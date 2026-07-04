@@ -685,7 +685,7 @@
   padding-top: calc(var(--section-y) + 60px);
 }
 .hero-home .about-hero__video {
-  filter: saturate(1.08) brightness(0.45);
+  filter: saturate(1.03) brightness(0.85);
 }
 .hero-home .hero-atmospheric__headline {
   font-size: clamp(var(--text-4xl), 7vw, var(--text-6xl));
@@ -716,7 +716,7 @@
   height:     100%;
   object-fit: cover;
   object-position: center;
-  filter:     saturate(1.05) brightness(0.55);
+  filter:     saturate(1.03) brightness(0.85);
 }
 
 .about-hero__fallback {
@@ -726,7 +726,8 @@
   background-size: cover;
   background-position: center;
   background-color: var(--color-green-950);
-  filter:     saturate(1.05) brightness(0.55);
+  background-image: var(--fallback-img, none);
+  filter:     saturate(1.03) brightness(0.85);
 }
 
 @media (prefers-reduced-motion: reduce) {

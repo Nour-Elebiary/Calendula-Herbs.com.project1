@@ -30,10 +30,13 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const normalizedUrl = siteUrl.startsWith('http://') || siteUrl.startsWith('https://')
+  ? siteUrl
+  : `https://${siteUrl}`
+
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000',
-  ),
+  metadataBase: new URL(normalizedUrl),
   title: {
     template: '%s | Calendula Herbs',
     default: 'Calendula Herbs For Import & Export — Premium Organic Herbs from Egypt',

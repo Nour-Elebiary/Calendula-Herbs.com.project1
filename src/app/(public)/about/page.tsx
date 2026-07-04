@@ -23,14 +23,12 @@ export default async function AboutPage() {
   const team = teamMembers.filter(m => m.memberType === 'TEAM')
 
   return (
-    <div className="page-root">
-      <div className="page-content">
-        
-        {/* Hero */}
-        <AboutHero />
+    <>
+      {/* Hero */}
+      <AboutHero />
 
-        {/* Heritage Stats */}
-        <section className="section">
+      {/* Heritage Stats */}
+      <section className="section">
           <div className="container">
             <div className="stat-row">
               <div className="stat-item">
@@ -165,8 +163,7 @@ export default async function AboutPage() {
           </div>
         </section>
 
-      </div>
-    </div>
+    </>
   )
 }
 

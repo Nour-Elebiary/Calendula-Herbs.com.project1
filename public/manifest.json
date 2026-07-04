@@ -1,0 +1,22 @@
+{
+  "name": "Calendula Herbs For Import & Export",
+  "short_name": "Calendula Herbs",
+  "description": "Premium organic herbs, spices, and medicinal plants exporter based in Egypt.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2d7a3a",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

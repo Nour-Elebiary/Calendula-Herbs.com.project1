@@ -1,0 +1,609 @@
+﻿node.exe : $ next dev
+At C:\Users\Asus\AppData\Roaming\npm\pnpm.ps1:24 char:5
++     & "node$exe"  "$basedir/node_modules/pnpm/bin/pnpm.mjs" $args
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ($ next dev:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Γû▓ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.20.112.1:3000
+- Environments: .env.local, .env
+Γ£ô Ready in 942ms
+
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE "public"."SiteSetting"."key" IN ($1,$2) OFFSET $3
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE ("public"."Product"."isFeatured" = $1 AND "public"."Product"."isActive" = $2) ORDER BY "public"."Product"."order" ASC LIMIT $3 OFFSET $4
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE 1=1 OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."ContactSetting"."id", "public"."ContactSetting"."managingEmails", "public"."ContactSetting"."mapAddress", "public"."ContactSetting"."mapLat", "public"."ContactSetting"."mapLng", "public"."ContactSetting"."phones", "public"."ContactSetting"."publicEmails", "public"."ContactSetting"."businessHours", "public"."ContactSetting"."autoReplySubject", "public"."ContactSetting"."autoReplyMessage", "public"."ContactSetting"."formEnabled", "public"."ContactSetting"."contactMethods", "public"."ContactSetting"."updatedAt" FROM "public"."ContactSetting" WHERE ("public"."ContactSetting"."id" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Plugin"."id", "public"."Plugin"."name", "public"."Plugin"."code", "public"."Plugin"."position"::text, "public"."Plugin"."isActive", "public"."Plugin"."order", "public"."Plugin"."createdAt" FROM "public"."Plugin" WHERE "public"."Plugin"."isActive" = $1 ORDER BY "public"."Plugin"."order" ASC OFFSET $2
+prisma:query COMMIT
+ GET / 200 in 10.2s (next.js: 3.1s, application-code: 7.1s)
+Γ£ô Compiled in 4.1s
+prisma:query SELECT 1
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE 1=1 OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE ("public"."Product"."isFeatured" = $1 AND "public"."Product"."isActive" = $2) ORDER BY "public"."Product"."order" ASC LIMIT $3 OFFSET $4
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Plugin"."id", "public"."Plugin"."name", "public"."Plugin"."code", "public"."Plugin"."position"::text, "public"."Plugin"."isActive", "public"."Plugin"."order", "public"."Plugin"."createdAt" FROM "public"."Plugin" WHERE "public"."Plugin"."isActive" = $1 ORDER BY "public"."Plugin"."order" ASC OFFSET $2
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE "public"."SiteSetting"."key" IN ($1,$2) OFFSET $3
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."ContactSetting"."id", "public"."ContactSetting"."managingEmails", "public"."ContactSetting"."mapAddress", "public"."ContactSetting"."mapLat", "public"."ContactSetting"."mapLng", "public"."ContactSetting"."phones", "public"."ContactSetting"."publicEmails", "public"."ContactSetting"."businessHours", "public"."ContactSetting"."autoReplySubject", "public"."ContactSetting"."autoReplyMessage", "public"."ContactSetting"."formEnabled", "public"."ContactSetting"."contactMethods", "public"."ContactSetting"."updatedAt" FROM "public"."ContactSetting" WHERE ("public"."ContactSetting"."id" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query COMMIT
+ GET / 200 in 6.4s (next.js: 1788ms, application-code: 4.6s)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this 
+tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="(public)/p...">
+                <SegmentTrieNode>
+                <HomePage>
+                  <div className="flex flex-col">
+                    <HeroSection tagline={"Premium ..."} founded="2014">
+                      <section ref={{current:null}} className="hero-atmos..." ...>
+                        <motion.div className="hero-atmos..." style={{y:{...}}}>
+                          <div className="hero-atmos..." style={{...}} ref={function useMotionRef.useCallback}>
++                           <div
++                             className="w-full h-full bg-[var(--color-green-800)]"
++                             
+style={{backgroundImage:"url(https:...",backgroundSize:"cover",backgroundPosition:"center",filter:"sa..."}}
++                           >
+-                           <video
+-                             autoplay=""
+-                             loop=""
+-                             muted=""
+-                             playsinline=""
+-                             preload="auto"
+-                             
+poster="https://res.cloudinary.com/dkz99j6vt/image/upload/v1746600000/calendula-hero-fie..."
+-                             className="hero-atmospheric__video"
+-                           >
+                        ...
+                    ...
+              ...
+            ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:3318:56)
+    at beginWork (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:6758:918)
+    at runWithFiberInDEV (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:965:74)
+    at performUnitOfWork (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9555:97)
+    at workLoopConcurrentByScheduler (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9551:58)
+    at renderRootConcurrent (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9534:71)
+    at performWorkOnRoot (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_17x5z_3._.js:2647:64)
+    at div (<anonymous>)
+    at HeroSection (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/src_1-hmimi._.js:403:363)
+    at HomePage (src\app\(public)\page.tsx:36:7)
+  34 |     <div className="flex flex-col">
+  35 |       {/* 2. HERO */}
+> 36 |       <HeroSection
+     |       ^
+  37 |         tagline={settings.site_tagline || ''}
+  38 |         founded={settings.company_founded || '2005'}
+  39 |       />
+[browser] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information 
+and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled (file://E:/Calendula Herbs 
+Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Certificate"."id", "public"."Certificate"."title", "public"."Certificate"."issuer", "public"."Certificate"."fileId", "public"."Certificate"."fileType"::text, "public"."Certificate"."order", "public"."Certificate"."isActive", "public"."Certificate"."createdAt" FROM "public"."Certificate" WHERE "public"."Certificate"."isActive" = $1 ORDER BY "public"."Certificate"."order" ASC OFFSET $2
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."url", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."type"::text FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6) OFFSET $7
+prisma:query COMMIT
+ GET /api/public/certificates 200 in 1812ms (next.js: 1151ms, application-code: 661ms)
+ GET /icon-192x192.png 404 in 951ms (next.js: 160ms, application-code: 790ms)
+prisma:query SELECT 1
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Plugin"."id", "public"."Plugin"."name", "public"."Plugin"."code", "public"."Plugin"."position"::text, "public"."Plugin"."isActive", "public"."Plugin"."order", "public"."Plugin"."createdAt" FROM "public"."Plugin" WHERE "public"."Plugin"."isActive" = $1 ORDER BY "public"."Plugin"."order" ASC OFFSET $2
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE 1=1 OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE ("public"."Product"."isFeatured" = $1 AND "public"."Product"."isActive" = $2) ORDER BY "public"."Product"."order" ASC LIMIT $3 OFFSET $4
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE "public"."SiteSetting"."key" IN ($1,$2) OFFSET $3
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."ContactSetting"."id", "public"."ContactSetting"."managingEmails", "public"."ContactSetting"."mapAddress", "public"."ContactSetting"."mapLat", "public"."ContactSetting"."mapLng", "public"."ContactSetting"."phones", "public"."ContactSetting"."publicEmails", "public"."ContactSetting"."businessHours", "public"."ContactSetting"."autoReplySubject", "public"."ContactSetting"."autoReplyMessage", "public"."ContactSetting"."formEnabled", "public"."ContactSetting"."contactMethods", "public"."ContactSetting"."updatedAt" FROM "public"."ContactSetting" WHERE ("public"."ContactSetting"."id" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query COMMIT
+ GET / 200 in 2.2s (next.js: 255ms, application-code: 1992ms)
+[browser] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information 
+and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled (file://E:/Calendula Herbs 
+Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this 
+tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="(public)/p...">
+                <SegmentTrieNode>
+                <HomePage>
+                  <div className="flex flex-col">
+                    <HeroSection tagline={"Premium ..."} founded="2014">
+                      <section ref={{current:null}} className="hero-atmos..." ...>
+                        <motion.div className="hero-atmos..." style={{y:{...}}}>
+                          <div className="hero-atmos..." style={{...}} ref={function useMotionRef.useCallback}>
++                           <div
++                             className="w-full h-full bg-[var(--color-green-800)]"
++                             
+style={{backgroundImage:"url(https:...",backgroundSize:"cover",backgroundPosition:"center",filter:"sa..."}}
++                           >
+-                           <video
+-                             autoplay=""
+-                             loop=""
+-                             muted=""
+-                             playsinline=""
+-                             preload="auto"
+-                             
+poster="https://res.cloudinary.com/dkz99j6vt/image/upload/v1746600000/calendula-hero-fie..."
+-                             className="hero-atmospheric__video"
+-                           >
+                        ...
+                    ...
+              ...
+            ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:3318:56)
+    at beginWork (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:6758:918)
+    at runWithFiberInDEV (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:965:74)
+    at performUnitOfWork (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9555:97)
+    at workLoopConcurrentByScheduler (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9551:58)
+    at renderRootConcurrent (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9534:71)
+    at performWorkOnRoot (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_17x5z_3._.js:2647:64)
+    at div (<anonymous>)
+    at HeroSection (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/src_1-hmimi._.js:403:363)
+    at HomePage (src\app\(public)\page.tsx:36:7)
+  34 |     <div className="flex flex-col">
+  35 |       {/* 2. HERO */}
+> 36 |       <HeroSection
+     |       ^
+  37 |         tagline={settings.site_tagline || ''}
+  38 |         founded={settings.company_founded || '2005'}
+  39 |       />
+ GET /icon-192x192.png 404 in 297ms (next.js: 23ms, application-code: 274ms)
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Certificate"."id", "public"."Certificate"."title", "public"."Certificate"."issuer", "public"."Certificate"."fileId", "public"."Certificate"."fileType"::text, "public"."Certificate"."order", "public"."Certificate"."isActive", "public"."Certificate"."createdAt" FROM "public"."Certificate" WHERE "public"."Certificate"."isActive" = $1 ORDER BY "public"."Certificate"."order" ASC OFFSET $2
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."url", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."type"::text FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6) OFFSET $7
+prisma:query COMMIT
+ GET /api/public/certificates 200 in 449ms (next.js: 33ms, application-code: 416ms)
+prisma:query SELECT 1
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Plugin"."id", "public"."Plugin"."name", "public"."Plugin"."code", "public"."Plugin"."position"::text, "public"."Plugin"."isActive", "public"."Plugin"."order", "public"."Plugin"."createdAt" FROM "public"."Plugin" WHERE "public"."Plugin"."isActive" = $1 ORDER BY "public"."Plugin"."order" ASC OFFSET $2
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE 1=1 OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE "public"."SiteSetting"."key" IN ($1,$2) OFFSET $3
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE ("public"."Product"."isFeatured" = $1 AND "public"."Product"."isActive" = $2) ORDER BY "public"."Product"."order" ASC LIMIT $3 OFFSET $4
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."ContactSetting"."id", "public"."ContactSetting"."managingEmails", "public"."ContactSetting"."mapAddress", "public"."ContactSetting"."mapLat", "public"."ContactSetting"."mapLng", "public"."ContactSetting"."phones", "public"."ContactSetting"."publicEmails", "public"."ContactSetting"."businessHours", "public"."ContactSetting"."autoReplySubject", "public"."ContactSetting"."autoReplyMessage", "public"."ContactSetting"."formEnabled", "public"."ContactSetting"."contactMethods", "public"."ContactSetting"."updatedAt" FROM "public"."ContactSetting" WHERE ("public"."ContactSetting"."id" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query COMMIT
+ GET / 200 in 4.1s (next.js: 384ms, application-code: 3.7s)
+[browser] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information 
+and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled (file://E:/Calendula Herbs 
+Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Uncaught Error: Hydration failed because the server rendered HTML didn't match the client. As a result this 
+tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={<SegmentViewNode>} forbidden={undefined} unauthorized={undefined}>
+      <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<SegmentViewNode>} forbidden={undefined} ...>
+        <RedirectBoundary>
+          <RedirectErrorBoundary router={{...}}>
+            <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} segmentPath={[...]} ...>
+              <SegmentViewNode type="page" pagePath="(public)/p...">
+                <SegmentTrieNode>
+                <HomePage>
+                  <div className="flex flex-col">
+                    <HeroSection tagline={"Premium ..."} founded="2014">
+                      <section ref={{current:null}} className="hero-atmos..." ...>
+                        <motion.div className="hero-atmos..." style={{y:{...}}}>
+                          <div className="hero-atmos..." style={{...}} ref={function useMotionRef.useCallback}>
++                           <div
++                             className="w-full h-full bg-[var(--color-green-800)]"
++                             
+style={{backgroundImage:"url(https:...",backgroundSize:"cover",backgroundPosition:"center",filter:"sa..."}}
++                           >
+-                           <video
+-                             autoplay=""
+-                             loop=""
+-                             muted=""
+-                             playsinline=""
+-                             preload="auto"
+-                             
+poster="https://res.cloudinary.com/dkz99j6vt/image/upload/v1746600000/calendula-hero-fie..."
+-                             className="hero-atmospheric__video"
+-                           >
+                        ...
+                    ...
+              ...
+            ...
+
+    at <unknown> (https://react.dev/link/hydration-mismatch)
+    at throwOnHydrationMismatch (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:3318:56)
+    at beginWork (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:6758:918)
+    at runWithFiberInDEV (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:965:74)
+    at performUnitOfWork (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9555:97)
+    at workLoopConcurrentByScheduler (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9551:58)
+    at renderRootConcurrent (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9534:71)
+    at performWorkOnRoot (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:9061:150)
+    at performWorkOnRootViaSchedulerTask (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_react-dom_0k2gwdz._.js:10255:9)
+    at MessagePort.performWorkUntilDeadline (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_compiled_17x5z_3._.js:2647:64)
+    at div (<anonymous>)
+    at HeroSection (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/src_1-hmimi._.js:403:363)
+    at HomePage (src\app\(public)\page.tsx:36:7)
+  34 |     <div className="flex flex-col">
+  35 |       {/* 2. HERO */}
+> 36 |       <HeroSection
+     |       ^
+  37 |         tagline={settings.site_tagline || ''}
+  38 |         founded={settings.company_founded || '2005'}
+  39 |       />
+ GET /icon-192x192.png 404 in 1534ms (next.js: 419ms, application-code: 1114ms)
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Certificate"."id", "public"."Certificate"."title", "public"."Certificate"."issuer", "public"."Certificate"."fileId", "public"."Certificate"."fileType"::text, "public"."Certificate"."order", "public"."Certificate"."isActive", "public"."Certificate"."createdAt" FROM "public"."Certificate" WHERE "public"."Certificate"."isActive" = $1 ORDER BY "public"."Certificate"."order" ASC OFFSET $2
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."url", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."type"::text FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6) OFFSET $7
+prisma:query COMMIT
+ GET /api/public/certificates 200 in 654ms (next.js: 75ms, application-code: 579ms)
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE 1=1 ORDER BY "public"."Category"."order" ASC OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE "public"."Product"."isActive" = $1 ORDER BY "public"."Product"."order" ASC OFFSET $2
+prisma:query SELECT "public"."ProductImage"."id", "public"."ProductImage"."productId", "public"."ProductImage"."mediaFileId", "public"."ProductImage"."isPrimary", "public"."ProductImage"."order" FROM "public"."ProductImage" WHERE "public"."ProductImage"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) ORDER BY "public"."ProductImage"."order" ASC OFFSET $25
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."ProductCategory"."productId", "public"."ProductCategory"."categoryId" FROM "public"."ProductCategory" WHERE "public"."ProductCategory"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE "public"."Category"."id" IN ($1) OFFSET $2
+prisma:query COMMIT
+ GET /products 200 in 2.4s (next.js: 503ms, application-code: 1894ms)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265681/calendula-herbs/products/ss4f1nr36lp0vbfdsogk.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265686/calendula-herbs/products/l7di88f46nes8sdbtikk.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265694/calendula-herbs/products/hsyw3lmatycu1xvrou5x.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265702/calendula-herbs/products/ss4bzpkcxnyncrkfpodq.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265760/calendula-herbs/products/sbzhhpvjztaj8u4iuogs.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265711/calendula-herbs/products/x9bvl7jv6dzstqk9vgwa.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265719/calendula-herbs/products/ze7uqhianobdiihfwkzy.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265724/calendula-herbs/products/gdyq2b3vp5kablnhgmwz.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265745/calendula-herbs/products/mhrc1cylk2wmza9lwnpf.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265731/calendula-herbs/products/q4gopl3ykwvxwhulhpsf.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265740/calendula-herbs/products/jdl3kgtp5d2izwhfnbck.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265753/calendula-herbs/products/xrflexzbf3qxcnu6pvzh.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265775/calendula-herbs/products/ykam7kvew6vmtt1jc7o1.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265769/calendula-herbs/products/ipfmpjqnpscqlcphko8b.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265783/calendula-herbs/products/n8uc28b7nglfiinop5bz.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+prisma:query SELECT 1
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE 1=1 ORDER BY "public"."Category"."order" ASC OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE "public"."Product"."isActive" = $1 ORDER BY "public"."Product"."order" ASC OFFSET $2
+prisma:query SELECT "public"."ProductImage"."id", "public"."ProductImage"."productId", "public"."ProductImage"."mediaFileId", "public"."ProductImage"."isPrimary", "public"."ProductImage"."order" FROM "public"."ProductImage" WHERE "public"."ProductImage"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) ORDER BY "public"."ProductImage"."order" ASC OFFSET $25
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."ProductCategory"."productId", "public"."ProductCategory"."categoryId" FROM "public"."ProductCategory" WHERE "public"."ProductCategory"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE "public"."Category"."id" IN ($1) OFFSET $2
+prisma:query COMMIT
+ GET /products?product=calendula-flowers 200 in 2.3s (next.js: 234ms, application-code: 2.0s)
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE ("public"."Product"."slug" = $1 AND "public"."Product"."isActive" = $2) LIMIT $3 OFFSET $4
+prisma:query SELECT "public"."ProductImage"."id", "public"."ProductImage"."productId", "public"."ProductImage"."mediaFileId", "public"."ProductImage"."isPrimary", "public"."ProductImage"."order" FROM "public"."ProductImage" WHERE "public"."ProductImage"."productId" IN ($1) ORDER BY "public"."ProductImage"."order" ASC OFFSET $2
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1) OFFSET $2
+prisma:query SELECT "public"."ProductCategory"."productId", "public"."ProductCategory"."categoryId" FROM "public"."ProductCategory" WHERE "public"."ProductCategory"."productId" IN ($1) OFFSET $2
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE "public"."Category"."id" IN ($1) OFFSET $2
+prisma:query COMMIT
+ GET /api/public/products/calendula-flowers 200 in 5.7s (next.js: 4.5s, application-code: 1243ms)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265796/calendula-herbs/products/o10sjidgqbhpuqz5tras.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265790/calendula-herbs/products/phdd0ku25b5ajq9p06jt.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265804/calendula-herbs/products/pwu8xahqw7frgowtjcwk.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+prisma:query SELECT 1
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE 1=1 ORDER BY "public"."Category"."order" ASC OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE "public"."Product"."isActive" = $1 ORDER BY "public"."Product"."order" ASC OFFSET $2
+prisma:query SELECT "public"."ProductImage"."id", "public"."ProductImage"."productId", "public"."ProductImage"."mediaFileId", "public"."ProductImage"."isPrimary", "public"."ProductImage"."order" FROM "public"."ProductImage" WHERE "public"."ProductImage"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) ORDER BY "public"."ProductImage"."order" ASC OFFSET $25
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."ProductCategory"."productId", "public"."ProductCategory"."categoryId" FROM "public"."ProductCategory" WHERE "public"."ProductCategory"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE "public"."Category"."id" IN ($1) OFFSET $2
+prisma:query COMMIT
+prisma:query BEGIN
+ GET /products 200 in 3.9s (next.js: 965ms, application-code: 3.0s)
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE 1=1 ORDER BY "public"."Category"."order" ASC OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE "public"."Product"."isActive" = $1 ORDER BY "public"."Product"."order" ASC OFFSET $2
+prisma:query SELECT "public"."ProductImage"."id", "public"."ProductImage"."productId", "public"."ProductImage"."mediaFileId", "public"."ProductImage"."isPrimary", "public"."ProductImage"."order" FROM "public"."ProductImage" WHERE "public"."ProductImage"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) ORDER BY "public"."ProductImage"."order" ASC OFFSET $25
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."ProductCategory"."productId", "public"."ProductCategory"."categoryId" FROM "public"."ProductCategory" WHERE "public"."ProductCategory"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE "public"."Category"."id" IN ($1) OFFSET $2
+prisma:query COMMIT
+ GET /products 200 in 2.2s (next.js: 49ms, application-code: 2.2s)
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE 1=1 ORDER BY "public"."Category"."order" ASC OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE "public"."Product"."isActive" = $1 ORDER BY "public"."Product"."order" ASC OFFSET $2
+prisma:query SELECT "public"."ProductImage"."id", "public"."ProductImage"."productId", "public"."ProductImage"."mediaFileId", "public"."ProductImage"."isPrimary", "public"."ProductImage"."order" FROM "public"."ProductImage" WHERE "public"."ProductImage"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) ORDER BY "public"."ProductImage"."order" ASC OFFSET $25
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."ProductCategory"."productId", "public"."ProductCategory"."categoryId" FROM "public"."ProductCategory" WHERE "public"."ProductCategory"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE "public"."Category"."id" IN ($1) OFFSET $2
+prisma:query COMMIT
+ GET /products 200 in 2.2s (next.js: 10ms, application-code: 2.2s)
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE 1=1 ORDER BY "public"."Category"."order" ASC OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE "public"."Product"."isActive" = $1 ORDER BY "public"."Product"."order" ASC OFFSET $2
+prisma:query SELECT "public"."ProductImage"."id", "public"."ProductImage"."productId", "public"."ProductImage"."mediaFileId", "public"."ProductImage"."isPrimary", "public"."ProductImage"."order" FROM "public"."ProductImage" WHERE "public"."ProductImage"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) ORDER BY "public"."ProductImage"."order" ASC OFFSET $25
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."ProductCategory"."productId", "public"."ProductCategory"."categoryId" FROM "public"."ProductCategory" WHERE "public"."ProductCategory"."productId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$13,$14,$15,$16,$17,$18,$19,$20,$21,$22,$23,$24) OFFSET $25
+prisma:query SELECT "public"."Category"."id", "public"."Category"."name", "public"."Category"."slug", "public"."Category"."order" FROM "public"."Category" WHERE "public"."Category"."id" IN ($1) OFFSET $2
+prisma:query COMMIT
+ GET /products 200 in 1892ms (next.js: 33ms, application-code: 1859ms)
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."TeamMember"."id", "public"."TeamMember"."name", "public"."TeamMember"."title", "public"."TeamMember"."bio", "public"."TeamMember"."photoId", "public"."TeamMember"."memberType"::text, "public"."TeamMember"."order", "public"."TeamMember"."isActive", "public"."TeamMember"."createdAt" FROM "public"."TeamMember" WHERE "public"."TeamMember"."isActive" = $1 ORDER BY "public"."TeamMember"."order" ASC OFFSET $2
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) OFFSET $11
+prisma:query SELECT "public"."TeamContact"."id", "public"."TeamContact"."memberId", "public"."TeamContact"."type"::text, "public"."TeamContact"."label", "public"."TeamContact"."value", "public"."TeamContact"."icon" FROM "public"."TeamContact" WHERE "public"."TeamContact"."memberId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) OFFSET $11
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."TeamMember"."id", "public"."TeamMember"."name", "public"."TeamMember"."title", "public"."TeamMember"."bio", "public"."TeamMember"."photoId", "public"."TeamMember"."memberType"::text, "public"."TeamMember"."order", "public"."TeamMember"."isActive", "public"."TeamMember"."createdAt" FROM "public"."TeamMember" WHERE "public"."TeamMember"."isActive" = $1 ORDER BY "public"."TeamMember"."order" ASC OFFSET $2
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) OFFSET $11
+prisma:query SELECT "public"."TeamContact"."id", "public"."TeamContact"."memberId", "public"."TeamContact"."type"::text, "public"."TeamContact"."label", "public"."TeamContact"."value", "public"."TeamContact"."icon" FROM "public"."TeamContact" WHERE "public"."TeamContact"."memberId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) OFFSET $11
+prisma:query COMMIT
+ GET /about 200 in 5.9s (next.js: 1402ms, application-code: 4.5s)
+ GET /about 200 in 3.5s (next.js: 50ms, application-code: 3.4s)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265851/calendula-herbs/team/wh8pruajq054cvupoqaw.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265856/calendula-herbs/team/whvupks9dqnrgbvchd8l.png" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265858/calendula-herbs/team/dk5gpqwr9jhobwemqhpl.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265864/calendula-herbs/team/jkmnuw4gcocjhzthwaik.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265861/calendula-herbs/team/e46hjmllzx36dsxvvo8f.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265869/calendula-herbs/team/mxkyvr0g2zgkyghuilbb.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265883/calendula-herbs/team/hz0srl4cgsto8fbcagyj.jpg" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265873/calendula-herbs/team/eltpnqu5z8twsvpzfnaq.png" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782265880/calendula-herbs/team/xioacncpa8pbmadogf7s.png" has 
+"fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src 
+"https://res.cloudinary.com/dcukpuftg/image/upload/v1782289289/calendula_media/ion9phupbsickvjrsmsj.jpg" has "fill" 
+but is missing "sizes" prop. Please add it to improve page performance. Read more: 
+https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website 
+Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+memory allocation of 16777216 bytes failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+[?25h
+[ELIFECYCLE] Command failed with exit code 3221226505.

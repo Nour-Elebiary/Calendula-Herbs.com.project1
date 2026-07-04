@@ -1,0 +1,370 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─── Auth & Admin ────────────────────────────────────────────────────────────
+
+model Admin {
+  id                 String         @id @default(cuid())
+  name               String
+  email              String         @unique
+  passwordHash       String
+  phone              String?
+  recoveryEmails     String[]       @default([])
+  recoveryPhones     String[]       @default([])
+  lastLoginIp        String?
+  lastLoginAt        DateTime?
+  lastLoginUserAgent String?
+  lastLoginCountry   String?
+  failedAttempts     Int            @default(0)
+  lockedUntil        DateTime?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+  sessions           AdminSession[]
+  auditLogs          AdminAuditLog[]
+}
+
+model AdminSession {
+  id         String    @id @default(cuid())
+  adminId    String
+  tokenHash  String    @unique
+  ip         String?
+  userAgent  String?
+  expiresAt  DateTime
+  createdAt  DateTime  @default(now())
+  revokedAt  DateTime?
+  admin      Admin     @relation(fields: [adminId], references: [id], onDelete: Cascade)
+}
+
+model OtpCode {
+  id         String    @id @default(cuid())
+  identifier String    // email or phone
+  codeHash   String    // bcrypt hash of 6-digit code
+  type       OtpType
+  expiresAt  DateTime
+  usedAt     DateTime?
+  attempts   Int       @default(0)
+  createdAt  DateTime  @default(now())
+}
+
+model AdminAuditLog {
+  id        String   @id @default(cuid())
+  adminId   String
+  action    String   // e.g. "product.create", "media.delete", "settings.update"
+  target    String?  // e.g. product ID or name
+  detail    String?  // JSON with before/after
+  ip        String?
+  createdAt DateTime @default(now())
+  admin     Admin    @relation(fields: [adminId], references: [id], onDelete: Cascade)
+}
+
+enum OtpType {
+  EMAIL_RESET
+  PHONE_RESET
+  EMAIL_VERIFY
+}
+
+// ─── Media ───────────────────────────────────────────────────────────────────
+
+model MediaFile {
+  id             String         @id @default(cuid())
+  name           String
+  originalName   String
+  type           MediaType
+  url            String         // Cloudinary secure URL
+  cloudinaryId   String         // Cloudinary public_id for deletion
+  thumbnailUrl   String?
+  mimeType       String
+  sizeBytes      Int
+  width          Int?
+  height         Int?
+  duration       Float?         // For audio/video in seconds
+  createdAt      DateTime       @default(now())
+  galleryItems   GalleryItem[]
+  productImages  ProductImage[]
+  teamMembers    TeamMember[]
+  certificates   Certificate[]
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+  AUDIO
+  PDF
+}
+
+// ─── Gallery ─────────────────────────────────────────────────────────────────
+
+enum GallerySection {
+  EVENTS
+  INTERVIEWS_TV
+  FACTORY
+  FARMS
+  SHIPMENTS
+}
+
+model Gallery {
+  id          String        @id @default(cuid())
+  name        String
+  slug        String        @unique
+  description String?
+  isActive    Boolean       @default(true)
+  order       Int           @default(0)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  items       GalleryItem[]
+}
+
+model GalleryItem {
+  id          String          @id @default(cuid())
+  galleryId   String
+  type        GalleryItemType
+  section     GallerySection?
+  mediaFileId String?
+  externalUrl String?         // For YouTube/Drive/Facebook links
+  externalId  String?         // Extracted video ID
+  thumbnailUrl String?        // For external sources
+  title       String?
+  caption     String?
+  order       Int             @default(0)
+  isActive    Boolean         @default(true)
+  createdAt   DateTime        @default(now())
+  gallery     Gallery         @relation(fields: [galleryId], references: [id], onDelete: Cascade)
+  mediaFile   MediaFile?      @relation(fields: [mediaFileId], references: [id])
+}
+
+enum GalleryItemType {
+  UPLOADED_IMAGE
+  UPLOADED_VIDEO
+  UPLOADED_AUDIO
+  YOUTUBE
+  GOOGLE_DRIVE
+  FACEBOOK
+}
+
+// ─── Products ────────────────────────────────────────────────────────────────
+
+model Category {
+  id       String            @id @default(cuid())
+  name     String
+  slug     String            @unique
+  order    Int               @default(0)
+  products ProductCategory[]
+}
+
+model Product {
+  id               String            @id @default(cuid())
+  name             String
+  scientificName   String?
+  slug             String            @unique
+  description      String?           // HTML via rich editor
+  shortDescription String?           // Plain text for cards
+  isOrganic        Boolean           @default(false)
+  organicType      String?           // EU, NOP, COR, JAS, BIO_SUISSE, etc.
+  conventionalType String?           // NORMAL, EU_LIMITS
+  minOrderKg       Int               @default(500)
+  isActive         Boolean           @default(true)
+  isFeatured       Boolean           @default(false)
+  order            Int               @default(0)
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  images           ProductImage[]
+  categories       ProductCategory[]
+}
+
+model ProductImage {
+  id          String    @id @default(cuid())
+  productId   String
+  mediaFileId String
+  isPrimary   Boolean   @default(false)
+  order       Int       @default(0)
+  product     Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  mediaFile   MediaFile @relation(fields: [mediaFileId], references: [id])
+}
+
+model ProductCategory {
+  productId  String
+  categoryId String
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([productId, categoryId])
+}
+
+// ─── Team ────────────────────────────────────────────────────────────────────
+
+model TeamMember {
+  id         String        @id @default(cuid())
+  name       String
+  title      String
+  bio        String?
+  photoId    String?
+  memberType MemberType
+  order      Int           @default(0)
+  isActive   Boolean       @default(true)
+  createdAt  DateTime      @default(now())
+  photo      MediaFile?    @relation(fields: [photoId], references: [id])
+  contacts   TeamContact[]
+}
+
+model TeamContact {
+  id       String      @id @default(cuid())
+  memberId String
+  type     ContactType
+  label    String?
+  value    String
+  icon     String?     // Lucide icon name for display override
+  member   TeamMember  @relation(fields: [memberId], references: [id], onDelete: Cascade)
+}
+
+enum MemberType {
+  TEAM
+  BOARD
+}
+
+enum ContactType {
+  EMAIL
+  PHONE
+  LINKEDIN
+  TWITTER
+  WHATSAPP
+  FACEBOOK
+  INSTAGRAM
+  TELEGRAM
+  VIBER
+  WECHAT
+  SIGNAL
+  MESSENGER
+  LINE
+  DISCORD
+  YOUTUBE
+  TIKTOK
+  SNAPCHAT
+  WEBSITE
+  OTHER
+}
+
+// ─── Certificates ────────────────────────────────────────────────────────────
+
+model Certificate {
+  id        String     @id @default(cuid())
+  title     String
+  issuer    String?
+  fileId    String?
+  fileType  CertType
+  order     Int        @default(0)
+  isActive  Boolean    @default(true)
+  createdAt DateTime   @default(now())
+  file      MediaFile? @relation(fields: [fileId], references: [id])
+}
+
+enum CertType {
+  PDF
+  IMAGE
+}
+
+// ─── Site Settings & Plugins ─────────────────────────────────────────────────
+
+model SiteSetting {
+  id        String   @id @default(cuid())
+  key       String   @unique
+  value     String   // JSON string for complex values
+  updatedAt DateTime @updatedAt
+}
+
+model Plugin {
+  id        String         @id @default(cuid())
+  name      String
+  code      String         // Raw HTML/script embed code
+  position  PluginPosition
+  isActive  Boolean        @default(false)
+  order     Int            @default(0)
+  createdAt DateTime       @default(now())
+}
+
+enum PluginPosition {
+  HEAD
+  BODY_END
+  FOOTER_FIXED
+  CHAT_WIDGET
+}
+
+// ─── Contact ─────────────────────────────────────────────────────────────────
+
+model ContactSetting {
+  id               String   @id @default("main")
+  managingEmails   String[]
+  mapAddress       String?
+  mapLat           Float?
+  mapLng           Float?
+  phones           String[]
+  publicEmails     String[]
+  businessHours    String?  // JSON
+  autoReplySubject  String?
+  autoReplyMessage  String?
+  formEnabled      Boolean  @default(true)
+  contactMethods   Json?    // [{ type: string, value: string, linkMode: 'auto'|'manual', manualLink?: string }]
+  updatedAt        DateTime @updatedAt
+}
+
+model ContactSubmission {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  country   String?
+  subject   String?
+  message   String
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model CartInquiry {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String?
+  company   String?
+  country   String?
+  notes     String?
+  itemsJson String   // JSON array of {productId, productName, quantity}
+  isRead    Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
+
+model SampleRequest {
+  id          String   @id @default(cuid())
+  productName String
+  quantity    String?
+  name        String
+  email       String
+  company     String?
+  address     String?
+  shippingBy  String   // "buyer" | "calendula"
+  notes       String?
+  isRead      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
+
+model ProductRequest {
+  id                String   @id @default(cuid())
+  productName       String
+  productDescription String?
+  quantity          String?
+  name              String
+  email             String
+  phone             String?
+  company           String?
+  country           String?
+  usage             String?  // intended use / application
+  notes             String?
+  isRead            Boolean  @default(false)
+  createdAt         DateTime @default(now())
+}

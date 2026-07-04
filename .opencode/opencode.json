@@ -1,0 +1,36 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "username": "Calendula Herbs Dev",
+  "instructions": ["AGENTS.md"],
+
+  "command": {
+    "dev": { "description": "Start the Next.js dev server", "prompt": "Run `npm run dev` and confirm the app starts on localhost:3000" },
+    "build": { "description": "Build the project for production", "prompt": "Run `npm run build` and fix any build errors" },
+    "lint": { "description": "Run ESLint across the project", "prompt": "Run `npm run lint` and report any errors or warnings" },
+    "db-migrate": { "description": "Create and apply a new Prisma migration", "prompt": "Run `npx prisma migrate dev` to generate and apply a new migration" },
+    "db-seed": { "description": "Seed the database with initial data (admin user)", "prompt": "Run `tsx prisma/seed.ts` to seed the admin user" },
+    "db-studio": { "description": "Open Prisma Studio to browse the database", "prompt": "Run `npx prisma studio` to open the database browser" },
+    "deploy": { "description": "Deploy to Vercel production", "prompt": "Check that .env.local is configured, then deploy to Vercel. The codebase is complete and ready for deployment." },
+    "routes": { "description": "List all application routes and their types", "prompt": "Read src/app directory structure and summarize all route groups, pages, and API endpoints by their access level (public, admin, auth)" }
+  },
+
+  "mcp": {
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["npx", "-y", "chrome-devtools-mcp@latest"]
+    }
+  },
+
+  "agent": {
+    "admin-dev": {
+      "description": "Calendula Herbs admin panel specialist — works on admin dashboard, settings, media, products, galleries, inquiries, team management",
+      "mode": "subagent",
+      "prompt": "You are an admin panel specialist for Calendula Herbs (calendulaherbs.com), an Egyptian herb exporter. The project is Next.js 16.2.9 App Router + TypeScript + Tailwind v4 + Radix UI + Prisma 6 + Supabase. Admin auth uses NextAuth v5 credentials with JWT + custom AdminSession table.\n\nRoute groups:\n- (admin-auth)/: login, forgot-password, OTP\n- (admin-panel)/admin/dashboard/: media, galleries, certificates, products, team, settings, inquiries\n- /api/admin/*: JWT-protected CRUD\n\nAlways read AGENTS.md first for conventions before making changes."
+    },
+    "public-dev": {
+      "description": "Calendula Herbs public-facing pages specialist — works on homepage, about, products, galleries, certificates, contact pages, cart, and SEO",
+      "mode": "subagent",
+      "prompt": "You are a public-facing pages specialist for Calendula Herbs (calendulaherbs.com). The project is Next.js 16.2.9 App Router + TypeScript + Tailwind v4 + Radix UI + Framer Motion.\n\nPage routes:\n- / (home), /about, /contact, /products, /products/[slug], /galleries, /certificates\n- All use server components with async data fetching from Prisma\n- Cart uses Zustand-like context via CartProvider (client component)\n- Images use next/image with Cloudinary remote pattern (res.cloudinary.com)\n- SEO is handled via layout.tsx metadata, sitemap.ts, and robots.ts\n\nAlways read AGENTS.md first for conventions before making changes."
+    }
+  }
+}

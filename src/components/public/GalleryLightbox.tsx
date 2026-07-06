@@ -11,6 +11,25 @@ type LightboxItem = {
   thumbnailUrl?: string | null
   title?: string | null
   caption?: string | null
+  externalId?: string | null
+}
+
+function getYouTubeEmbedUrl(item: LightboxItem): string | null {
+  const id = item.externalId
+  if (id) return `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`
+
+  const url = item.url || item.thumbnailUrl
+  if (!url) return null
+
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]+)/,
+    /^([a-zA-Z0-9_-]{11})$/,
+  ]
+  for (const p of patterns) {
+    const m = url.match(p)
+    if (m) return `https://www.youtube.com/embed/${m[1]}?autoplay=1&rel=0`
+  }
+  return null
 }
 
 export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
@@ -50,11 +69,13 @@ export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
   const current = items[currentIndex]
   const imgUrl = current?.url || current?.thumbnailUrl
   const isVideo = current?.type === 'UPLOADED_VIDEO' || current?.type === 'YOUTUBE'
+  const youtubeEmbedUrl = current?.type === 'YOUTUBE' ? getYouTubeEmbedUrl(current) : null
 
   return (
     <>
       {items.map((item, index) => {
         const itemImgUrl = item.url || item.thumbnailUrl
+        const itemIsVideo = item.type === 'UPLOADED_VIDEO' || item.type === 'YOUTUBE'
         return (
           <button
             key={item.id}
@@ -70,13 +91,13 @@ export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
-                {isVideo
+                {itemIsVideo
                   ? <Play className="w-10 h-10" style={{ color: 'var(--color-text-tertiary)' }} />
                   : <Image src="/file.svg" alt="" width={40} height={40} style={{ color: 'var(--color-text-tertiary)' }} />
                 }
               </div>
             )}
-            {isVideo && (
+            {itemIsVideo && (
               <div
                 className="absolute inset-0 flex items-center justify-center transition-colors"
                 style={{ background: 'rgba(0,0,0,0.20)' }}
@@ -115,7 +136,7 @@ export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
         )
       })}
 
-      {isOpen && imgUrl && (
+      {isOpen && (imgUrl || isVideo) && current && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center"
           style={{ background: 'rgba(6,15,9,0.95)' }}
@@ -155,14 +176,33 @@ export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
             className="relative max-w-[90vw] max-h-[85vh] w-full h-full flex flex-col items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full h-full max-w-[90vw] max-h-[80vh]">
-              <Image
-                src={imgUrl}
-                alt={current?.title || 'Gallery image'}
-                fill
-                className="object-contain"
-                priority
-              />
+            <div className="relative w-full h-full max-w-[90vw] max-h-[80vh] flex items-center justify-center">
+              {isVideo && youtubeEmbedUrl ? (
+                <iframe
+                  src={youtubeEmbedUrl}
+                  title={current?.title || 'YouTube video'}
+                  className="w-full h-full rounded-lg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : isVideo && current?.url ? (
+                <video
+                  controls
+                  autoPlay
+                  className="max-w-full max-h-full rounded-lg"
+                  style={{ objectFit: 'contain' }}
+                >
+                  <source src={current.url} type="video/mp4" />
+                </video>
+              ) : imgUrl ? (
+                <Image
+                  src={imgUrl}
+                  alt={current?.title || 'Gallery image'}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              ) : null}
             </div>
             {(current?.title || current?.caption) && (
               <div className="text-center mt-4 max-w-2xl">

@@ -6,6 +6,11 @@ import { Leaf, Search, Package, FileSearch } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { ProductGridClient } from './ProductGridClient'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const normalizedUrl = siteUrl.startsWith('http://') || siteUrl.startsWith('https://')
+  ? siteUrl
+  : `https://${siteUrl}`
+
 export const metadata = {
   title: 'Our Products | Calendula Herbs For Import & Export',
   description: 'Browse our catalog of premium bulk herbs, spices, and seeds for export. Minimum order quantities from 500 KG. Request a quote for your import needs.',
@@ -47,17 +52,63 @@ export default async function ProductsPage({ searchParams }: { searchParams: Pro
     }
   })
 
+  const productSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: productCards.map((p, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'Product',
+        name: p.name,
+        description: p.shortDescription,
+        ...(p.mainImage ? { image: p.mainImage } : {}),
+        offers: {
+          '@type': 'Offer',
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          description: `Minimum order: ${p.minOrderKg} KG`,
+        },
+      },
+    })),
+  }
+
   return (
     <div className="page-root">
       <div className="page-content">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: normalizedUrl },
+                { '@type': 'ListItem', position: 2, name: 'Products', item: `${normalizedUrl}/products` },
+              ],
+            }),
+          }}
+        />
+
         {/* Header */}
-        <section className="section section--tint text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-[var(--color-text-primary)] mb-4">
-            Our Products
-          </h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl mx-auto text-lg">
-            Premium bulk herbs, spices, and seeds for global importers and manufacturers. All products available for export with full certification.
-          </p>
+        <section className="hero-page">
+          <div className="hero-page__bg hero-page__bg--products" />
+          <div className="hero-page__overlay hero-page__overlay--products" />
+          <div className="hero-page__content">
+            <div className="hero-page__glass-card hero-page__glass-card--dark">
+              <h1 className="hero-page__title">
+                Our Products
+              </h1>
+              <p className="hero-page__desc">
+                Premium bulk herbs, spices, and seeds for global importers and manufacturers. All products available for export with full certification.
+              </p>
+            </div>
+          </div>
         </section>
 
         <div className="container" style={{ marginTop: '-2rem', position: 'relative', zIndex: 10 }}>

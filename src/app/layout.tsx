@@ -67,6 +67,43 @@ export const metadata: Metadata = {
   },
 }
 
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Calendula Herbs For Import & Export',
+  url: normalizedUrl,
+  logo: `${normalizedUrl}/icon`,
+  description: 'Premium organic herbs, spices & seeds from Egypt. Certified organic, global export.',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'EG',
+    addressRegion: 'Fayoum',
+  },
+  sameAs: [
+    '',
+  ],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    availableLanguage: ['English', 'Arabic'],
+  },
+}
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Calendula Herbs',
+  url: normalizedUrl,
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: `${normalizedUrl}/products?q={search_term_string}`,
+    },
+    'query-input': 'required name=search_term_string',
+  },
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -81,6 +118,14 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#FAFAF6" />
         <link rel="apple-touch-icon" href="/icon" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
       </head>
       <body className="min-h-full flex flex-col antialiased bg-[var(--color-bg-void)] text-[var(--color-text-primary)]">
         <a href="#main-content" className="skip-link">

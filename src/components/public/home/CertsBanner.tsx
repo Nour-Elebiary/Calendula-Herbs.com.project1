@@ -22,7 +22,7 @@ export function CertsBanner() {
   if (certs.length === 0) return null
 
   return (
-    <section className="py-24" style={{ backgroundColor: 'var(--color-bg-base)' }}>
+    <section className="section-herbal-frame py-24">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           className="text-center space-y-4 mb-16"

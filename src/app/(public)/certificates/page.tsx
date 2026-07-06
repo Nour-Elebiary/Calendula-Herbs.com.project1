@@ -19,13 +19,19 @@ export default async function CertificatesPage() {
   return (
     <div className="page-root">
       <div className="page-content">
-        <section className="bg-[var(--color-bg-elevated)] pt-32 pb-20 text-center px-6">
-          <h1 className="font-display text-4xl md:text-5xl font-medium mb-4" style={{ color: 'var(--color-text-primary)' }}>
-            Quality & Certifications
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg" style={{ color: 'var(--color-text-secondary)' }}>
-            We adhere to the highest international standards for organic farming, processing, and export.
-          </p>
+        <section className="hero-page">
+          <div className="hero-page__bg hero-page__bg--certificates" />
+          <div className="hero-page__overlay hero-page__overlay--certificates" />
+          <div className="hero-page__content">
+            <div className="hero-page__glass-card hero-page__glass-card--dark">
+              <h1 className="hero-page__title">
+                Quality & Certifications
+              </h1>
+              <p className="hero-page__desc">
+                We adhere to the highest international standards for organic farming, processing, and export.
+              </p>
+            </div>
+          </div>
         </section>
 
         <div className="section">
@@ -39,7 +45,7 @@ export default async function CertificatesPage() {
                 const thumbUrl = cert.file?.thumbnailUrl || fileUrl
 
                 const card = (
-                  <div className="card-glass cert-card">
+                  <div key={cert.id} className="card-glass cert-card">
                     {fileUrl && thumbUrl ? (
                       <div className="w-full aspect-[4/3] relative mb-3 rounded-lg overflow-hidden bg-neutral-50">
                         {isPdf ? (

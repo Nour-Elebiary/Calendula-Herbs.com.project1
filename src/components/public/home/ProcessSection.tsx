@@ -28,10 +28,14 @@ const steps = [
   },
 ]
 
+
+
 export function ProcessSection() {
   return (
-    <section className="py-24 relative" style={{ backgroundColor: 'var(--color-bg-void)' }}>
-      <div className="container mx-auto max-w-7xl">
+    <section className="py-24 relative overflow-hidden" style={{ backgroundColor: 'var(--color-bg-void)' }}>
+
+
+      <div className="container mx-auto max-w-7xl relative z-10">
         <motion.div
           className="text-center space-y-4 mb-20"
           initial="hidden"
@@ -69,7 +73,7 @@ export function ProcessSection() {
             <motion.div
               key={step.title}
               variants={fadeInUp}
-              className="card-glass p-8 text-center"
+              className="card-glass p-8 text-center relative"
             >
               <div
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"

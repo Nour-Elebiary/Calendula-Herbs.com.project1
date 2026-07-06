@@ -1,0 +1,64 @@
+$ next dev
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://172.25.80.1:3000
+- Environments: .env.local, .env
+✓ Ready in 926ms
+- Experiments (use with caution):
+  · cpus: 2
+
+○ Compiling / ...
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE 1=1 OFFSET $1
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."SiteSetting"."id", "public"."SiteSetting"."key", "public"."SiteSetting"."value", "public"."SiteSetting"."updatedAt" FROM "public"."SiteSetting" WHERE "public"."SiteSetting"."key" IN ($1,$2) OFFSET $3
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Plugin"."id", "public"."Plugin"."name", "public"."Plugin"."code", "public"."Plugin"."position"::text, "public"."Plugin"."isActive", "public"."Plugin"."order", "public"."Plugin"."createdAt" FROM "public"."Plugin" WHERE "public"."Plugin"."isActive" = $1 ORDER BY "public"."Plugin"."order" ASC OFFSET $2
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."ContactSetting"."id", "public"."ContactSetting"."managingEmails", "public"."ContactSetting"."mapAddress", "public"."ContactSetting"."mapLat", "public"."ContactSetting"."mapLng", "public"."ContactSetting"."phones", "public"."ContactSetting"."publicEmails", "public"."ContactSetting"."businessHours", "public"."ContactSetting"."autoReplySubject", "public"."ContactSetting"."autoReplyMessage", "public"."ContactSetting"."formEnabled", "public"."ContactSetting"."contactMethods", "public"."ContactSetting"."updatedAt" FROM "public"."ContactSetting" WHERE ("public"."ContactSetting"."id" = $1 AND 1=1) LIMIT $2 OFFSET $3
+prisma:query COMMIT
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Product"."id", "public"."Product"."name", "public"."Product"."scientificName", "public"."Product"."slug", "public"."Product"."description", "public"."Product"."shortDescription", "public"."Product"."isOrganic", "public"."Product"."organicType", "public"."Product"."conventionalType", "public"."Product"."minOrderKg", "public"."Product"."isActive", "public"."Product"."isFeatured", "public"."Product"."order", "public"."Product"."createdAt", "public"."Product"."updatedAt" FROM "public"."Product" WHERE ("public"."Product"."isFeatured" = $1 AND "public"."Product"."isActive" = $2) ORDER BY "public"."Product"."order" ASC LIMIT $3 OFFSET $4
+prisma:query COMMIT
+ GET / 200 in 19.6s (next.js: 11.8s, application-code: 7.8s)
+[browser] You have Reduced Motion enabled on your device. Animations may not appear as expected.. For more information and steps for solving, visit https://motion.dev/troubleshooting/reduced-motion-disabled (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+○ Compiling /api/public/certificates ...
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."Certificate"."id", "public"."Certificate"."title", "public"."Certificate"."issuer", "public"."Certificate"."fileId", "public"."Certificate"."fileType"::text, "public"."Certificate"."order", "public"."Certificate"."isActive", "public"."Certificate"."createdAt" FROM "public"."Certificate" WHERE "public"."Certificate"."isActive" = $1 ORDER BY "public"."Certificate"."order" ASC OFFSET $2
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."url", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."type"::text FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6) OFFSET $7
+prisma:query COMMIT
+ GET /api/public/certificates 200 in 5.7s (next.js: 4.4s, application-code: 1330ms)
+ GET /icon 200 in 5.2s (next.js: 4.4s, application-code: 864ms)
+ GET /icon?8f2c62011fd15b6d 200 in 5.3s (next.js: 4.6s, application-code: 657ms)
+○ Compiling /about ...
+prisma:query SELECT 1
+prisma:query BEGIN
+prisma:query DEALLOCATE ALL
+prisma:query SELECT "public"."TeamMember"."id", "public"."TeamMember"."name", "public"."TeamMember"."title", "public"."TeamMember"."bio", "public"."TeamMember"."photoId", "public"."TeamMember"."memberType"::text, "public"."TeamMember"."order", "public"."TeamMember"."isActive", "public"."TeamMember"."createdAt" FROM "public"."TeamMember" WHERE "public"."TeamMember"."isActive" = $1 ORDER BY "public"."TeamMember"."order" ASC OFFSET $2
+prisma:query SELECT "public"."MediaFile"."id", "public"."MediaFile"."name", "public"."MediaFile"."originalName", "public"."MediaFile"."type"::text, "public"."MediaFile"."url", "public"."MediaFile"."cloudinaryId", "public"."MediaFile"."thumbnailUrl", "public"."MediaFile"."mimeType", "public"."MediaFile"."sizeBytes", "public"."MediaFile"."width", "public"."MediaFile"."height", "public"."MediaFile"."duration", "public"."MediaFile"."createdAt" FROM "public"."MediaFile" WHERE "public"."MediaFile"."id" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) OFFSET $11
+prisma:query SELECT "public"."TeamContact"."id", "public"."TeamContact"."memberId", "public"."TeamContact"."type"::text, "public"."TeamContact"."label", "public"."TeamContact"."value", "public"."TeamContact"."icon" FROM "public"."TeamContact" WHERE "public"."TeamContact"."memberId" IN ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) OFFSET $11
+prisma:query COMMIT
+ GET /about 200 in 9.6s (next.js: 8.2s, application-code: 1482ms)
+ GET /icon?8f2c62011fd15b6d 200 in 524ms (next.js: 24ms, application-code: 499ms)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265851/calendula-herbs/team/wh8pruajq054cvupoqaw.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265856/calendula-herbs/team/whvupks9dqnrgbvchd8l.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265858/calendula-herbs/team/dk5gpqwr9jhobwemqhpl.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265861/calendula-herbs/team/e46hjmllzx36dsxvvo8f.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265864/calendula-herbs/team/jkmnuw4gcocjhzthwaik.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265869/calendula-herbs/team/mxkyvr0g2zgkyghuilbb.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265880/calendula-herbs/team/xioacncpa8pbmadogf7s.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782289289/calendula_media/ion9phupbsickvjrsmsj.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265883/calendula-herbs/team/hz0srl4cgsto8fbcagyj.jpg" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+[browser] Image with src "https://res.cloudinary.com/dcukpuftg/image/upload/v1782265873/calendula-herbs/team/eltpnqu5z8twsvpzfnaq.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes (file://E:/Calendula Herbs Website Project/calendula-herbs/.next/dev/static/chunks/1h0h_next_dist_2165rxv._.js:2477:13)
+✓ Finished writing to filesystem cache in 13.5s
+[?25h
+[ELIFECYCLE] Command failed with exit code 3221226505.

@@ -32,11 +32,17 @@ export default async function ContactPage() {
     <div className="page-root">
       <div className="page-content">
         {/* Header */}
-        <section className="section section--tint text-center">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-[var(--color-text-primary)] mb-4">Contact Us</h1>
-          <p className="text-[var(--color-text-secondary)] max-w-2xl mx-auto text-lg">
-            We are here to assist with your bulk herbal export needs. Pricing is provided after we understand your specific requirements and volume.
-          </p>
+        <section className="hero-page">
+          <div className="hero-page__bg hero-page__bg--contact" />
+          <div className="hero-page__overlay hero-page__overlay--contact" />
+          <div className="hero-page__content">
+            <div className="hero-page__glass-card">
+              <h1 className="hero-page__title">Contact Us</h1>
+              <p className="hero-page__desc">
+                We are here to assist with your bulk herbal export needs. Pricing is provided after we understand your specific requirements and volume.
+              </p>
+            </div>
+          </div>
         </section>
 
         <div className="section">

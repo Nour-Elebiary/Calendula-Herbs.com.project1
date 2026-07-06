@@ -1,0 +1,37 @@
+# PR labeler — auto-labels PRs by changed file patterns
+
+# Areas
+area/admin:
+  - changed-files:
+      - any-glob-to-any-file: src/app/admin/**/*
+      - any-glob-to-any-file: src/components/admin/**/*
+area/api:
+  - changed-files:
+      - any-glob-to-any-file: src/app/api/**/*
+area/public:
+  - changed-files:
+      - any-glob-to-any-file: src/app/\(public\)/**/*
+      - any-glob-to-any-file: src/components/public/**/*
+area/prisma:
+  - changed-files:
+      - any-glob-to-any-file: prisma/**/*
+area/auth:
+  - changed-files:
+      - any-glob-to-any-file: src/proxy.ts
+      - any-glob-to-any-file: src/app/api/auth/**/*
+      - any-glob-to-any-file: src/components/auth/**/*
+
+# Types
+dependencies:
+  - changed-files:
+      - any-glob-to-any-file: package.json
+      - any-glob-to-any-file: pnpm-lock.yaml
+ci:
+  - changed-files:
+      - any-glob-to-any-file: .github/**/*
+tests:
+  - changed-files:
+      - any-glob-to-any-file: src/__tests__/**
+      - any-glob-to-any-file: src/test/**
+      - any-glob-to-any-file: "*.test.*"
+      - any-glob-to-any-file: "*.spec.*"

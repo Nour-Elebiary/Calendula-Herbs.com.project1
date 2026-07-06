@@ -11,13 +11,18 @@ export default async function ProductRequestPage() {
   return (
     <div className="page-root">
       <div className="page-content">
-        <section className="bg-[var(--color-bg-elevated)] pt-32 pb-20 text-center px-6">
-          <h1 className="font-display text-4xl md:text-5xl font-medium mb-4" style={{ color: 'var(--color-text-primary)' }}>
-            Can&apos;t Find a Product?
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg" style={{ color: 'var(--color-text-secondary)' }}>
-            We source a wide range of herbs, spices, seeds, and botanical products beyond what is listed on our site. Tell us what you need.
-          </p>
+        <section className="hero-page">
+          <div className="hero-page__bg hero-page__bg--product-request" />
+          <div className="hero-page__content">
+            <div className="hero-page__glass-card">
+              <h1 className="hero-page__title">
+                Can&apos;t Find a Product?
+              </h1>
+              <p className="hero-page__desc">
+                We source a wide range of herbs, spices, seeds, and botanical products beyond what is listed on our site. Tell us what you need.
+              </p>
+            </div>
+          </div>
         </section>
 
         <div className="section" style={{ maxWidth: 'var(--container-max)', margin: '0 auto' }}>

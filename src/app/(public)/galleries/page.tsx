@@ -64,13 +64,18 @@ export default async function GalleriesPage() {
   return (
     <div className="page-root">
       <div className="page-content">
-        <section className="bg-[var(--color-bg-elevated)] pt-32 pb-20 text-center px-6" style={{ fontFamily: 'var(--font-body)' }}>
-          <h1 className="font-display text-4xl md:text-5xl font-medium mb-4" style={{ color: 'var(--color-text-primary)' }}>
-            Media Galleries
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg" style={{ color: 'var(--color-text-secondary)' }}>
-            A visual journey through our farms, state-of-the-art processing facilities, and premium products.
-          </p>
+        <section className="hero-page">
+          <div className="hero-page__bg hero-page__bg--galleries" />
+          <div className="hero-page__content">
+            <div className="hero-page__glass-card">
+              <h1 className="hero-page__title">
+                Media Galleries
+              </h1>
+              <p className="hero-page__desc">
+                A visual journey through our farms, state-of-the-art processing facilities, and premium products.
+              </p>
+            </div>
+          </div>
         </section>
 
         <div className="section space-y-24">
@@ -103,6 +108,7 @@ export default async function GalleriesPage() {
                       thumbnailUrl: item.thumbnailUrl,
                       title: item.title,
                       caption: item.caption,
+                      externalId: item.externalId,
                     }))}
                   />
                 </div>

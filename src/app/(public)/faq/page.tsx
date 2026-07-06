@@ -2,6 +2,11 @@ import React from 'react'
 import { db } from '@/lib/db'
 import { HelpCircle, ChevronDown } from 'lucide-react'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const normalizedUrl = siteUrl.startsWith('http://') || siteUrl.startsWith('https://')
+  ? siteUrl
+  : `https://${siteUrl}`
+
 export const metadata = {
   title: 'FAQ | Calendula Herbs',
   description: 'B2B export FAQs — MOQ, free samples, certifications, shipping, and payment terms for bulk herb and spice buyers.',
@@ -88,6 +93,27 @@ function FaqAccordion({ items }: { items: FaqItem[] }) {
   )
 }
 
+function FaqPageSchema({ items }: { items: FaqItem[] }) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map(item => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  }
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
 export default async function FaqPage() {
   const setting = await db.siteSetting.findUnique({ where: { key: 'faqs' } })
 
@@ -102,14 +128,35 @@ export default async function FaqPage() {
   return (
     <div className="page-root">
       <div className="page-content">
-        <section className="bg-[var(--color-bg-elevated)] pt-32 pb-20 text-center px-6">
-          <h1 className="font-display text-4xl md:text-5xl font-medium mb-4" style={{ color: 'var(--color-text-primary)' }}>
-            Frequently Asked Questions
-          </h1>
-          <p className="max-w-2xl mx-auto text-lg" style={{ color: 'var(--color-text-secondary)' }}>
-            Everything B2B buyers need to know about ordering from Calendula Herbs.
-          </p>
+        <section className="hero-page">
+          <div className="hero-page__bg hero-page__bg--faq" />
+          <div className="hero-page__content">
+            <div className="hero-page__glass-card">
+              <h1 className="hero-page__title">
+                Frequently Asked Questions
+              </h1>
+              <p className="hero-page__desc">
+                Everything B2B buyers need to know about ordering from Calendula Herbs.
+              </p>
+            </div>
+          </div>
         </section>
+
+        <FaqPageSchema items={faqs} />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'BreadcrumbList',
+              itemListElement: [
+                { '@type': 'ListItem', position: 1, name: 'Home', item: normalizedUrl },
+                { '@type': 'ListItem', position: 2, name: 'FAQ', item: `${normalizedUrl}/faq` },
+              ],
+            }),
+          }}
+        />
 
         <div className="section" style={{ maxWidth: 'var(--container-tight)', margin: '0 auto' }}>
           {faqs.length === 0 ? (

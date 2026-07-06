@@ -10,13 +10,18 @@ export default function TermsPage() {
   return (
     <div className="page-root">
       <div className="page-content">
-        <section className="bg-[var(--color-bg-elevated)] pt-32 pb-20 text-center px-6">
-          <h1 className="font-display text-4xl md:text-5xl font-medium mb-4" style={{ color: 'var(--color-text-primary)' }}>
-            Terms &amp; Conditions
-          </h1>
-          <p className="text-sm" style={{ color: 'var(--color-text-tertiary)' }}>
-            Last updated: June 2026
-          </p>
+        <section className="hero-page">
+          <div className="hero-page__bg hero-page__bg--legal" />
+          <div className="hero-page__content">
+            <div className="hero-page__glass-card">
+              <h1 className="hero-page__title">
+                Terms &amp; Conditions
+              </h1>
+              <p className="text-sm mt-2" style={{ color: 'var(--color-text-tertiary)' }}>
+                Last updated: June 2026
+              </p>
+            </div>
+          </div>
         </section>
 
         <div className="section" style={{ maxWidth: 'var(--container-tight)', margin: '0 auto' }}>

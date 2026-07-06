@@ -84,8 +84,9 @@ export default async function HomePage() {
 
       {/* 10. CONTACT CTA */}
       <ScrollReveal>
-        <section className="section" style={{ background: 'var(--color-green-800)' }}>
-          <div className="container max-w-7xl text-center">
+        <section className="section relative overflow-hidden" style={{ background: 'var(--color-green-800)' }}>
+
+          <div className="container max-w-7xl text-center relative z-10">
             <h2 className="font-display text-4xl md:text-5xl font-medium" style={{ color: 'var(--color-text-inverse)' }}>
               Ready to Source Premium Egyptian Herbs?
             </h2>

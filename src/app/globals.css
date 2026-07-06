@@ -1111,7 +1111,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .about-hero__video { display: none; }
+  /* Keep the video visible (shows poster / first frame) but prevent autoplay animation */
+  .about-hero__video { animation: none !important; transition: none !important; }
 }
 
 .about-hero__overlay {

@@ -23,8 +23,12 @@ export function HeroSection({ tagline, founded }: { tagline: string; founded: st
 
   useEffect(() => {
     const video = videoRef.current
-    // Use === true so null (SSR/hydration initial value) does NOT block playback
-    if (!video || prefersReducedMotion === true) return
+    if (!video) return
+    // When reduced motion is enabled, pause and show the poster/first frame
+    if (prefersReducedMotion === true) {
+      video.pause()
+      return
+    }
     if (video.readyState >= 2) {
       video.play().catch(() => {})
     } else {

@@ -200,6 +200,18 @@
   --ring:                 rgba(94,158,102,0.48);
 }
 
+/* ─── Watermark ──────────────────────────────────────────────────────────── */
+.watermark-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.10;
+  background-size: min(600px, 80vw) auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 /* ─── Admin panel uses the public light theme — tokens inherited from :root ── */
 
 /* ─── Page Root ──────────────────────────────────────────────────────────── */
@@ -1433,6 +1445,33 @@
 .cert-badge:hover {
   background:    rgba(77,133,84,0.18);
   border-color:  rgba(94,158,102,0.42);
+}
+
+.cert-logo-link {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  padding:         var(--space-3) var(--space-5);
+  background:      rgba(255, 253, 248, 0.5);
+  border:          1px solid var(--color-border-subtle);
+  border-radius:   var(--radius-lg);
+  transition:      all var(--duration-fast);
+  cursor:          pointer;
+  text-decoration: none;
+}
+
+.cert-logo-link:hover {
+  background:    rgba(255, 253, 248, 0.9);
+  border-color:  rgba(94,158,102,0.42);
+  box-shadow:    0 2px 12px rgba(50,70,45,0.1);
+  transform:     scale(1.05);
+}
+
+.cert-logo-img {
+  height:         48px;
+  width:          auto;
+  max-width:      120px;
+  object-fit:     contain;
 }
 
 /* ─── Stat Row ────────────────────────────────────────────────────────────── */

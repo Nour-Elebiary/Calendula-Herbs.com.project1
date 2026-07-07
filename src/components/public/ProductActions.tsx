@@ -35,7 +35,7 @@ export function ProductActions({ productId, productName, minOrderKg }: Props) {
   const [sNotes, setSNotes] = useState('')
 
   const handleAddToCart = () => {
-    addItem({ productId, productName, quantity })
+    addItem({ productId, productName, quantity, minOrderKg })
     toast.success(`${productName} added to quote cart`)
   }
 
@@ -86,7 +86,7 @@ export function ProductActions({ productId, productName, minOrderKg }: Props) {
               kg
             </div>
           </div>
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-2">Minimum order quantity: {minOrderKg} kg</p>
+          <p className="text-xs text-[var(--color-text-tertiary)] mt-2">MOQ: {minOrderKg} kg</p>
         </div>
 
         <div className="flex flex-col gap-3">

@@ -12,6 +12,7 @@ type LightboxItem = {
   title?: string | null
   caption?: string | null
   externalId?: string | null
+  externalUrl?: string | null
 }
 
 function getYouTubeEmbedUrl(item: LightboxItem): string | null {
@@ -29,6 +30,15 @@ function getYouTubeEmbedUrl(item: LightboxItem): string | null {
     const m = url.match(p)
     if (m) return `https://www.youtube.com/embed/${m[1]}?autoplay=1&rel=0`
   }
+  return null
+}
+
+function getGoogleDriveEmbedUrl(item: LightboxItem): string | null {
+  const url = item.externalUrl || item.url
+  if (!url) return null
+  const match = url.match(/\/d\/([a-zA-Z0-9_-]+)/)
+  if (match) return `https://drive.google.com/file/d/${match[1]}/preview`
+  if (item.externalId) return `https://drive.google.com/file/d/${item.externalId}/preview`
   return null
 }
 
@@ -68,14 +78,18 @@ export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
 
   const current = items[currentIndex]
   const imgUrl = current?.url || current?.thumbnailUrl
-  const isVideo = current?.type === 'UPLOADED_VIDEO' || current?.type === 'YOUTUBE'
-  const youtubeEmbedUrl = current?.type === 'YOUTUBE' ? getYouTubeEmbedUrl(current) : null
+  const isVideo = current?.type === 'UPLOADED_VIDEO'
+  const isYouTube = current?.type === 'YOUTUBE'
+  const isGoogleDrive = current?.type === 'GOOGLE_DRIVE'
+  const isFacebook = current?.type === 'FACEBOOK'
+  const youtubeEmbedUrl = isYouTube ? getYouTubeEmbedUrl(current) : null
+  const googleDriveEmbedUrl = isGoogleDrive ? getGoogleDriveEmbedUrl(current) : null
 
   return (
     <>
       {items.map((item, index) => {
         const itemImgUrl = item.url || item.thumbnailUrl
-        const itemIsVideo = item.type === 'UPLOADED_VIDEO' || item.type === 'YOUTUBE'
+        const itemIsEmbed = item.type === 'UPLOADED_VIDEO' || item.type === 'YOUTUBE' || item.type === 'GOOGLE_DRIVE' || item.type === 'FACEBOOK'
         return (
           <button
             key={item.id}
@@ -91,13 +105,13 @@ export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
               />
             ) : (
               <div className="absolute inset-0 flex items-center justify-center">
-                {itemIsVideo
+                {itemIsEmbed
                   ? <Play className="w-10 h-10" style={{ color: 'var(--color-text-tertiary)' }} />
                   : <Image src="/file.svg" alt="" width={40} height={40} style={{ color: 'var(--color-text-tertiary)' }} />
                 }
               </div>
             )}
-            {itemIsVideo && (
+            {itemIsEmbed && (
               <div
                 className="absolute inset-0 flex items-center justify-center transition-colors"
                 style={{ background: 'rgba(0,0,0,0.20)' }}
@@ -136,7 +150,7 @@ export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
         )
       })}
 
-      {isOpen && (imgUrl || isVideo) && current && (
+      {isOpen && (imgUrl || isYouTube || isGoogleDrive || isFacebook || isVideo) && current && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center"
           style={{ background: 'rgba(6,15,9,0.95)' }}
@@ -177,12 +191,28 @@ export function GalleryLightbox({ items }: { items: LightboxItem[] }) {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative w-full h-full max-w-[90vw] max-h-[80vh] flex items-center justify-center">
-              {isVideo && youtubeEmbedUrl ? (
+              {isYouTube && youtubeEmbedUrl ? (
                 <iframe
                   src={youtubeEmbedUrl}
                   title={current?.title || 'YouTube video'}
                   className="w-full h-full rounded-lg"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                />
+              ) : isGoogleDrive && googleDriveEmbedUrl ? (
+                <iframe
+                  src={googleDriveEmbedUrl}
+                  title={current?.title || 'Google Drive file'}
+                  className="w-full h-full rounded-lg"
+                  allow="autoplay"
+                  allowFullScreen
+                />
+              ) : isFacebook && current?.externalUrl ? (
+                <iframe
+                  src={`https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(current.externalUrl)}&show_text=false`}
+                  title={current?.title || 'Facebook video'}
+                  className="w-full h-full rounded-lg"
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                   allowFullScreen
                 />
               ) : isVideo && current?.url ? (

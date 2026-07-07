@@ -13,7 +13,7 @@ vi.mock('@/components/public/CartProvider', () => ({
   useCart: () => mockUseCart(),
 }))
 
-const defaultItem: CartItem = { productId: '1', productName: 'Calendula Flowers', quantity: 500 }
+const defaultItem: CartItem = { productId: '1', productName: 'Calendula Flowers', quantity: 500, minOrderKg: 500 }
 const mockSetIsCartOpen = vi.fn()
 const mockRemoveItem = vi.fn()
 const mockUpdateQuantity = vi.fn()
@@ -52,7 +52,7 @@ describe('CartDrawer', () => {
   })
 
   it('displays cart items with quantity controls', () => {
-    setupCart({ items: [defaultItem, { productId: '2', productName: 'Chamomile', quantity: 300 }] })
+    setupCart({ items: [defaultItem, { productId: '2', productName: 'Chamomile', quantity: 300, minOrderKg: 300 }] })
     render(<CartDrawer />)
     expect(screen.getByText('Calendula Flowers')).toBeInTheDocument()
     expect(screen.getByText('Chamomile')).toBeInTheDocument()

@@ -48,6 +48,13 @@ export default async function PublicLayout({ children }: { children: React.React
       <CartProvider>
         <LazyMotion features={domAnimation}>
           <div className="page-root">
+            {settings.watermark_enabled === 'true' && settings.watermark_logo_url && (
+              <div
+                className="watermark-bg"
+                style={{ backgroundImage: `url(${settings.watermark_logo_url})` }}
+                aria-hidden="true"
+              />
+            )}
             <Header siteName={settings.site_name} />
             
             <main className="page-content">

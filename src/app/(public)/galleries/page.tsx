@@ -1,7 +1,13 @@
 import React from 'react'
 import { db } from '@/lib/db'
 import { ImageIcon } from 'lucide-react'
-import { GalleryLightbox } from '@/components/public/GalleryLightbox'
+import { GalleryCarousel } from '@/components/public/GalleryCarousel'
+import { Template1Carousel } from '@/components/public/carousels/Template1Carousel'
+import { Template2Carousel } from '@/components/public/carousels/Template2Carousel'
+import { Template2PageAdapter } from '@/components/public/carousels/Template2PageAdapter'
+import { Template3Carousel } from '@/components/public/carousels/Template3Carousel'
+import { getCarouselStyle, type CarouselStyle } from '@/lib/settings'
+import { CarouselItem } from '@/components/public/carousels/types'
 import { GallerySection } from '@prisma/client'
 
 export const metadata = {
@@ -12,6 +18,7 @@ export const metadata = {
 const SECTION_ORDER: GallerySection[] = [
   'EVENTS',
   'INTERVIEWS_TV',
+  'VISITS',
   'FACTORY',
   'FARMS',
   'SHIPMENTS',
@@ -38,18 +45,48 @@ const SECTION_META: Record<GallerySection, { label: string; description: string 
     label: 'Shipments Pics',
     description: 'Our products being prepared and shipped worldwide.',
   },
+  VISITS: {
+    label: 'Visits',
+    description: 'Visits to our farms, facilities, and partners around the world.',
+  },
+}
+
+function mapItems(items: any[]): CarouselItem[] {
+  return items.map(item => ({
+    id: item.id,
+    type: item.type,
+    url: item.mediaFile?.url,
+    thumbnailUrl: item.thumbnailUrl
+      || (item.type === 'YOUTUBE' && item.externalId ? `https://img.youtube.com/vi/${item.externalId}/hqdefault.jpg` : undefined)
+      || (item.type === 'GOOGLE_DRIVE' && item.externalId ? `https://drive.google.com/thumbnail?id=${item.externalId}&sz=w480` : undefined),
+    title: item.title,
+    caption: item.caption,
+    externalId: item.externalId,
+    externalUrl: item.externalUrl,
+  }))
 }
 
 export default async function GalleriesPage() {
-  const items = await db.galleryItem.findMany({
-    where: {
-      isActive: true,
-      section: { not: null },
-      gallery: { isActive: true },
-    },
-    include: { mediaFile: true, gallery: true },
-    orderBy: [{ section: 'asc' }, { order: 'asc' }],
-  })
+  let carouselStyle: CarouselStyle = 'original'
+  let items: any[] = []
+  try {
+    const [style, galleryItems] = await Promise.all([
+      getCarouselStyle(),
+      db.galleryItem.findMany({
+        where: {
+          isActive: true,
+          section: { not: null },
+          gallery: { isActive: true },
+        },
+        include: { mediaFile: true, gallery: true },
+        orderBy: [{ section: 'asc' }, { order: 'asc' }],
+      }),
+    ])
+    carouselStyle = style
+    items = galleryItems
+  } catch (err) {
+    console.error('[GALLERIES PAGE] Failed to load gallery data:', err)
+  }
 
   const grouped = SECTION_ORDER
     .map(section => ({
@@ -60,6 +97,26 @@ export default async function GalleriesPage() {
     .filter(group => group.items.length > 0)
 
   const hasContent = grouped.length > 0
+
+  const renderCarousel = (group: { section: GallerySection; label: string; description: string; items: any[] }) => {
+    const carouselItems = mapItems(group.items)
+    const props = {
+      items: carouselItems,
+      sectionLabel: group.label,
+      sectionDescription: group.description,
+    }
+
+    switch (carouselStyle) {
+      case 'template1':
+        return <Template1Carousel key={group.section} {...props} />
+      case 'template2':
+        return <Template2Carousel key={group.section} {...props} />
+      case 'template3':
+        return <Template3Carousel key={group.section} {...props} />
+      default:
+        return <GalleryCarousel key={group.section} {...props} />
+    }
+  }
 
   return (
     <div className="page-root">
@@ -88,32 +145,16 @@ export default async function GalleriesPage() {
               <p style={{ color: 'var(--color-text-secondary)' }}>Check back later for photos and videos.</p>
             </div>
           ) : (
-            grouped.map(group => (
-              <div key={group.section} className="space-y-8">
-                <div className="pb-4" style={{ borderBottom: '1px solid var(--color-border-subtle)' }}>
-                  <h2 className="font-display text-3xl font-medium" style={{ color: 'var(--color-text-primary)' }}>
-                    {group.label}
-                  </h2>
-                  <p className="mt-2 text-lg" style={{ color: 'var(--color-text-secondary)' }}>
-                    {group.description}
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                  <GalleryLightbox
-                    items={group.items.map(item => ({
-                      id: item.id,
-                      type: item.type,
-                      url: item.mediaFile?.url,
-                      thumbnailUrl: item.thumbnailUrl,
-                      title: item.title,
-                      caption: item.caption,
-                      externalId: item.externalId,
-                    }))}
-                  />
-                </div>
-              </div>
-            ))
+            carouselStyle === 'template2' ? (
+              <Template2PageAdapter groups={grouped.map(g => ({
+                section: g.section,
+                label: g.label,
+                description: g.description,
+                items: mapItems(g.items),
+              }))} />
+            ) : (
+              grouped.map(group => renderCarousel(group))
+            )
           )}
         </div>
       </div>

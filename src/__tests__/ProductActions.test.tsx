@@ -39,7 +39,7 @@ describe('ProductActions', () => {
 
   it('shows minimum order quantity', () => {
     render(<ProductActions {...defaultProps} />)
-    expect(screen.getByText(/minimum order quantity: 500 kg/i)).toBeInTheDocument()
+    expect(screen.getByText(/MOQ: 500 kg/i)).toBeInTheDocument()
   })
 
   it('opens sample dialog on button click', async () => {

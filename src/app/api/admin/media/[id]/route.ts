@@ -43,7 +43,8 @@ export async function DELETE(
             galleryItems: true,
             productImages: true,
             teamMembers: true,
-            certificates: true,
+            certFiles: true,
+            certLogos: true,
           }
         }
       }
@@ -57,7 +58,8 @@ export async function DELETE(
       media._count.galleryItems + 
       media._count.productImages + 
       media._count.teamMembers + 
-      media._count.certificates
+      media._count.certFiles + 
+      media._count.certLogos
 
     if (usageCount > 0) {
       return NextResponse.json({ 

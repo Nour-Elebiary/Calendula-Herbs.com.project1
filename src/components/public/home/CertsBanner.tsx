@@ -2,18 +2,26 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
+import { cleanImageUrl } from '@/lib/image-url'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 
+type CertData = {
+  id: string
+  title: string
+  file?: { url: string; type: string } | null
+  logo?: { url: string; thumbnailUrl: string | null } | null
+}
+
 export function CertsBanner() {
-  const [certs, setCerts] = useState<string[]>([])
+  const [certs, setCerts] = useState<CertData[]>([])
 
   useEffect(() => {
     fetch('/api/public/certificates')
       .then(r => r.json())
       .then(data => {
         if (data.certs?.length) {
-          setCerts(data.certs.map((c: { title: string }) => c.title))
+          setCerts(data.certs.filter((c: CertData) => c.logo?.url))
         }
       })
       .catch(() => {})
@@ -54,16 +62,50 @@ export function CertsBanner() {
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          {certs.map((cert) => (
-            <motion.span
-              key={cert}
-              variants={fadeInUp}
-              className="cert-badge"
-            >
-              <CheckCircle2 className="w-3.5 h-3.5" style={{ color: 'var(--color-calendula-500)' }} />
-              {cert}
-            </motion.span>
-          ))}
+          {certs.map((cert) => {
+            const rawLogoUrl = cert.logo?.thumbnailUrl || cert.logo?.url
+            const logoUrl = cleanImageUrl(rawLogoUrl)
+            const isSvg = rawLogoUrl ? /\.svg($|\?)/i.test(rawLogoUrl) : false
+            if (!logoUrl) return null
+
+            const fileUrl = cert.file?.url
+            const isPdf = cert.file?.type === 'PDF'
+            const downloadHref = isPdf && cert.id ? `/api/public/certificates/pdf/${cert.id}` : fileUrl
+            const Wrapper = fileUrl ? 'a' : 'div'
+            const wrapperProps = fileUrl
+              ? { href: downloadHref, target: '_blank', rel: 'noopener noreferrer' }
+              : {}
+
+            return (
+              <motion.div key={cert.title} variants={fadeInUp}>
+                <Wrapper
+                  {...wrapperProps}
+                  className="cert-logo-link"
+                  title={`${cert.title}${fileUrl ? ' — Click to view certificate' : ''}`}
+                >
+                  {isSvg ? (
+                    <img
+                      src={logoUrl}
+                      alt={`${cert.title} certificate logo`}
+                      width={120}
+                      height={60}
+                      className="cert-logo-img"
+                      style={{ objectFit: 'contain' }}
+                    />
+                  ) : (
+                    <Image
+                      src={logoUrl}
+                      alt={`${cert.title} certificate logo`}
+                      width={120}
+                      height={60}
+                      className="cert-logo-img"
+                      style={{ objectFit: 'contain' }}
+                    />
+                  )}
+                </Wrapper>
+              </motion.div>
+            )
+          })}
         </motion.div>
       </div>
     </section>

@@ -5,7 +5,8 @@ import {
   Settings, Phone, Globe, Mail, MapPin, Code,
   Plus, Trash2, Pencil, Check, X, Loader2, AlertCircle,
   Save, Eye, EyeOff,
-  HelpCircle, ChevronUp, ChevronDown, MessageCircle
+  HelpCircle, ChevronUp, ChevronDown, MessageCircle,
+  ImageIcon
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -18,6 +19,8 @@ import {
 } from '@/components/ui/select'
 import { IconPicker } from '@/components/ui/icon-picker'
 import { getContactMethodIcon, CONTACT_METHOD_ICONS } from '@/lib/icon-map'
+import { MediaPicker } from '@/components/admin/media/MediaPicker'
+import Image from 'next/image'
 import { toast } from 'sonner'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
@@ -105,6 +108,7 @@ function GeneralTab() {
   const [values, setValues] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
+  const [showWatermarkPicker, setShowWatermarkPicker] = useState(false)
 
   useEffect(() => {
     fetch('/api/admin/settings')
@@ -157,10 +161,64 @@ function GeneralTab() {
           </div>
         ))}
       </div>
+
+      {/* Site Watermark */}
+      <div className="bg-white border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+          <ImageIcon className="h-4 w-4 text-primary" /> Site Watermark
+        </h2>
+        <p className="text-sm text-neutral-500">Show a subtle company logo watermark on all public pages.</p>
+        <div className="flex items-center justify-between">
+          <Label htmlFor="watermark-enabled" className="cursor-pointer">
+            <span className="font-medium">Watermark Enabled</span>
+            <p className="text-xs text-neutral-400 mt-0.5">Display watermark background on public pages</p>
+          </Label>
+          <Switch
+            id="watermark-enabled"
+            checked={values.watermark_enabled === 'true'}
+            onCheckedChange={v => setValues(prev => ({ ...prev, watermark_enabled: v ? 'true' : 'false' }))}
+          />
+        </div>
+        {values.watermark_enabled === 'true' && (
+          <div className="space-y-3">
+            <Label>Watermark Logo</Label>
+            {values.watermark_logo_url ? (
+              <div className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg border">
+                <div className="w-16 h-16 relative rounded-lg overflow-hidden bg-white border shrink-0">
+                  <Image src={values.watermark_logo_url} alt="Watermark logo" fill className="object-contain p-1" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-sm text-neutral-600 truncate">{values.watermark_logo_url.split('/').pop()}</p>
+                  <div className="flex gap-2 mt-2">
+                    <Button size="sm" variant="outline" onClick={() => setShowWatermarkPicker(true)}>
+                      Change
+                    </Button>
+                    <Button size="sm" variant="ghost" className="text-red-500" onClick={() => setValues(prev => ({ ...prev, watermark_logo_url: '' }))}>
+                      <Trash2 className="h-3.5 w-3.5" />
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Button variant="outline" onClick={() => setShowWatermarkPicker(true)}>
+                <Plus className="h-4 w-4 mr-2" /> Select Logo
+              </Button>
+            )}
+          </div>
+        )}
+      </div>
+
       <Button onClick={handleSave} disabled={saving}>
         {saving ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Save className="h-4 w-4 mr-2" />}
         Save General Settings
       </Button>
+
+      <MediaPicker
+        open={showWatermarkPicker}
+        onOpenChange={setShowWatermarkPicker}
+        filterType="IMAGE"
+        onSelect={media => setValues(prev => ({ ...prev, watermark_logo_url: media.url }))}
+      />
     </div>
   )
 }
@@ -854,12 +912,94 @@ function FaqTab() {
   )
 }
 
+// ─── Tab: Galleries ───────────────────────────────────────────────────────────
+
+const CAROUSEL_STYLE_OPTIONS = [
+  { value: 'original', label: 'Original (Default)', description: 'Horizontal scroll carousel with 3D tilt cards and lightbox.' },
+  { value: 'template1', label: 'Template 1 — 3D Fan Carousel', description: '3D fan/spiral layout with scroll wheel navigation and z-index cascade.' },
+  { value: 'template2', label: 'Template 2 — Vertical Stack Carousel', description: 'Vertical card stack with perspective, up/down arrows, and dot indicators.' },
+  { value: 'template3', label: 'Template 3 — GSAP Infinite Carousel', description: 'Infinite horizontal scrolling loop with card reflections.' },
+]
+
+function GalleriesTab() {
+  const [carouselStyle, setCarouselStyle] = useState('original')
+  const [loading, setLoading] = useState(true)
+  const [saving, setSaving] = useState(false)
+
+  useEffect(() => {
+    fetch('/api/admin/settings')
+      .then(r => r.json())
+      .then(d => {
+        setCarouselStyle(d.settings?.carousel_style || 'original')
+        setLoading(false)
+      })
+  }, [])
+
+  const handleSave = async () => {
+    setSaving(true)
+    try {
+      const res = await fetch('/api/admin/settings', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ carousel_style: carouselStyle }),
+      })
+      if (res.ok) toast.success('Gallery settings saved')
+      else toast.error('Failed to save')
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  if (loading) return <div className="flex justify-center py-16"><Loader2 className="h-7 w-7 animate-spin text-primary" /></div>
+
+  return (
+    <div className="space-y-6 max-w-2xl">
+      <div className="bg-white border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+          <ImageIcon className="h-4 w-4 text-primary" /> Carousel Style
+        </h2>
+        <p className="text-sm text-neutral-500">Choose how the galleries page displays photos and videos.</p>
+
+        <div className="space-y-1.5">
+          <Label htmlFor="carousel-style">Gallery Carousel Style</Label>
+          <Select value={carouselStyle} onValueChange={setCarouselStyle}>
+            <SelectTrigger id="carousel-style" className="w-full">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              {CAROUSEL_STYLE_OPTIONS.map(opt => (
+                <SelectItem key={opt.value} value={opt.value}>
+                  {opt.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <p className="text-xs text-neutral-400 mt-2">
+            {CAROUSEL_STYLE_OPTIONS.find(o => o.value === carouselStyle)?.description}
+          </p>
+        </div>
+
+        <div className="bg-amber-50 border border-amber-200 rounded-lg p-3 text-sm text-amber-800 flex gap-2">
+          <AlertCircle className="h-4 w-4 shrink-0 mt-0.5 text-amber-600" />
+          <span>Changing the carousel style changes how the galleries page looks. Vertical styles change the page layout.</span>
+        </div>
+      </div>
+
+      <Button onClick={handleSave} disabled={saving}>
+        {saving ? <Loader2 className="h-4 w-4 animate-spin mr-2" /> : <Save className="h-4 w-4 mr-2" />}
+        Save Gallery Settings
+      </Button>
+    </div>
+  )
+}
+
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
-type TabId = 'general' | 'contact' | 'plugins' | 'faq'
+type TabId = 'general' | 'contact' | 'plugins' | 'faq' | 'galleries' | 'galleries'
 
 const TABS: { id: TabId; label: string; icon: React.ComponentType<{ className?: string }> }[] = [
   { id: 'general', label: 'General', icon: Settings },
+  { id: 'galleries', label: 'Galleries', icon: ImageIcon },
   { id: 'contact', label: 'Contact', icon: Phone },
   { id: 'plugins', label: 'Plugins', icon: Code },
   { id: 'faq', label: 'FAQ', icon: HelpCircle },
@@ -895,6 +1035,7 @@ export default function SettingsPage() {
 
       {/* Tab content */}
       {activeTab === 'general' && <GeneralTab />}
+      {activeTab === 'galleries' && <GalleriesTab />}
       {activeTab === 'contact' && <ContactTab />}
       {activeTab === 'plugins' && <PluginsTab />}
       {activeTab === 'faq' && <FaqTab />}

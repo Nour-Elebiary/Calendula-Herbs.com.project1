@@ -8,6 +8,7 @@ const updateSchema = z.object({
   title: z.string().min(1).optional(),
   issuer: z.string().optional().nullable(),
   fileId: z.string().optional().nullable(),
+  logoFileId: z.string().optional().nullable(),
   fileType: z.nativeEnum(CertType).optional(),
   isActive: z.boolean().optional(),
 })

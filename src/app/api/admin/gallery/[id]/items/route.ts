@@ -34,6 +34,17 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
       }
     }
 
+    // Google Drive — extract file ID and generate thumbnail URL
+    if (data.type === 'GOOGLE_DRIVE' && data.externalUrl) {
+      const gdMatch = data.externalUrl.match(
+        /\/d\/([a-zA-Z0-9_-]+)/
+      )
+      if (gdMatch) {
+        externalId = gdMatch[1]
+        thumbnailUrl = `https://drive.google.com/thumbnail?id=${externalId}&sz=w480`
+      }
+    }
+
     const maxOrder = await db.galleryItem.aggregate({
       _max: { order: true },
       where: { galleryId: id },

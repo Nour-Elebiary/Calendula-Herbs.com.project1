@@ -21,7 +21,10 @@ import { Label } from '@/components/ui/label'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { toast } from 'sonner'
 
-type CertWithFile = Certificate & { file?: { url: string; thumbnailUrl: string | null; type: string } | null }
+type CertWithFile = Certificate & {
+  file?: { url: string; thumbnailUrl: string | null; type: string } | null
+  logo?: { url: string; thumbnailUrl: string | null } | null
+}
 
 function SortableCert({ cert, onEdit, onDelete, onToggle }: {
   cert: CertWithFile
@@ -32,12 +35,25 @@ function SortableCert({ cert, onEdit, onDelete, onToggle }: {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id: cert.id })
   const style = { transform: CSS.Transform.toString(transform), transition, opacity: isDragging ? 0.5 : 1 }
   const thumb = cert.file?.thumbnailUrl || cert.file?.url
+  const logoSrc = cert.logo?.thumbnailUrl || cert.logo?.url
+  const isLogoSvg = logoSrc ? /\.svg($|\?)/i.test(logoSrc) : false
 
   return (
     <div ref={setNodeRef} style={style} className="flex items-center gap-3 bg-white border rounded-xl p-4 hover:shadow-sm transition-shadow">
       <button {...attributes} {...listeners} className="cursor-grab text-neutral-300 hover:text-neutral-500">
         <GripVertical className="h-5 w-5" />
       </button>
+
+      {/* Logo thumb */}
+      {logoSrc && (
+        <div className="w-10 h-10 bg-neutral-50 rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center p-1">
+          {isLogoSvg ? (
+            <img src={logoSrc} alt={cert.title} width={40} height={40} className="object-contain w-full h-full" />
+          ) : (
+            <Image src={logoSrc} alt={cert.title} width={40} height={40} className="object-contain w-full h-full" />
+          )}
+        </div>
+      )}
 
       {/* Thumb */}
       <div className="w-12 h-12 bg-neutral-100 rounded-lg overflow-hidden flex-shrink-0 flex items-center justify-center">
@@ -85,6 +101,8 @@ export default function CertificatesPage() {
   const [form, setForm] = useState(EMPTY_FORM)
   const [pickerOpen, setPickerOpen] = useState(false)
   const [selectedFile, setSelectedFile] = useState<{ url: string; id: string } | null>(null)
+  const [logoPickerOpen, setLogoPickerOpen] = useState(false)
+  const [selectedLogo, setSelectedLogo] = useState<{ url: string; id: string } | null>(null)
   const [saving, setSaving] = useState(false)
   const sensors = useSensors(useSensor(PointerSensor))
 
@@ -101,6 +119,7 @@ export default function CertificatesPage() {
     setEditing(null)
     setForm(EMPTY_FORM)
     setSelectedFile(null)
+    setSelectedLogo(null)
     setDialogOpen(true)
   }
 
@@ -109,13 +128,14 @@ export default function CertificatesPage() {
     setForm({ title: cert.title, issuer: cert.issuer || '', fileId: cert.fileId || '', fileType: cert.fileType })
      
     setSelectedFile(cert.file ? { url: cert.file.url, id: cert.fileId! } : null)
+    setSelectedLogo(cert.logo ? { url: cert.logo.url, id: cert.logoFileId! } : null)
     setDialogOpen(true)
   }
 
   const handleSave = async () => {
     if (!form.title.trim()) return toast.error('Title is required')
     setSaving(true)
-    const body = { title: form.title, issuer: form.issuer || null, fileId: selectedFile?.id || null, fileType: form.fileType }
+    const body = { title: form.title, issuer: form.issuer || null, fileId: selectedFile?.id || null, logoFileId: selectedLogo?.id || null, fileType: form.fileType }
     const url = editing ? `/api/admin/certificates/${editing.id}` : '/api/admin/certificates'
     const method = editing ? 'PATCH' : 'POST'
     const res = await fetch(url, {
@@ -241,11 +261,41 @@ export default function CertificatesPage() {
               </div>
             </div>
 
+            <div>
+              <Label>Logo</Label>
+              <div className="mt-1.5 flex gap-2 items-center">
+                {selectedLogo && (
+                  <div className="w-12 h-12 rounded border overflow-hidden flex-shrink-0 flex items-center justify-center p-1">
+                    {/\.svg($|\?)/i.test(selectedLogo.url) ? (
+                      <img src={selectedLogo.url} alt="" width={48} height={48} className="object-contain w-full h-full" />
+                    ) : (
+                      <Image src={selectedLogo.url} alt="" width={48} height={48} className="object-contain w-full h-full" />
+                    )}
+                  </div>
+                )}
+                <Button variant="outline" className="flex-1" onClick={() => setLogoPickerOpen(true)}>
+                  {selectedLogo ? 'Change Logo' : 'Choose Logo from Media Library'}
+                </Button>
+                {selectedLogo && (
+                  <Button variant="ghost" size="sm" onClick={() => setSelectedLogo(null)}>
+                    <X className="h-4 w-4" />
+                  </Button>
+                )}
+              </div>
+            </div>
+
             <MediaPicker
               open={pickerOpen}
               onOpenChange={setPickerOpen}
               filterType={form.fileType === 'PDF' ? 'PDF' : 'IMAGE'}
               onSelect={(media) => setSelectedFile({ url: media.url, id: media.id })}
+            />
+
+            <MediaPicker
+              open={logoPickerOpen}
+              onOpenChange={setLogoPickerOpen}
+              filterType="IMAGE"
+              onSelect={(media) => setSelectedLogo({ url: media.url, id: media.id })}
             />
 
             <div className="flex gap-2 pt-2">

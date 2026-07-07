@@ -22,7 +22,7 @@ const securityHeaders = [
         ? "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://tawk.to https://embed.tawk.to"
         : "script-src 'self' 'unsafe-inline' https://tawk.to https://embed.tawk.to",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
-      "img-src 'self' data: blob: https://res.cloudinary.com https://*.supabase.co https://img.youtube.com https://i.ytimg.com",
+      "img-src 'self' data: blob: https://res.cloudinary.com https://*.supabase.co https://img.youtube.com https://i.ytimg.com https://drive.google.com https://lh3.googleusercontent.com",
       "media-src 'self' blob: https://res.cloudinary.com https://www.youtube.com",
       "frame-src https://www.youtube.com https://www.youtube-nocookie.com https://www.google.com https://drive.google.com https://www.facebook.com",
       "font-src 'self' data: https://fonts.gstatic.com",
@@ -45,6 +45,8 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "*.supabase.co" },
       { protocol: "https", hostname: "img.youtube.com" },
       { protocol: "https", hostname: "i.ytimg.com" },
+      { protocol: "https", hostname: "drive.google.com" },
+      { protocol: "https", hostname: "lh3.googleusercontent.com" },
     ],
     formats: ["image/avif", "image/webp"],
   },

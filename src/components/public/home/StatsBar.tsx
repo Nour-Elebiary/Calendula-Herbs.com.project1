@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { fadeInUp } from '@/lib/animations'
 
@@ -7,7 +8,7 @@ const stats = [
   { value: '45', unit: 'Years', label: 'Farming' },
   { value: '25', unit: 'Years', label: 'Manufacturing' },
   { value: '11', unit: 'Years', label: 'Exporting' },
-  { value: '4+', unit: 'Times', label: 'At BIOFACH' },
+  { value: '4+', unit: 'Times', label: 'At BIOFACH', href: '/galleries' as const },
 ]
 
 export function StatsBar() {
@@ -23,11 +24,21 @@ export function StatsBar() {
             visible: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
           }}
         >
-          {stats.map((stat, i) => (
+          {stats.map((stat) => (
             <motion.div key={stat.label} variants={fadeInUp} className="stat-item">
-              <div className="stat-item__number">{stat.value}</div>
-              <span className="stat-item__unit">{stat.unit}</span>
-              <span className="stat-item__label">{stat.label}</span>
+              {stat.href ? (
+                <Link href={stat.href} className="no-underline">
+                  <div className="stat-item__number">{stat.value}</div>
+                  <span className="stat-item__unit">{stat.unit}</span>
+                  <span className="stat-item__label">{stat.label}</span>
+                </Link>
+              ) : (
+                <>
+                  <div className="stat-item__number">{stat.value}</div>
+                  <span className="stat-item__unit">{stat.unit}</span>
+                  <span className="stat-item__label">{stat.label}</span>
+                </>
+              )}
             </motion.div>
           ))}
         </motion.div>

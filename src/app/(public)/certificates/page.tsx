@@ -2,7 +2,16 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { db } from '@/lib/db'
-import { FileText, ExternalLink, FileImage } from 'lucide-react'
+import { cleanImageUrl } from '@/lib/image-url'
+import { ExternalLink, FileImage } from 'lucide-react'
+
+function pdfPreviewUrl(url: string | undefined | null): string | null {
+  if (!url) return null
+  if (url.includes('res.cloudinary.com') && url.endsWith('.pdf')) {
+    return url.replace('/upload/', '/upload/f_png/')
+  }
+  return url.replace(/\.pdf$/, '.png')
+}
 
 export const metadata = {
   title: 'Certificates | Calendula Herbs',
@@ -13,7 +22,10 @@ export default async function CertificatesPage() {
   const certs = await db.certificate.findMany({
     where: { isActive: true },
     orderBy: { order: 'asc' },
-    include: { file: { select: { url: true, thumbnailUrl: true, type: true } } },
+    include: {
+      file: { select: { url: true, thumbnailUrl: true, type: true } },
+      logo: { select: { url: true } },
+    },
   })
 
   return (
@@ -42,35 +54,59 @@ export default async function CertificatesPage() {
               {certs.map((cert) => {
                 const fileUrl = cert.file?.url
                 const isPdf = cert.file?.type === 'PDF' || cert.fileType === 'PDF'
-                const thumbUrl = cert.file?.thumbnailUrl || fileUrl
+                const previewUrl = pdfPreviewUrl(fileUrl) || cert.file?.thumbnailUrl || fileUrl
 
                 const card = (
                   <div key={cert.id} className="card-glass cert-card">
-                    {fileUrl && thumbUrl ? (
+                    {fileUrl && previewUrl ? (
                       <div className="w-full aspect-[4/3] relative mb-3 rounded-lg overflow-hidden bg-neutral-50">
-                        {isPdf ? (
-                          <div className="w-full h-full flex flex-col items-center justify-center gap-2">
-                            <FileText className="w-10 h-10 text-red-400" />
-                            <span className="text-xs text-neutral-400 font-medium">PDF Document</span>
-                          </div>
-                        ) : (
-                          <Image
-                            src={thumbUrl}
-                            alt={cert.title}
-                            fill
-                            className="object-contain p-2"
-                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
-                          />
-                        )}
+                        <Image
+                          src={previewUrl}
+                          alt={cert.title}
+                          fill
+                          className="object-contain p-2"
+                          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                        />
                       </div>
                     ) : (
                       <div className="w-full aspect-[4/3] relative mb-3 rounded-lg overflow-hidden bg-neutral-50 flex items-center justify-center">
                         <FileImage className="w-10 h-10 text-neutral-300" />
                       </div>
                     )}
-                    <h3 className="cert-card__name">{cert.title}</h3>
-                    {cert.issuer && (
-                      <p className="text-xs text-neutral-400 font-medium">{cert.issuer}</p>
+                    {cert.logo?.url && (
+                      <div className="flex items-center gap-3 mb-2">
+                        {/\.svg($|\?)/i.test(cert.logo.url) ? (
+                          <img
+                            src={cleanImageUrl(cert.logo.url) ?? ''}
+                            alt={`${cert.title} logo`}
+                            width={40}
+                            height={40}
+                            className="object-contain rounded"
+                          />
+                        ) : (
+                          <Image
+                            src={cleanImageUrl(cert.logo.url) ?? ''}
+                            alt={`${cert.title} logo`}
+                            width={40}
+                            height={40}
+                            className="object-contain rounded"
+                          />
+                        )}
+                        <div>
+                          <h3 className="cert-card__name">{cert.title}</h3>
+                          {cert.issuer && (
+                            <p className="text-xs text-neutral-400 font-medium">{cert.issuer}</p>
+                          )}
+                        </div>
+                      </div>
+                    )}
+                    {!cert.logo?.url && (
+                      <>
+                        <h3 className="cert-card__name">{cert.title}</h3>
+                        {cert.issuer && (
+                          <p className="text-xs text-neutral-400 font-medium">{cert.issuer}</p>
+                        )}
+                      </>
                     )}
                     <span className="badge badge-green mt-1">
                       Certified

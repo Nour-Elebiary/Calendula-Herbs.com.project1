@@ -401,7 +401,7 @@ export default function ProductEditPage({ params }: { params: Promise<{ id: stri
             <h2 className="font-semibold text-neutral-800">Trade Details</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <Label htmlFor="prod-moq">Minimum Order (kg)</Label>
+                <Label htmlFor="prod-moq">MOQ (kg)</Label>
                 <Input
                   id="prod-moq"
                   type="number"

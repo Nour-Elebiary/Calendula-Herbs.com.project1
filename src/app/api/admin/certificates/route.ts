@@ -8,6 +8,7 @@ const certSchema = z.object({
   title: z.string().min(1),
   issuer: z.string().optional().nullable(),
   fileId: z.string().optional().nullable(),
+  logoFileId: z.string().optional().nullable(),
   fileType: z.nativeEnum(CertType),
 })
 
@@ -15,7 +16,10 @@ export async function GET() {
   try { await requireAdmin() } catch { return unauthorized() }
   const certs = await db.certificate.findMany({
     orderBy: { order: 'asc' },
-    include: { file: { select: { url: true, thumbnailUrl: true, type: true } } },
+    include: {
+      file: { select: { url: true, thumbnailUrl: true, type: true } },
+      logo: { select: { url: true, thumbnailUrl: true } },
+    },
   })
   return NextResponse.json({ certs })
 }

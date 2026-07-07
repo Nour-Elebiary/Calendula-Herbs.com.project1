@@ -6,6 +6,7 @@ export type CartItem = {
   productId: string
   productName: string
   quantity: number
+  minOrderKg: number
 }
 
 type CartContextType = {

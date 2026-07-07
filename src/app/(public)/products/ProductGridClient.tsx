@@ -98,7 +98,7 @@ export function ProductGridClient({ products }: Props) {
                 <div className="card-product__footer">
                   <span className="badge badge-amber text-[10px]">
                     <Package className="w-3 h-3" />
-                    Min. 500–1,000 KG
+                    MOQ: {product.minOrderKg.toLocaleString()} kg
                   </span>
                 </div>
               </div>

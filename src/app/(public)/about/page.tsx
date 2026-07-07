@@ -241,7 +241,7 @@ function MemberCard({ member, small = false }: { member: { name: string; title: 
         )}
 
         {member.contacts.length > 0 && (
-          <div className="flex flex-wrap gap-3 pt-4 border-t border-[var(--color-border-subtle)]">
+          <div className="flex flex-wrap gap-2 pt-4 border-t border-[var(--color-border-subtle)]">
             {member.contacts.map((c: { id: string; icon: string | null; type: string; value: string; label: string | null }) => {
               const Icon = getContactTypeIcon(c.icon || c.type)
               const { href, external } = generateTeamContactLink(c.type, c.value)
@@ -251,10 +251,10 @@ function MemberCard({ member, small = false }: { member: { name: string; title: 
                   href={href}
                   target={external ? '_blank' : undefined}
                   rel={external ? 'noreferrer' : undefined}
-                  className="flex items-center justify-center w-9 h-9 rounded-full bg-[var(--color-bg-elevated)] text-[var(--color-text-tertiary)] hover:text-[var(--color-green-600)] hover:bg-[var(--color-green-50)] transition-all"
+                  className="flex items-center justify-center w-10 h-10 rounded-full bg-[var(--color-bg-elevated)] hover:bg-[var(--color-green-50)] transition-colors"
                   title={c.label || c.type}
                 >
-                  <Icon className="w-4 h-4" />
+                  <Icon className="w-5 h-5 text-[var(--color-green-600)]" />
                 </a>
               )
             })}

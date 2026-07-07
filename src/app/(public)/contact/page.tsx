@@ -39,7 +39,7 @@ export default async function ContactPage() {
             <div className="hero-page__glass-card">
               <h1 className="hero-page__title">Contact Us</h1>
               <p className="hero-page__desc">
-                We are here to assist with your bulk herbal export needs. Pricing is provided after we understand your specific requirements and volume.
+                Submit a bulk inquiry for our premium Egyptian herbs, spices, and botanicals. Our export team will review your requirements and respond with a tailored quotation within 24 hours.
               </p>
             </div>
           </div>
@@ -53,7 +53,7 @@ export default async function ContactPage() {
               <div className="lg:col-span-3">
                 <div className="card-glass p-8 md:p-10">
                   <h2 className="text-3xl font-display font-bold text-[var(--color-text-primary)] mb-2">Send an Inquiry</h2>
-                  <p className="text-[var(--color-text-tertiary)] mb-8">Tell us about your requirements and we will get back to you within 24 hours.</p>
+                  <p className="text-[var(--color-text-tertiary)] mb-8">Tell us about your required volume, specifications, and destination — our team will prepare a custom quote for your review.</p>
                   
                   {formEnabled ? (
                     <ContactForm />
@@ -72,7 +72,7 @@ export default async function ContactPage() {
                 <div>
                   <h3 className="text-2xl font-display font-bold text-[var(--color-text-primary)] mb-6">Direct Contact</h3>
                   <p className="text-[var(--color-text-secondary)] mb-8 leading-relaxed">
-                    Prefer to reach us directly? Our team is available during business hours.
+                    Reach our export team directly via phone, email, or messaging app. We respond to all B2B inquiries promptly during business hours.
                   </p>
                   
                   <div className="space-y-4">
@@ -151,7 +151,7 @@ export default async function ContactPage() {
               <p className="text-[var(--color-text-tertiary)] mt-2">{address}</p>
             </div>
             <div className="card-glass overflow-hidden p-1">
-              <MapEmbedWrapper address={address} />
+              <MapEmbedWrapper address={address} mapLat={contact?.mapLat} mapLng={contact?.mapLng} />
             </div>
           </div>
         </div>

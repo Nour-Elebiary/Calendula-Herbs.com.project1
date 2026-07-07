@@ -27,6 +27,7 @@ const SECTION_LABELS: Record<GallerySection, string> = {
   FACTORY: 'Factory Pics',
   FARMS: 'Farms Pics',
   SHIPMENTS: 'Shipments Pics',
+  VISITS: 'Visits',
 }
 
 const SECTION_COLORS: Record<GallerySection, string> = {
@@ -35,6 +36,7 @@ const SECTION_COLORS: Record<GallerySection, string> = {
   FACTORY: 'bg-amber-100 text-amber-700',
   FARMS: 'bg-green-100 text-green-700',
   SHIPMENTS: 'bg-cyan-100 text-cyan-700',
+  VISITS: 'bg-pink-100 text-pink-700',
 }
 
 type FullItem = GalleryItem & { mediaFile?: MediaFile | null }
@@ -199,7 +201,7 @@ export default function GalleryItemsPage({ params }: { params: Promise<{ id: str
             <div>
               <Label>Type</Label>
               <div className="flex gap-2 mt-1.5">
-                {(['UPLOADED_IMAGE', 'UPLOADED_VIDEO', 'YOUTUBE', 'GOOGLE_DRIVE'] as GalleryItemType[]).map(t => (
+                {(['UPLOADED_IMAGE', 'UPLOADED_VIDEO', 'YOUTUBE', 'GOOGLE_DRIVE', 'FACEBOOK'] as GalleryItemType[]).map(t => (
                   <button
                     key={t}
                     onClick={() => setAddType(t)}
@@ -207,7 +209,7 @@ export default function GalleryItemsPage({ params }: { params: Promise<{ id: str
                       addType === t ? 'border-primary bg-primary/5 text-primary' : 'border-neutral-200 text-neutral-600 hover:border-primary/40'
                     }`}
                   >
-                    {t === 'UPLOADED_IMAGE' ? 'Image' : t === 'UPLOADED_VIDEO' ? 'Video' : t === 'YOUTUBE' ? 'YouTube' : 'Drive'}
+                    {t === 'UPLOADED_IMAGE' ? 'Image' : t === 'UPLOADED_VIDEO' ? 'Video' : t === 'YOUTUBE' ? 'YouTube' : t === 'GOOGLE_DRIVE' ? 'Drive' : 'Facebook'}
                   </button>
                 ))}
               </div>
@@ -259,7 +261,7 @@ export default function GalleryItemsPage({ params }: { params: Promise<{ id: str
               <div className="space-y-2">
                 <Label>URL</Label>
                 <Input
-                  placeholder={addType === 'YOUTUBE' ? 'https://youtube.com/watch?v=...' : 'https://drive.google.com/...'}
+                  placeholder={addType === 'YOUTUBE' ? 'https://youtube.com/watch?v=...' : addType === 'GOOGLE_DRIVE' ? 'https://drive.google.com/...' : 'https://facebook.com/...'}
                   value={externalUrl}
                   onChange={e => setExternalUrl(e.target.value)}
                 />

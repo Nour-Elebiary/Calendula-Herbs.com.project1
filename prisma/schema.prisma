@@ -89,7 +89,8 @@ model MediaFile {
   galleryItems   GalleryItem[]
   productImages  ProductImage[]
   teamMembers    TeamMember[]
-  certificates   Certificate[]
+  certFiles      Certificate[]  @relation("CertFile")
+  certLogos      Certificate[]  @relation("CertLogo")
 }
 
 enum MediaType {
@@ -107,6 +108,7 @@ enum GallerySection {
   FACTORY
   FARMS
   SHIPMENTS
+  VISITS
 }
 
 model Gallery {
@@ -253,15 +255,17 @@ enum ContactType {
 // ─── Certificates ────────────────────────────────────────────────────────────
 
 model Certificate {
-  id        String     @id @default(cuid())
-  title     String
-  issuer    String?
-  fileId    String?
-  fileType  CertType
-  order     Int        @default(0)
-  isActive  Boolean    @default(true)
-  createdAt DateTime   @default(now())
-  file      MediaFile? @relation(fields: [fileId], references: [id])
+  id          String     @id @default(cuid())
+  title       String
+  issuer      String?
+  fileId      String?
+  fileType    CertType
+  order       Int        @default(0)
+  isActive    Boolean    @default(true)
+  createdAt   DateTime   @default(now())
+  file        MediaFile? @relation("CertFile", fields: [fileId], references: [id])
+  logoFileId  String?
+  logo        MediaFile? @relation("CertLogo", fields: [logoFileId], references: [id])
 }
 
 enum CertType {

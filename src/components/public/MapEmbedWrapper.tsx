@@ -13,8 +13,10 @@ const MapEmbedInner = dynamic(
 
 interface MapEmbedWrapperProps {
   address: string
+  mapLat?: number | null
+  mapLng?: number | null
 }
 
-export function MapEmbedWrapper({ address }: MapEmbedWrapperProps) {
-  return <MapEmbedInner address={address} />
+export function MapEmbedWrapper({ address, mapLat, mapLng }: MapEmbedWrapperProps) {
+  return <MapEmbedInner address={address} mapLat={mapLat} mapLng={mapLng} />
 }

@@ -105,7 +105,7 @@ export function CartDrawer() {
                     <div key={item.productId} className="card-glass flex flex-col gap-3 p-4 sm:p-5">
                       <div className="flex-1">
                         <h4 className="font-display text-sm sm:text-base text-[var(--color-text-primary)] line-clamp-2">{item.productName}</h4>
-                        <p className="text-xs sm:text-sm text-[var(--color-text-tertiary)] mt-1">Minimum Order: 500kg</p>
+                        <p className="text-xs sm:text-sm text-[var(--color-text-tertiary)] mt-1">MOQ: {item.minOrderKg.toLocaleString()} kg</p>
                       </div>
 
                       <div className="flex items-center gap-2 sm:gap-3 flex-wrap">

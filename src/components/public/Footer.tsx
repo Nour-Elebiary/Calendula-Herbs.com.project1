@@ -1,9 +1,10 @@
 'use client'
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, Phone, Mail, Clock, Globe } from 'lucide-react'
+import { cleanImageUrl } from '@/lib/image-url'
 import { generateContactLink, isClickableLink, CONTACT_METHOD_META, type ContactMethod } from '@/lib/contact-links'
 import { getContactMethodIcon } from '@/lib/icon-map'
 
@@ -18,9 +19,27 @@ type FooterProps = {
   } | null
 }
 
+type CertData = {
+  id: string
+  title: string
+  logo?: { url: string; thumbnailUrl: string | null } | null
+}
+
 export function Footer({ settings, contact }: FooterProps) {
+  const [certs, setCerts] = useState<CertData[]>([])
   const currentYear = new Date().getFullYear()
   const siteName = settings.site_name || 'Calendula Herbs'
+
+  useEffect(() => {
+    fetch('/api/public/certificates')
+      .then(r => r.json())
+      .then(data => {
+        if (data.certs?.length) {
+          setCerts(data.certs.filter((c: CertData) => c.logo?.url))
+        }
+      })
+      .catch(() => {})
+  }, [])
 
   let hours: Record<string, string> = {}
   try {
@@ -145,11 +164,6 @@ export function Footer({ settings, contact }: FooterProps) {
                 })}
               </div>
             )}
-            <div className="flex flex-wrap gap-2">
-              {['ISO 9001', 'EU Organic', 'HALAL', 'KOSHER', 'FDA'].map(cert => (
-                <span key={cert} className="badge badge-green text-[10px] sm:text-xs">{cert}</span>
-              ))}
-            </div>
           </div>
 
           {/* Business Hours */}
@@ -172,6 +186,45 @@ export function Footer({ settings, contact }: FooterProps) {
             )}
           </div>
         </div>
+
+        {/* Certificates — full width row */}
+        {certs.length > 0 && (
+          <div
+            className="border-t pt-8 mt-8"
+            style={{ borderColor: 'var(--color-border-subtle)' }}
+          >
+            <h4 className="footer-heading text-center mb-6">Our Certifications</h4>
+            <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+              {certs.map(cert => {
+                const rawLogoUrl = cert.logo?.thumbnailUrl || cert.logo?.url
+                const logoUrl = cleanImageUrl(rawLogoUrl)
+                const isSvg = rawLogoUrl ? /\.svg($|\?)/i.test(rawLogoUrl) : false
+                if (!logoUrl) return null
+                return (
+                  <div
+                    key={cert.id}
+                    className="w-[110px] h-[55px] relative flex items-center justify-center"
+                  >
+                    {isSvg ? (
+                      <img
+                        src={logoUrl}
+                        alt={`${cert.title} certificate logo`}
+                        className="w-full h-full object-contain opacity-70 hover:opacity-100 transition-opacity"
+                      />
+                    ) : (
+                      <Image
+                        src={logoUrl}
+                        alt={`${cert.title} certificate logo`}
+                        fill
+                        className="object-contain opacity-70 hover:opacity-100 transition-opacity"
+                      />
+                    )}
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Bottom */}
         <div className="footer-bottom">

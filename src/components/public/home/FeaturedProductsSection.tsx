@@ -21,6 +21,7 @@ type Product = {
   isOrganic: boolean
   organicType: string | null
   conventionalType: string | null
+  minOrderKg: number
   images: ProductImage[]
 }
 
@@ -126,7 +127,7 @@ export function FeaturedProductsSection({ products }: { products: Product[] }) {
                       Available: {cuts}
                     </p>
                     <div className="card-product__footer">
-                      <span className="badge badge-calendula">MOQ: 500 kg</span>
+                      <span className="badge badge-calendula">MOQ: {product.minOrderKg.toLocaleString()} kg</span>
                       <button
                         className="btn-icon"
                         aria-label={`Request quote for ${product.name}`}

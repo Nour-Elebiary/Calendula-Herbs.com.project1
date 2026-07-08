@@ -53,6 +53,7 @@ async function main() {
     { key: 'foreground_color', value: '#0f172a' },
     { key: 'company_name', value: 'Calendula Herbs For Import & Export' },
     { key: 'company_tagline', value: 'Premium Organic Herbs, Spices & Seeds from Egypt to the World' },
+    { key: 'watermark_opacity', value: '0.05' },
   ]
 
   for (const setting of defaultSettings) {

@@ -75,56 +75,18 @@ export function BotanicalAboutSection() {
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <div aria-hidden="true" className="card-line-art w-full h-full px-8">
-              <svg viewBox="0 0 400 400" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Calendula flower - continuous line */}
-                <path d="M200 380
-                  C160 380 120 350 100 310
-                  C80 270 80 220 100 180
-                  C120 140 160 100 200 80
-                  C240 100 280 140 300 180
-                  C320 220 320 270 300 310
-                  C280 350 240 380 200 380Z"
-                  stroke="white" strokeWidth="1.5" strokeLinecap="round" fill="none" opacity="0.6" />
-                {/* Inner petals */}
-                <path d="M200 340
-                  C175 340 150 320 140 290
-                  C130 260 135 225 155 205
-                  C175 185 200 170 200 170
-                  C200 170 225 185 245 205
-                  C265 225 270 260 260 290
-                  C250 320 225 340 200 340Z"
-                  stroke="white" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.4" />
-                {/* Center dot */}
-                <circle cx="200" cy="230" r="15" stroke="white" strokeWidth="1" fill="none" opacity="0.5" />
-                {/* Stem */}
-                <path d="M200 300 L200 380"
-                  stroke="white" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-                {/* Leaf on stem */}
-                <path d="M200 340 Q220 330 230 345 Q220 360 200 350"
-                  stroke="white" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.35" />
-                {/* Rosemary sprig - left */}
-                <path d="M160 200 Q130 180 100 160
-                  M130 185 Q120 170 110 165
-                  M145 195 Q135 180 125 175"
-                  stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.35" />
-                {/* Rosemary sprig - right */}
-                <path d="M240 200 Q270 180 300 160
-                  M270 185 Q280 170 290 165
-                  M255 195 Q265 180 275 175"
-                  stroke="white" strokeWidth="1" strokeLinecap="round" opacity="0.35" />
-                {/* Decorative dots */}
-                <circle cx="100" cy="160" r="2" fill="white" opacity="0.3" />
-                <circle cx="300" cy="160" r="2" fill="white" opacity="0.3" />
-                {/* Small decorative leaves */}
-                <path d="M80 200 Q90 190 100 200 Q90 210 80 200Z"
-                  stroke="white" strokeWidth="0.8" fill="none" opacity="0.25" />
-                <path d="M300 200 Q310 190 320 200 Q310 210 300 200Z"
-                  stroke="white" strokeWidth="0.8" fill="none" opacity="0.25" />
-              </svg>
-              <div className="absolute bottom-8 left-0 right-0 text-center">
-                <p className="font-display text-xl text-white/60">Since 2005</p>
-              </div>
+            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-lg bg-neutral-100">
+              <div className="absolute inset-0 bg-neutral-100 animate-pulse" />
+              <iframe
+                src="https://www.youtube.com/embed/GlmljM2BUwQ"
+                title="Calendula Herbs — Cultivating Excellence"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                loading="lazy"
+                className="absolute inset-0 w-full h-full rounded-2xl"
+                style={{ border: 0 }}
+              />
             </div>
           </motion.div>
         </div>

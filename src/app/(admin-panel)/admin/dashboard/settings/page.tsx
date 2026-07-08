@@ -204,6 +204,29 @@ function GeneralTab() {
                 <Plus className="h-4 w-4 mr-2" /> Select Logo
               </Button>
             )}
+            <div className="space-y-2">
+              <Label htmlFor="watermark-opacity">Watermark Opacity</Label>
+              <div className="flex items-center gap-4">
+                <input
+                  id="watermark-opacity"
+                  type="range"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value={values.watermark_opacity || '0.05'}
+                  onChange={e => setValues(prev => ({ ...prev, watermark_opacity: e.target.value }))}
+                  className="flex-1 h-2 rounded-full appearance-none cursor-pointer"
+                  style={{
+                    background: `linear-gradient(to right, var(--color-calendula-500) ${(parseFloat(values.watermark_opacity || '0.05') * 100).toFixed(0)}%, #e5e7eb ${(parseFloat(values.watermark_opacity || '0.05') * 100).toFixed(0)}%)`,
+                    accentColor: 'var(--color-calendula-500)',
+                  }}
+                />
+                <span className="text-sm font-mono text-neutral-500 w-10 text-right">
+                  {Math.round(parseFloat(values.watermark_opacity || '0.05') * 100)}%
+                </span>
+              </div>
+              <p className="text-xs text-neutral-400">Lower values = more transparent. Default: 5%.</p>
+            </div>
           </div>
         )}
       </div>

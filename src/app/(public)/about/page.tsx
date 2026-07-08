@@ -66,46 +66,18 @@ export default async function AboutPage() {
         <section className="section">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="card-line-art aspect-[4/3] rounded-2xl p-8">
-                <svg viewBox="0 0 400 300" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Calendula flower */}
-                  <path d="M200 280
-                    C160 280 120 250 100 210
-                    C80 170 80 120 100 80
-                    C120 40 160 20 200 20
-                    C240 20 280 40 300 80
-                    C320 120 320 170 300 210
-                    C280 250 240 280 200 280Z"
-                    stroke="white" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.5" />
-                  <path d="M200 240
-                    C175 240 150 215 140 185
-                    C130 155 135 125 155 105
-                    C175 85 200 70 200 70
-                    C200 70 225 85 245 105
-                    C265 125 270 155 260 185
-                    C250 215 225 240 200 240Z"
-                    stroke="white" strokeWidth="0.8" strokeLinecap="round" fill="none" opacity="0.35" />
-                  <circle cx="200" cy="130" r="12" stroke="white" strokeWidth="0.8" fill="none" opacity="0.4" />
-                  <path d="M200 200 L200 280" stroke="white" strokeWidth="1.2" strokeLinecap="round" opacity="0.35" />
-                  {/* Decorative leaves around flower */}
-                  <path d="M100 100 Q80 85 70 95 Q85 105 100 100Z" stroke="white" strokeWidth="0.6" fill="none" opacity="0.25" />
-                  <path d="M300 100 Q320 85 330 95 Q315 105 300 100Z" stroke="white" strokeWidth="0.6" fill="none" opacity="0.25" />
-                  <path d="M120 220 Q100 240 90 230 Q105 215 120 220Z" stroke="white" strokeWidth="0.6" fill="none" opacity="0.25" />
-                  <path d="M280 220 Q300 240 310 230 Q295 215 280 220Z" stroke="white" strokeWidth="0.6" fill="none" opacity="0.25" />
-                  {/* Rosemary branches */}
-                  <path d="M140 100 Q110 80 80 70
-                    M115 85 Q105 70 95 65
-                    M130 95 Q120 80 110 75"
-                    stroke="white" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
-                  <path d="M260 100 Q290 80 320 70
-                    M285 85 Q295 70 305 65
-                    M270 95 Q280 80 290 75"
-                    stroke="white" strokeWidth="0.8" strokeLinecap="round" opacity="0.3" />
-                  {/* Small decorative dots */}
-                  <circle cx="80" cy="70" r="1.5" fill="white" opacity="0.25" />
-                  <circle cx="320" cy="70" r="1.5" fill="white" opacity="0.25" />
-                  <circle cx="200" cy="15" r="2" fill="white" opacity="0.2" />
-                </svg>
+              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg bg-neutral-100">
+                <div className="absolute inset-0 bg-neutral-100 animate-pulse" />
+                <iframe
+                  src="https://www.youtube.com/embed/rvwUCZmODrs"
+                  title="Calendula Herbs — Our Heritage & Mission"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full"
+                  style={{ border: 0 }}
+                />
               </div>
               <div className="space-y-6">
                 <h2 className="text-3xl md:text-4xl font-display font-bold text-[var(--color-text-primary)]">Our Heritage & Mission</h2>

@@ -15,8 +15,9 @@ interface MapEmbedWrapperProps {
   address: string
   mapLat?: number | null
   mapLng?: number | null
+  customSrc?: string | null
 }
 
-export function MapEmbedWrapper({ address, mapLat, mapLng }: MapEmbedWrapperProps) {
-  return <MapEmbedInner address={address} mapLat={mapLat} mapLng={mapLng} />
+export function MapEmbedWrapper({ address, mapLat, mapLng, customSrc }: MapEmbedWrapperProps) {
+  return <MapEmbedInner address={address} mapLat={mapLat} mapLng={mapLng} customSrc={customSrc} />
 }

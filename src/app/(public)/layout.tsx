@@ -51,7 +51,10 @@ export default async function PublicLayout({ children }: { children: React.React
             {settings.watermark_enabled === 'true' && settings.watermark_logo_url && (
               <div
                 className="watermark-bg"
-                style={{ backgroundImage: `url(${settings.watermark_logo_url})` }}
+                style={{
+                  backgroundImage: `url(${settings.watermark_logo_url})`,
+                  opacity: settings.watermark_opacity ? parseFloat(settings.watermark_opacity) : 0.05,
+                }}
                 aria-hidden="true"
               />
             )}

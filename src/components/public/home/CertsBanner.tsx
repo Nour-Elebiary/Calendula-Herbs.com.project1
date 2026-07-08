@@ -70,7 +70,7 @@ export function CertsBanner() {
 
             const fileUrl = cert.file?.url
             const isPdf = cert.file?.type === 'PDF'
-            const downloadHref = isPdf && cert.id ? `/api/public/certificates/pdf/${cert.id}` : fileUrl
+            const downloadHref = fileUrl || (isPdf && cert.id ? `/api/public/certificates/pdf/${cert.id}` : undefined)
             const Wrapper = fileUrl ? 'a' : 'div'
             const wrapperProps = fileUrl
               ? { href: downloadHref, target: '_blank', rel: 'noopener noreferrer' }

@@ -151,7 +151,12 @@ export default async function ContactPage() {
               <p className="text-[var(--color-text-tertiary)] mt-2">{address}</p>
             </div>
             <div className="card-glass overflow-hidden p-1">
-              <MapEmbedWrapper address={address} mapLat={contact?.mapLat} mapLng={contact?.mapLng} />
+              <MapEmbedWrapper
+                address={address}
+                mapLat={contact?.mapLat}
+                mapLng={contact?.mapLng}
+                customSrc="https://www.google.com/maps/d/u/0/embed?mid=1MnppadxTyBKV4xc3v-Qgqqqk1LijRTQ&ehbc=2E312F&noprof=1"
+              />
             </div>
           </div>
         </div>

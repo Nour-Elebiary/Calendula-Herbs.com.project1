@@ -15,20 +15,35 @@ export const metadata = {
 }
 
 export default async function HomePage() {
-  const [featuredProducts, settingsRow] = await Promise.all([
-    db.product.findMany({
-      where: { isFeatured: true, isActive: true },
-      include: { images: { orderBy: { order: 'asc' }, take: 1, include: { mediaFile: true } } },
-      orderBy: { order: 'asc' },
-      take: 6,
-    }),
-    db.siteSetting.findMany({
-      where: { key: { in: ['site_tagline', 'company_founded'] } }
-    }),
-  ])
+  type FeaturedProductImage = { mediaFile: { url: string } }
+  type FeaturedProduct = {
+    id: string; slug: string; name: string
+    scientificName: string | null; shortDescription: string | null
+    isOrganic: boolean; organicType: string | null
+    conventionalType: string | null; minOrderKg: number
+    images: FeaturedProductImage[]
+  }
 
-  const settings: Record<string, string> = {}
-  settingsRow.forEach(s => { settings[s.key] = s.value })
+  let featuredProducts: FeaturedProduct[] = []
+  let settings: Record<string, string> = {}
+
+  try {
+    const [products, settingsRow] = await Promise.all([
+      db.product.findMany({
+        where: { isFeatured: true, isActive: true },
+        include: { images: { orderBy: { order: 'asc' }, take: 1, include: { mediaFile: true } } },
+        orderBy: { order: 'asc' },
+        take: 6,
+      }),
+      db.siteSetting.findMany({
+        where: { key: { in: ['site_tagline', 'company_founded'] } }
+      }),
+    ])
+    featuredProducts = products
+    settingsRow.forEach(s => { settings[s.key] = s.value })
+  } catch (err) {
+    console.error('HomePage: DB fetch failed, rendering with defaults:', err)
+  }
 
   return (
     <div className="flex flex-col">

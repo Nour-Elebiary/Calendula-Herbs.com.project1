@@ -111,7 +111,7 @@ export default async function ProductsPage({ searchParams }: { searchParams: Pro
           </div>
         </section>
 
-        <div className="container" style={{ marginTop: '-2rem', position: 'relative', zIndex: 10 }}>
+        <div className="container" style={{ marginTop: '-2rem' }}>
           <div className="flex flex-col md:flex-row gap-8">
             
             {/* Sidebar / Filters */}

@@ -381,6 +381,43 @@
   margin-top:      var(--space-3);
 }
 
+/* ─── Product Card — enhanced glassmorphism ─────────────────────────────────── */
+.card-product--glass {
+  background: rgba(255, 253, 248, 0.74);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border-color: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    var(--shadow-glass),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.50);
+  transition:
+    transform   var(--duration-normal) var(--ease-out),
+    box-shadow  var(--duration-normal) var(--ease-out),
+    border-color var(--duration-normal) var(--ease-out),
+    backdrop-filter var(--duration-normal) var(--ease-out);
+}
+
+.card-product--glass:hover {
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow:
+    var(--shadow-glass),
+    var(--shadow-glow-green),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.60);
+}
+
+.card-product--glass .card-product__stage::after {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(94, 158, 102, 0.38) 0%,
+    transparent 75%
+  );
+  filter: blur(4px);
+}
+
 /* ─── Feature Card ────────────────────────────────────────────────────────── */
 .card-feature {
   border-radius: var(--radius-xl);

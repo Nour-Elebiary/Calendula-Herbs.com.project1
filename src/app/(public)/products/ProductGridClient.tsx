@@ -52,7 +52,7 @@ export function ProductGridClient({ products }: Props) {
             <Card3D key={product.id}>
               <button
                 onClick={() => openProduct(product.slug)}
-                className="card-glass card-product group text-left w-full"
+                className="card-glass card-product card-product--glass group text-left w-full"
               >
               <div className="card-product__stage">
                 {product.mainImage ? (

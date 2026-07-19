@@ -9,6 +9,7 @@ const contactMethodSchema = z.object({
   linkMode: z.enum(['auto', 'manual']),
   manualLink: z.string().nullable().optional(),
   icon: z.string().nullable().optional(),
+  label: z.string().nullable().optional(),
 })
 
 const schema = z.object({
@@ -16,7 +17,7 @@ const schema = z.object({
   mapAddress: z.string().nullable().optional(),
   mapLat: z.number().nullable().optional(),
   mapLng: z.number().nullable().optional(),
-  phones: z.array(z.string()).optional(),
+  phones: z.array(z.object({ number: z.string(), ownerName: z.string().optional() })).optional(),
   publicEmails: z.array(z.string()).optional(),
   businessHours: z.string().nullable().optional(),
   autoReplySubject: z.string().nullable().optional(),

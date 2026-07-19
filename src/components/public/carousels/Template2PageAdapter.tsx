@@ -8,12 +8,13 @@ import type { CarouselItem } from './types'
 type RawGalleryItem = {
   id: string
   type: string
+  url?: string | null
   thumbnailUrl?: string | null
   title?: string | null
   caption?: string | null
   externalId?: string | null
   externalUrl?: string | null
-  mediaFile?: { url?: string | null } | null
+  mediaFile?: { url?: string | null; thumbnailUrl?: string | null } | null
 }
 
 type SectionGroup = {
@@ -31,8 +32,11 @@ function toCarouselItem(item: RawGalleryItem): CarouselItem {
   return {
     id: item.id,
     type: item.type,
-    url: item.mediaFile?.url,
-    thumbnailUrl: item.thumbnailUrl || (item.type === 'YOUTUBE' && item.externalId ? `https://img.youtube.com/vi/${item.externalId}/hqdefault.jpg` : undefined),
+    url: item.url || item.mediaFile?.url,
+    thumbnailUrl: item.thumbnailUrl
+      || item.mediaFile?.thumbnailUrl
+      || (item.type === 'YOUTUBE' && item.externalId ? `https://img.youtube.com/vi/${item.externalId}/hqdefault.jpg` : undefined)
+      || (item.type === 'GOOGLE_DRIVE' && item.externalId ? `https://drive.google.com/thumbnail?id=${item.externalId}&sz=w480` : undefined),
     title: item.title,
     caption: item.caption,
     externalId: item.externalId,

@@ -1,11 +1,11 @@
 import { readdirSync, statSync } from 'fs'
 import { resolve, extname, basename } from 'path'
 import { cloudinary } from '../src/lib/cloudinary'
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient, GallerySection } from '@prisma/client'
 
 const prisma = new PrismaClient()
 
-const SECTION_MAP: Record<string, string> = {
+const SECTION_MAP: Record<string, GallerySection> = {
   'Events': 'EVENTS',
   'Factory': 'FACTORY',
   'Farm': 'FARMS',
@@ -97,7 +97,7 @@ async function main() {
             data: {
               galleryId,
               type: getGalleryItemType(extname(file)),
-              section: sectionKey as any,
+              section: sectionKey,
               mediaFileId: existing.id,
               title: basename(file, extname(file)),
               order: maxOrder++,
@@ -132,7 +132,7 @@ async function main() {
           data: {
             galleryId,
             type: getGalleryItemType(extname(file)),
-            section: sectionKey as any,
+            section: sectionKey,
             mediaFileId: media.id,
             title: basename(file, extname(file)),
             order: maxOrder++,

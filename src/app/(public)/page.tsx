@@ -1,6 +1,7 @@
 import React from 'react'
 import { db } from '@/lib/db'
 import Link from 'next/link'
+import { getTranslations, getLocale } from 'next-intl/server'
 import { HeroSection } from '@/components/public/home/HeroSection'
 import { StatsBar } from '@/components/public/home/StatsBar'
 import { FeaturedProductsSection } from '@/components/public/home/FeaturedProductsSection'
@@ -9,29 +10,40 @@ import { ProcessSection } from '@/components/public/home/ProcessSection'
 import { CertsBanner } from '@/components/public/home/CertsBanner'
 import { ScrollReveal } from '@/components/public/shared/ScrollReveal'
 
-export const metadata = {
-  title: 'Home | Calendula Herbs For Import & Export',
-  description: 'Premium Egyptian dried herbs, spices, herbal tea and seeds for global export. Certified organic, 45 years of farming heritage.',
+export async function generateMetadata() {
+  const t = await getTranslations('home')
+  return {
+    title: 'Home | Calendula Herbs For Import & Export',
+    description: t('heroDescription', { year: '2005' }).replace(/<[^>]+>/g, ''),
+  }
 }
 
 export default async function HomePage() {
+  const t = await getTranslations('home')
+  const locale = await getLocale()
   type FeaturedProductImage = { mediaFile: { url: string } }
   type FeaturedProduct = {
     id: string; slug: string; name: string
-    scientificName: string | null; shortDescription: string | null
+    scientificName: string | null; commonName: string | null
+    shortDescription: string | null
     isOrganic: boolean; organicType: string | null
     conventionalType: string | null; minOrderKg: number
+    availableCuts: string[]
     images: FeaturedProductImage[]
+    translations?: { name: string; commonName: string | null; shortDescription: string | null }[]
   }
 
   let featuredProducts: FeaturedProduct[] = []
-  let settings: Record<string, string> = {}
+  const settings: Record<string, string> = {}
 
   try {
     const [products, settingsRow] = await Promise.all([
       db.product.findMany({
         where: { isFeatured: true, isActive: true },
-        include: { images: { orderBy: { order: 'asc' }, take: 1, include: { mediaFile: true } } },
+        include: { 
+          images: { orderBy: { order: 'asc' }, take: 1, include: { mediaFile: true } },
+          translations: { where: { locale } }
+        },
         orderBy: { order: 'asc' },
         take: 6,
       }),
@@ -39,7 +51,15 @@ export default async function HomePage() {
         where: { key: { in: ['site_tagline', 'company_founded'] } }
       }),
     ])
-    featuredProducts = products
+    featuredProducts = products.map(p => {
+      const tr = p.translations?.[0]
+      return {
+        ...p,
+        name: tr?.name ?? p.name,
+        commonName: tr?.commonName ?? p.commonName,
+        shortDescription: tr?.shortDescription ?? p.shortDescription
+      }
+    })
     settingsRow.forEach(s => { settings[s.key] = s.value })
   } catch (err) {
     console.error('HomePage: DB fetch failed, rendering with defaults:', err)
@@ -81,16 +101,16 @@ export default async function HomePage() {
         <section className="section section--tint">
           <div className="container max-w-7xl text-center">
             <div className="card-glass p-12 max-w-3xl mx-auto">
-              <span className="badge badge-calendula mb-4">BIOFACH Participant</span>
+              <span className="badge badge-calendula mb-4">{t('biofachBadge')}</span>
               <h2 className="font-display text-3xl md:text-4xl font-medium" style={{ color: 'var(--color-text-primary)' }}>
-                Exhibiting at BIOFACH for Over 4 Years
+                {t('biofachTitle')}
               </h2>
               <p className="mt-4" style={{ color: 'var(--color-text-secondary)' }}>
-                Meet us at the world&apos;s leading organic trade fair. Connect with our team to discuss partnerships, sample our products, and experience our quality firsthand.
+                {t('biofachDesc')}
               </p>
               <div className="flex items-center justify-center gap-4 mt-8 flex-wrap">
-                <Link href="/contact" className="btn btn-primary">Contact Us for a Meeting</Link>
-                <Link href="/certificates" className="btn btn-secondary">View Our Certificates</Link>
+                <Link href="/contact" className="btn btn-primary">{t('biofachCta')}</Link>
+                <Link href="/certificates" className="btn btn-secondary">{t('biofachSecondaryCta')}</Link>
               </div>
             </div>
           </div>
@@ -99,25 +119,25 @@ export default async function HomePage() {
 
       {/* 10. CONTACT CTA */}
       <ScrollReveal>
-        <section className="section relative overflow-hidden" style={{ background: 'var(--color-green-800)' }}>
+        <section className="section section-cta-green relative overflow-hidden">
 
           <div className="container max-w-7xl text-center relative z-10">
-            <h2 className="font-display text-4xl md:text-5xl font-medium" style={{ color: 'var(--color-text-inverse)' }}>
-              Ready to Source Premium Egyptian Herbs?
+            <h2 className="font-display text-4xl md:text-5xl font-medium" style={{ color: 'rgba(250,250,246,0.95)' }}>
+              {t('ctaAltTitle')}
             </h2>
             <p className="mt-4 text-lg max-w-2xl mx-auto" style={{ color: 'rgba(250,250,246,0.75)' }}>
-              Get in touch with our team for bulk quotes, product specifications, and sample requests.
+              {t('ctaAltDesc')}
             </p>
             <div className="flex items-center justify-center gap-4 mt-10 flex-wrap">
-              <Link href="/contact" className="btn btn-accent btn-lg">Request a Quote</Link>
+              <Link href="/contact" className="btn btn-accent btn-lg">{t('ctaAltButton')}</Link>
               <Link href="/products" className="btn" style={{
                 padding: 'var(--space-4) var(--space-10)',
                 background: 'transparent',
-                color: 'var(--color-text-inverse)',
+                color: 'rgba(250,250,246,0.95)',
                 border: '1px solid rgba(250,250,246,0.3)',
                 borderRadius: 'var(--radius-full)'
               }}>
-                Browse Products
+                {t('ctaAltSecondary')}
               </Link>
             </div>
           </div>

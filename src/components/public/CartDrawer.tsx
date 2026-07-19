@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { useCart } from './CartProvider'
 import { X, Trash2, Plus, Minus, Loader2, ArrowRight } from 'lucide-react'
 import { Input } from '@/components/ui/input'
@@ -10,6 +11,7 @@ import { toast } from 'sonner'
 import Link from 'next/link'
 
 export function CartDrawer() {
+  const t = useTranslations('cart')
   const { items, isCartOpen, setIsCartOpen, removeItem, updateQuantity, clearCart } = useCart()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [step, setStep] = useState<1 | 2>(1)
@@ -46,17 +48,17 @@ export function CartDrawer() {
       })
 
       if (res.ok) {
-        toast.success('Inquiry submitted successfully! We will contact you soon.')
+        toast.success(t('success'))
         clearCart()
         setIsCartOpen(false)
         setStep(1)
         setName(''); setEmail(''); setPhone(''); setCompany(''); setCountry(''); setNotes('')
       } else {
         const data = await res.json()
-        toast.error(data.error || 'Failed to submit inquiry')
+        toast.error(data.error || t('errorGeneric'))
       }
     } catch (err) {
-      toast.error('An unexpected error occurred')
+      toast.error(t('errorGeneric'))
     } finally {
       setIsSubmitting(false)
     }
@@ -73,12 +75,12 @@ export function CartDrawer() {
 
         {/* Header */}
         <div className="flex items-center justify-between px-4 sm:px-6 py-5 border-b border-[var(--color-border-default)] flex-shrink-0">
-          <h2 className="font-display text-lg sm:text-xl font-bold text-[var(--color-text-primary)]">Quote Request</h2>
+          <h2 className="font-display text-lg sm:text-xl font-bold text-[var(--color-text-primary)]">{t('title')}</h2>
           <button
             onClick={() => setIsCartOpen(false)}
             className="btn-icon"
-            aria-label="Close cart"
-            title="Close cart"
+            aria-label={t('closeAria')}
+            title={t('closeTitle')}
             autoFocus
           >
             <X className="w-5 h-5" aria-hidden="true" />
@@ -90,11 +92,9 @@ export function CartDrawer() {
             <div className="w-16 h-16 bg-[var(--color-bg-base)] rounded-full flex items-center justify-center mb-4" aria-hidden="true">
               <span className="text-3xl">📋</span>
             </div>
-            <h3 className="font-display text-base sm:text-lg text-[var(--color-text-primary)] mb-2">Your quote cart is empty</h3>
-            <p className="text-sm text-[var(--color-text-tertiary)] mb-6 leading-relaxed">Browse our catalog and add products you&apos;d like a bulk quote for.</p>
-            <Link href="/products" onClick={() => setIsCartOpen(false)} className="btn btn-primary btn-sm">
-              Browse Products
-            </Link>
+            <h3 className="font-display text-base sm:text-lg text-[var(--color-text-primary)] mb-2">{t('emptyTitle')}</h3>
+            <p className="text-sm text-[var(--color-text-tertiary)] mb-6 leading-relaxed">{t('emptyDesc')}</p>
+            <Link href="/products" onClick={() => setIsCartOpen(false)} className="btn btn-primary btn-sm">{t('browseProducts')}</Link>
           </div>
         ) : (
           <>
@@ -105,7 +105,7 @@ export function CartDrawer() {
                     <div key={item.productId} className="card-glass flex flex-col gap-3 p-4 sm:p-5">
                       <div className="flex-1">
                         <h4 className="font-display text-sm sm:text-base text-[var(--color-text-primary)] line-clamp-2">{item.productName}</h4>
-                        <p className="text-xs sm:text-sm text-[var(--color-text-tertiary)] mt-1">MOQ: {item.minOrderKg.toLocaleString()} kg</p>
+                        <p className="text-xs sm:text-sm text-[var(--color-text-tertiary)] mt-1">{t('moq', { weight: item.minOrderKg.toLocaleString() })}</p>
                       </div>
 
                       <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
@@ -113,7 +113,7 @@ export function CartDrawer() {
                           <button
                             className="p-2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-base)] transition-colors"
                             onClick={() => updateQuantity(item.productId, item.quantity - 100)}
-                            aria-label="Decrease quantity"
+                            aria-label={t('decreaseAria')}
                           >
                             <Minus className="w-4 h-4" />
                           </button>
@@ -121,7 +121,7 @@ export function CartDrawer() {
                           <button
                             className="p-2 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] hover:bg-[var(--color-bg-base)] transition-colors"
                             onClick={() => updateQuantity(item.productId, item.quantity + 100)}
-                            aria-label="Increase quantity"
+                            aria-label={t('increaseAria')}
                           >
                             <Plus className="w-4 h-4" />
                           </button>
@@ -130,8 +130,8 @@ export function CartDrawer() {
                         <button
                           onClick={() => removeItem(item.productId)}
                           className="btn-icon text-red-500 hover:text-red-600 ml-auto flex-shrink-0"
-                          aria-label="Remove item"
-                          title="Remove from cart"
+                          aria-label={t('removeAria')}
+                          title={t('removeTitle')}
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -145,39 +145,39 @@ export function CartDrawer() {
                     <form id="inquiry-form" onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="name">Name *</Label>
-                          <Input id="name" required value={name} onChange={e => setName(e.target.value)} placeholder="Jane Doe" />
+                          <Label htmlFor="name">{t('nameLabel')}</Label>
+                          <Input id="name" required value={name} onChange={e => setName(e.target.value)} placeholder={t('namePlaceholder')} />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="company">Company</Label>
-                          <Input id="company" value={company} onChange={e => setCompany(e.target.value)} placeholder="Herbs LLC" />
+                          <Label htmlFor="company">{t('companyLabel')}</Label>
+                          <Input id="company" value={company} onChange={e => setCompany(e.target.value)} placeholder={t('companyPlaceholder')} />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
-                        <Input id="email" type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder="jane@example.com" />
+                        <Label htmlFor="email">{t('emailLabel')}</Label>
+                        <Input id="email" type="email" required value={email} onChange={e => setEmail(e.target.value)} placeholder={t('emailPlaceholder')} />
                       </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor="phone">Phone</Label>
-                          <Input id="phone" value={phone} onChange={e => setPhone(e.target.value)} placeholder="+1 234..." />
+                          <Label htmlFor="phone">{t('phoneLabel')}</Label>
+                          <Input id="phone" value={phone} onChange={e => setPhone(e.target.value)} placeholder={t('phonePlaceholder')} />
                         </div>
                         <div className="space-y-2">
-                          <Label htmlFor="country">Country</Label>
-                          <Input id="country" value={country} onChange={e => setCountry(e.target.value)} placeholder="United States" />
+                          <Label htmlFor="country">{t('countryLabel')}</Label>
+                          <Input id="country" value={country} onChange={e => setCountry(e.target.value)} placeholder={t('countryPlaceholder')} />
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="notes">Additional Notes (Optional)</Label>
+                        <Label htmlFor="notes">{t('notesLabel')}</Label>
                         <Textarea
                           id="notes"
                           rows={4}
                           value={notes}
                           onChange={e => setNotes(e.target.value)}
-                          placeholder="Destination port, special requirements, forms..."
+                          placeholder={t('notesPlaceholder')}
                         />
                       </div>
                     </form>
@@ -190,17 +190,17 @@ export function CartDrawer() {
             <div className="p-4 sm:p-6 border-t border-[var(--color-border-default)] bg-[var(--color-bg-base)] flex-shrink-0 space-y-3">
               {step === 1 ? (
                 <button className="btn btn-primary w-full flex items-center justify-center gap-2" onClick={() => setStep(2)}>
-                  Proceed to Details
+                  {t('step1Button')}
                   <ArrowRight className="w-4 h-4" />
                 </button>
               ) : (
                 <div className="flex gap-2 sm:gap-3">
                   <button type="button" className="btn btn-secondary flex-1" onClick={() => setStep(1)}>
-                    Back
+                    {t('step2Back')}
                   </button>
                   <button type="submit" form="inquiry-form" disabled={isSubmitting} className="btn btn-primary flex-1 flex items-center justify-center gap-2">
                     {isSubmitting && <Loader2 className="w-4 h-4 animate-spin" />}
-                    {isSubmitting ? 'Submitting...' : 'Submit'}
+                    {isSubmitting ? t('submitting') : t('submit')}
                   </button>
                 </div>
               )}

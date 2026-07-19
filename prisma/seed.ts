@@ -83,13 +83,46 @@ async function main() {
       id: 'main',
       managingEmails: [adminEmail],
       publicEmails: ['info@calendulaherbs.com'],
-      phones: ['+201000000000'],
+      phones: [{ number: '+201000000000' }],
       mapAddress: 'New Sea Street, Ibshaway, Fayoum, Egypt — ZIP 63611',
       formEnabled: true,
       contactMethods: defaultContactMethods,
     },
   })
   console.log('✅ Default contact settings ensured.')
+
+  // 5. Seed initial English translations for existing products and categories
+  const products = await prisma.product.findMany()
+  for (const p of products) {
+    await prisma.productTranslation.upsert({
+      where: { productId_locale: { productId: p.id, locale: 'en' } },
+      update: {},
+      create: {
+        productId: p.id,
+        locale: 'en',
+        name: p.name,
+        scientificName: p.scientificName,
+        commonName: p.commonName,
+        description: p.description,
+        shortDescription: p.shortDescription,
+      },
+    })
+  }
+  console.log(`✅ English translations seeded for ${products.length} products.`)
+
+  const categories = await prisma.category.findMany()
+  for (const c of categories) {
+    await prisma.categoryTranslation.upsert({
+      where: { categoryId_locale: { categoryId: c.id, locale: 'en' } },
+      update: {},
+      create: {
+        categoryId: c.id,
+        locale: 'en',
+        name: c.name,
+      },
+    })
+  }
+  console.log(`✅ English translations seeded for ${categories.length} categories.`)
 
   console.log('Seeding finished.')
 }

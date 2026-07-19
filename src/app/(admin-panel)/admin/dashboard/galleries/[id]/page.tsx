@@ -48,7 +48,7 @@ function SortableItem({ item, onDelete }: { item: FullItem; onDelete: (id: strin
   const thumb = item.mediaFile?.url ?? item.thumbnailUrl
 
   return (
-    <div ref={setNodeRef} style={style} className="relative group bg-white border rounded-xl overflow-hidden aspect-square">
+    <div ref={setNodeRef} style={style} className="relative group bg-card border rounded-xl overflow-hidden aspect-square">
       {thumb ? (
         <Image src={thumb} alt={item.title || 'Gallery item'} fill className="object-cover" sizes="200px" />
       ) : (
@@ -64,14 +64,14 @@ function SortableItem({ item, onDelete }: { item: FullItem; onDelete: (id: strin
 
       {/* Section badge */}
       {item.section && (
-        <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 text-[10px] rounded font-medium uppercase bg-white/90 shadow-sm">
+        <div className="absolute top-1.5 right-1.5 px-1.5 py-0.5 text-[10px] rounded font-medium uppercase bg-card/90 shadow-sm">
           {SECTION_LABELS[item.section as GallerySection] || item.section}
         </div>
       )}
 
       {/* Actions */}
       <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-end justify-between p-2">
-        <button {...attributes} {...listeners} className="p-1 bg-white/80 rounded cursor-grab">
+        <button {...attributes} {...listeners} className="p-1 bg-card/80 rounded cursor-grab">
           <GripVertical className="h-4 w-4" />
         </button>
         <button onClick={() => onDelete(item.id)} className="p-1 bg-red-500 text-white rounded hover:bg-red-600">

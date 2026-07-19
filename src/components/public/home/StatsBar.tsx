@@ -2,16 +2,18 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { fadeInUp } from '@/lib/animations'
 
 const stats = [
-  { value: '45', unit: 'Years', label: 'Farming' },
-  { value: '25', unit: 'Years', label: 'Manufacturing' },
-  { value: '11', unit: 'Years', label: 'Exporting' },
-  { value: '4+', unit: 'Times', label: 'At BIOFACH', href: '/galleries' as const },
+  { valueKey: 'stat1Value', unitKey: 'stat1Unit', labelKey: 'stat1Label' },
+  { valueKey: 'stat2Value', unitKey: 'stat2Unit', labelKey: 'stat2Label' },
+  { valueKey: 'stat3Value', unitKey: 'stat3Unit', labelKey: 'stat3Label' },
+  { valueKey: 'stat4Value', unitKey: 'stat4Unit', labelKey: 'stat4Label', href: '/galleries' as const },
 ]
 
 export function StatsBar() {
+  const t = useTranslations('home')
   return (
     <section className="py-16" style={{ backgroundColor: 'var(--color-bg-base)' }}>
       <div className="container mx-auto max-w-7xl">
@@ -25,18 +27,18 @@ export function StatsBar() {
           }}
         >
           {stats.map((stat) => (
-            <motion.div key={stat.label} variants={fadeInUp} className="stat-item">
+            <motion.div key={stat.labelKey} variants={fadeInUp} className="stat-item">
               {stat.href ? (
                 <Link href={stat.href} className="no-underline">
-                  <div className="stat-item__number">{stat.value}</div>
-                  <span className="stat-item__unit">{stat.unit}</span>
-                  <span className="stat-item__label">{stat.label}</span>
+                  <div className="stat-item__number">{t(stat.valueKey)}</div>
+                  <span className="stat-item__unit">{t(stat.unitKey)}</span>
+                  <span className="stat-item__label">{t(stat.labelKey)}</span>
                 </Link>
               ) : (
                 <>
-                  <div className="stat-item__number">{stat.value}</div>
-                  <span className="stat-item__unit">{stat.unit}</span>
-                  <span className="stat-item__label">{stat.label}</span>
+                  <div className="stat-item__number">{t(stat.valueKey)}</div>
+                  <span className="stat-item__unit">{t(stat.unitKey)}</span>
+                  <span className="stat-item__label">{t(stat.labelKey)}</span>
                 </>
               )}
             </motion.div>

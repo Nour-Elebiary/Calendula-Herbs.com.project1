@@ -1,15 +1,17 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
 import { X } from 'lucide-react'
 
 const STORAGE_KEY = 'calendula_cookie_consent'
 
 export function CookieConsent() {
+  const t = useTranslations('common')
   const [show, setShow] = useState(false)
 
-  React.useEffect(() => {
-    if (typeof window !== 'undefined' && !localStorage.getItem(STORAGE_KEY)) {
+  useEffect(() => {
+    if (!localStorage.getItem(STORAGE_KEY)) {
       setShow(true)
     }
   }, [])
@@ -31,18 +33,18 @@ export function CookieConsent() {
       <div className="max-w-4xl mx-auto card-glass p-5 md:p-6 flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
         <div className="flex-1">
           <p className="text-sm text-[var(--color-text-primary)]">
-            This site uses cookies for analytics and essential functionality.{' '}
+            {t('cookieConsent')}{' '}
             <a href="/privacy" className="text-[var(--color-green-600)] underline hover:no-underline">Privacy Policy</a>
           </p>
         </div>
         <div className="flex items-center gap-3 shrink-0">
           <button onClick={decline} className="btn btn-secondary btn-sm">
-            Decline
+            {t('cookieDecline')}
           </button>
           <button onClick={accept} className="btn btn-primary btn-sm" autoFocus>
-            Accept
+            {t('cookieAccept')}
           </button>
-          <button onClick={decline} className="p-1 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors" aria-label="Close">
+          <button onClick={decline} className="p-1 text-[var(--color-text-tertiary)] hover:text-[var(--color-text-primary)] transition-colors" aria-label={t('close')}>
             <X className="h-4 w-4" aria-hidden="true" />
           </button>
         </div>

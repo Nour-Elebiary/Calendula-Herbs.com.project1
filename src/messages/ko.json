@@ -1,0 +1,556 @@
+{
+  "nav": {
+    "home": "홈",
+    "products": "제품",
+    "aboutUs": "회사 소개",
+    "galleries": "갤러리",
+    "certificates": "인증서",
+    "contact": "문의하기"
+  },
+  "header": {
+    "getQuote": "견적 요청",
+    "themeLight": "라이트 모드로 전환",
+    "themeDark": "다크 모드로 전환",
+    "languageLabel": "언어 선택",
+    "cartAria": "장바구니에 {count}개 항목"
+  },
+  "home": {
+    "heroEyebrow": "{year}년부터 프리미엄 수출 품질",
+    "heroTitle": "자연에 뿌리를 두고,<br />정성으로 수출합니다.",
+    "heroDescription": "이집트 농장에서 글로벌 창고까지 안정적인 종합 공급망 — GAP/GHP 인증, 이중 건조 방식, MOSH/MOAH 프리 포장으로 {year}년부터 프리미엄 유기농 허브, 향신료, 씨앗을 제공합니다.",
+    "heroCta": "견적 요청",
+    "heroSecondaryCta": "제품 살펴보기",
+    "ourCollection": "컬렉션",
+    "featuredProducts": "추천 제품",
+    "featuredDesc": "국제 기준에 맞춰 정성껏 재배하고 가공한 가장 인기 있는 식물성 제품을 만나보세요.",
+    "howItWorks": "이용 방법",
+    "processTitle": "문의부터 선적까지",
+    "processSubtitle": "국제 구매자를 위한 체계적인 프로세스. 모든 단계가 정밀하고 세심하게 관리됩니다.",
+    "step1Title": "문의",
+    "step1Desc": "제품 요구 사항과 사양을 제출하세요. 당사 팀이 24시간 이내에 검토하고 맞춤형 제안을 드립니다.",
+    "step2Title": "샘플",
+    "step2Desc": "품질 평가를 위한 대표 샘플을 준비하여 보내드리며, 제품이 귀하의 정확한 기준에 부합하는지 확인합니다.",
+    "step3Title": "주문",
+    "step3Desc": "샘플 승인 후 영업 조건, 생산 일정 및 품질 사양을 확정합니다.",
+    "step4Title": "선적",
+    "step4Desc": "주문 상품을 처리하여 수출 기준에 맞게 포장하고, 전체 문서와 실시간 추적 정보와 함께 발송합니다.",
+    "ourStory": "스토리",
+    "cultivatingTitle": "우수성을 재배하다.",
+    "cultivatingSpan": "신뢰를 전달하다.",
+    "aboutPara1": "이집트 비옥한 파이윰 지역에 기반을 둔 Calendula Herbs는 재배에서 납품까지 전체 공급망을 관리하며, 자체 및 계약 농장을 우수 농업 관행(GAP) 및 우수 취급 관행(GHP)에 따라 운영합니다.",
+    "aboutPara2": "45년의 농업 전문성, 25년의 제조 우수성, 11년의 글로벌 수출 경험으로 모든 선적에 비할 데 없는 전통을 제공합니다. 현대화된 가공 시설에서 글로벌 식품 규정에 따라 상품을 세척, 가공, 혼합하며, 모든 단계에서 자체 실험실 테스트를 수행합니다.",
+    "highlight1": "농장에서 선적까지 완벽한 추적 가능성",
+    "highlight2": "GAP 및 GHP 인증 농업 관행",
+    "highlight3": "제품 무결성을 위한 MOSH/MOAH 프리 포장",
+    "highlight4": "이중 건조 옵션: 햇빛 건조 및 기계 건조",
+    "learnMoreAboutUs": "회사 소개 더 보기",
+    "stat1Value": "45",
+    "stat1Unit": "년",
+    "stat1Label": "농업",
+    "stat2Value": "25",
+    "stat2Unit": "년",
+    "stat2Label": "제조",
+    "stat3Value": "11",
+    "stat3Unit": "년",
+    "stat3Label": "수출",
+    "stat4Value": "4+",
+    "stat4Unit": "회",
+    "stat4Label": "BIOFACH 참가",
+    "certsTitle": "인증 및 품질 기준",
+    "certsSubtitle": "당사의 인증은 품질, 안전 및 지속 가능성에 대한 변함없는 약속을 반영합니다.",
+    "biofachBadge": "BIOFACH 참가업체",
+    "biofachTitle": "4년 넘게 BIOFACH에 전시 중",
+    "biofachDesc": "세계 최고의 유기농 무역 박람회에서 저희를 만나보세요. 파트너십 논의, 제품 샘플링, 그리고 저희의 품질을 직접 경험하실 수 있습니다.",
+    "biofachCta": "미팅 문의하기",
+    "biofachSecondaryCta": "인증서 보기",
+    "ctaAltTitle": "프리미엄 이집트 허브를 조달할 준비가 되셨나요?",
+    "ctaAltDesc": "대량 견적, 제품 사양 및 샘플 요청을 위해 당사 팀에 문의하세요.",
+    "ctaAltButton": "견적 요청",
+    "ctaAltSecondary": "제품 둘러보기",
+    "available": "가능: {cuts}",
+    "moq": "최소 주문량: {weight} kg",
+    "requestQuoteAria": "{name} 견적 요청"
+  },
+  "products": {
+    "heroTitle": "제품",
+    "heroDesc": "글로벌 수입업체 및 제조업체를 위한 프리미엄 벌크 허브, 향신료 및 씨앗. 모든 제품이 전체 인증을 갖추고 수출 가능합니다.",
+    "heroMetadataTitle": "제품 | Calendula Herbs 수출입",
+    "heroMetadataDesc": "수출용 프리미엄 벌크 허브, 향신료 및 씨앗 카탈로그를 둘러보세요. 최소 주문 수량 500KG부터. 수입 요구 사항에 대한 견적을 요청하세요.",
+    "searchPlaceholder": "제품 검색...",
+    "sidebarTitle": "카테고리",
+    "filterAllLabel": "전체 제품",
+    "noResults": "검색 결과가 없습니다",
+    "noResultsDesc": "검색어나 카테고리 필터를 조정해 보세요.",
+    "clearFilters": "필터 초기화",
+    "loading": "제품 로딩 중...",
+    "cantFindTitle": "원하는 제품을 찾을 수 없나요?",
+    "cantFindDesc": "저희는 여기에 나열된 것보다 더 다양한 제품을 조달합니다. 필요한 것을 알려주시면 찾아드립니다.",
+    "requestProduct": "제품 요청",
+    "noDescription": "벌크 수출 견적 및 전체 사양에 대해 문의하십시오.",
+    "cutForms": {
+      "WHOLE": "통",
+      "CRUSHED": "분쇄",
+      "POWDER": "분말",
+      "CUT_SIFTED": "절단 및 체거름",
+      "GRANULATED": "과립",
+      "LEAF": "잎",
+      "STEM": "줄기",
+      "ROOT": "뿌리",
+      "TBC": "확인 필요"
+    },
+    "moq": "(MOQ) {weight} kg"
+  },
+  "productDetail": {
+    "home": "홈",
+    "products": "제품",
+    "productHighlights": "제품 하이라이트",
+    "highlightFreeSamples": "품질 평가를 위한 무료 샘플 제공",
+    "highlightCustomCut": "맞춤 절단 및 라벨링 가능",
+    "highlightOrganicOptions": "EU 유기농 / USDA 유기농 인증 옵션",
+    "cutForms": "절단 형태",
+    "certifications": "인증",
+    "productInformation": "제품 정보",
+    "minOrder": "최소 주문: {weight} KG",
+    "cutFormEmpty": "절단 옵션에 대해 문의하십시오",
+    "certAvailable": "인증 가능",
+    "close": "닫기",
+    "productNotFound": "제품을 찾을 수 없습니다",
+    "failedToLoad": "제품 로딩 실패",
+    "closeAria": "닫기",
+    "cutForm": {
+      "whole": "통",
+      "cutSifted": "절단 및 체거름",
+      "powder": "분말",
+      "teaCut": "티 컷",
+      "granulated": "과립"
+    },
+    "cert": {
+      "eu_organic": "EU Organic",
+      "usda": "USDA Organic",
+      "iso22000": "ISO 22000",
+      "haccp": "HACCP",
+      "gmp": "GMP"
+    }
+  },
+  "about": {
+    "heroTitle": "Calendula Herbs 소개",
+    "heroDesc": "40년 넘게 순수함을 재배하고 우수성을 전달해 왔습니다. 여러 세대의 농업 전문성을 바탕으로 세계에 최고의 유기농 허브를 제공하는 데 전념하고 있습니다.",
+    "heroMetadataTitle": "회사 소개 | Calendula Herbs 수출입",
+    "heroMetadataDesc": "저희의 유산을 알아보세요: 45년의 농업, 25년의 제조, 11년의 이집트 프리미엄 유기농 허브 수출 경험.",
+    "statUnit": "년",
+    "statFarming": "농업 유산",
+    "statManufacturing": "제조",
+    "statExporting": "수출 우수성",
+    "heritageTitle": "유산과 사명",
+    "heritagePara1": "지역 농부와 글로벌 시장을 연결한다는 비전으로 설립된 Calendula Herbs는 유기농 식물성 제품의 선도적인 수출업체로 성장했습니다. 당사 농장은 이집트에서 가장 깨끗한 농업 지역에 위치하여 모든 작물이 최적의 조건에서 재배되도록 보장합니다.",
+    "heritagePara2": "저희는 지속 가능한 농업, 윤리적 거래, 그리고 타협 없는 품질을 믿습니다. 종자 선별부터 최종 포장까지 엄격한 품질 관리 프로세스를 통해 국제 기준을 초과하는 제품을 고객께 제공합니다.",
+    "journeyTitle": "저희의 여정",
+    "journeySubtitle": "가족 농장에서 글로벌 수출기업으로 — 3세대에 걸친 농업 우수성.",
+    "timeline1Year": "1980",
+    "timeline1Title": "농업의 뿌리",
+    "timeline1Desc": "저희 가족은 이집트 비옥한 파이윰 지역에서 약용 허브와 향기로운 식물 재배를 시작했습니다.",
+    "timeline2Year": "2000",
+    "timeline2Title": "제조",
+    "timeline2Desc": "허브의 세척, 절단, 건조 및 포장을 위한 현대적인 가공 시설로 확장했습니다.",
+    "timeline3Year": "2014",
+    "timeline3Title": "글로벌 수출",
+    "timeline3Desc": "완벽한 추적 가능성으로 이집트 식물성 제품을 세계 시장에 소개하기 위해 Calendula Herbs for Export를 설립했습니다.",
+    "teamTitle": "리더십 및 팀",
+    "teamSubtitle": "비전을 실현하는 헌신적인 전문가들을 만나보세요.",
+    "boardTitle": "이사회",
+    "execTeamTitle": "경영진",
+    "ctaTitle": "저희와 협력할 준비가 되셨나요?",
+    "ctaDesc": "수입업체, 유통업체 또는 제조업체이신 경우, 당사 프리미엄 허브가 귀하의 요구를 어떻게 충족시킬 수 있는지 논의하고 싶습니다.",
+    "ctaButton": "문의하기"
+  },
+  "contact": {
+    "heroTitle": "문의하기",
+    "heroDesc": "프리미엄 이집트 허브, 향신료 및 식물성 제품에 대한 대량 문의를 제출하세요. 저희 수출 팀이 귀하의 요구 사항을 검토하고 24시간 이내에 맞춤형 견적으로 답변드립니다.",
+    "heroMetadataTitle": "문의하기 | Calendula Herbs 수출입",
+    "heroMetadataDesc": "대량 유기농 허브 수출 문의는 Calendula Herbs에 연락하세요. 견적, 제품 사양 또는 샘플을 요청하세요.",
+    "formTitle": "문의 보내기",
+    "formDesc": "아래 양식을 작성하시면 당사 수출 팀이 24시간 이내에 답변드립니다.",
+    "unavailableTitle": "문의 양식을 현재 사용할 수 없습니다",
+    "unavailableDesc": "제공된 연락처를 통해 이메일이나 전화로 직접 문의해 주세요.",
+    "directTitle": "직접 연락",
+    "directDesc": "더 빠른 응답을 원하시면 아래 채널을 통해 수출 팀에 직접 연락하세요. 토요일부터 목요일, 오전 9시 ~ 오후 5시(카이로 시간)에 이용 가능합니다.",
+    "locationTitle": "위치",
+    "phoneLabel": "전화",
+    "emailLabel": "이메일",
+    "addressLabel": "본사 및 농장",
+    "hoursLabel": "영업 시간",
+    "nameLabel": "이름",
+    "namePlaceholder": "홍길동",
+    "emailLabel2": "이메일",
+    "emailPlaceholder": "hong@example.com",
+    "phoneLabel2": "전화",
+    "phonePlaceholder": "+82 10...",
+    "companyLabel": "회사",
+    "companyPlaceholder": "허브즈 LLC",
+    "countryLabel": "국가",
+    "countryPlaceholder": "대한민국",
+    "subjectLabel": "제목",
+    "subjectPlaceholder": "대량 문의",
+    "messageLabel": "메시지",
+    "messagePlaceholder": "요구 사항을 알려주세요 — 제품, 수량, 목적지, 필요한 기준이나 인증 사항 등.",
+    "sendButton": "문의 보내기",
+    "sendingButton": "보내는 중...",
+    "successTitle": "문의가 전송되었습니다!",
+    "successMessage": "문의해 주셔서 감사합니다. 당사 수출 팀이 24시간 이내에 답변드릴 것입니다.",
+    "errorMessage": "메시지 전송에 실패했습니다. 다시 시도하거나 전화 또는 이메일로 직접 문의해 주세요.",
+    "errorUnexpected": "예기치 못한 오류가 발생했습니다",
+    "validationRequired": "{field}은(는) 필수 항목입니다",
+    "validationEmail": "유효한 이메일을 입력해 주세요",
+    "validationFix": "양식의 오류를 수정해 주세요"
+  },
+  "footer": {
+    "brandDescription": "프리미엄 이집트 건조 허브, 향신료, 허브차 및 씨앗 수출 전문 기업.",
+    "quickLinks": "바로가기",
+    "productsCatalog": "제품 카탈로그",
+    "aboutCompany": "회사 소개",
+    "farmProcessing": "농장 및 가공",
+    "qualityCertificates": "품질 인증서",
+    "contactUs": "문의하기",
+    "privacyPolicy": "개인정보처리방침",
+    "termsOfService": "이용약관",
+    "contactInfo": "연락처 정보",
+    "businessHours": "영업 시간",
+    "fallbackHours": "문의 사항은 언제든지 연락해 주세요.",
+    "ourCertifications": "인증 현황",
+    "followUs": "팔로우하기",
+    "copyright": "© {year} Calendula Herbs For Import & Export. Ibshaway, Fayoum, Egypt."
+  },
+  "faq": {
+    "heroTitle": "자주 묻는 질문",
+    "heroDesc": "B2B 구매자가 Calendula Herbs 주문에 대해 알아야 할 모든 것.",
+    "heroMetadataTitle": "자주 묻는 질문 | Calendula Herbs",
+    "heroMetadataDesc": "B2B 수출 FAQ — 최소 주문 수량, 무료 샘플, 인증, 배송 및 대량 허브/향신료 구매자를 위한 결제 조건.",
+    "empty": "FAQ가 없습니다",
+    "stillQuestions": "아직 궁금한 점이 있으신가요?",
+    "teamReady": "당사 수출 팀이 추가 문의 사항에 대해 도와드릴 준비가 되어 있습니다.",
+    "contactButton": "문의하기",
+    "items": [
+      {
+        "question": "최소 주문 수량(MOQ)은 어떻게 되나요?",
+        "answer": "표준 최소 주문 수량은 품목과 시즌에 따라 제품당 500~1,000kg입니다. 첫 거래 적격 구매자에게는 소량 시험 주문(50~100kg)도 가능합니다. 특정 수량 요구 사항에 대해 논의하려면 영업 팀에 문의하세요."
+      },
+      {
+        "question": "품질 평가를 위한 무료 샘플을 제공하나요?",
+        "answer": "네, 적격 B2B 구매자에게 50~200g의 무료 샘플을 제공합니다. 별도 협의가 없는 한 배송비는 구매자가 부담합니다. 당사 웹사이트를 통해 샘플 요청을 제출하시면, 당사 팀이 현재 생산 배치에서 샘플을 준비합니다."
+      },
+      {
+        "question": "어떤 살균 옵션을 제공하나요?",
+        "answer": "증기 살균(오토클레이브), 에틸렌옥사이드(EtO), 감마선 조사 등 여러 살균 방법을 제품 사양과 목적국 요구 사항에 따라 제공합니다. 당사 가공 시설은 GMP 및 HACCP 지침을 따릅니다. 견적 요청 시 살균 요구 사항을 명시해 주세요."
+      },
+      {
+        "question": "웹사이트에서 가격을 확인할 수 있나요?",
+        "answer": "허브와 향신료 가격은 작물 수확량, 시장 상황 및 계절성에 따라 변동됩니다. 정확한 최신 가격은 귀하의 특정 요구 사항(수량, 품질 등급, 포장, 목적지)을 파악한 후에만 제공합니다. 맞춤형 견적을 위해 문의해 주세요."
+      },
+      {
+        "question": "어떤 인증을 보유하고 있나요?",
+        "answer": "ISO 9001, ISO 22000, EU Organic, USDA NOP, HALAL, KOSHER, BRCGS, FDA 등록, SEDEX/Semeta, NFSA 화이트리스트, AHK 위원회 회원 등 11개의 주요 인증을 보유하고 있습니다. 전체 내용은 인증서 페이지를 방문해 주세요. 규정 준수 검토를 위해 요청 시 인증서를 제공할 수 있습니다."
+      },
+      {
+        "question": "배송 조건과 리드 타임은 어떻게 되나요?",
+        "answer": "항공 및 해상 운송을 통해 전 세계로 배송합니다. 일반적인 인코텀스는 FOB(다미에타 또는 알렉산드리아 항구), CIF 및 EXW입니다. 리드 타임은 재고 품목의 경우 7~14일, 맞춤 가공의 경우 20~30일입니다. 신뢰할 수 있는 포워더와 협력하며 물류 준비를 도와드릴 수 있습니다."
+      },
+      {
+        "question": "어떤 결제 조건을 제공하나요?",
+        "answer": "결제 조건은 주문 금액, 목적지 및 구매자 이력에 따라 주문별로 논의되고 합의됩니다. 일반적인 방식으로는 T/T(송금)와 L/C(신용장)가 있습니다. 주문에 가장 적합한 옵션을 논의하려면 영업 팀에 문의하세요."
+      },
+      {
+        "question": "자체 농장에서만 조달하나요?",
+        "answer": "이집트 파이윰 입샤웨이에 500에이커가 넘는 자체 농장을 소유 및 운영하며 유기농 금잔화, 카모마일, 히비스커스 및 기타 식물성 제품을 재배합니다. 또한 직접 농업 전문가의 감독 하에 신뢰할 수 있는 파트너 농장의 제품을 보충하여 일관된 품질, 추적 가능성 및 연중 공급을 보장합니다."
+      },
+      {
+        "question": "제품 품질과 일관성을 어떻게 보장하나요?",
+        "answer": "품질은 종자 선별, 재배, 수확, 가공 및 포장의 모든 단계에서 보장됩니다. 순도, 효능, 미생물 오염 및 중금속에 대한 자체 실험실 테스트를 수행합니다. 당사 품질 관리 시스템은 ISO 9001 및 ISO 22000 인증을 받았으며, 전 공정에 걸쳐 GMP 및 HACCP 지침을 따릅니다."
+      },
+      {
+        "question": "농장이나 가공 시설을 방문할 수 있나요?",
+        "answer": "네, 진지한 구매자와 수입업체의 방문을 환영합니다. 이집트 파이윰에 있는 농장, 가공 시설 및 품질 관리 실험실 견학을 위해 사전에 연락해 주세요. 비자 및 여행 준비를 위해 최소 2주 전에 연락 주시는 것이 좋습니다."
+      },
+      {
+        "question": "대량 주문은 어떻게 하나요?",
+        "answer": "제품 카탈로그를 둘러보고, 견적 요청 양식을 통해 문의를 제출하거나, 영업 팀에 직접 연락하세요. 24시간 이내에 제품 사양, 현재 가격 및 샘플 제공과 계약 조건을 포함한 다음 단계에 대해 답변드리겠습니다."
+      },
+      {
+        "question": "자체 브랜드 라벨링이나 맞춤 포장을 제공하나요?",
+        "answer": "네, B2B 파트너를 위한 자체 브랜드 라벨링, 맞춤 포장 및 OEM 서비스를 제공합니다. 최소 수량이 적용됩니다. 사양과 함께 문의해 주시면 자세한 제안을 드리겠습니다."
+      }
+    ]
+  },
+  "certificates": {
+    "heroTitle": "품질 및 인증",
+    "heroDesc": "유기농 재배, 가공 및 수출에 대해 최고 수준의 국제 기준을 준수합니다.",
+    "heroMetadataTitle": "인증서 | Calendula Herbs",
+    "heroMetadataDesc": "유기농 및 품질 보증 인증서 — ISO, EU Organic, HALAL, KOSHER, USDA NOP 등.",
+    "empty": "아직 등록된 인증이 없습니다.",
+    "certified": "인증 완료",
+    "viewPdf": "PDF 보기",
+    "viewFile": "파일 보기"
+  },
+  "galleries": {
+    "heroTitle": "미디어 갤러리",
+    "heroDesc": "농장, 최첨단 가공 시설 및 프리미엄 제품을 통한 시각적 여정.",
+    "heroMetadataTitle": "갤러리 | Calendula Herbs",
+    "heroMetadataDesc": "미디어 갤러리를 통해 농장, 가공 시설 및 제품을 살펴보세요.",
+    "empty": "갤러리가 없습니다",
+    "emptyDesc": "나중에 사진과 비디오를 확인해 주세요.",
+    "sections": {
+      "EVENTS": "이벤트",
+      "EVENTS_desc": "업계 이벤트, 전시회 및 모임의 순간들.",
+      "INTERVIEWS_TV": "인터뷰 및 TV 프로그램",
+      "INTERVIEWS_TV_desc": "미디어 출연, 인터뷰 및 TV 특집.",
+      "FACTORY": "공장 사진",
+      "FACTORY_desc": "최첨단 가공 시설 내부 모습.",
+      "FARMS": "농장 사진",
+      "FARMS_desc": "파트너 농장과 재배지의 모습.",
+      "SHIPMENTS": "선적 사진",
+      "SHIPMENTS_desc": "전 세계로 준비 및 선적되는 제품.",
+      "VISITS": "방문",
+      "VISITS_desc": "전 세계 농장, 시설 및 파트너 방문."
+    },
+    "scrollLeft": "왼쪽으로 스크롤",
+    "scrollRight": "오른쪽으로 스크롤",
+    "closeLightbox": "라이트박스 닫기",
+    "previousImage": "이전 이미지",
+    "nextImage": "다음 이미지",
+    "galleryItemLabel": "갤러리 항목 {index}"
+  },
+  "privacy": {
+    "heroTitle": "개인정보처리방침",
+    "heroDesc": "개인 데이터를 수집, 사용 및 보호하는 방법.",
+    "heroMetadataTitle": "개인정보처리방침",
+    "heroMetadataDesc": "Calendula Herbs 개인정보처리방침 — 개인 데이터를 수집, 사용 및 보호하는 방법.",
+    "lastUpdated": "최종 업데이트: {date}",
+    "section1": {
+      "title": "1. 소개",
+      "body": "<p>Calendula Herbs For Import & Export(이하 '당사')는 귀하의 개인정보를 보호하기 위해 최선을 다하고 있습니다. 본 정책은 귀하가 당사 웹사이트를 방문하거나 당사 서비스를 이용할 때 당사가 귀하의 개인정보를 수집, 이용 및 보호하는 방법을 설명합니다.</p>"
+    },
+    "section2": {
+      "title": "2. 수집하는 정보",
+      "body": "<p><strong>귀하가 제공하는 정보:</strong> 이름, 이메일 주소, 전화번호, 회사명, 국가 및 문의 양식, 견적 요청 또는 샘플 요청을 통해 제출하는 모든 세부 정보.</p><p><strong>자동으로 수집되는 정보:</strong> IP 주소, 브라우저 유형, 기기 정보, 방문 페이지 및 당사 사이트 체류 시간(쿠키 및 분석 도구를 통해).</p>"
+    },
+    "section3": {
+      "title": "3. 정보 이용 방법",
+      "body": "<ul><li>문의에 응답하고 견적을 제공하기 위해</li><li>제품 및 샘플 요청을 처리하기 위해</li><li>당사 웹사이트와 고객 경험을 개선하기 위해</li><li>법적 의무를 준수하기 위해</li></ul>"
+    },
+    "section4": {
+      "title": "4. 데이터 보호",
+      "body": "<p>당사는 암호화, 접근 통제 및 보안 서버를 포함한 적절한 보안 조치를 구현하여 귀하의 개인 데이터를 무단 접근, 변경 또는 공개로부터 보호합니다.</p>"
+    },
+    "section5": {
+      "title": "5. 데이터 보관",
+      "body": "<p>당사는 본 정책에 명시된 목적 또는 법률이 요구하는 기간 동안만 귀하의 개인 데이터를 보관합니다. 문의 및 연락처 제출 정보는 최대 3년간 보관됩니다.</p>"
+    },
+    "section6": {
+      "title": "6. 귀하의 권리",
+      "body": "<p>적용 가능한 데이터 보호법에 따라 귀하는 다음과 같은 권리가 있습니다:</p><ul><li>개인 데이터에 접근할 권리</li><li>부정확한 데이터의 정정을 요청할 권리</li><li>데이터 삭제를 요청할 권리</li><li>데이터 처리에 반대할 권리</li><li>데이터 이전성을 요청할 권리</li></ul><p>이러한 권리를 행사하려면 <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a>으로 연락해 주세요.</p>"
+    },
+    "section7": {
+      "title": "7. 타사 서비스",
+      "body": "<p>당사는 귀하의 데이터를 처리할 수 있는 다음과 같은 타사 서비스를 사용합니다:</p><ul><li><strong>Cloudinary</strong> — 이미지 및 미디어 호스팅</li><li><strong>Resend</strong> — 트랜잭션 이메일 발송</li><li><strong>Supabase</strong> — 데이터베이스 호스팅</li><li><strong>Railway</strong> — 웹사이트 호스팅</li></ul>"
+    },
+    "section8": {
+      "title": "8. 쿠키",
+      "body": "<p>당사 웹사이트는 분석 및 기능을 위해 쿠키를 사용할 수 있습니다. 브라우저 설정을 통해 쿠키 기본 설정을 제어할 수 있습니다.</p>"
+    },
+    "section9": {
+      "title": "9. 문의",
+      "body": "<p>본 개인정보처리방침에 관한 문의는 다음으로 연락해 주세요:</p><p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />이메일: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
+    }
+  },
+  "terms": {
+    "heroTitle": "이용약관",
+    "heroDesc": "웹사이트 및 서비스 이용에 관한 규정.",
+    "heroMetadataTitle": "이용약관",
+    "heroMetadataDesc": "Calendula Herbs 이용약관 — 웹사이트 및 서비스 이용에 관한 규정.",
+    "lastUpdated": "최종 업데이트: {date}",
+    "section1": {
+      "title": "1. 약관 동의",
+      "body": "<p>Calendula Herbs 웹사이트에 접속 및 이용함으로써 귀하는 본 이용약관에 구속되는 것에 동의합니다. 동의하지 않는 경우 당사 사이트를 이용하지 마시기 바랍니다.</p>"
+    },
+    "section2": {
+      "title": "2. 제품 및 서비스",
+      "body": "<p>당사 웹사이트에 등록된 모든 제품은 재고 상황에 따라 제공됩니다. 당사는 사전 통지 없이 제품을 수정하거나 단종할 권리를 보유합니다. 제품 설명, 이미지 및 사양은 정보 제공 목적으로 제공되며 색상이나 외관이 100% 정확하지 않을 수 있습니다.</p>"
+    },
+    "section3": {
+      "title": "3. 주문 및 견적",
+      "body": "<p>견적 요청 또는 문의를 제출하는 것은 구속력 있는 계약으로 간주되지 않습니다. 견적은 현재 시장 가격을 기준으로 제공되며 견적서에 명시된 기간 동안 유효합니다. 모든 주문은 당사의 서면 확인 및 합의된 조건에 따릅니다.</p>"
+    },
+    "section4": {
+      "title": "4. 가격",
+      "body": "<p>표시된 모든 가격은 참고용이며 시장 상황, 작물 수확량 및 주문 수량에 따라 변경될 수 있습니다. 최종 가격은 공식 견적서에 제공됩니다.</p>"
+    },
+    "section5": {
+      "title": "5. 최소 주문 수량",
+      "body": "<p>최소 주문 수량(MOQ)은 제품별로 기재되어 있습니다. 제품 가용성 및 계절적 요인에 따라 달라질 수 있습니다.</p>"
+    },
+    "section6": {
+      "title": "6. 배송 및 납품",
+      "body": "<p>배송 조건은 주문별로 협의되며 판매 계약서에 명시됩니다. 당사는 평판이 좋은 물류 파트너와 협력하여 적시 납품을 보장합니다. Calendula Herbs는 세관, 기상 또는 기타 불가항력 사건으로 인한 지연에 대해 책임을 지지 않습니다.</p>"
+    },
+    "section7": {
+      "title": "7. 샘플",
+      "body": "<p>샘플 요청은 재고 상황에 따라 제공됩니다. 별도 합의가 없는 한 샘플 요청자가 일반적으로 배송비를 부담합니다. 샘플은 품질 평가 목적으로만 제공됩니다.</p>"
+    },
+    "section8": {
+      "title": "8. 책임 제한",
+      "body": "<p>Calendula Herbs는 당사 웹사이트 또는 제품 사용으로 인해 발생하는 간접적, 우발적 또는 결과적 손해에 대해 책임을 지지 않습니다. 당사의 총 책임은 해당 특정 주문의 가치를 초과하지 않습니다.</p>"
+    },
+    "section9": {
+      "title": "9. 지적 재산권",
+      "body": "<p>본 웹사이트의 모든 콘텐츠(텍스트, 이미지, 로고 및 디자인 포함)는 Calendula Herbs For Import & Export의 재산이며 관련 지적 재산권법에 의해 보호됩니다.</p>"
+    },
+    "section10": {
+      "title": "10. 준거법",
+      "body": "<p>본 약관은 이집트 아랍 공화국의 법률에 따라 규율됩니다. 모든 분쟁은 이집트 파이윰 주 법원에서 해결됩니다.</p>"
+    },
+    "section11": {
+      "title": "11. 문의",
+      "body": "<p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />이메일: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
+    }
+  },
+  "common": {
+    "readMore": "더 보기",
+    "learnMore": "더 알아보기",
+    "close": "닫기",
+    "loading": "로딩 중...",
+    "error": "문제가 발생했습니다",
+    "search": "검색",
+    "subscribe": "구독",
+    "subscribePlaceholder": "이메일을 입력하세요",
+    "allRightsReserved": "모든 권리 보유.",
+    "pageNotFound": "페이지를 찾을 수 없음",
+    "goHome": "홈으로 가기",
+    "cookieConsent": "이 사이트는 분석 및 필수 기능을 위해 쿠키를 사용합니다.",
+    "cookieAccept": "동의",
+    "cookieDecline": "거부",
+    "privacyPolicy": "개인정보처리방침"
+  },
+  "languages": {
+    "en": "English",
+    "ar": "العربية",
+    "es": "Español",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "ru": "Русский",
+    "uk": "Українська",
+    "pt-BR": "Português (Brasil)",
+    "zh-CN": "简体中文",
+    "fr": "Français",
+    "nl": "Nederlands",
+    "de": "Deutsch",
+    "bg": "Български",
+    "el": "Ελληνικά",
+    "tr": "Türkçe"
+  },
+  "errors": {
+    "validation": {
+      "required": "이 필드는 필수 항목입니다",
+      "email": "유효한 이메일 주소를 입력해 주세요",
+      "phone": "유효한 전화번호를 입력해 주세요",
+      "minLength": "최소 {min}자 이상이어야 합니다",
+      "maxLength": "최대 {max}자를 초과할 수 없습니다"
+    }
+  },
+  "sample": {
+    "heroTitle": "샘플 요청",
+    "heroDesc": "저희의 품질을 직접 확인하세요. 유기농 제품의 무료 샘플을 요청하세요.",
+    "heroMetadataTitle": "샘플 요청 | Calendula Herbs",
+    "heroMetadataDesc": "품질 평가를 위해 유기농 허브, 향신료 및 식물성 제품의 무료 샘플을 요청하세요.",
+    "howItWorks": "이용 방법",
+    "step1Title": "제품 선택",
+    "step1Desc": "테스트해 보고 싶은 제품을 선택하세요.",
+    "step2Title": "준비 및 발송",
+    "step2Desc": "당사 팀이 현재 배치에서 샘플(50~200g)을 준비합니다.",
+    "step3Title": "품질 평가",
+    "step3Desc": "귀하의 실험실에서 순도, 효능 및 일관성을 테스트하세요.",
+    "importantNotes": "중요 사항",
+    "note1": "샘플은 적격 구매자에게 무료로 제공됩니다.",
+    "note2": "위치와 주문 금액에 따라 배송비가 발생할 수 있습니다.",
+    "note3": "샘플 수량은 일반적으로 50g에서 200g입니다.",
+    "note4": "샘플 준비 및 발송에 5~10영업일이 소요됩니다.",
+    "formTitle": "요청 제출",
+    "formDesc": "양식을 작성하시면 당사 팀이 24시간 이내에 연락드립니다.",
+    "loading": "양식 로딩 중..."
+  },
+  "productRequest": {
+    "heroTitle": "제품을 찾을 수 없나요?",
+    "heroDesc": "저희는 사이트에 나열된 것보다 더 다양한 허브, 향신료, 씨앗 및 식물성 제품을 조달합니다. 필요한 것을 알려주세요.",
+    "heroMetadataTitle": "제품 요청 | Calendula Herbs",
+    "heroMetadataDesc": "원하는 제품을 찾을 수 없나요? 제품 요청을 제출하시면 당사 팀이 조달해 드립니다.",
+    "howItWorks": "이용 방법",
+    "step1Title": "필요한 것을 알려주세요",
+    "step1Desc": "찾고 계신 제품(이름, 사양, 수량)을 설명해 주세요.",
+    "step2Title": "조달 및 견적",
+    "step2Desc": "당사 조달 팀이 글로벌 공급업체를 검색하고 경쟁력 있는 견적을 준비합니다.",
+    "step3Title": "배송",
+    "step3Desc": "확정 후 물류를 처리하여 목적지까지 배송합니다.",
+    "whatWeCanSource": "조달 가능 품목",
+    "item1": "요리용 및 약용 허브",
+    "item2": "향신료 및 조미료",
+    "item3": "씨앗 및 식물성 제품",
+    "item4": "에센셜 오일 및 추출물",
+    "item5": "맞춤 사양 및 등급",
+    "item6": "유기농 및 일반 옵션",
+    "formTitle": "요청 제출",
+    "formDesc": "양식을 작성하시면 당사 팀이 24시간 이내에 맞춤형 견적으로 답변드립니다.",
+    "loading": "양식 로딩 중..."
+  },
+  "cart": {
+    "title": "견적 요청",
+    "closeAria": "장바구니 닫기",
+    "closeTitle": "장바구니 닫기",
+    "emptyTitle": "견적 장바구니가 비어 있습니다",
+    "emptyDesc": "카탈로그를 둘러보고 대량 견적을 원하는 제품을 추가하세요.",
+    "browseProducts": "제품 둘러보기",
+    "decreaseAria": "수량 줄이기",
+    "increaseAria": "수량 늘리기",
+    "removeAria": "항목 제거",
+    "removeTitle": "장바구니에서 제거",
+    "moq": "(MOQ) {weight} kg",
+    "step1Button": "세부 정보 입력",
+    "step2Back": "뒤로",
+    "submit": "제출",
+    "submitting": "제출 중...",
+    "success": "문의가 성공적으로 제출되었습니다! 곧 연락드리겠습니다.",
+    "errorGeneric": "예기치 못한 오류가 발생했습니다",
+    "nameLabel": "이름 *",
+    "namePlaceholder": "홍길동",
+    "companyLabel": "회사",
+    "companyPlaceholder": "허브즈 LLC",
+    "emailLabel": "이메일 *",
+    "emailPlaceholder": "hong@example.com",
+    "phoneLabel": "전화",
+    "phonePlaceholder": "+82 10...",
+    "countryLabel": "국가",
+    "countryPlaceholder": "대한민국",
+    "notesLabel": "추가 메모 (선택 사항)",
+    "notesPlaceholder": "목적지 항구, 특별 요구 사항, 서류..."
+  },
+  "productActions": {
+    "bulkInquiryLabel": "대량 문의 수량 (kg)",
+    "kgSuffix": "kg",
+    "moq": "최소 주문량: {weight} kg",
+    "addToCart": "견적 장바구니에 추가",
+    "requestSample": "샘플 요청",
+    "dialogTitle": "샘플 요청: {name}",
+    "dialogDesc": "품질 평가를 위한 제품 샘플을 제공합니다. 배송비는 일반적으로 구매자가 부담합니다.",
+    "contactName": "담당자 이름 *",
+    "email": "이메일 *",
+    "company": "회사",
+    "shippingAddress": "배송 주소 *",
+    "shippingAccount": "배송 계정(DHL/FedEx) 또는 메모",
+    "shippingPlaceholder": "배송비를 부담하려는 경우 택배사 계정 번호를 입력하세요...",
+    "cancel": "취소",
+    "requestSampleButton": "샘플 요청",
+    "submitting": "제출 중...",
+    "cartSuccess": "{name}이(가) 견적 장바구니에 추가되었습니다",
+    "sampleSuccess": "샘플 요청이 제출되었습니다",
+    "submitError": "요청 제출 실패"
+  }
+}

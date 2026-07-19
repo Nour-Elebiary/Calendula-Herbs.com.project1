@@ -1,47 +1,46 @@
-import { auth } from '@/lib/auth'
 import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+import { getToken } from 'next-auth/jwt'
 
-export default auth((req) => {
-  const { nextUrl, auth: session } = req
-  // Check for valid user (session with empty user means revoked JWT)
-  const isLoggedIn = !!session?.user?.email
+export default async function middleware(req: NextRequest) {
+  const pathname = req.nextUrl.pathname
 
-  // Protected admin routes (everything under /admin except /admin/login and /admin/forgot-password)
-  const isAdminRoute = nextUrl.pathname.startsWith('/admin')
-  const isAuthPage =
-    nextUrl.pathname === '/admin/login' ||
-    nextUrl.pathname.startsWith('/admin/forgot-password') ||
-    nextUrl.pathname.startsWith('/admin/otp') ||
-    nextUrl.pathname === '/admin/email-changed'
-
-  // Protected admin API routes
-  const isAdminApi = nextUrl.pathname.startsWith('/api/admin')
-
-  if (isAdminApi && !isLoggedIn) {
-    return NextResponse.json(
-      { error: 'Unauthorized' },
-      { status: 401 },
-    )
+  // Skip non-admin, non-API routes
+  if (!pathname.startsWith('/admin') && !pathname.startsWith('/api')) {
+    return NextResponse.next()
   }
 
-  if (isAdminRoute && !isAuthPage && !isLoggedIn) {
-    const loginUrl = new URL('/admin/login', nextUrl.origin)
-    loginUrl.searchParams.set('callbackUrl', nextUrl.pathname)
-    return NextResponse.redirect(loginUrl)
+  // Admin/API routes → check auth
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET })
+  const isLoggedIn = !!token?.email
+
+  if (pathname.startsWith('/api/admin') && !isLoggedIn) {
+    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
 
-  // Redirect already-authenticated admins away from login page
-  if (isAuthPage && isLoggedIn) {
-    return NextResponse.redirect(new URL('/admin/dashboard', nextUrl.origin))
+  if (pathname.startsWith('/admin')) {
+    const isAuthPage =
+      pathname === '/admin/login' ||
+      pathname.startsWith('/admin/forgot-password') ||
+      pathname.startsWith('/admin/otp') ||
+      pathname === '/admin/email-changed'
+
+    if (!isAuthPage && !isLoggedIn) {
+      const loginUrl = new URL('/admin/login', req.nextUrl.origin)
+      loginUrl.searchParams.set('callbackUrl', pathname)
+      return NextResponse.redirect(loginUrl)
+    }
+
+    if (isAuthPage && isLoggedIn) {
+      return NextResponse.redirect(new URL('/admin/dashboard', req.nextUrl.origin))
+    }
   }
 
   return NextResponse.next()
-})
+}
 
 export const config = {
   matcher: [
-    // Match all admin routes and admin API routes
-    '/admin/:path*',
-    '/api/admin/:path*',
+    '/((?!_next|_vercel|static|favicon.ico|.*\\..*).*)',
   ],
 }

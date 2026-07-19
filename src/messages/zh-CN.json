@@ -1,0 +1,556 @@
+{
+  "nav": {
+    "home": "首页",
+    "products": "产品",
+    "aboutUs": "关于我们",
+    "galleries": "图库",
+    "certificates": "证书",
+    "contact": "联系我们"
+  },
+  "header": {
+    "getQuote": "获取报价",
+    "themeLight": "切换为浅色模式",
+    "themeDark": "切换为深色模式",
+    "languageLabel": "选择语言",
+    "cartAria": "购物车中有 {count} 件商品"
+  },
+  "home": {
+    "heroEyebrow": "自 {year} 年起优质出口品质",
+    "heroTitle": "根植自然，<br />用心出口。",
+    "heroDescription": "从埃及农场到全球仓库的可靠端到端供应链——GAP/GHP认证，双重干燥方法，以及无MOSH/MOAH包装，自 {year} 年起提供优质有机香草、香料和籽实。",
+    "heroCta": "请求报价",
+    "heroSecondaryCta": "探索产品",
+    "ourCollection": "我们的产品系列",
+    "featuredProducts": "精选产品",
+    "featuredDesc": "发现我们最受欢迎的植物产品，精心种植和加工，符合国际标准。",
+    "howItWorks": "合作方式",
+    "processTitle": "从询价到发货",
+    "processSubtitle": "为国际买家设计的简化流程。每一步都经过精确和用心的管理。",
+    "step1Title": "询价",
+    "step1Desc": "提交您的产品需求和规格。我们的团队在24小时内审核并回复定制化方案。",
+    "step2Title": "样品",
+    "step2Desc": "我们准备并寄送代表性样品供您质量评估，确保产品完全符合您的标准。",
+    "step3Title": "订购",
+    "step3Desc": "样品获批后，我们将确定商业条款、生产计划和质量规格。",
+    "step4Title": "发货",
+    "step4Desc": "您的订单经过加工并按出口标准包装，并附有完整文件和实时追踪信息提供。",
+    "ourStory": "我们的故事",
+    "cultivatingTitle": "追求卓越。",
+    "cultivatingSpan": "传递信任。",
+    "aboutPara1": "Calendula Herbs 总部位于埃及肥沃的法尤姆地区，管理从种植到交付的完整供应链——在良好农业规范（GAP）和良好处理规范（GHP）下运营自有及合作农场。",
+    "aboutPara2": "凭借45年的种植经验、25年的加工制造专长和11年的全球出口经验，我们为每批货物带来无与伦比的传统优势。我们改造后的加工设施按照全球食品法规进行清洗、加工和混合，并在每个阶段进行内部实验室检测。",
+    "highlight1": "从农场到发货的端到端可追溯性",
+    "highlight2": "GAP和GHP认证的种植实践",
+    "highlight3": "无MOSH/MOAH包装，确保产品完整性",
+    "highlight4": "双重干燥选项：晒干和机器烘干",
+    "learnMoreAboutUs": "了解更多关于我们",
+    "stat1Value": "45",
+    "stat1Unit": "年",
+    "stat1Label": "种植经验",
+    "stat2Value": "25",
+    "stat2Unit": "年",
+    "stat2Label": "制造经验",
+    "stat3Value": "11",
+    "stat3Unit": "年",
+    "stat3Label": "出口经验",
+    "stat4Value": "4+",
+    "stat4Unit": "届",
+    "stat4Label": "参加BIOFACH",
+    "certsTitle": "认证与质量标准",
+    "certsSubtitle": "我们的认证反映了我们对质量、安全和可持续发展的坚定承诺。",
+    "biofachBadge": "BIOFACH参展商",
+    "biofachTitle": "连续4年以上参加BIOFACH展会",
+    "biofachDesc": "在世界领先的有机贸易展上与我们相遇。与我们的团队联系讨论合作、品鉴我们的产品，并亲身感受我们的品质。",
+    "biofachCta": "联系我们安排会面",
+    "biofachSecondaryCta": "查看我们的证书",
+    "ctaAltTitle": "准备采购优质埃及香草？",
+    "ctaAltDesc": "联系我们的团队获取批量报价、产品规格和样品请求。",
+    "ctaAltButton": "请求报价",
+    "ctaAltSecondary": "浏览产品",
+    "available": "可选规格：{cuts}",
+    "moq": "最低起订量：{weight} 公斤",
+    "requestQuoteAria": "为 {name} 请求报价"
+  },
+  "products": {
+    "heroTitle": "我们的产品",
+    "heroDesc": "面向全球进口商和制造商的优质散装香草、香料和籽实。所有产品均可出口并附有完整认证。",
+    "heroMetadataTitle": "我们的产品 | Calendula Herbs 进出口公司",
+    "heroMetadataDesc": "浏览我们优质散装香草、香料和籽实的产品目录。最低起订量500公斤起。为您的进口需求请求报价。",
+    "searchPlaceholder": "搜索产品...",
+    "sidebarTitle": "分类",
+    "filterAllLabel": "全部产品",
+    "noResults": "未找到产品",
+    "noResultsDesc": "请尝试调整您的搜索或分类筛选条件。",
+    "clearFilters": "清除筛选",
+    "loading": "正在加载产品...",
+    "cantFindTitle": "找不到您想要的产品？",
+    "cantFindDesc": "我们的货源范围远超此处列出的产品。告诉我们您需要什么，我们将为您找到。",
+    "requestProduct": "请求产品",
+    "noDescription": "联系我们获取批量出口报价和完整规格。",
+    "cutForms": {
+      "WHOLE": "整颗",
+      "CRUSHED": "压碎",
+      "POWDER": "粉末",
+      "CUT_SIFTED": "切碎过筛",
+      "GRANULATED": "颗粒",
+      "LEAF": "叶片",
+      "STEM": "茎",
+      "ROOT": "根",
+      "TBC": "待确认"
+    },
+    "moq": "(MOQ) {weight} kg"
+  },
+  "productDetail": {
+    "home": "首页",
+    "products": "产品",
+    "productHighlights": "产品亮点",
+    "highlightFreeSamples": "提供免费样品供质量评估",
+    "highlightCustomCut": "可根据要求定制切型和标签",
+    "highlightOrganicOptions": "可选欧盟有机/美国农业部有机认证产品",
+    "cutForms": "切型",
+    "certifications": "认证",
+    "productInformation": "产品信息",
+    "minOrder": "最低订购量：{weight} 公斤",
+    "cutFormEmpty": "联系我们了解切割选项",
+    "certAvailable": "可提供认证",
+    "close": "关闭",
+    "productNotFound": "未找到产品",
+    "failedToLoad": "加载产品失败",
+    "closeAria": "关闭",
+    "cutForm": {
+      "whole": "Whole",
+      "cutSifted": "Cut & Sifted",
+      "powder": "Powder",
+      "granulated": "Granulated",
+      "teaCut": "Tea Cut"
+    },
+    "cert": {
+      "haccp": "HACCP",
+      "eu_organic": "EU Organic",
+      "iso22000": "ISO 22000",
+      "gmp": "GMP",
+      "usda": "USDA Organic"
+    }
+  },
+  "about": {
+    "heroTitle": "关于 Calendula Herbs",
+    "heroDesc": "四十多年来致力于培育纯净和传递卓越。我们致力于为世界提供最优质的有机香草，根植于世代相传的农业专长。",
+    "heroMetadataTitle": "关于我们 | Calendula Herbs 进出口公司",
+    "heroMetadataDesc": "探索我们的传承：45年种植经验、25年制造经验和11年埃及优质有机香草出口经验。",
+    "statUnit": "年",
+    "statFarming": "种植传承",
+    "statManufacturing": "制造经验",
+    "statExporting": "出口卓越",
+    "heritageTitle": "我们的传承与使命",
+    "heritagePara1": "Calendula Herbs 创立的愿景是将当地农民与全球市场连接起来，现已发展成为领先的有机植物产品出口商。我们的农场位于埃及最 pristine 的农业区域，确保每种作物都在最佳条件下生长。",
+    "heritagePara2": "我们相信可持续农业、公平贸易和不妥协的品质。从种籽筛选到最终包装，我们严格的质量控制流程确保客户收到的产品超越国际标准。",
+    "journeyTitle": "我们的历程",
+    "journeySubtitle": "从家庭农场到全球出口商——三代人的农业卓越之路。",
+    "timeline1Year": "1980",
+    "timeline1Title": "种植根基",
+    "timeline1Desc": "我们的家族开始在埃及肥沃的法尤姆地区种植药用香草和芳香植物。",
+    "timeline2Year": "2000",
+    "timeline2Title": "加工制造",
+    "timeline2Desc": "扩建现代化加工设施，实现香草清洗、切割、烘干和包装的规模化生产。",
+    "timeline3Year": "2014",
+    "timeline3Title": "全球出口",
+    "timeline3Desc": "创立 Calendula Herbs for Export，将埃及植物产品以完全可追溯的方式推向全球市场。",
+    "teamTitle": "领导力与团队",
+    "teamSubtitle": "认识推动我们愿景向前发展的敬业专业人士。",
+    "boardTitle": "董事会",
+    "execTeamTitle": "执行团队",
+    "ctaTitle": "准备好与我们合作了吗？",
+    "ctaDesc": "无论您是进口商、分销商还是制造商，我们都希望能与您讨论我们的优质香草如何满足您的需求。",
+    "ctaButton": "联系我们"
+  },
+  "contact": {
+    "heroTitle": "联系我们",
+    "heroDesc": "提交您对埃及优质香草、香料和植物产品的大宗询价。我们的出口团队将在24小时内审核您的需求并回复定制报价。",
+    "heroMetadataTitle": "联系我们 | Calendula Herbs 进出口公司",
+    "heroMetadataDesc": "联系 Calendula Herbs 进行有机香草大宗出口询价。请求报价、产品规格或样品。",
+    "formTitle": "发送询价",
+    "formDesc": "告诉我们您需要的数量、规格和目的地——我们的团队将为您准备定制报价。",
+    "unavailableTitle": "联系表格当前不可用",
+    "unavailableDesc": "请通过下方提供的电子邮件或电话直接联系我们。",
+    "directTitle": "直接联系",
+    "directDesc": "通过电话、电子邮件或即时通讯应用直接联系我们的出口团队。我们在工作时间及时回复所有B2B询价。",
+    "locationTitle": "我们的位置",
+    "phoneLabel": "电话",
+    "emailLabel": "邮件支持",
+    "addressLabel": "总部与农场",
+    "hoursLabel": "营业时间",
+    "nameLabel": "姓名",
+    "namePlaceholder": "张三",
+    "emailLabel2": "邮箱",
+    "emailPlaceholder": "zhangsan@example.com",
+    "phoneLabel2": "电话",
+    "phonePlaceholder": "+86 138...",
+    "companyLabel": "公司",
+    "companyPlaceholder": "香草贸易有限公司",
+    "countryLabel": "国家",
+    "countryPlaceholder": "中国",
+    "subjectLabel": "主题",
+    "subjectPlaceholder": "大宗询价",
+    "messageLabel": "留言",
+    "messagePlaceholder": "我们如何帮助您？",
+    "sendButton": "发送询价",
+    "sendingButton": "发送中...",
+    "successTitle": "成功发送",
+    "successMessage": "您的询价已发送。我们将尽快与您联系。",
+    "errorMessage": "消息发送失败。请稍后再试。",
+    "errorUnexpected": "发生了意外错误",
+    "validationRequired": "{field} 为必填项",
+    "validationEmail": "请输入有效的邮箱地址",
+    "validationFix": "请修正表单中的错误"
+  },
+  "footer": {
+    "brandDescription": "专业出口优质埃及干制香草、香料、花草茶和籽实。",
+    "quickLinks": "快速链接",
+    "productsCatalog": "产品目录",
+    "aboutCompany": "关于我们公司",
+    "farmProcessing": "农场与加工",
+    "qualityCertificates": "质量证书",
+    "contactUs": "联系我们",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "contactInfo": "联系我们",
+    "businessHours": "营业时间",
+    "fallbackHours": "随时联系我们进行询价。",
+    "ourCertifications": "我们的认证",
+    "followUs": "关注我们",
+    "copyright": "© {year} Calendula Herbs 进出口公司。埃及法尤姆·伊布沙维市。"
+  },
+  "faq": {
+    "heroTitle": "常见问题",
+    "heroDesc": "B2B买家从 Calendula Herbs 订购所需了解的一切。",
+    "heroMetadataTitle": "常见问题 | Calendula Herbs",
+    "heroMetadataDesc": "B2B出口FAQ——散装香草和香料买家的最低起订量、免费样品、认证、运输和付款条款。",
+    "empty": "暂无常见问题",
+    "stillQuestions": "还有疑问？",
+    "teamReady": "我们的出口团队随时准备解答您的其他问题。",
+    "contactButton": "联系我们",
+    "items": [
+      {
+        "question": "你们的最低起订量（MOQ）是多少？",
+        "answer": "我们的标准最低起订量为每产品500-1000公斤，具体取决于产品和季节。对于首次合作的合格买家，我们可以接受较小试单（50-100公斤）。请联系我们的销售团队讨论您的具体数量需求。"
+      },
+      {
+        "question": "你们提供免费样品供质量评估吗？",
+        "answer": "是的，我们为合格的B2B买家提供50-200克的免费样品。除非另有协商，买家承担运费。通过我们的网站提交样品请求，我们的团队将从当前生产批次中准备材料。"
+      },
+      {
+        "question": "你们提供哪些灭菌选项？",
+        "answer": "我们提供多种灭菌方法，包括蒸汽灭菌（高压灭菌）、环氧乙烷（EtO）和伽马辐照，具体取决于产品规格和目的地国家要求。我们的加工设施遵循GMP和HACCP指南。请在请求报价时说明您的灭菌要求。"
+      },
+      {
+        "question": "你们可以在网站上提供定价吗？",
+        "answer": "香草和香料价格随作物产量、市场条件和季节性波动。我们仅在了解您的具体需求后提供准确的当前定价——包括数量、品质等级、包装和目的地。联系我们获取定制报价。"
+      },
+      {
+        "question": "你们持有哪些认证？",
+        "answer": "我们持有11项主要认证，包括ISO 9001、ISO 22000、欧盟有机认证、美国农业部NOP、HALAL、KOSHER、BRCGS、FDA注册、SEDEX/Semeta、NFSA白名单和AHK商会会员。请访问我们的证书页面获取完整详情。我们可根据要求提供证书供您的合规审查。"
+      },
+      {
+        "question": "你们的运输条款和交货周期是多少？",
+        "answer": "我们通过空运和海运运往全球。常用贸易术语包括FOB（达米埃塔或亚历山大港）、CIF和EXW。库存商品交货周期为7-14天，定制加工为20-30天。我们与可靠的货运代理商合作，并可协助物流安排。"
+      },
+      {
+        "question": "你们接受哪些付款条件？",
+        "answer": "付款条件根据订单金额、目的地和买家历史记录按订单讨论和确定。典型安排包括电汇（T/T）和信用证（L/C）。联系我们的销售团队讨论最适合您订单的方案。"
+      },
+      {
+        "question": "你们是否仅从自家农场采购？",
+        "answer": "我们在埃及法尤姆·伊布沙维拥有并运营自家农场——超过500英亩专门用于有机金盏花、洋甘菊、木槿和其他植物产品。我们还通过直接农艺师监督下的可信合作农场进行补充采购，以确保稳定的品质、可追溯性和全年供应。"
+      },
+      {
+        "question": "你们如何确保产品质量和一致性？",
+        "answer": "质量在每个阶段都得到保障：种籽筛选、种植、收获、加工和包装。我们进行内部实验室检测，包括纯度、效力、微生物污染和重金属。我们的质量管理体系已通过ISO 9001和ISO 22000认证，全程遵循GMP和HACCP指南。"
+      },
+      {
+        "question": "我可以参观你们的农场或加工设施吗？",
+        "answer": "是的，我们欢迎认真买家和进口商来访。请提前联系我们安排参观我们在埃及法尤姆的农场、加工设施和质量控制实验室。我们建议至少提前两周安排签证和旅行事宜。"
+      },
+      {
+        "question": "如何下大宗订单？",
+        "answer": "浏览我们的产品目录，通过我们的「请求报价」表单提交询价，或直接联系我们的销售团队。我们将在24小时内回复，提供产品规格、当前定价以及后续步骤，包括样品提供和合同条款。"
+      },
+      {
+        "question": "你们提供贴牌或定制包装吗？",
+        "answer": "是的，我们为B2B合作伙伴提供贴牌、定制包装和OEM服务。有最低数量要求。请将您的规格需求发送给我们，获取详细方案。"
+      }
+    ]
+  },
+  "certificates": {
+    "heroTitle": "质量与认证",
+    "heroDesc": "我们遵循有机种植、加工和出口的最高国际标准。",
+    "heroMetadataTitle": "证书 | Calendula Herbs",
+    "heroMetadataDesc": "我们的有机和质量保证证书——ISO、欧盟有机认证、HALAL、KOSHER、美国农业部NOP等。",
+    "empty": "暂无认证列表。",
+    "certified": "已认证",
+    "viewPdf": "查看PDF",
+    "viewFile": "查看文件"
+  },
+  "galleries": {
+    "heroTitle": "媒体图库",
+    "heroDesc": "通过图片了解我们的农场、先进加工设施和优质产品的视觉之旅。",
+    "heroMetadataTitle": "图库 | Calendula Herbs",
+    "heroMetadataDesc": "通过我们的媒体图库探索我们的农场、加工设施和产品。",
+    "empty": "暂无图库",
+    "emptyDesc": "请稍后查看照片和视频。",
+    "sections": {
+      "EVENTS": "活动",
+      "EVENTS_desc": "来自我们行业活动、展览和聚会的精彩瞬间。",
+      "INTERVIEWS_TV": "采访与电视节目",
+      "INTERVIEWS_TV_desc": "媒体亮相、采访和电视专题报道。",
+      "FACTORY": "工厂照片",
+      "FACTORY_desc": "一窥我们先进的加工设施内部。",
+      "FARMS": "农场照片",
+      "FARMS_desc": "来自我们合作农场和种植基地的场景。",
+      "SHIPMENTS": "发货照片",
+      "SHIPMENTS_desc": "我们的产品正在准备并运往世界各地。",
+      "VISITS": "参观访问",
+      "VISITS_desc": "参观我们全球各地的农场、设施和合作伙伴。"
+    },
+    "scrollLeft": "向左滚动",
+    "scrollRight": "向右滚动",
+    "closeLightbox": "关闭灯箱",
+    "previousImage": "上一张图片",
+    "nextImage": "下一张图片",
+    "galleryItemLabel": "画廊项目 {index}"
+  },
+  "privacy": {
+    "heroTitle": "隐私政策",
+    "heroDesc": "我们如何收集、使用和保护您的个人数据。",
+    "heroMetadataTitle": "隐私政策",
+    "heroMetadataDesc": "Calendula Herbs 隐私政策——我们如何收集、使用和保护您的个人数据。",
+    "lastUpdated": "最后更新：{date}",
+    "section1": {
+      "title": "一、引言",
+      "body": "<p>Calendula Herbs For Import & Export（我们，我们的）致力于保护您的隐私。本政策说明了当您访问我们的网站或使用我们的服务时，我们如何收集、使用和保护您的个人信息。</p>"
+    },
+    "section2": {
+      "title": "二、我们收集的信息",
+      "body": "<p><strong>您提供的信息：</strong>姓名、电子邮箱地址、电话号码、公司名称、国家以及您通过我们的联系表单、报价请求或样品请求提交的任何详细信息。</p><p><strong>自动收集的信息：</strong>IP地址、浏览器类型、设备信息、访问的页面以及在我们网站上的停留时间（通过Cookie和分析工具）。</p>"
+    },
+    "section3": {
+      "title": "三、我们如何使用您的信息",
+      "body": "<ul><li>回应您的咨询并提供报价</li><li>处理产品和样品请求</li><li>改进我们的网站和客户体验</li><li>履行法律义务</li></ul>"
+    },
+    "section4": {
+      "title": "四、数据保护",
+      "body": "<p>我们实施适当的安全措施，包括加密、访问控制和安全服务器，以保护您的个人数据免受未经授权的访问、更改或泄露。</p>"
+    },
+    "section5": {
+      "title": "五、数据保留",
+      "body": "<p>我们仅在必要的时间内保留您的个人数据，以用于本政策所述的目的或法律要求。咨询和联系信息最多保留3年。</p>"
+    },
+    "section6": {
+      "title": "六、您的权利",
+      "body": "<p>根据适用的数据保护法律，您有权：</p><ul><li>访问您的个人数据</li><li>要求更正不准确的数据</li><li>要求删除您的数据</li><li>反对处理您的数据</li><li>要求数据可移植性</li></ul><p>如需行使这些权利，请通过 <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a> 与我们联系。</p>"
+    },
+    "section7": {
+      "title": "七、第三方服务",
+      "body": "<p>我们使用以下第三方服务，它们可能会处理您的数据：</p><ul><li><strong>Cloudinary</strong> — 图片和媒体托管</li><li><strong>Resend</strong> — 事务性邮件发送</li><li><strong>Supabase</strong> — 数据库托管</li><li><strong>Railway</strong> — 网站托管</li></ul>"
+    },
+    "section8": {
+      "title": "八、Cookie",
+      "body": "<p>我们的网站可能使用Cookie进行分析和功能优化。您可以通过浏览器设置控制Cookie偏好。</p>"
+    },
+    "section9": {
+      "title": "九、联系方式",
+      "body": "<p>如对本隐私政策有疑问，请联系我们：</p><p>Calendula Herbs For Import & Export<br />埃及法尤姆·伊布沙维<br />电子邮箱：<a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
+    }
+  },
+  "terms": {
+    "heroTitle": "条款与条件",
+    "heroDesc": "适用于我们网站和服务的使用。",
+    "heroMetadataTitle": "条款与条件",
+    "heroMetadataDesc": "Calendula Herbs 条款与条件——适用于我们网站和服务的使用。",
+    "lastUpdated": "最后更新：{date}",
+    "section1": {
+      "title": "一、条款接受",
+      "body": "<p>访问和使用 Calendula Herbs 网站即表示您接受这些条款和条件的约束。如果您不同意，请勿使用我们的网站。</p>"
+    },
+    "section2": {
+      "title": "二、产品与服务",
+      "body": "<p>我们网站上列出的所有产品均视供应情况而定。我们保留在未事先通知的情况下修改或停产产品的权利。产品描述、图片和规格仅供参考，在颜色或外观上可能并非100%准确。</p>"
+    },
+    "section3": {
+      "title": "三、订单与报价",
+      "body": "<p>提交报价请求或询价并不构成具有约束力的合同。报价基于当前市场汇率提供，在报价中规定的期限内有效。所有订单均需我们书面确认并商定条款。</p>"
+    },
+    "section4": {
+      "title": "四、定价",
+      "body": "<p>所有标价均为指示性价格，可能根据市场状况、作物产量和订单数量而变化。最终价格将在正式报价中提供。</p>"
+    },
+    "section5": {
+      "title": "五、最低起订量",
+      "body": "<p>最低起订量（MOQ）按产品列出。可能因产品供应情况和季节性因素而有所差异。</p>"
+    },
+    "section6": {
+      "title": "六、运输与交付",
+      "body": "<p>运输条款按订单协商，并将在销售合同中明确规定。我们与信誉良好的物流合作伙伴合作，以确保及时交货。Calendula Herbs 对因海关、天气或其他不可抗力事件造成的延误不承担任何责任。</p>"
+    },
+    "section7": {
+      "title": "七、样品",
+      "body": "<p>样品请求视供应情况而定。除非另有约定，请求方通常承担运费。样品仅供质量评估之用。</p>"
+    },
+    "section8": {
+      "title": "八、责任限制",
+      "body": "<p>Calendula Herbs 不对因使用我们的网站或产品而产生的任何间接、附带或后果性损害承担赔偿责任。我们的总赔偿责任不超过相关特定订单的价值。</p>"
+    },
+    "section9": {
+      "title": "九、知识产权",
+      "body": "<p>本网站上的所有内容——包括文字、图片、标志和设计——均为 Calendula Herbs For Import & Export 的财产，并受适用的知识产权法律保护。</p>"
+    },
+    "section10": {
+      "title": "十、管辖法律",
+      "body": "<p>本条受阿拉伯埃及共和国法律管辖。任何争议应在埃及法尤姆的法院解决。</p>"
+    },
+    "section11": {
+      "title": "十一、联系方式",
+      "body": "<p>Calendula Herbs For Import & Export<br />埃及法尤姆·伊布沙维<br />电子邮箱：<a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
+    }
+  },
+  "common": {
+    "readMore": "阅读更多",
+    "learnMore": "了解更多",
+    "close": "关闭",
+    "loading": "加载中...",
+    "error": "出了点问题",
+    "search": "搜索",
+    "subscribe": "订阅",
+    "subscribePlaceholder": "输入您的邮箱",
+    "allRightsReserved": "保留所有权利。",
+    "pageNotFound": "页面未找到",
+    "goHome": "返回首页",
+    "cookieConsent": "本网站使用cookies进行分析和基本功能。",
+    "cookieAccept": "接受",
+    "cookieDecline": "拒绝",
+    "privacyPolicy": "隐私政策"
+  },
+  "languages": {
+    "en": "English",
+    "ar": "العربية",
+    "es": "Español",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "hi": "हिन्दी",
+    "ru": "Русский",
+    "uk": "Українська",
+    "pt-BR": "Português (Brasil)",
+    "zh-CN": "简体中文",
+    "fr": "Français",
+    "nl": "Nederlands",
+    "de": "Deutsch",
+    "bg": "Български",
+    "el": "Ελληνικά",
+    "tr": "Türkçe"
+  },
+  "errors": {
+    "validation": {
+      "required": "此字段为必填项",
+      "email": "请输入有效的邮箱地址",
+      "phone": "请输入有效的电话号码",
+      "minLength": "至少需要 {min} 个字符",
+      "maxLength": "不能超过 {max} 个字符"
+    }
+  },
+  "sample": {
+    "heroTitle": "请求样品",
+    "heroDesc": "亲身评估我们的质量。请求我们有机产品的免费样品。",
+    "heroMetadataTitle": "请求样品 | Calendula Herbs",
+    "heroMetadataDesc": "请求我们有机香草、香料和植物产品的免费样品进行质量评估。",
+    "howItWorks": "合作方式",
+    "step1Title": "选择产品",
+    "step1Desc": "选择您感兴趣测试的产品。",
+    "step2Title": "我们准备并发货",
+    "step2Desc": "我们的团队从当前批次中准备样品（50-200克）。",
+    "step3Title": "评估质量",
+    "step3Desc": "在您的实验室测试纯度、效力和一致性。",
+    "importantNotes": "重要说明",
+    "note1": "样品对合格买家免费。",
+    "note2": "运费可能根据地点和订单金额而定。",
+    "note3": "样品数量通常在50克到200克之间。",
+    "note4": "样品准备和发货需要5-10个工作日。",
+    "formTitle": "提交您的请求",
+    "formDesc": "填写表单，我们的团队将在24小时内跟进。",
+    "loading": "正在加载表单..."
+  },
+  "productRequest": {
+    "heroTitle": "找不到产品？",
+    "heroDesc": "我们的货源范围远超网站上列出的香草、香料、籽实和植物产品。告诉我们您需要什么。",
+    "heroMetadataTitle": "请求产品 | Calendula Herbs",
+    "heroMetadataDesc": "找不到您想要的产品？提交产品请求，我们的团队将为您采购。",
+    "howItWorks": "合作方式",
+    "step1Title": "告诉我们您需要什么",
+    "step1Desc": "描述您寻找的产品——名称、规格、数量。",
+    "step2Title": "我们采购并报价",
+    "step2Desc": "我们的采购团队搜索全球供应商并准备有竞争力的报价。",
+    "step3Title": "我们交付",
+    "step3Desc": "确认后，我们处理物流并将货物送达您的目的地。",
+    "whatWeCanSource": "我们可以采购的产品",
+    "item1": "烹饪及药用香草",
+    "item2": "香料和调味品",
+    "item3": "籽实和植物产品",
+    "item4": "精油和提取物",
+    "item5": "定制规格和等级",
+    "item6": "有机和常规选项",
+    "formTitle": "提交您的请求",
+    "formDesc": "填写表单，我们的团队将在24小时内回复定制报价。",
+    "loading": "正在加载表单..."
+  },
+  "cart": {
+    "title": "报价请求",
+    "closeAria": "关闭购物车",
+    "closeTitle": "关闭购物车",
+    "emptyTitle": "您的报价车是空的",
+    "emptyDesc": "浏览我们的目录并添加您需要大宗报价的产品。",
+    "browseProducts": "浏览产品",
+    "decreaseAria": "减少数量",
+    "increaseAria": "增加数量",
+    "removeAria": "移除商品",
+    "removeTitle": "从购物车中移除",
+    "moq": "(MOQ) {weight} kg",
+    "step1Button": "继续填写信息",
+    "step2Back": "返回",
+    "submit": "提交",
+    "submitting": "提交中...",
+    "success": "询价提交成功！我们将尽快与您联系。",
+    "errorGeneric": "发生了意外错误",
+    "nameLabel": "姓名 *",
+    "namePlaceholder": "张三",
+    "companyLabel": "公司",
+    "companyPlaceholder": "香草贸易有限公司",
+    "emailLabel": "邮箱 *",
+    "emailPlaceholder": "zhangsan@example.com",
+    "phoneLabel": "电话",
+    "phonePlaceholder": "+86 138...",
+    "countryLabel": "国家",
+    "countryPlaceholder": "中国",
+    "notesLabel": "附加说明（可选）",
+    "notesPlaceholder": "目的港、特殊要求、表格等..."
+  },
+  "productActions": {
+    "bulkInquiryLabel": "大宗询价数量（公斤）",
+    "kgSuffix": "公斤",
+    "moq": "最低起订量：{weight} 公斤",
+    "addToCart": "加入报价车",
+    "requestSample": "请求样品",
+    "dialogTitle": "请求样品：{name}",
+    "dialogDesc": "我们提供产品样品供质量评估。请注意，运费通常由买家承担。",
+    "contactName": "联系人姓名 *",
+    "email": "邮箱 *",
+    "company": "公司",
+    "shippingAddress": "收货地址 *",
+    "shippingAccount": "快递账号（DHL/FedEx）或说明",
+    "shippingPlaceholder": "如果您希望承担运费，请提供您的快递账号...",
+    "cancel": "取消",
+    "requestSampleButton": "请求样品",
+    "submitting": "提交中...",
+    "cartSuccess": "{name} 已加入报价车",
+    "sampleSuccess": "样品请求已提交",
+    "submitError": "提交请求失败"
+  }
+}

@@ -4,9 +4,12 @@ import { z } from 'zod'
 import { CertType } from '@prisma/client'
 import { requireAdmin, unauthorized } from '@/lib/admin-auth'
 
+const LOCALES = ['en', 'ar', 'es', 'it', 'ja', 'ko', 'hi', 'ru', 'uk', 'pt-BR', 'zh-CN', 'fr', 'nl', 'de', 'bg', 'el', 'tr']
+
 const certSchema = z.object({
   title: z.string().min(1),
   issuer: z.string().optional().nullable(),
+  description: z.string().optional().nullable(),
   fileId: z.string().optional().nullable(),
   logoFileId: z.string().optional().nullable(),
   fileType: z.nativeEnum(CertType),
@@ -19,6 +22,7 @@ export async function GET() {
     include: {
       file: { select: { url: true, thumbnailUrl: true, type: true } },
       logo: { select: { url: true, thumbnailUrl: true } },
+      translations: true,
     },
   })
   return NextResponse.json({ certs })
@@ -31,7 +35,13 @@ export async function POST(req: NextRequest) {
     const data = certSchema.parse(json)
     const maxOrder = await db.certificate.aggregate({ _max: { order: true } })
     const order = (maxOrder._max.order ?? -1) + 1
-    const cert = await db.certificate.create({ data: { ...data, order } })
+    const cert = await db.certificate.create({
+      data: {
+        ...data, order,
+        translations: { create: LOCALES.map(locale => ({ locale, title: data.title, issuer: data.issuer, description: data.description })) },
+      },
+      include: { translations: true },
+    })
     return NextResponse.json({ cert }, { status: 201 })
   } catch (err) {
     if (err instanceof z.ZodError) return NextResponse.json({ error: err.issues }, { status: 400 })

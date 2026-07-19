@@ -1,9 +1,10 @@
 import { v2 as cloudinary } from 'cloudinary'
+import { getRequiredEnvVar } from '@/lib/env'
 
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
+  cloud_name: getRequiredEnvVar('CLOUDINARY_CLOUD_NAME'),
+  api_key: getRequiredEnvVar('CLOUDINARY_API_KEY'),
+  api_secret: getRequiredEnvVar('CLOUDINARY_API_SECRET'),
   secure: true,
 })
 
@@ -18,7 +19,7 @@ export async function generateSignature(folder: string) {
 
   const signature = cloudinary.utils.api_sign_request(
     paramsToSign,
-    process.env.CLOUDINARY_API_SECRET as string
+    getRequiredEnvVar('CLOUDINARY_API_SECRET')
   )
 
   return { timestamp, signature }

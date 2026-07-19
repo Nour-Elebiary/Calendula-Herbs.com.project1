@@ -2,35 +2,12 @@
 
 import { motion } from 'framer-motion'
 import { FileText, FlaskConical, ClipboardCheck, Truck } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 import { SectionLabel } from '../shared/SectionLabel'
 
-const steps = [
-  {
-    icon: FileText,
-    title: 'Inquiry',
-    description: 'Submit your product requirements and specifications. Our team reviews and responds within 24 hours with a tailored proposal.',
-  },
-  {
-    icon: FlaskConical,
-    title: 'Sample',
-    description: 'We prepare and send representative samples for your quality assessment, ensuring the product meets your exact standards.',
-  },
-  {
-    icon: ClipboardCheck,
-    title: 'Order',
-    description: 'Once samples are approved, we finalize the commercial terms, production schedule, and quality specifications.',
-  },
-  {
-    icon: Truck,
-    title: 'Shipment',
-    description: 'Your order is processed, packed to export standards, and shipped with full documentation and real-time tracking.',
-  },
-]
-
-
-
 export function ProcessSection() {
+  const t = useTranslations('home')
   return (
     <section className="py-24 relative overflow-hidden" style={{ backgroundColor: 'var(--color-bg-void)' }}>
 
@@ -44,21 +21,21 @@ export function ProcessSection() {
           variants={staggerContainer}
         >
           <motion.div variants={fadeInUp}>
-            <SectionLabel>How It Works</SectionLabel>
+            <SectionLabel>{t('howItWorks')}</SectionLabel>
           </motion.div>
           <motion.h2
             variants={fadeInUp}
             className="text-4xl md:text-5xl font-display font-[400] leading-tight"
             style={{ color: 'var(--color-text-primary)' }}
           >
-            From Inquiry to Shipment
+            {t('processTitle')}
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="font-light max-w-xl mx-auto"
             style={{ color: 'var(--color-text-tertiary)' }}
           >
-            A streamlined process designed for international buyers. Every step is managed with precision and care.
+            {t('processSubtitle')}
           </motion.p>
         </motion.div>
 
@@ -69,15 +46,20 @@ export function ProcessSection() {
           viewport={{ once: true }}
           variants={staggerContainer}
         >
-          {steps.map((step, i) => (
+          {[
+            { icon: FileText, titleKey: 'step1Title', descKey: 'step1Desc' },
+            { icon: FlaskConical, titleKey: 'step2Title', descKey: 'step2Desc' },
+            { icon: ClipboardCheck, titleKey: 'step3Title', descKey: 'step3Desc' },
+            { icon: Truck, titleKey: 'step4Title', descKey: 'step4Desc' },
+          ].map((step, i) => (
             <motion.div
-              key={step.title}
+              key={step.titleKey}
               variants={fadeInUp}
               className="card-glass p-8 text-center relative"
             >
               <div
                 className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
-                style={{ backgroundColor: 'rgba(220,126,24,0.12)', color: 'var(--color-calendula-500)' }}
+                style={{ backgroundColor: 'var(--color-bg-active)', color: 'var(--color-calendula-500)' }}
               >
                 <step.icon className="w-7 h-7" />
               </div>
@@ -92,13 +74,13 @@ export function ProcessSection() {
                   className="text-xl font-display font-[400] mb-3"
                   style={{ color: 'var(--color-text-primary)' }}
                 >
-                  {step.title}
+                  {t(step.titleKey)}
                 </h3>
                 <p
                   className="text-sm leading-relaxed"
                   style={{ color: 'var(--color-text-tertiary)' }}
                 >
-                  {step.description}
+                  {t(step.descKey)}
                 </p>
               </div>
             </motion.div>

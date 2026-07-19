@@ -1,0 +1,556 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "aboutUs": "Hakkımızda",
+    "galleries": "Galeriler",
+    "certificates": "Sertifikalar",
+    "contact": "İletişim"
+  },
+  "header": {
+    "getQuote": "Teklif Al",
+    "themeLight": "Açık moda geç",
+    "themeDark": "Koyu moda geç",
+    "languageLabel": "Dil seçin",
+    "cartAria": "{count} ürün içeren alışveriş sepeti"
+  },
+  "home": {
+    "heroTitle": "Doğanın En İyi Organik Otları",
+    "heroCta": "Koleksiyonumuzu Keşfedin",
+    "heroSecondaryCta": "Daha Fazla Bilgi",
+    "biofachBadge": "BIOFACH Katılımcısı",
+    "biofachTitle": "4 Yılı Aşkın Süredir BIOFACH'ta Sergiliyoruz",
+    "biofachDesc": "Dünyanın önde gelen organik ticaret fuarında bizi ziyaret edin. Ortaklıkları görüşmek, ürünlerimizi tatmak ve kalitemizi bizzat deneyimlemek için ekibimizle bağlantı kurun.",
+    "biofachCta": "Toplantı İçin Bize Ulaşın",
+    "biofachSecondaryCta": "Sertifikalarımızı Görüntüleyin",
+    "ctaAltTitle": "Premium Mısır Otlarını Tedarik Etmeye Hazır mısınız?",
+    "ctaAltDesc": "Toplu teklifler, ürün özellikleri ve numune talepleri için ekibimizle iletişime geçin.",
+    "ctaAltButton": "Teklif İste",
+    "ctaAltSecondary": "Ürünlere Göz Atın",
+    "heroEyebrow": "{year} Yılından Beri Premium İhracat Kalitesi",
+    "heroDescription": "{year} yılından beri premium organik otlar, baharatlar ve tohumlar için Mısır çiftliklerinden küresel depolara güvenilir uçtan uca tedarik zinciri — GAP/GHP sertifikalı, çift kurutma yöntemi ve MOSH/MOAH içermeyen ambalaj.",
+    "ourCollection": "Koleksiyonumuz",
+    "featuredProducts": "Öne Çıkan Ürünler",
+    "featuredDesc": "Uluslararası standartlara uygun olarak özenle yetiştirilen ve işlenen en çok aranan bitkilerimizi keşfedin.",
+    "howItWorks": "Nasıl Çalışır",
+    "processTitle": "Talepten Sevkiyata",
+    "processSubtitle": "Uluslararası alıcılar için tasarlanmış akıcı bir süreç. Her adım hassasiyet ve özenle yönetilir.",
+    "step1Title": "Talep",
+    "step1Desc": "Ürün gereksinimlerinizi ve özelliklerinizi gönderin. Ekibimiz 24 saat içinde inceleyip size özel bir teklifle yanıt verir.",
+    "step2Title": "Numune",
+    "step2Desc": "Kalite değerlendirmeniz için temsilî numuneler hazırlayıp gönderiyoruz, böylece ürünün tam standartlarınızı karşıladığından emin olursunuz.",
+    "step3Title": "Sipariş",
+    "step3Desc": "Numuneler onaylandıktan sonra ticari koşulları, üretim takvimini ve kalite özelliklerini kesinleştiriyoruz.",
+    "step4Title": "Sevkiyat",
+    "step4Desc": "Siparişiniz işlenir, ihracat standartlarına göre paketlenir ve eksiksiz belgelerle gerçek zamanlı takip ile gönderilir.",
+    "ourStory": "Hikayemiz",
+    "cultivatingTitle": "Mükemmellik Yetiştiriyoruz.",
+    "cultivatingSpan": "Güven Sunuyoruz.",
+    "aboutPara1": "Mısır'ın verimli Fayoum bölgesinde yer alan Calendula Herbs, yetiştiricilikten teslimata kadar tüm tedarik zincirini yönetir — kendi ve sözleşmeli çiftliklerimizi İyi Tarım Uygulamaları (GAP) ve İyi Elleçleme Uygulamaları (GHP) kapsamında işletiriz.",
+    "aboutPara2": "45 yıllık çiftçilik deneyimi, 25 yıllık üretim mükemmelliği ve 11 yıllık küresel ihracat tecrübesiyle her sevkiyata eşsiz bir miras katıyoruz. Yenilenmiş işleme tesislerimiz, ürünleri küresel gıda düzenlemelerine uygun şekilde temizler, işler ve harmanlar; her aşamada şirket içi laboratuvar testleri uygulanır.",
+    "highlight1": "Çiftlikten sevkiyata uçtan uca izlenebilirlik",
+    "highlight2": "GAP ve GHP sertifikalı tarım uygulamaları",
+    "highlight3": "Ürün bütünlüğü için MOSH/MOAH içermeyen ambalaj",
+    "highlight4": "Çift kurutma seçeneği: güneş ve makine kurutması",
+    "learnMoreAboutUs": "Hakkımızda Daha Fazla Bilgi",
+    "stat1Value": "45",
+    "stat1Unit": "Yıl",
+    "stat1Label": "Çiftçilik",
+    "stat2Value": "25",
+    "stat2Unit": "Yıl",
+    "stat2Label": "Üretim",
+    "stat3Value": "11",
+    "stat3Unit": "Yıl",
+    "stat3Label": "İhracat",
+    "stat4Value": "4+",
+    "stat4Unit": "Kez",
+    "stat4Label": "BIOFACH'ta",
+    "certsTitle": "Sertifikalar ve Kalite Standartları",
+    "certsSubtitle": "Sertifikalarımız kalite, güvenlik ve sürdürülebilirliğe olan sarsılmaz bağlılığımızı yansıtır.",
+    "available": "Mevcut: {cuts}",
+    "moq": "Min. Sipariş: {weight} kg",
+    "requestQuoteAria": "{name} için teklif iste"
+  },
+  "products": {
+    "searchPlaceholder": "Ürünlerde ara...",
+    "noResults": "Ürün bulunamadı",
+    "heroTitle": "Ürünlerimiz",
+    "heroDesc": "Küresel ithalatçılar ve üreticiler için premium toplu otlar, baharatlar ve tohumlar. Tüm ürünler tam sertifikalı olarak ihracata sunulur.",
+    "heroMetadataTitle": "Ürünlerimiz | Calendula Herbs İthalat ve İhracat",
+    "heroMetadataDesc": "Premium toplu otlar, baharatlar ve tohumlar kataloğumuza göz atın. 500 KG'dan başlayan minimum sipariş miktarları. İthalat ihtiyaçlarınız için teklif talep edin.",
+    "sidebarTitle": "Kategoriler",
+    "filterAllLabel": "Tüm Ürünler",
+    "noResultsDesc": "Aramanızı veya kategori filtrenizi değiştirmeyi deneyin.",
+    "clearFilters": "Filtreleri Temizle",
+    "loading": "Ürünler yükleniyor...",
+    "cantFindTitle": "Aradığınızı Bulamıyor musunuz?",
+    "cantFindDesc": "Burada listelenenlerin ötesinde geniş bir ürün yelpazesi tedarik ediyoruz. İhtiyacınızı bize söyleyin, sizin için bulalım.",
+    "requestProduct": "Ürün Talep Et",
+    "noDescription": "Toplu ihracat fiyat teklifleri ve tam özellikler için bizimle iletişime geçin.",
+    "cutForms": {
+      "WHOLE": "Bütün",
+      "CRUSHED": "Kırık",
+      "POWDER": "Toz",
+      "CUT_SIFTED": "Kesilmiş ve Elenmiş",
+      "GRANULATED": "Granül",
+      "LEAF": "Yaprak",
+      "STEM": "Sap",
+      "ROOT": "Kök",
+      "TBC": "Onaylanacak"
+    },
+    "moq": "(MOQ) {weight} kg"
+  },
+  "productDetail": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "productHighlights": "Ürün Öne Çıkanları",
+    "highlightFreeSamples": "Kalite değerlendirmesi için ücretsiz numuneler mevcuttur",
+    "highlightCustomCut": "Talep üzerine özel kesim ve etiketleme mevcuttur",
+    "highlightOrganicOptions": "AB Organik / USDA Organik sertifikalı seçenekler",
+    "cutForms": "Kesim Şekilleri",
+    "certifications": "Sertifikalar",
+    "productInformation": "Ürün Bilgisi",
+    "minOrder": "Min. Sipariş: {weight} KG",
+    "cutFormEmpty": "Kesim seçenekleri için bizimle iletişime geçin",
+    "certAvailable": "Sertifikalar mevcut",
+    "close": "Kapat",
+    "productNotFound": "Ürün bulunamadı",
+    "failedToLoad": "Ürün yüklenemedi",
+    "closeAria": "Kapat",
+    "cutForm": {
+      "whole": "Whole",
+      "cutSifted": "Cut & Sifted",
+      "powder": "Powder",
+      "granulated": "Granulated",
+      "teaCut": "Tea Cut"
+    },
+    "cert": {
+      "haccp": "HACCP",
+      "eu_organic": "EU Organic",
+      "iso22000": "ISO 22000",
+      "gmp": "GMP",
+      "usda": "USDA Organic"
+    }
+  },
+  "about": {
+    "teamTitle": "Ekibimizle Tanışın",
+    "heroTitle": "Calendula Herbs Hakkında",
+    "heroDesc": "Kırk yılı aşkın süredir saflığı yetiştiriyor ve mükemmelliği sunuyoruz. Nesiller boyu tarım uzmanlığına dayanarak dünyaya en iyi organik otları sunmaya adanmışızdır.",
+    "heroMetadataTitle": "Hakkımızda | Calendula Herbs İthalat ve İhracat",
+    "heroMetadataDesc": "Mirasımızı keşfedin: Mısır'dan 45 yıllık çiftçilik, 25 yıllık üretim ve 11 yıllık premium organik ot ihracatı.",
+    "statUnit": "Yıl",
+    "statFarming": "Çiftçilik Mirası",
+    "statManufacturing": "Üretim",
+    "statExporting": "İhracat Mükemmelliği",
+    "heritageTitle": "Mirasımız ve Misyonumuz",
+    "heritagePara1": "Yerel çiftçileri küresel pazarlarla buluşturma vizyonuyla kurulan Calendula Herbs, organik bitkilerin önde gelen ihracatçısı haline gelmiştir. Çiftliklerimiz Mısır'ın en bakir tarım bölgelerinde yer almakta olup, her ürünün optimal koşullarda yetiştirilmesini sağlar.",
+    "heritagePara2": "Sürdürülebilir tarıma, etik ticarete ve ödünsüz kaliteye inanıyoruz. Tohum seçiminden son paketlemeye kadar titiz kalite kontrol süreçlerimiz, müşterilerimizin uluslararası standartları aşan ürünler almasını garanti eder.",
+    "journeyTitle": "Yolculuğumuz",
+    "journeySubtitle": "Aile çiftliğinden küresel ihracatçıya — üç nesillik tarım mükemmelliği.",
+    "timeline1Year": "1980",
+    "timeline1Title": "Çiftçilik Kökleri",
+    "timeline1Desc": "Ailemiz, Mısır'ın verimli Fayoum bölgesinde şifalı otlar ve aromatik bitkiler yetiştirmeye başladı.",
+    "timeline2Year": "2000",
+    "timeline2Title": "Üretim",
+    "timeline2Desc": "Otların temizlenmesi, kesilmesi, kurutulması ve paketlenmesi için modern işleme tesislerine yatırım yapıldı.",
+    "timeline3Year": "2014",
+    "timeline3Title": "Küresel İhracat",
+    "timeline3Desc": "Mısır bitkilerini tam izlenebilirlikle dünya pazarına sunmak için Calendula Herbs İhracat kuruldu.",
+    "teamSubtitle": "Vizyonumuzu ileriye taşıyan özverili profesyonellerle tanışın.",
+    "boardTitle": "Yönetim Kurulu",
+    "execTeamTitle": "Yönetici Ekibi",
+    "ctaTitle": "Bizimle Çalışmaya Hazır mısınız?",
+    "ctaDesc": "İster ithalatçı, ister distribütör, ister üretici olun, premium otlarımızın ihtiyaçlarınızı nasıl karşılayabileceğini görüşmek isteriz.",
+    "ctaButton": "Bize Ulaşın"
+  },
+  "contact": {
+    "formTitle": "Bize Mesaj Gönderin",
+    "nameLabel": "Adınız",
+    "namePlaceholder": "Adınızı ve soyadınızı girin",
+    "emailLabel": "E-posta Adresi",
+    "emailPlaceholder": "E-posta adresinizi girin",
+    "phoneLabel": "Telefon Numarası",
+    "phonePlaceholder": "Telefon numaranızı girin",
+    "subjectLabel": "Konu",
+    "subjectPlaceholder": "Bu ne hakkında?",
+    "messageLabel": "Mesaj",
+    "messagePlaceholder": "Talebiniz hakkında daha fazla bilgi verin...",
+    "sendButton": "Mesaj Gönder",
+    "sendingButton": "Gönderiliyor...",
+    "successMessage": "Teşekkürler! Mesajınız başarıyla gönderildi. En kısa sürede size dönüş yapacağız.",
+    "errorMessage": "Bir şey ters gitti. Lütfen tekrar deneyin veya doğrudan bize e-posta gönderin.",
+    "heroTitle": "Bize Ulaşın",
+    "heroDesc": "Premium Mısır otları, baharatları ve bitkileri için toplu talep gönderin. İhracat ekibimiz gereksinimlerinizi inceleyecek ve 24 saat içinde size özel bir fiyat teklifi ile yanıt verecektir.",
+    "heroMetadataTitle": "İletişim | Calendula Herbs İthalat ve İhracat",
+    "heroMetadataDesc": "Toplu organik ot ihracatı talepleriniz için Calendula Herbs ile iletişime geçin. Teklif, ürün özellikleri veya numune talep edin.",
+    "formDesc": "İhtiyacınız olan hacim, özellikler ve varış noktası hakkında bize bilgi verin — ekibimiz incelemeniz için özel bir teklif hazırlayacaktır.",
+    "unavailableTitle": "İletişim Formu Şu Anda Kullanılamıyor",
+    "unavailableDesc": "Lütfen sağlanan bilgileri kullanarak doğrudan e-posta veya telefon yoluyla bize ulaşın.",
+    "directTitle": "Doğrudan İletişim",
+    "directDesc": "İhracat ekibimize doğrudan telefon, e-posta veya mesajlaşma uygulamasıyla ulaşın. Çalışma saatleri içinde tüm B2B taleplerine hızlıca yanıt veririz.",
+    "locationTitle": "Konumumuz",
+    "addressLabel": "Merkez Ofis ve Çiftlik",
+    "hoursLabel": "Çalışma Saatleri",
+    "emailLabel2": "E-posta",
+    "phoneLabel2": "Telefon",
+    "companyLabel": "Şirket",
+    "companyPlaceholder": "Otlar Ltd. Şti.",
+    "countryLabel": "Ülke",
+    "countryPlaceholder": "Amerika Birleşik Devletleri",
+    "successTitle": "Başarılı!",
+    "errorUnexpected": "Beklenmeyen bir hata oluştu",
+    "validationRequired": "{field} zorunludur",
+    "validationEmail": "Lütfen geçerli bir e-posta girin",
+    "validationFix": "Lütfen formdaki hataları düzeltin"
+  },
+  "footer": {
+    "brandDescription": "Dünyanın dört bir yanından sürdürülebilir şekilde tedarik edilen premium organik otlar. 1995'ten beri bitki ticaretinde güvenilir ortağınız.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "contactInfo": "İletişim Bilgileri",
+    "businessHours": "Çalışma Saatleri",
+    "followUs": "Bizi Takip Edin",
+    "copyright": "© {year} Calendula Herbs. Tüm hakları saklıdır.",
+    "privacyPolicy": "Gizlilik Politikası",
+    "termsOfService": "Kullanım Koşulları",
+    "productsCatalog": "Ürün Kataloğu",
+    "aboutCompany": "Şirketimiz Hakkında",
+    "farmProcessing": "Çiftlik ve İşleme",
+    "qualityCertificates": "Kalite Sertifikaları",
+    "contactUs": "Bize Ulaşın",
+    "fallbackHours": "İstediğiniz zaman bizimle iletişime geçin.",
+    "ourCertifications": "Sertifikalarımız"
+  },
+  "faq": {
+    "heroTitle": "Sıkça Sorulan Sorular",
+    "heroDesc": "Calendula Herbs'ten sipariş verme hakkında B2B alıcılarının bilmesi gereken her şey.",
+    "heroMetadataTitle": "SSS | Calendula Herbs",
+    "heroMetadataDesc": "B2B ihracat SSS — toplu ot ve baharat alıcıları için min. sipariş miktarı, ücretsiz numuneler, sertifikalar, nakliye ve ödeme koşulları.",
+    "empty": "SSS Mevcut Değil",
+    "stillQuestions": "Hala sorularınız mı var?",
+    "teamReady": "İhracat ekibimiz ek sorularınız için yardıma hazır.",
+    "contactButton": "Bize Ulaşın",
+    "items": [
+      {
+        "question": "Minimum sipariş miktarınız (MOQ) nedir?",
+        "answer": "Standart minimum sipariş miktarımız ürüne ve sezona bağlı olarak 500–1.000 kg'dır. İlk kez sipariş verecek nitelikli alıcılar için daha küçük deneme siparişlerini (50–100 kg) karşılayabiliriz. Özel hacim ihtiyaçlarınızı görüşmek için satış ekibimizle iletişime geçin."
+      },
+      {
+        "question": "Kalite değerlendirmesi için ücretsiz numune sunuyor musunuz?",
+        "answer": "Evet, nitelikli B2B alıcılarına 50–200 g'lık ücretsiz numuneler sağlıyoruz. Aksi kararlaştırılmadıkça nakliye masrafları alıcıya aittir. Web sitemiz üzerinden numune talebi gönderin, ekibimiz mevcut üretim partilerinden malzeme hazırlayacaktır."
+      },
+      {
+        "question": "Hangi sterilizasyon seçeneklerini sunuyorsunuz?",
+        "answer": "Buhar sterilizasyonu (otoklav), etilen oksit (EtO) ve gama ışınlama dahil olmak üzere çeşitli sterilizasyon yöntemleri sunuyoruz; seçim, ürün özelliklerine ve varış ülkesi gereksinimlerine bağlıdır. İşleme tesislerimiz GMP ve HACCP yönergelerini takip eder. Teklif talep ederken sterilizasyon gereksinimlerinizi belirtin."
+      },
+      {
+        "question": "Web sitenizde fiyatlandırma sağlayabiliyor musunuz?",
+        "answer": "Bitki ve baharat fiyatları mahsul verimine, piyasa koşullarına ve mevsimselliğe göre dalgalanır. Doğru ve güncel fiyatlandırmayı yalnızca belirli gereksinimlerinizi — hacim, kalite sınıfı, paketleme ve varış yeri — anladıktan sonra sağlarız. Size özel bir teklif için bizimle iletişime geçin."
+      },
+      {
+        "question": "Hangi sertifikalara sahipsiniz?",
+        "answer": "ISO 9001, ISO 22000, AB Organik, USDA NOP, HELAL, KOŞER, BRCGS, FDA Tescili, SEDEX/Semeta, NFSA Beyaz Liste ve AHK Konsey üyeliği dahil 11 büyük sertifikaya sahibiz. Tam detaylar için Sertifikalar sayfamızı ziyaret edin. Uygunluk incelemeniz için talep üzerine sertifikaları sağlayabiliriz."
+      },
+      {
+        "question": "Nakliye koşullarınız ve teslim süreleriniz nelerdir?",
+        "answer": "Hava ve deniz yoluyla dünya çapında nakliye yapıyoruz. Yaygın teslim şekilleri FOB (Dimyat veya İskenderiye limanları), CIF ve EXW'dir. Teslim süreleri stok ürünler için 7–14 gün, özel işleme için 20–30 gündür. Güvenilir nakliye firmalarıyla çalışıyor ve lojistik düzenlemelerinde yardımcı olabiliyoruz."
+      },
+      {
+        "question": "Hangi ödeme koşullarını kabul ediyorsunuz?",
+        "answer": "Ödeme koşulları, sipariş değeri, varış yeri ve alıcı geçmişine bağlı olarak sipariş bazında görüşülür ve kararlaştırılır. Tipik düzenlemeler arasında T/T (banka havalesi) ve L/C (akreditif) bulunur. Siparişiniz için en uygun seçeneği görüşmek üzere satış ekibimizle iletişime geçin."
+      },
+      {
+        "question": "Ürünleri yalnızca kendi çiftliklerinizden mi tedarik ediyorsunuz?",
+        "answer": "Mısır'ın Fayoum bölgesi İbshaway'de kendi çiftliklerimize sahibiz ve işletiyoruz — organik aynışifa, papatya, hibiskus ve diğer bitkilere ayrılmış 500 dönümün üzerinde arazi. Tutarlı kalite, izlenebilirlik ve yıl boyu bulunabilirlik sağlamak için doğrudan agronomist denetimimiz altındaki güvenilir ortak çiftliklerle destekliyoruz."
+      },
+      {
+        "question": "Ürün kalitesini ve tutarlılığını nasıl sağlıyorsunuz?",
+        "answer": "Kalite her aşamada sağlanır: tohum seçimi, yetiştirme, hasat, işleme ve paketleme. Saflık, etki, mikrobiyolojik kontaminasyon ve ağır metaller için şirket içi laboratuvar testleri yapıyoruz. Kalite yönetim sistemimiz ISO 9001 ve ISO 22000 sertifikalıdır ve her aşamada GMP ile HACCP yönergelerini takip eder."
+      },
+      {
+        "question": "Çiftliğinizi veya işleme tesisinizi ziyaret edebilir miyim?",
+        "answer": "Evet, ciddi alıcıları ve ithalatçıları ağırlamaktan mutluluk duyarız. Fayoum, Mısır'daki çiftliklerimizi, işleme tesislerimizi ve kalite kontrol laboratuvarlarımızı gezmek için önceden bizimle iletişime geçin. Vize ve seyahat düzenlemeleri için en az iki hafta önceden plan yapmanızı öneririz."
+      },
+      {
+        "question": "Toplu sipariş nasıl veririm?",
+        "answer": "Ürün kataloğumuza göz atın, Teklif İste formumuz aracılığıyla talep gönderin veya satış ekibimizle doğrudan iletişime geçin. 24 saat içinde ürün özellikleri, güncel fiyatlandırma ve numune temini ile sözleşme koşullarını içeren sonraki adımlarla yanıt vereceğiz."
+      },
+      {
+        "question": "Özel etiketleme veya özel paketleme sunuyor musunuz?",
+        "answer": "Evet, B2B ortaklarımız için özel etiketleme, özel paketleme ve OEM hizmetleri sunuyoruz. Minimum miktarlar uygulanır. Detaylı bir teklif için özelliklerinizle birlikte bizimle iletişime geçin."
+      }
+    ]
+  },
+  "certificates": {
+    "heroTitle": "Kalite ve Sertifikalar",
+    "heroDesc": "Organik tarım, işleme ve ihracatta en yüksek uluslararası standartlara bağlıyız.",
+    "heroMetadataTitle": "Sertifikalar | Calendula Herbs",
+    "heroMetadataDesc": "Organik ve kalite güvence sertifikalarımız — ISO, AB Organik, HELAL, KOŞER, USDA NOP ve daha fazlası.",
+    "empty": "Henüz sertifika listelenmemiştir.",
+    "certified": "Sertifikalı",
+    "viewPdf": "PDF'yi Görüntüle",
+    "viewFile": "Dosyayı Görüntüle"
+  },
+  "galleries": {
+    "heroTitle": "Medya Galerileri",
+    "heroDesc": "Çiftliklerimiz, son teknoloji işleme tesislerimiz ve premium ürünlerimiz arasında görsel bir yolculuk.",
+    "heroMetadataTitle": "Galeriler | Calendula Herbs",
+    "heroMetadataDesc": "Medya galerilerimiz aracılığıyla çiftliklerimizi, işleme tesislerimizi ve ürünlerimizi keşfedin.",
+    "empty": "Galeri Mevcut Değil",
+    "emptyDesc": "Fotoğraf ve videolar için daha sonra tekrar kontrol edin.",
+    "sections": {
+      "EVENTS": "Etkinlikler",
+      "EVENTS_desc": "Sektör etkinliklerimizden, fuarlarımızdan ve buluşmalarımızdan kareler.",
+      "INTERVIEWS_TV": "Röportajlar ve TV Programları",
+      "INTERVIEWS_TV_desc": "Medya görünümleri, röportajlar ve televizyon programları.",
+      "FACTORY": "Fabrika Fotoğrafları",
+      "FACTORY_desc": "Son teknoloji işleme tesislerimize bir bakış.",
+      "FARMS": "Çiftlik Fotoğrafları",
+      "FARMS_desc": "Partner çiftliklerimizden ve ekim alanlarımızdan görüntüler.",
+      "SHIPMENTS": "Sevkiyat Fotoğrafları",
+      "SHIPMENTS_desc": "Ürünlerimizin dünyanın dört bir yanına hazırlanıp gönderilmesi.",
+      "VISITS": "Ziyaretler",
+      "VISITS_desc": "Çiftliklerimize, tesislerimize ve dünya çapındaki ortaklarımıza ziyaretler."
+    },
+    "scrollLeft": "Sola kaydır",
+    "scrollRight": "Sağa kaydır",
+    "closeLightbox": "Işık kutusunu kapat",
+    "previousImage": "Önceki görsel",
+    "nextImage": "Sonraki görsel",
+    "galleryItemLabel": "Galeri öğesi {index}"
+  },
+  "privacy": {
+    "lastUpdated": "Son güncelleme: {date}",
+    "section1": {
+      "title": "1. Giriş",
+      "body": "<p>Calendula Herbs For Import & Export (biz, bize) gizliliğinizi korumayı taahhüt eder. Bu politika, web sitemizi ziyaret ettiğinizde veya hizmetlerimizi kullandığınızda kişisel bilgilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.</p>"
+    },
+    "section2": {
+      "title": "2. Topladığımız Bilgiler",
+      "body": "<p><strong>Sağladığınız bilgiler:</strong> Ad, e-posta adresi, telefon numarası, şirket adı, ülke ve iletişim formlarımız, teklif talepleriniz veya numune talepleriniz aracılığıyla gönderdiğiniz tüm detaylar.</p><p><strong>Otomatik olarak toplanan bilgiler:</strong> IP adresi, tarayıcı türü, cihaz bilgileri, ziyaret edilen sayfalar ve sitemizde geçirilen süre (çerezler ve analitikler aracılığıyla).</p>"
+    },
+    "section3": {
+      "title": "3. Bilgilerinizi Nasıl Kullanıyoruz",
+      "body": "<ul><li>Taleplerinize yanıt vermek ve teklif sağlamak</li><li>Ürün ve numune taleplerini işlemek</li><li>Web sitemizi ve müşteri deneyimini iyileştirmek</li><li>Yasal yükümlülüklere uymak</li></ul>"
+    },
+    "section4": {
+      "title": "4. Veri Koruması",
+      "body": "<p>Kişisel verilerinizi yetkisiz erişime, değişikliğe veya ifşaya karşı korumak için şifreleme, erişim kontrolleri ve güvenli sunucular dahil olmak üzere uygun güvenlik önlemleri uyguluyoruz.</p>"
+    },
+    "section5": {
+      "title": "5. Veri Saklama",
+      "body": "<p>Kişisel verilerinizi yalnızca bu politikada açıklanan amaçlar için gerekli olduğu sürece veya yasaların gerektirdiği şekilde saklarız. Talepler ve iletişim gönderimleri en fazla 3 yıl süreyle saklanır.</p>"
+    },
+    "section6": {
+      "title": "6. Haklarınız",
+      "body": "<p>Geçerli veri koruma yasaları kapsamında aşağıdaki haklara sahipsiniz:</p><ul><li>Kişisel verilerinize erişme</li><li>Hatalı verilerin düzeltilmesini talep etme</li><li>Verilerinizin silinmesini talep etme</li><li>Verilerinizin işlenmesine itiraz etme</li><li>Veri taşınabilirliği talep etme</li></ul><p>Bu hakları kullanmak için bizimle <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a> adresinden iletişime geçin.</p>"
+    },
+    "section7": {
+      "title": "7. Üçüncü Taraf Hizmetleri",
+      "body": "<p>Verilerinizi işleyebilecek aşağıdaki üçüncü taraf hizmetlerini kullanıyoruz:</p><ul><li><strong>Cloudinary</strong> — görsel ve medya barındırma</li><li><strong>Resend</strong> — işlemsel e-posta teslimatı</li><li><strong>Supabase</strong> — veritabanı barındırma</li><li><strong>Railway</strong> — web sitesi barındırma</li></ul>"
+    },
+    "section8": {
+      "title": "8. Çerezler",
+      "body": "<p>Web sitemiz, analitik ve işlevsellik amacıyla çerezler kullanabilir. Çerez tercihlerinizi tarayıcı ayarlarınız aracılığıyla kontrol edebilirsiniz.</p>"
+    },
+    "section9": {
+      "title": "9. İletişim",
+      "body": "<p>Bu gizlilik politikası hakkında sorularınız için bizimle iletişime geçin:</p><p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />E-posta: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
+    },
+    "heroTitle": "Gizlilik Politikası",
+    "heroDesc": "Kişisel verilerinizi nasıl topladığımız, kullandığımız ve koruduğumuz.",
+    "heroMetadataTitle": "Gizlilik Politikası",
+    "heroMetadataDesc": "Calendula Herbs gizlilik politikası — kişisel verilerinizi nasıl topladığımız, kullandığımız ve koruduğumuz."
+  },
+  "terms": {
+    "lastUpdated": "Son güncelleme: {date}",
+    "section1": {
+      "title": "1. Koşulların Kabulü",
+      "body": "<p>Calendula Herbs web sitesine erişerek ve kullanarak, bu kullanım koşullarına bağlı kalmayı kabul edersiniz. Kabul etmiyorsanız, lütfen sitemizi kullanmayın.</p>"
+    },
+    "section2": {
+      "title": "2. Ürünler ve Hizmetler",
+      "body": "<p>Sitemizde listelenen tüm ürünler stok durumuna bağlıdır. Ürünleri önceden haber vermeksizin değiştirme veya durdurma hakkımız saklıdır. Ürün açıklamaları, görselleri ve özellikleri bilgilendirme amaçlıdır ve renk veya görünüm açısından %100 doğru olmayabilir.</p>"
+    },
+    "section3": {
+      "title": "3. Siparişler ve Teklifler",
+      "body": "<p>Teklif talebi veya bilgi talebi göndermek, bağlayıcı bir sözleşme oluşturmaz. Teklifler, geçerli piyasa fiyatlarına göre sunulur ve teklifte belirtilen süre için geçerlidir. Tüm siparişler, yazılı onayımıza ve kararlaştırılan koşullara tabidir.</p>"
+    },
+    "section4": {
+      "title": "4. Fiyatlandırma",
+      "body": "<p>Listelenen tüm fiyatlar gösterge niteliğindedir ve piyasa koşullarına, mahsul verimine ve sipariş hacmine bağlı olarak değişebilir. Nihai fiyatlandırma resmi teklifte sağlanacaktır.</p>"
+    },
+    "section5": {
+      "title": "5. Minimum Sipariş Miktarları",
+      "body": "<p>Minimum sipariş miktarları (MOQ) ürün başına listelenmiştir. Bunlar, ürün bulunabilirliğine ve mevsimsel faktörlere bağlı olarak değişebilir.</p>"
+    },
+    "section6": {
+      "title": "6. Nakliye ve Teslimat",
+      "body": "<p>Nakliye koşulları sipariş bazında kararlaştırılır ve satış sözleşmesinde belirtilir. Zamanında teslimatı sağlamak için saygın lojistik ortaklarıyla çalışıyoruz. Calendula Herbs, gümrük, hava koşulları veya diğer mücbir sebeplerden kaynaklanan gecikmelerden sorumlu değildir.</p>"
+    },
+    "section7": {
+      "title": "7. Numuneler",
+      "body": "<p>Numune talepleri stok durumuna bağlıdır. Aksi kararlaştırılmadıkça, nakliye masrafları genellikle talep eden tarafından karşılanır. Numuneler yalnızca kalite değerlendirme amacıyla sağlanır.</p>"
+    },
+    "section8": {
+      "title": "8. Sorumluluğun Sınırlandırılması",
+      "body": "<p>Calendula Herbs, web sitemizin veya ürünlerimizin kullanımından kaynaklanan dolaylı, arızi veya sonuç olarak ortaya çıkan hiçbir zarardan sorumlu olmayacaktır. Toplam sorumluluğumuz, ilgili belirli siparişin değerini aşmayacaktır.</p>"
+    },
+    "section9": {
+      "title": "9. Fikri Mülkiyet",
+      "body": "<p>Bu web sitesindeki tüm içerik — metinler, görseller, logolar ve tasarımlar dahil — Calendula Herbs For Import & Export'un mülkiyetindedir ve geçerli fikri mülkiyet yasalarıyla korunmaktadır.</p>"
+    },
+    "section10": {
+      "title": "10. Uygulanacak Hukuk",
+      "body": "<p>Bu koşullar, Mısır Arap Cumhuriyeti yasalarına tabidir. Herhangi bir anlaşmazlık, Mısır'ın Fayoum Valiliği mahkemelerinde çözülecektir.</p>"
+    },
+    "section11": {
+      "title": "11. İletişim",
+      "body": "<p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />E-posta: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
+    },
+    "heroTitle": "Kullanım Koşulları",
+    "heroDesc": "Web sitemizin ve hizmetlerimizin kullanımını düzenleyen kurallar.",
+    "heroMetadataTitle": "Kullanım Koşulları",
+    "heroMetadataDesc": "Calendula Herbs kullanım koşulları — web sitemizin ve hizmetlerimizin kullanımını düzenleyen kurallar."
+  },
+  "common": {
+    "readMore": "Devamını Oku",
+    "learnMore": "Daha Fazla Bilgi",
+    "close": "Kapat",
+    "loading": "Yükleniyor...",
+    "error": "Bir şey ters gitti",
+    "search": "Ara",
+    "subscribe": "Abone Ol",
+    "subscribePlaceholder": "E-postanızı girin",
+    "allRightsReserved": "Tüm hakları saklıdır.",
+    "pageNotFound": "Sayfa Bulunamadı",
+    "goHome": "Ana Sayfaya Git",
+    "cookieConsent": "Deneyiminizi iyileştirmek için çerezler kullanıyoruz. Sitemizi kullanarak çerez politikamızı kabul etmiş olursunuz.",
+    "cookieAccept": "Kabul Et",
+    "cookieDecline": "Reddet",
+    "privacyPolicy": "Gizlilik Politikası"
+  },
+  "languages": {
+    "en": "İngilizce",
+    "ar": "Arapça",
+    "es": "İspanyolca",
+    "it": "İtalyanca",
+    "ja": "Japonca",
+    "ko": "Korece",
+    "hi": "Hintçe",
+    "ru": "Rusça",
+    "uk": "Ukraynaca",
+    "pt-BR": "Portekizce (Brezilya)",
+    "zh-CN": "Basitleştirilmiş Çince",
+    "fr": "Fransızca",
+    "nl": "Felemenkçe",
+    "de": "Almanca",
+    "bg": "Bulgarca",
+    "el": "Yunanca",
+    "tr": "Türkçe"
+  },
+  "errors": {
+    "validation": {
+      "required": "Bu alan zorunludur",
+      "email": "Lütfen geçerli bir e-posta adresi girin",
+      "phone": "Lütfen geçerli bir telefon numarası girin",
+      "minLength": "En az {min} karakter olmalıdır",
+      "maxLength": "En fazla {max} karakter olmalıdır"
+    }
+  },
+  "sample": {
+    "heroTitle": "Numune Talep Et",
+    "heroDesc": "Kalitemizi bizzat değerlendirin. Organik ürünlerimizden ücretsiz numune talep edin.",
+    "heroMetadataTitle": "Numune Talep Et | Calendula Herbs",
+    "heroMetadataDesc": "Organik otlarımız, baharatlarımız ve bitkisel ürünlerimizden kalite değerlendirmesi için ücretsiz numune talep edin.",
+    "howItWorks": "Nasıl Çalışır",
+    "step1Title": "Ürünleri Seçin",
+    "step1Desc": "Test etmek istediğiniz ürünleri seçin.",
+    "step2Title": "Hazırlayıp Gönderiyoruz",
+    "step2Desc": "Ekibimiz mevcut partiden numuneler (50–200g) hazırlar.",
+    "step3Title": "Kaliteyi Değerlendirin",
+    "step3Desc": "Laboratuvarınızda saflık, etki ve tutarlılık testi yapın.",
+    "importantNotes": "Önemli Notlar",
+    "note1": "Numuneler nitelikli alıcılar için ücretsizdir.",
+    "note2": "Konuma ve sipariş değerine bağlı olarak nakliye ücretleri uygulanabilir.",
+    "note3": "Numune miktarları genellikle 50g ile 200g arasında değişir.",
+    "note4": "Numune hazırlığı ve gönderimi için 5–10 iş günü bekleyin.",
+    "formTitle": "Talebinizi Gönderin",
+    "formDesc": "Formu doldurun, ekibimiz 24 saat içinde size dönüş yapacaktır.",
+    "loading": "Form yükleniyor..."
+  },
+  "productRequest": {
+    "heroTitle": "Bir Ürün Bulamıyor musunuz?",
+    "heroDesc": "Sitemizde listelenenlerin ötesinde geniş bir bitki, baharat, tohum ve botanik ürün yelpazesi tedarik ediyoruz. İhtiyacınızı bize söyleyin.",
+    "heroMetadataTitle": "Ürün Talep Et | Calendula Herbs",
+    "heroMetadataDesc": "Aradığınızı bulamıyor musunuz? Bir ürün talebi gönderin, ekibimiz sizin için tedarik etsin.",
+    "howItWorks": "Nasıl Çalışır",
+    "step1Title": "Bize İhtiyacınızı Söyleyin",
+    "step1Desc": "Aradığınız ürünü tanımlayın — adı, özellikleri, miktarı.",
+    "step2Title": "Tedarik Edip Teklif Veriyoruz",
+    "step2Desc": "Tedarik ekibimiz küresel tedarikçileri araştırır ve rekabetçi bir teklif hazırlar.",
+    "step3Title": "Teslim Ediyoruz",
+    "step3Desc": "Onaylandıktan sonra lojistiği yönetir ve ürünü varış noktanıza teslim ederiz.",
+    "whatWeCanSource": "Tedarik Edebileceklerimiz",
+    "item1": "Mutfak ve şifalı otlar",
+    "item2": "Baharatlar ve çeşniler",
+    "item3": "Tohumlar ve botanikler",
+    "item4": "Esansiyel yağlar ve ekstraktlar",
+    "item5": "Özel özellikler ve sınıflar",
+    "item6": "Organik ve geleneksel seçenekler",
+    "formTitle": "Talebinizi Gönderin",
+    "formDesc": "Formu doldurun, ekibimiz 24 saat içinde size özel bir teklifle dönüş yapacaktır.",
+    "loading": "Form yükleniyor..."
+  },
+  "cart": {
+    "title": "Teklif Talebi",
+    "closeAria": "Sepeti kapat",
+    "closeTitle": "Sepeti kapat",
+    "emptyTitle": "Teklif sepetiniz boş",
+    "emptyDesc": "Kataloğumuza göz atın ve toplu teklif almak istediğiniz ürünleri ekleyin.",
+    "browseProducts": "Ürünlere Göz Atın",
+    "decreaseAria": "Miktarı azalt",
+    "increaseAria": "Miktarı artır",
+    "removeAria": "Ürünü kaldır",
+    "removeTitle": "Sepetten çıkar",
+    "moq": "(MOQ) {weight} kg",
+    "step1Button": "Detaylara Geç",
+    "step2Back": "Geri",
+    "submit": "Gönder",
+    "submitting": "Gönderiliyor...",
+    "success": "Talep başarıyla gönderildi! En kısa sürede sizinle iletişime geçeceğiz.",
+    "errorGeneric": "Beklenmeyen bir hata oluştu",
+    "nameLabel": "Ad *",
+    "namePlaceholder": "Ayşe Yılmaz",
+    "companyLabel": "Şirket",
+    "companyPlaceholder": "Otlar Ltd. Şti.",
+    "emailLabel": "E-posta *",
+    "emailPlaceholder": "ayse@ornek.com",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+90 212...",
+    "countryLabel": "Ülke",
+    "countryPlaceholder": "Türkiye",
+    "notesLabel": "Ek Notlar (İsteğe Bağlı)",
+    "notesPlaceholder": "Varış limanı, özel gereksinimler, formlar..."
+  },
+  "productActions": {
+    "bulkInquiryLabel": "Toplu Talep Miktarı (kg)",
+    "kgSuffix": "kg",
+    "moq": "Min. Sipariş: {weight} kg",
+    "addToCart": "Teklif Sepetine Ekle",
+    "requestSample": "Numune Talep Et",
+    "dialogTitle": "Numune Talep Et: {name}",
+    "dialogDesc": "Kalite değerlendirmesi için ürün numuneleri sağlıyoruz. Nakliye masrafları genellikle alıcı tarafından karşılanır.",
+    "contactName": "İletişim Adı *",
+    "email": "E-posta *",
+    "company": "Şirket",
+    "shippingAddress": "Teslimat Adresi *",
+    "shippingAccount": "Nakliye Hesabı (DHL/FedEx) veya Notlar",
+    "shippingPlaceholder": "Nakliyeyi karşılamak istiyorsanız kurye hesap numaranızı girin...",
+    "cancel": "İptal",
+    "requestSampleButton": "Numune Talep Et",
+    "submitting": "Gönderiliyor...",
+    "cartSuccess": "{name} teklif sepetine eklendi",
+    "sampleSuccess": "Numune talebi gönderildi",
+    "submitError": "Talep gönderilemedi"
+  }
+}

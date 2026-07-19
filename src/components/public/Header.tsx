@@ -6,19 +6,27 @@ import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import Image from 'next/image'
 import { Menu, X, ShoppingCart } from 'lucide-react'
+import { useTranslations, useLocale } from 'next-intl'
 import { useCart } from './CartProvider'
-
-const NAV_LINKS = [
-  { label: 'Home', href: '/' },
-  { label: 'Products', href: '/products' },
-  { label: 'About Us', href: '/about' },
-  { label: 'Galleries', href: '/galleries' },
-  { label: 'Certificates', href: '/certificates' },
-  { label: 'Contact', href: '/contact' },
-]
+import { ThemeToggle } from './ThemeToggle'
+import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) {
+  const t = useTranslations('nav')
+  const th = useTranslations('header')
   const pathname = usePathname()
+  const locale = useLocale()
+  const isRtl = locale === 'ar'
+
+  const NAV_LINKS = [
+    { label: t('home'), href: '/' },
+    { label: t('products'), href: '/products' },
+    { label: t('aboutUs'), href: '/about' },
+    { label: t('galleries'), href: '/galleries' },
+    { label: t('certificates'), href: '/certificates' },
+    { label: t('contact'), href: '/contact' },
+  ]
+
   const { items, setIsCartOpen } = useCart()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -57,7 +65,7 @@ export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) 
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-6 lg:gap-8 nav-links">
+        <nav className="hidden md:flex items-center gap-6 lg:gap-8 nav-links" dir={isRtl ? 'rtl' : 'ltr'}>
           {NAV_LINKS.map((link) => {
             const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
             return (
@@ -79,11 +87,13 @@ export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) 
 
         {/* Desktop Actions */}
         <div className="hidden md:flex items-center gap-3 lg:gap-4">
+          <ThemeToggle />
+          <LanguageSwitcher />
           <button
             onClick={() => setIsCartOpen(true)}
             className="btn-icon relative"
-            aria-label="Quote cart"
-            title="Open quote cart"
+            aria-label={th('cartAria', { count: cartItemCount })}
+            title={th('cartAria', { count: cartItemCount })}
           >
             <ShoppingCart className="w-5 h-5" />
             {cartItemCount > 0 && (
@@ -96,7 +106,7 @@ export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) 
             href="/contact"
             className="btn btn-primary text-sm"
           >
-            Get a Quote
+            {th('getQuote')}
           </Link>
         </div>
 
@@ -105,8 +115,8 @@ export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) 
           <button
             onClick={() => setIsCartOpen(true)}
             className="btn-icon relative"
-            aria-label="Quote cart"
-            title="Open quote cart"
+            aria-label={th('cartAria', { count: cartItemCount })}
+            title={th('cartAria', { count: cartItemCount })}
           >
             <ShoppingCart className="w-5 h-5" />
             {cartItemCount > 0 && (
@@ -118,7 +128,7 @@ export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="btn-icon"
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
             title={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
@@ -132,9 +142,9 @@ export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) 
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ x: '100%' }}
+            initial={{ x: isRtl ? '-100%' : '100%' }}
             animate={{ x: 0 }}
-            exit={{ x: '100%' }}
+            exit={{ x: isRtl ? '-100%' : '100%' }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
             id="mobile-menu"
             className="fixed inset-0 z-40 md:hidden"
@@ -145,8 +155,12 @@ export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) 
             }}
           >
             <div className="flex flex-col h-full pt-20 pb-8 px-6 mt-16">
-              <nav className="flex flex-col gap-6 mb-auto">
-                {NAV_LINKS.map((link, i) => (
+                <nav className="flex flex-col gap-6 mb-auto" dir={isRtl ? 'rtl' : 'ltr'}>
+                  <div className="flex items-center gap-4 pb-4 border-b border-[var(--color-border-subtle)]">
+                    <ThemeToggle />
+                    <LanguageSwitcher />
+                  </div>
+                  {NAV_LINKS.map((link, i) => (
                   <motion.div
                     key={link.href}
                     initial={{ opacity: 0, x: 20 }}
@@ -174,7 +188,7 @@ export function Header({ siteName = 'Calendula Herbs' }: { siteName?: string }) 
                   href="/contact"
                   className="btn btn-primary btn-lg w-full justify-center text-base"
                 >
-                  Get a Quote
+                  {th('getQuote')}
                 </Link>
               </motion.div>
             </div>

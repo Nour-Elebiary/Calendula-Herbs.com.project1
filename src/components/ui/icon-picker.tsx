@@ -61,7 +61,7 @@ export function IconPicker({ value, onChange }: IconPickerProps) {
       </Button>
 
       {open && (
-        <div className="absolute top-full left-0 z-50 mt-1 w-72 rounded-xl border bg-white p-3 shadow-lg">
+        <div className="absolute top-full left-0 z-50 mt-1 w-72 rounded-xl border bg-card p-3 shadow-lg">
           {/* Search */}
           <div className="relative mb-3">
             <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-neutral-400 pointer-events-none" />

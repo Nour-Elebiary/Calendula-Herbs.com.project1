@@ -6,6 +6,7 @@ import { Footer } from '@/components/public/Footer'
 import { CartProvider } from '@/components/public/CartProvider'
 import { CartDrawer } from '@/components/public/CartDrawer'
 import { CookieConsent } from '@/components/public/CookieConsent'
+import { ThemeProvider } from '@/components/public/ThemeProvider'
 import DOMPurify from 'isomorphic-dompurify'
 import type { ContactMethod } from '@/lib/contact-links'
 import type { ContactSetting } from '@prisma/client'
@@ -16,16 +17,19 @@ export default async function PublicLayout({ children }: { children: React.React
   let siteSettings: { key: string; value: string }[] = []
   let contactSetting: ContactSetting | null = null
   let activePlugins: { id: string; code: string; position: string; order: number }[] = []
+  let teamMembers: any[] = []
 
   try {
-    const [ss, cs, ap] = await Promise.all([
+    const [ss, cs, ap, tm] = await Promise.all([
       db.siteSetting.findMany(),
       db.contactSetting.findUnique({ where: { id: 'main' } }),
-      db.plugin.findMany({ where: { isActive: true }, orderBy: { order: 'asc' } })
+      db.plugin.findMany({ where: { isActive: true }, orderBy: { order: 'asc' } }),
+      db.teamMember.findMany({ where: { isActive: true }, orderBy: { order: 'asc' } })
     ])
     siteSettings = ss
     contactSetting = cs
     activePlugins = ap
+    teamMembers = tm
   } catch (err) {
     console.error('PublicLayout: DB fetch failed, rendering with defaults:', err)
   }
@@ -45,6 +49,7 @@ export default async function PublicLayout({ children }: { children: React.React
       {plugins.head.map(p => (
         <div key={p.id} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(p.code) }} />
       ))}
+      <ThemeProvider>
       <CartProvider>
         <LazyMotion features={domAnimation}>
           <div className="page-root">
@@ -64,12 +69,16 @@ export default async function PublicLayout({ children }: { children: React.React
               {children}
             </main>
 
-            <Footer
-              settings={settings}
-              contact={contactSetting ? {
-                ...contactSetting,
-                contactMethods: contactSetting.contactMethods as ContactMethod[] | null,
-              } : null}
+            <Footer 
+              settings={settings} 
+              contact={{
+                mapAddress: contactSetting?.mapAddress || null,
+                phones: (contactSetting?.phones as unknown as { number: string; ownerName?: string }[]) || [],
+                publicEmails: contactSetting?.publicEmails || [],
+                businessHours: contactSetting?.businessHours || null,
+                contactMethods: (contactSetting?.contactMethods as ContactMethod[]) || null,
+                teamMembers: teamMembers,
+              }} 
             />
             
             <CartDrawer />
@@ -85,6 +94,7 @@ export default async function PublicLayout({ children }: { children: React.React
           </div>
         </LazyMotion>
       </CartProvider>
+      </ThemeProvider>
       {plugins.bodyEnd.map(p => (
         <div key={p.id} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(p.code) }} />
       ))}

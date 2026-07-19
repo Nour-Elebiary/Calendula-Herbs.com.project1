@@ -18,9 +18,9 @@ import { join } from 'path'
 
 // ── Cloudinary Config ─────────────────────────────────────
 cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME || 'dcukpuftg',
-  api_key: process.env.CLOUDINARY_API_KEY || '675339851565595',
-  api_secret: process.env.CLOUDINARY_API_SECRET || 'Kzf1z9YSx8davluDFJF_yI9LwZg',
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
   secure: true,
 })
 

@@ -3,9 +3,9 @@ import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 
 const CATEGORIES = [
-  { name: 'Herbs',    slug: 'herbs',    order: 0 },
-  { name: 'Spices',   slug: 'spices',   order: 1 },
-  { name: 'Specialty', slug: 'specialty', order: 2 },
+  { name: 'Herbs',    slug: 'herbs',    order: 0, description: 'Aromatic and medicinal herbs cultivated in Egypt\'s nutrient-rich soils — from chamomile and hibiscus to mint and marjoram.' },
+  { name: 'Spices',   slug: 'spices',   order: 1, description: 'Premium Egyptian spices including cumin, coriander, fennel, and nigella seeds — sourced from traditional growing regions.' },
+  { name: 'Specialty', slug: 'specialty', order: 2, description: 'Specialty products including dried fruits, vegetables, and unique botanical ingredients for industrial and culinary use.' },
 ]
 
 async function main() {
@@ -17,7 +17,8 @@ async function main() {
       console.log(`SKIP ${cat.name} — already exists`)
       continue
     }
-    await prisma.category.create({ data: cat })
+    const { name, slug, order, description } = cat
+    await prisma.category.create({ data: { name, slug, order, description } })
     created++
     console.log(`CREATED ${cat.name} (${cat.slug})`)
   }

@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { cleanImageUrl } from '@/lib/image-url'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 
@@ -14,6 +15,7 @@ type CertData = {
 }
 
 export function CertsBanner() {
+  const t = useTranslations('home')
   const [certs, setCerts] = useState<CertData[]>([])
 
   useEffect(() => {
@@ -44,14 +46,14 @@ export function CertsBanner() {
             className="text-3xl md:text-4xl font-display font-[400] leading-tight"
             style={{ color: 'var(--color-text-primary)' }}
           >
-            Certifications &amp; Quality Standards
+            {t('certsTitle')}
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="font-light max-w-xl mx-auto"
             style={{ color: 'var(--color-text-tertiary)' }}
           >
-            Our certifications reflect our unwavering commitment to quality, safety, and sustainability.
+            {t('certsSubtitle')}
           </motion.p>
         </motion.div>
 

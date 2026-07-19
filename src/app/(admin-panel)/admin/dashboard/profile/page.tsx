@@ -34,7 +34,7 @@ export default async function ProfilePage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Profile Info */}
-        <div className="bg-white border border-[var(--color-border-subtle)] rounded-xl p-6">
+        <div className="bg-card border border-[var(--color-border-subtle)] rounded-xl p-6">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-full bg-[var(--color-green-500)]/15 flex items-center justify-center">
               <User className="w-5 h-5 text-[var(--color-green-600)]" />
@@ -62,7 +62,7 @@ export default async function ProfilePage() {
       </div>
 
       {/* Active Sessions */}
-      <div className="bg-white border border-[var(--color-border-subtle)] rounded-xl p-6">
+      <div className="bg-card border border-[var(--color-border-subtle)] rounded-xl p-6">
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-[var(--color-green-500)]/15 flex items-center justify-center">

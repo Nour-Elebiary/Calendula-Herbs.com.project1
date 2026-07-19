@@ -73,41 +73,46 @@ export function Template2Carousel({ items, sectionLabel, sectionDescription }: P
         {/* Vertical carousel */}
         <div className="relative w-full max-w-md" style={{ height: '420px', perspective: '800px' }}>
           <div className="relative w-full h-full flex flex-col items-center justify-center">
-            {items.map((item, index) => (
-              <div
-                key={item.id}
-                className={`absolute w-full max-w-sm rounded-xl overflow-hidden cursor-pointer transition-all duration-[600ms] ${getCardClass(index)}`}
-                style={{ filter: index === currentIndex ? 'grayscale(0)' : 'grayscale(0.6)' }}
-                onClick={() => {
-                  if (index !== currentIndex) { goTo(index); return }
-                  setLightboxIndex(index)
-                }}
-              >
-                <div className="relative aspect-[4/3] bg-[var(--color-bg-elevated)]">
-                  {(item.thumbnailUrl || item.url) ? (
-                    <Image
-                      src={item.thumbnailUrl || item.url!}
-                      alt={item.title || 'Gallery item'}
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, 400px"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <Play className="w-10 h-10" style={{ color: 'var(--color-text-tertiary)' }} />
-                    </div>
-                  )}
-                  {(item.type === 'UPLOADED_VIDEO' || item.type === 'YOUTUBE' || item.type === 'GOOGLE_DRIVE' || item.type === 'FACEBOOK') && index === currentIndex && (
-                    <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'rgba(0,0,0,0.20)' }}>
-                      <div className="w-12 h-12 rounded-full flex items-center justify-center pl-1"
-                        style={{ background: 'rgba(255,253,248,0.90)', backdropFilter: 'blur(8px)' }}>
-                        <Play className="w-5 h-5" style={{ color: 'var(--color-text-primary)' }} />
+            {items.map((item, index) => {
+              const isVideoType = item.type === 'UPLOADED_VIDEO' || item.type === 'YOUTUBE' || item.type === 'GOOGLE_DRIVE' || item.type === 'FACEBOOK'
+              const imgUrl = item.thumbnailUrl || item.url
+              const showPlayOverlay = isVideoType && index === currentIndex
+              return (
+                <div
+                  key={item.id}
+                  className={`absolute w-full max-w-sm rounded-xl overflow-hidden cursor-pointer transition-all duration-[600ms] ${getCardClass(index)}`}
+                  style={{ filter: index === currentIndex ? 'grayscale(0)' : 'grayscale(0.6)' }}
+                  onClick={() => {
+                    if (index !== currentIndex) { goTo(index); return }
+                    setLightboxIndex(index)
+                  }}
+                >
+                  <div className="relative aspect-[4/3] bg-[var(--color-bg-elevated)]">
+                    {imgUrl ? (
+                      <Image
+                        src={imgUrl}
+                        alt={item.title || 'Gallery item'}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 640px) 100vw, 400px"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <Play className="w-10 h-10" style={{ color: 'var(--color-text-tertiary)' }} />
                       </div>
-                    </div>
-                  )}
+                    )}
+                    {showPlayOverlay && (
+                      <div className="absolute inset-0 flex items-center justify-center" style={{ background: 'rgba(0,0,0,0.20)' }}>
+                        <div className="w-12 h-12 rounded-full flex items-center justify-center pl-1"
+                          style={{ background: 'rgba(255,253,248,0.90)', backdropFilter: 'blur(8px)' }}>
+                          <Play className="w-5 h-5" style={{ color: 'var(--color-text-primary)' }} />
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
 
           {/* Up/Down arrows on carousel */}

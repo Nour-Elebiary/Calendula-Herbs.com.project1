@@ -134,7 +134,7 @@ export default function MediaPage() {
       </div>
 
       {/* Storage Bar */}
-      <div className="bg-white border rounded-lg p-4">
+      <div className="bg-card border rounded-lg p-4">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2 text-sm font-medium">
             <HardDrive className="h-4 w-4" />
@@ -157,7 +157,7 @@ export default function MediaPage() {
 
       {/* Uploader */}
       {uploaderOpen && (
-        <div className="bg-white border rounded-lg p-6">
+        <div className="bg-card border rounded-lg p-6">
           <div className="flex justify-between items-center mb-4">
             <h3 className="font-semibold">Upload New Files</h3>
             <Button variant="ghost" size="sm" onClick={() => setUploaderOpen(false)}>
@@ -187,7 +187,7 @@ export default function MediaPage() {
               className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                 typeFilter === tab.value
                   ? 'bg-primary text-white'
-                  : 'bg-white border text-neutral-600 hover:border-primary/60 hover:text-primary'
+                  : 'bg-card border text-neutral-600 hover:border-primary/60 hover:text-primary'
               }`}
             >
               {tab.label}
@@ -210,7 +210,7 @@ export default function MediaPage() {
       ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {media.map((item) => (
-            <div key={item.id} className="group relative bg-white border rounded-xl overflow-hidden hover:shadow-md transition-shadow">
+            <div key={item.id} className="group relative bg-card border rounded-xl overflow-hidden hover:shadow-md transition-shadow">
               {/* Thumbnail */}
               <div className="aspect-square relative flex items-center justify-center bg-neutral-50">
                 {item.type === 'IMAGE' ? (
@@ -232,14 +232,14 @@ export default function MediaPage() {
                   <button
                     title="Copy URL"
                     onClick={() => copyUrl(item.url)}
-                    className="p-1.5 bg-white/90 rounded-full hover:bg-white transition-colors"
+                    className="p-1.5 bg-card/90 rounded-full hover:bg-card transition-colors"
                   >
                     <Link2 className="h-3.5 w-3.5" />
                   </button>
                   <button
                     title="Rename"
                     onClick={() => { setRenamingId(item.id); setRenameValue(item.name) }}
-                    className="p-1.5 bg-white/90 rounded-full hover:bg-white transition-colors"
+                    className="p-1.5 bg-card/90 rounded-full hover:bg-card transition-colors"
                   >
                     <Pencil className="h-3.5 w-3.5" />
                   </button>
@@ -259,7 +259,7 @@ export default function MediaPage() {
               </div>
 
               {/* Name / Rename */}
-              <div className="p-2 border-t bg-white">
+              <div className="p-2 border-t bg-card">
                 {renamingId === item.id ? (
                   <div className="flex gap-1">
                     <input

@@ -2,6 +2,8 @@
 
 import React, { useState, useRef, useCallback, useEffect, useSyncExternalStore } from 'react'
 import Image from 'next/image'
+import { useLocale } from 'next-intl'
+import { isRtlLocale, type Locale } from '@/i18n/routing'
 import { Play } from 'lucide-react'
 import { CarouselItem } from './types'
 import { Lightbox } from './Lightbox'
@@ -21,6 +23,9 @@ export function Template1Carousel({ items, sectionLabel, sectionDescription }: P
   const [isDown, setIsDown] = useState(false)
   const [startX, setStartX] = useState(0)
   const containerRef = useRef<HTMLDivElement>(null)
+  
+  const locale = useLocale()
+  const isRtl = isRtlLocale(locale as Locale)
 
   const prefersReducedMotion = useSyncExternalStore(
     (onStoreChange) => {
@@ -106,12 +111,12 @@ export function Template1Carousel({ items, sectionLabel, sectionDescription }: P
         onTouchEnd={handleMouseUp}
       >
         {items.map((item, index) => {
-          const imgUrl = item.thumbnailUrl || item.url
           const isEmbed = item.type === 'UPLOADED_VIDEO' || item.type === 'YOUTUBE' || item.type === 'GOOGLE_DRIVE' || item.type === 'FACEBOOK'
+          const imgUrl = item.thumbnailUrl || item.url
           const zIndex = zIndices[index]
           const activeOffset = (index - active) / items.length
-          const xOffset = activeOffset * 80
-          const rotation = activeOffset * 6
+          const xOffset = activeOffset * 80 * (isRtl ? -1 : 1)
+          const rotation = activeOffset * 6 * (isRtl ? -1 : 1)
 
           return (
             <div

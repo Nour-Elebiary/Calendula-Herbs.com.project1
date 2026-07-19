@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { ShoppingCart, Leaf } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { fadeInUp, staggerContainer, cardVariant } from '@/lib/animations'
 import { SectionLabel } from '../shared/SectionLabel'
 import { Card3D } from '@/components/public/Card3D'
@@ -17,29 +18,19 @@ type Product = {
   slug: string
   name: string
   scientificName: string | null
+  commonName: string | null
   shortDescription: string | null
   isOrganic: boolean
   organicType: string | null
   conventionalType: string | null
   minOrderKg: number
+  availableCuts: string[]
   images: ProductImage[]
 }
 
-const categoryLookup: Record<string, string> = {
-  herbs: 'Dried Herbs',
-  spices: 'Spices',
-  seeds: 'Seeds',
-  flowers: 'Dried Flowers',
-}
-
-const cutsLookup: Record<string, string> = {
-  whole: 'Whole',
-  crushed: 'Crushed',
-  powder: 'Powdered',
-  cut_sifted: 'Cut & Sifted',
-}
-
 export function FeaturedProductsSection({ products }: { products: Product[] }) {
+  const t = useTranslations('home')
+  const tp = useTranslations('products')
   if (products.length === 0) return null
 
   return (
@@ -53,21 +44,21 @@ export function FeaturedProductsSection({ products }: { products: Product[] }) {
           variants={staggerContainer}
         >
           <motion.div variants={fadeInUp}>
-            <SectionLabel>Our Collection</SectionLabel>
+            <SectionLabel>{t('ourCollection')}</SectionLabel>
           </motion.div>
           <motion.h2
             variants={fadeInUp}
             className="text-4xl md:text-5xl font-display font-[400] leading-tight"
             style={{ color: 'var(--color-text-primary)' }}
           >
-            Featured Products
+            {t('featuredProducts')}
           </motion.h2>
           <motion.p
             variants={fadeInUp}
             className="text-lg font-light max-w-2xl mx-auto"
             style={{ color: 'var(--color-text-tertiary)' }}
           >
-            Discover our most sought-after botanicals, meticulously grown and processed to meet international standards.
+            {t('featuredDesc')}
           </motion.p>
         </motion.div>
 
@@ -80,10 +71,10 @@ export function FeaturedProductsSection({ products }: { products: Product[] }) {
         >
           {products.map((product) => {
             const mainImage = product.images[0]?.mediaFile.url
-            const category = categoryLookup[product.slug.split('-')[0]] || 'Botanicals'
-            const cuts = product.shortDescription
-              ? Object.values(cutsLookup).slice(0, 2).join(', ')
-              : 'Whole, Cut & Sifted'
+            const displayName = product.commonName || product.name
+            const cuts = product.availableCuts?.length
+              ? product.availableCuts.map(c => tp('cutForms.' + c) || c).slice(0, 2).join(', ')
+              : tp('cutForms.WHOLE') + ', ' + tp('cutForms.CUT_SIFTED')
             return (
               <motion.div key={product.id} variants={cardVariant}>
                 <Card3D>
@@ -96,6 +87,8 @@ export function FeaturedProductsSection({ products }: { products: Product[] }) {
                         width={320}
                         height={320}
                         className="card-product__image"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={true}
                       />
                     ) : (
                       <div className="flex items-center justify-center w-full h-full">
@@ -114,23 +107,24 @@ export function FeaturedProductsSection({ products }: { products: Product[] }) {
                     )}
                   </div>
                   <div className="card-product__body px-4 pb-4">
-                    <span className="card-product__label">{category}</span>
                     <h3 className="card-product__name group-hover" style={{ color: 'var(--color-calendula-500)' }}>
-                      {product.name}
+                      {displayName}
                     </h3>
                     {product.scientificName && (
                       <p className="italic text-sm" style={{ color: 'var(--color-text-tertiary)' }}>
                         {product.scientificName}
                       </p>
                     )}
-                    <p className="card-product__cuts">
-                      Available: {cuts}
-                    </p>
+                    {product.availableCuts && product.availableCuts.length > 0 && (
+                      <p className="card-product__cuts">
+                        {cuts}
+                      </p>
+                    )}
                     <div className="card-product__footer">
-                      <span className="badge badge-calendula">MOQ: {product.minOrderKg.toLocaleString()} kg</span>
+                      <span className="badge badge-calendula">{t('moq', { weight: product.minOrderKg.toLocaleString() })}</span>
                       <button
                         className="btn-icon"
-                        aria-label={`Request quote for ${product.name}`}
+                        aria-label={t('requestQuoteAria', { name: product.name })}
                         onClick={(e) => { e.preventDefault(); window.location.href = `/contact?product=${product.slug}` }}
                       >
                         <ShoppingCart className="w-4 h-4" />

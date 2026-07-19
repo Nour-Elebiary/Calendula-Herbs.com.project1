@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Dancing_Script, DM_Sans, JetBrains_Mono } from 'next/font/google'
+import { Cormorant_Garamond, Dancing_Script, DM_Sans, JetBrains_Mono, Noto_Naskh_Arabic } from 'next/font/google'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getMessages } from 'next-intl/server'
+import { isRtlLocale, routing, type Locale } from '@/i18n/routing'
 import './globals.css'
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -27,6 +30,12 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
   subsets: ['latin'],
   weight: ['400'],
+  display: 'swap',
+})
+
+const notoNaskhArabic = Noto_Naskh_Arabic({
+  variable: '--font-arabic',
+  subsets: ['arabic'],
   display: 'swap',
 })
 
@@ -79,9 +88,7 @@ const organizationJsonLd = {
     addressCountry: 'EG',
     addressRegion: 'Fayoum',
   },
-  sameAs: [
-    '',
-  ],
+  sameAs: [''],
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'sales',
@@ -104,20 +111,44 @@ const websiteJsonLd = {
   },
 }
 
-export default function RootLayout({
+export const dynamic = 'force-dynamic'
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const locale = await getLocale()
+  const messages = await getMessages()
+  const dir = isRtlLocale(locale as Locale) ? 'rtl' : 'ltr'
+
   return (
     <html
-      lang="en"
-      className={`${cormorantGaramond.variable} ${dancingScript.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      lang={locale}
+      dir={dir}
+      className={`${cormorantGaramond.variable} ${dancingScript.variable} ${dmSans.variable} ${jetbrainsMono.variable} ${notoNaskhArabic.variable}`}
+      suppressHydrationWarning
     >
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#FAFAF6" />
         <link rel="apple-touch-icon" href="/icon" />
+        <link rel="alternate" hrefLang={locale} href={normalizedUrl} />
+        {routing.locales.map(l => (
+          <link key={l} rel="alternate" hrefLang={l} href={normalizedUrl} />
+        ))}
+        <link rel="alternate" hrefLang="x-default" href={normalizedUrl} />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            (function() {
+              try {
+                var theme = localStorage.getItem('calendula-theme');
+                if (!theme) theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                if (theme === 'dark') document.documentElement.classList.add('dark');
+              } catch(e) {}
+            })();
+          `
+        }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -128,12 +159,14 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex flex-col antialiased bg-[var(--color-bg-void)] text-[var(--color-text-primary)]">
-        <a href="#main-content" className="skip-link">
-          Skip to main content
-        </a>
-        <div id="main-content">
-          {children}
-        </div>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <a href="#main-content" className="skip-link">
+            Skip to main content
+          </a>
+          <div id="main-content">
+            {children}
+          </div>
+        </NextIntlClientProvider>
       </body>
     </html>
   )

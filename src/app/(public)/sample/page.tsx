@@ -2,13 +2,18 @@ import React, { Suspense } from 'react'
 import { db } from '@/lib/db'
 import { FlaskConical, Package } from 'lucide-react'
 import { SampleRequestForm } from './SampleRequestForm'
+import { getTranslations } from 'next-intl/server'
 
-export const metadata = {
-  title: 'Request a Sample | Calendula Herbs',
-  description: 'Request free samples of our organic herbs, spices, and botanical products for quality evaluation.',
+export async function generateMetadata() {
+  const t = await getTranslations('sample')
+  return {
+    title: t('heroMetadataTitle'),
+    description: t('heroMetadataDesc'),
+  }
 }
 
 export default async function SamplePage() {
+  const t = await getTranslations('sample')
   const products = await db.product.findMany({
     where: { isActive: true },
     select: { id: true, name: true },
@@ -22,12 +27,8 @@ export default async function SamplePage() {
           <div className="hero-page__bg hero-page__bg--sample" />
           <div className="hero-page__content">
             <div className="hero-page__glass-card">
-              <h1 className="hero-page__title">
-                Request a Sample
-              </h1>
-              <p className="hero-page__desc">
-                Evaluate our quality firsthand. Request free samples of our organic products.
-              </p>
+              <h1 className="hero-page__title">{t('heroTitle')}</h1>
+              <p className="hero-page__desc">{t('heroDesc')}</p>
             </div>
           </div>
         </section>
@@ -36,14 +37,12 @@ export default async function SamplePage() {
           <div className="grid lg:grid-cols-5 gap-12">
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <h2 className="font-display text-2xl font-medium mb-4" style={{ color: 'var(--color-text-primary)' }}>
-                  How It Works
-                </h2>
+                <h2 className="font-display text-2xl font-medium mb-4" style={{ color: 'var(--color-text-primary)' }}>{t('howItWorks')}</h2>
                 <ul className="space-y-4">
                   {[
-                    { icon: Package, title: 'Select Products', desc: 'Choose the products you\'re interested in testing.' },
-                    { icon: FlaskConical, title: 'We Prepare & Ship', desc: 'Our team prepares samples (50–200g) from current batch.' },
-                    { icon: Package, title: 'Evaluate Quality', desc: 'Test for purity, potency, and consistency in your lab.' },
+                    { icon: Package, titleKey: 'step1Title', descKey: 'step1Desc' },
+                    { icon: FlaskConical, titleKey: 'step2Title', descKey: 'step2Desc' },
+                    { icon: Package, titleKey: 'step3Title', descKey: 'step3Desc' },
                   ].map((step, i) => (
                     <li key={i} className="flex gap-4">
                       <div
@@ -53,27 +52,27 @@ export default async function SamplePage() {
                         <step.icon className="w-5 h-5" style={{ color: 'var(--color-green-600)' }} />
                       </div>
                       <div>
-                        <h4 className="font-medium" style={{ color: 'var(--color-text-primary)' }}>{step.title}</h4>
-                        <p className="text-sm" style={{ color: 'var(--color-text-tertiary)' }}>{step.desc}</p>
+                        <h4 className="font-medium" style={{ color: 'var(--color-text-primary)' }}>{t(step.titleKey)}</h4>
+                        <p className="text-sm" style={{ color: 'var(--color-text-tertiary)' }}>{t(step.descKey)}</p>
                       </div>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="card-glass p-6 space-y-3">
-                <h3 className="font-medium" style={{ color: 'var(--color-text-primary)' }}>Important Notes</h3>
+                <h3 className="font-medium" style={{ color: 'var(--color-text-primary)' }}>{t('importantNotes')}</h3>
                 <ul className="space-y-2" style={{ fontSize: 'var(--text-sm)', color: 'var(--color-text-secondary)' }}>
                   <li className="flex items-start gap-2 before:content-['•'] before:mr-1" style={{ color: 'var(--color-calendula-500)' }}>
-                    <span style={{ color: 'var(--color-text-secondary)' }}>Samples are free for qualified buyers.</span>
+                    <span style={{ color: 'var(--color-text-secondary)' }}>{t('note1')}</span>
                   </li>
                   <li className="flex items-start gap-2 before:content-['•'] before:mr-1" style={{ color: 'var(--color-calendula-500)' }}>
-                    <span style={{ color: 'var(--color-text-secondary)' }}>Shipping costs may apply depending on location and order value.</span>
+                    <span style={{ color: 'var(--color-text-secondary)' }}>{t('note2')}</span>
                   </li>
                   <li className="flex items-start gap-2 before:content-['•'] before:mr-1" style={{ color: 'var(--color-calendula-500)' }}>
-                    <span style={{ color: 'var(--color-text-secondary)' }}>Sample quantities typically range from 50g to 200g.</span>
+                    <span style={{ color: 'var(--color-text-secondary)' }}>{t('note3')}</span>
                   </li>
                   <li className="flex items-start gap-2 before:content-['•'] before:mr-1" style={{ color: 'var(--color-calendula-500)' }}>
-                    <span style={{ color: 'var(--color-text-secondary)' }}>Allow 5–10 business days for sample preparation and dispatch.</span>
+                    <span style={{ color: 'var(--color-text-secondary)' }}>{t('note4')}</span>
                   </li>
                 </ul>
               </div>
@@ -81,13 +80,9 @@ export default async function SamplePage() {
 
             <div className="lg:col-span-3">
               <div className="card-glass p-8 md:p-10">
-                <h2 className="font-display text-3xl font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>
-                  Submit Your Request
-                </h2>
-                <p className="mb-8" style={{ color: 'var(--color-text-tertiary)' }}>
-                  Fill out the form and our team will follow up within 24 hours.
-                </p>
-                <Suspense fallback={<div className="text-center py-8" style={{ color: 'var(--color-text-tertiary)' }}>Loading form...</div>}>
+                <h2 className="font-display text-3xl font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>{t('formTitle')}</h2>
+                <p className="mb-8" style={{ color: 'var(--color-text-tertiary)' }}>{t('formDesc')}</p>
+                <Suspense fallback={<div className="text-center py-8" style={{ color: 'var(--color-text-tertiary)' }}>{t('loading')}</div>}>
                   <SampleRequestForm products={products} />
                 </Suspense>
               </div>

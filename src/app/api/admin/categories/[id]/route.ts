@@ -1,13 +1,36 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
+import { z } from 'zod'
 import { requireAdmin, unauthorized } from '@/lib/admin-auth'
+
+const LOCALES = ['en', 'ar', 'es', 'it', 'ja', 'ko', 'hi', 'ru', 'uk', 'pt-BR', 'zh-CN', 'fr', 'nl', 'de', 'bg', 'el', 'tr']
+
+const patchSchema = z.object({
+  name: z.string().min(1).optional(),
+  description: z.string().optional().nullable(),
+  imageId: z.string().optional().nullable(),
+  parentId: z.string().optional().nullable(),
+})
 
 export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   try { await requireAdmin() } catch { return unauthorized() }
   const { id } = await params
-  const { name } = await req.json()
-  if (!name?.trim()) return NextResponse.json({ error: 'Name required' }, { status: 400 })
-  const category = await db.category.update({ where: { id }, data: { name: name.trim() } })
+  const data = patchSchema.parse(await req.json())
+  const category = await db.category.update({
+    where: { id },
+    data: {
+      ...data,
+      ...(data.name ? {
+        translations: {
+          upsert: LOCALES.map(locale => ({
+            where: { categoryId_locale: { categoryId: id, locale } },
+            create: { locale, name: data.name! },
+            update: { name: data.name! },
+          })),
+        },
+      } : {}),
+    },
+  })
   return NextResponse.json({ category })
 }
 

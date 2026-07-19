@@ -5,11 +5,13 @@ import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion
 import Link from 'next/link'
 import { ChevronDown } from 'lucide-react'
 import DOMPurify from 'isomorphic-dompurify'
+import { useTranslations } from 'next-intl'
 import { heroStagger, heroChild } from '@/lib/animations'
 
 const VIDEO_URL = 'https://res.cloudinary.com/dcukpuftg/video/upload/v1782298734/calendula-herbs/videos/hero-about.mp4'
 
 export function HeroSection({ tagline, founded }: { tagline: string; founded: string }) {
+  const t = useTranslations('home')
   const sectionRef = useRef<HTMLDivElement>(null)
   const videoRef = useRef<HTMLVideoElement>(null)
   const prefersReducedMotion = useReducedMotion()
@@ -72,27 +74,30 @@ export function HeroSection({ tagline, founded }: { tagline: string; founded: st
       >
         <motion.div variants={heroChild} className="about-hero__glass-card">
           <motion.div variants={heroChild} className="hero-atmospheric__eyebrow" style={{ justifyContent: 'center' }}>
-            Premium Export Quality Since {founded || '2005'}
+            {t('heroEyebrow', { year: founded || '2005' })}
           </motion.div>
 
           <motion.h1
             variants={heroChild}
             className="hero-atmospheric__headline"
-            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(tagline || 'Rooted in Nature,<br />Exported with Care.') }}
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(t('heroTitle')) }}
           />
+          {tagline && (
+            <motion.p variants={heroChild} className="hero-atmospheric__body hero-atmospheric__tagline" style={{ maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
+              {tagline}
+            </motion.p>
+          )}
 
           <motion.p variants={heroChild} className="hero-atmospheric__body" style={{ maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
-            A reliable end-to-end supply chain from Egyptian farms to global warehouses
-            &mdash; GAP/GHP certified, dual drying methods, and MOSH/MOAH-free packaging
-            for premium organic herbs, spices, and seeds since {founded || '2005'}.
+            {t('heroDescription', { year: founded || '2005' })}
           </motion.p>
 
           <motion.div variants={heroChild} className="hero-atmospheric__actions" style={{ justifyContent: 'center' }}>
             <Link href="/contact" className="btn btn-primary btn-lg whitespace-nowrap">
-              Request a Quote
+              {t('heroCta')}
             </Link>
-            <Link href="/products" className="btn btn-secondary btn-lg whitespace-nowrap" style={{ color: 'var(--color-text-inverse)', borderColor: 'rgba(255,255,255,0.35)' }}>
-              Explore Products
+            <Link href="/products" className="btn btn-secondary btn-lg whitespace-nowrap" style={{ color: 'var(--color-text-inverse)', borderColor: 'var(--color-glass-border)' }}>
+              {t('heroSecondaryCta')}
             </Link>
           </motion.div>
         </motion.div>

@@ -1,12 +1,13 @@
 import { Ratelimit } from '@upstash/ratelimit'
 import { Redis } from '@upstash/redis'
+import { getRequiredEnvVar } from '@/lib/env'
 
 let _redis: Redis | null = null
 function getRedis(): Redis {
   if (!_redis) {
     _redis = new Redis({
-      url: process.env.UPSTASH_REDIS_REST_URL!,
-      token: process.env.UPSTASH_REDIS_REST_TOKEN!,
+      url: getRequiredEnvVar('UPSTASH_REDIS_REST_URL'),
+      token: getRequiredEnvVar('UPSTASH_REDIS_REST_TOKEN'),
     })
   }
   return _redis

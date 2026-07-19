@@ -4,6 +4,7 @@ export type ContactMethod = {
   linkMode: 'auto' | 'manual'
   manualLink?: string | null
   icon?: string | null
+  label?: string | null
 }
 
 export type ContactMethodType =

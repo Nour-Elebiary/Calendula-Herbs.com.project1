@@ -1,0 +1,2074 @@
+[
+  {
+    "id": "cmrbwan2e000ap70ka8py9fgu",
+    "title": "Canadian Organic ( COR )",
+    "issuer": null,
+    "description": null,
+    "fileId": null,
+    "fileType": "PDF",
+    "order": 15,
+    "isActive": true,
+    "createdAt": "2026-07-08T09:48:25.287Z",
+    "logoFileId": "cmrbw90j70005p70kudtf04qv",
+    "translations": [
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "ar",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "es",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "it",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "ja",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "ko",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "hi",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "ru",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "uk",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "pt-BR",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "zh-CN",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "fr",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "nl",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "de",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "bg",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "el",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwan2e000ap70ka8py9fgu",
+        "locale": "tr",
+        "title": "Canadian Organic ( COR )",
+        "issuer": null,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrfetzf000bvk7slax214cc",
+    "title": "USDA NOP Organic",
+    "issuer": "USDA National Organic Program",
+    "description": null,
+    "fileId": "cmrc07m3u0000s70kgwweqbzc",
+    "fileType": "PDF",
+    "order": 4,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:23.883Z",
+    "logoFileId": "cmraqr19d000bvk6s6aa121tw",
+    "translations": [
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "ar",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "es",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "it",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "ja",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "ko",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "hi",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "ru",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "uk",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "pt-BR",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "zh-CN",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "fr",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "nl",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "de",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "bg",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "el",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfetzf000bvk7slax214cc",
+        "locale": "tr",
+        "title": "USDA NOP Organic",
+        "issuer": "USDA National Organic Program",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrfeug2000cvk7s07qjwbjx",
+    "title": "KOSHER Certificate",
+    "issuer": "Kosher Certification",
+    "description": null,
+    "fileId": "cmrc09cet0001s70kghupmmr2",
+    "fileType": "PDF",
+    "order": 5,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:24.482Z",
+    "logoFileId": "cmraqqryc0008vk6s613w1zl6",
+    "translations": [
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "ar",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "es",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "it",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "ja",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "ko",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "hi",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "ru",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "uk",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "pt-BR",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "zh-CN",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "fr",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "nl",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "de",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "bg",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "el",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeug2000cvk7s07qjwbjx",
+        "locale": "tr",
+        "title": "KOSHER Certificate",
+        "issuer": "Kosher Certification",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmrq0zsjr0001vkvgw40vl9s4",
+    "title": "Agricultural Export Council ( AEC )",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:43.718Z",
+    "logoFileId": "cert_logo_Agricultural_Export_Council_(_AEC_)",
+    "translations": []
+  },
+  {
+    "id": "cmrq0ztf70003vkvg8qr4dty9",
+    "title": "AHK EGYPT",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:44.851Z",
+    "logoFileId": "cert_logo_AHK_EGYPT",
+    "translations": []
+  },
+  {
+    "id": "cmrq0zudv0005vkvgufdbyhqv",
+    "title": "BRCGS",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:46.099Z",
+    "logoFileId": "cert_logo_BRCGS",
+    "translations": []
+  },
+  {
+    "id": "cmrq0zw8e0009vkvgpdr6xw8m",
+    "title": "EU",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:48.494Z",
+    "logoFileId": "cert_logo_EU",
+    "translations": []
+  },
+  {
+    "id": "cmrq0zxho000bvkvge2rr4496",
+    "title": "FDA",
+    "issuer": "Various",
+    "description": null,
+    "fileId": "cert_doc_FDA",
+    "fileType": "PDF",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:50.124Z",
+    "logoFileId": "cert_logo_FDA",
+    "translations": []
+  },
+  {
+    "id": "cmrq0zyfj000dvkvga60vmt21",
+    "title": "FEC EGYPT",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:51.342Z",
+    "logoFileId": "cert_logo_FEC_EGYPT",
+    "translations": []
+  },
+  {
+    "id": "cmrbwa3pj0008p70ke68lvwk2",
+    "title": "FSSC 22000",
+    "issuer": null,
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 14,
+    "isActive": true,
+    "createdAt": "2026-07-08T09:48:00.200Z",
+    "logoFileId": "cert_logo_FSSC_22000",
+    "translations": [
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "ar",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "es",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "it",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "ja",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "ko",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "hi",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "ru",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "uk",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "pt-BR",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "zh-CN",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "fr",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "nl",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "de",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "bg",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "el",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbwa3pj0008p70ke68lvwk2",
+        "locale": "tr",
+        "title": "FSSC 22000",
+        "issuer": null,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmrq100aa000fvkvg7it1h1cz",
+    "title": "HALAL",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:53.746Z",
+    "logoFileId": "cert_logo_HALAL",
+    "translations": []
+  },
+  {
+    "id": "cmrq101kq000hvkvgrvevwhy0",
+    "title": "ISO 22000",
+    "issuer": "Various",
+    "description": null,
+    "fileId": "cert_doc_ISO_22000",
+    "fileType": "PDF",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:55.418Z",
+    "logoFileId": "cert_logo_ISO_22000",
+    "translations": []
+  },
+  {
+    "id": "cmrq102u0000jvkvgeyhylh4k",
+    "title": "ISO 9001",
+    "issuer": "Various",
+    "description": null,
+    "fileId": "cert_doc_ISO_9001",
+    "fileType": "PDF",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:57.048Z",
+    "logoFileId": "cert_logo_ISO_9001",
+    "translations": []
+  },
+  {
+    "id": "cmrq103rx000lvkvgbm27t40c",
+    "title": "KOSHER",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:58.270Z",
+    "logoFileId": "cert_logo_KOSHER",
+    "translations": []
+  },
+  {
+    "id": "cmrq104pj000nvkvgg5mw4xsm",
+    "title": "NFSA",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:59.479Z",
+    "logoFileId": "cert_logo_NFSA",
+    "translations": []
+  },
+  {
+    "id": "cmrq105me000pvkvgo7dsuc3j",
+    "title": "SEDEX-SEMETA-nobg",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:09:00.661Z",
+    "logoFileId": "cert_logo_SEDEX-SEMETA-nobg",
+    "translations": []
+  },
+  {
+    "id": "cmqdpuzav000ll804swu0bfkc",
+    "title": "ISO 22000:2018",
+    "issuer": "Certiva",
+    "description": null,
+    "fileId": "cmr99ek6s0002vkh874imkfei",
+    "fileType": "PDF",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-06-14T11:44:06.968Z",
+    "logoFileId": "cmraqqq2k0007vk6sx3xz18vj",
+    "translations": [
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "ar",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "es",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "it",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "ja",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "ko",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "hi",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "ru",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "uk",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "pt-BR",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "zh-CN",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "fr",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "nl",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "de",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "bg",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "el",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      },
+      {
+        "certificateId": "cmqdpuzav000ll804swu0bfkc",
+        "locale": "tr",
+        "title": "ISO 22000:2018",
+        "issuer": "Certiva",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrfeerm0002vk7sntm0ix7h",
+    "title": "ISO 9001:2015",
+    "issuer": "Quality Management System (TÜV)",
+    "description": null,
+    "fileId": "cmr99em4v0003vkh8545vksrr",
+    "fileType": "PDF",
+    "order": 1,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:04.162Z",
+    "logoFileId": "cmraqqocp0006vk6snvgbjvjc",
+    "translations": [
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "ar",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "es",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "it",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "ja",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "ko",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "hi",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "ru",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "uk",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "pt-BR",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "zh-CN",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "fr",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "nl",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "de",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "bg",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "el",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfeerm0002vk7sntm0ix7h",
+        "locale": "tr",
+        "title": "ISO 9001:2015",
+        "issuer": "Quality Management System (TÜV)",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrfemk30005vk7ss79yeh2t",
+    "title": "HALAL Certificate",
+    "issuer": "Halal Quality Control",
+    "description": null,
+    "fileId": "cmqrfembl0003vk7sksvqb0kg",
+    "fileType": "IMAGE",
+    "order": 2,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:14.259Z",
+    "logoFileId": "cmraqqme60005vk6sp8bsfkcw",
+    "translations": [
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "ar",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "es",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "it",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "ja",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "ko",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "hi",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "ru",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "uk",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "pt-BR",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "zh-CN",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "fr",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "nl",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "de",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "bg",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "el",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfemk30005vk7ss79yeh2t",
+        "locale": "tr",
+        "title": "HALAL Certificate",
+        "issuer": "Halal Quality Control",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrfermh0008vk7s1sfxaduf",
+    "title": "EU Organic Certificate",
+    "issuer": "Control Union Certifications",
+    "description": null,
+    "fileId": "cmr99ed8n0000vkh82o5jk4sz",
+    "fileType": "PDF",
+    "order": 3,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:20.825Z",
+    "logoFileId": "cmraqqe0u0002vk6sqd42a5rs",
+    "translations": [
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "ar",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "es",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "it",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "ja",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "ko",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "hi",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "ru",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "uk",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "pt-BR",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "zh-CN",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "fr",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "nl",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "de",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "bg",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "el",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfermh0008vk7s1sfxaduf",
+        "locale": "tr",
+        "title": "EU Organic Certificate",
+        "issuer": "Control Union Certifications",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrffe2w000fvk7stdimykqu",
+    "title": "FDA Registration",
+    "issuer": "U.S. Food & Drug Administration",
+    "description": null,
+    "fileId": "cmr99ei6m0001vkh81nfbfhl8",
+    "fileType": "PDF",
+    "order": 6,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:49.928Z",
+    "logoFileId": "cmraqqg2t0003vk6sgzyhkh3r",
+    "translations": [
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "ar",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "es",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "it",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "ja",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "ko",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "hi",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "ru",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "uk",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "pt-BR",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "zh-CN",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "fr",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "nl",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "de",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "bg",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "el",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffe2w000fvk7stdimykqu",
+        "locale": "tr",
+        "title": "FDA Registration",
+        "issuer": "U.S. Food & Drug Administration",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrffejm000gvk7svyuuwdoz",
+    "title": "BRCGS Certificate",
+    "issuer": "Brand Reputation Compliance Global Standards",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 7,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:50.530Z",
+    "logoFileId": "cmraqq7n80001vk6sy8unu9ob",
+    "translations": [
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "ar",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "es",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "it",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "ja",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "ko",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "hi",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "ru",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "uk",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "pt-BR",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "zh-CN",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "fr",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "nl",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "de",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "bg",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "el",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrffejm000gvk7svyuuwdoz",
+        "locale": "tr",
+        "title": "BRCGS Certificate",
+        "issuer": "Brand Reputation Compliance Global Standards",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrfff08000hvk7sm3q34jt2",
+    "title": "SEDEX / SMETA",
+    "issuer": "Supplier Ethical Data Exchange",
+    "description": null,
+    "fileId": "cmr99eon70004vkh8l9uhtna6",
+    "fileType": "PDF",
+    "order": 8,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:51.128Z",
+    "logoFileId": "cmraqqys0000avk6sssp08xjq",
+    "translations": [
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "ar",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "es",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "it",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "ja",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "ko",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "hi",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "ru",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "uk",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "pt-BR",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "zh-CN",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "fr",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "nl",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "de",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "bg",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "el",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfff08000hvk7sm3q34jt2",
+        "locale": "tr",
+        "title": "SEDEX / SMETA",
+        "issuer": "Supplier Ethical Data Exchange",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmqrfffgx000ivk7st8ads8cm",
+    "title": "NFSA Whitelist",
+    "issuer": "National Food Safety Authority (Egypt)",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 9,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:51.729Z",
+    "logoFileId": "cmraqqu770009vk6sok6n2sct",
+    "translations": [
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "ar",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "es",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "it",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "ja",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "ko",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "hi",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "ru",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "uk",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "pt-BR",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "zh-CN",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "fr",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "nl",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "de",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "bg",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "el",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffgx000ivk7st8ads8cm",
+        "locale": "tr",
+        "title": "NFSA Whitelist",
+        "issuer": "National Food Safety Authority (Egypt)",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmrq106ku000rvkvgmx49a7tf",
+    "title": "USDA Organic Seal NOP",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:09:01.902Z",
+    "logoFileId": "cert_logo_USDA_Organic_Seal_NOP",
+    "translations": []
+  },
+  {
+    "id": "cmqrfffxj000jvk7sihnbv40r",
+    "title": "AHK Membership",
+    "issuer": "The German-Arab Chamber of Industry and Commerce",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 10,
+    "isActive": true,
+    "createdAt": "2026-06-24T02:00:52.328Z",
+    "logoFileId": "cmraqq2n00000vk6s551ahrst",
+    "translations": [
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "ar",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "es",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "it",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "ja",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "ko",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "hi",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "ru",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "uk",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "pt-BR",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "zh-CN",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "fr",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "nl",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "de",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "bg",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "el",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      },
+      {
+        "certificateId": "cmqrfffxj000jvk7sihnbv40r",
+        "locale": "tr",
+        "title": "AHK Membership",
+        "issuer": "The German-Arab Chamber of Industry and Commerce",
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmr99ffnx000fvkh8nsvskq7o",
+    "title": "Egyptian Food Export Council",
+    "issuer": null,
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 12,
+    "isActive": true,
+    "createdAt": "2026-07-06T13:32:45.453Z",
+    "logoFileId": "cmraqqiw00004vk6sb2zky1m3",
+    "translations": [
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "ar",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "es",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "it",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "ja",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "ko",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "hi",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "ru",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "uk",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "pt-BR",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "zh-CN",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "fr",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "nl",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "de",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "bg",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "el",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmr99ffnx000fvkh8nsvskq7o",
+        "locale": "tr",
+        "title": "Egyptian Food Export Council",
+        "issuer": null,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmrbw88v00003p70kv99v81ff",
+    "title": "Egyptian Agricultural Export Council",
+    "issuer": null,
+    "description": null,
+    "fileId": null,
+    "fileType": "PDF",
+    "order": 13,
+    "isActive": true,
+    "createdAt": "2026-07-08T09:46:33.565Z",
+    "logoFileId": "cmrbw8w6v0004p70kojqx257v",
+    "translations": [
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "ar",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "es",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "it",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "ja",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "ko",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "hi",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "ru",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "uk",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "pt-BR",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "zh-CN",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "fr",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "nl",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "de",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "bg",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "el",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      },
+      {
+        "certificateId": "cmrbw88v00003p70kv99v81ff",
+        "locale": "tr",
+        "title": "Egyptian Agricultural Export Council",
+        "issuer": null,
+        "description": null
+      }
+    ]
+  },
+  {
+    "id": "cmrq0zv9s0007vkvgclhzkb6j",
+    "title": "COR",
+    "issuer": "Various",
+    "description": null,
+    "fileId": null,
+    "fileType": "IMAGE",
+    "order": 0,
+    "isActive": true,
+    "createdAt": "2026-07-18T07:08:47.248Z",
+    "logoFileId": "cert_logo_COR_",
+    "translations": []
+  }
+]

@@ -23,7 +23,9 @@ jobs:
       NEXTAUTH_URL: http://localhost:3000
       ADMIN_EMAIL: admin@example.com
       RESEND_API_KEY: placeholder
-      CLOUDINARY_URL: cloudinary://placeholder:placeholder@placeholder
+      CLOUDINARY_CLOUD_NAME: placeholder
+      CLOUDINARY_API_KEY: placeholder
+      CLOUDINARY_API_SECRET: placeholder
       UPSTASH_REDIS_REST_URL: https://placeholder.upstash.io
       UPSTASH_REDIS_REST_TOKEN: placeholder
       NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME: placeholder
@@ -50,5 +52,14 @@ jobs:
       - run: pnpm tsc
 
       - run: pnpm test
+
+      - name: Locale consistency check
+        run: node scripts/check-locale-consistency.mjs
+
+      - name: Env var usage check
+        run: node scripts/check-env-usage.mjs
+
+      - name: Dependency audit (non-blocking)
+        run: pnpm audit --audit-level=high || true
 
       - run: pnpm build

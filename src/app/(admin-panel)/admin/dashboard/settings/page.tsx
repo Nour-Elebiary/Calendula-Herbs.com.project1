@@ -40,14 +40,17 @@ type ContactMethod = {
   linkMode: 'auto' | 'manual'
   manualLink?: string | null
   icon?: string | null
+  label?: string | null
 }
+
+type PhoneEntry = { number: string; ownerName?: string }
 
 type ContactSettings = {
   managingEmails: string[]
   mapAddress: string | null
   mapLat: number | null
   mapLng: number | null
-  phones: string[]
+  phones: PhoneEntry[]
   publicEmails: string[]
   businessHours: string | null
   autoReplySubject: string | null
@@ -135,8 +138,8 @@ function GeneralTab() {
 
   return (
     <div className="space-y-6 max-w-2xl">
-      <div className="bg-white border rounded-xl p-6 space-y-5">
-        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+      <div className="bg-card border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-foreground flex items-center gap-2">
           <Globe className="h-4 w-4 text-primary" /> General Information
         </h2>
         {GENERAL_KEYS.map(({ key, label, placeholder, multiline }) => (
@@ -163,15 +166,15 @@ function GeneralTab() {
       </div>
 
       {/* Site Watermark */}
-      <div className="bg-white border rounded-xl p-6 space-y-5">
-        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+      <div className="bg-card border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-foreground flex items-center gap-2">
           <ImageIcon className="h-4 w-4 text-primary" /> Site Watermark
         </h2>
-        <p className="text-sm text-neutral-500">Show a subtle company logo watermark on all public pages.</p>
+        <p className="text-sm text-muted-foreground">Show a subtle company logo watermark on all public pages.</p>
         <div className="flex items-center justify-between">
           <Label htmlFor="watermark-enabled" className="cursor-pointer">
             <span className="font-medium">Watermark Enabled</span>
-            <p className="text-xs text-neutral-400 mt-0.5">Display watermark background on public pages</p>
+            <p className="text-xs text-muted-foreground/70 mt-0.5">Display watermark background on public pages</p>
           </Label>
           <Switch
             id="watermark-enabled"
@@ -183,12 +186,12 @@ function GeneralTab() {
           <div className="space-y-3">
             <Label>Watermark Logo</Label>
             {values.watermark_logo_url ? (
-              <div className="flex items-center gap-4 p-4 bg-neutral-50 rounded-lg border">
-                <div className="w-16 h-16 relative rounded-lg overflow-hidden bg-white border shrink-0">
+              <div className="flex items-center gap-4 p-4 bg-muted/50 rounded-lg border">
+                <div className="w-16 h-16 relative rounded-lg overflow-hidden bg-card border shrink-0">
                   <Image src={values.watermark_logo_url} alt="Watermark logo" fill className="object-contain p-1" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm text-neutral-600 truncate">{values.watermark_logo_url.split('/').pop()}</p>
+                  <p className="text-sm text-muted-foreground truncate">{values.watermark_logo_url.split('/').pop()}</p>
                   <div className="flex gap-2 mt-2">
                     <Button size="sm" variant="outline" onClick={() => setShowWatermarkPicker(true)}>
                       Change
@@ -221,11 +224,11 @@ function GeneralTab() {
                     accentColor: 'var(--color-calendula-500)',
                   }}
                 />
-                <span className="text-sm font-mono text-neutral-500 w-10 text-right">
+                <span className="text-sm font-mono text-muted-foreground w-10 text-right">
                   {Math.round(parseFloat(values.watermark_opacity || '0.05') * 100)}%
                 </span>
               </div>
-              <p className="text-xs text-neutral-400">Lower values = more transparent. Default: 5%.</p>
+              <p className="text-xs text-muted-foreground/70">Lower values = more transparent. Default: 5%.</p>
             </div>
           </div>
         )}
@@ -264,7 +267,7 @@ function ContactTab() {
   })
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
-  const [newPhone, setNewPhone] = useState('')
+  const [newPhone, setNewPhone] = useState({ number: '', ownerName: '' })
   const [newPublicEmail, setNewPublicEmail] = useState('')
   const [newManagingEmail, setNewManagingEmail] = useState('')
 
@@ -275,6 +278,7 @@ function ContactTab() {
   const [methodLinkMode, setMethodLinkMode] = useState<'auto' | 'manual'>('auto')
   const [methodManualLink, setMethodManualLink] = useState('')
   const [methodIcon, setMethodIcon] = useState<string | null>(null)
+  const [methodLabel, setMethodLabel] = useState('')
 
   useEffect(() => {
     fetch('/api/admin/contact-settings')
@@ -305,6 +309,14 @@ function ContactTab() {
     }
   }
 
+  const addPhone = () => {
+    if (!newPhone.number.trim()) return
+    setData(prev => ({ ...prev, phones: [...prev.phones, { number: newPhone.number.trim(), ownerName: newPhone.ownerName.trim() || undefined }] }))
+    setNewPhone({ number: '', ownerName: '' })
+  }
+  const removePhone = (idx: number) => {
+    setData(prev => ({ ...prev, phones: prev.phones.filter((_, i) => i !== idx) }))
+  }
   const addToList = (key: keyof ContactSettings, val: string, setter: (v: string) => void) => {
     if (!val.trim()) return
     setData(prev => ({ ...prev, [key]: [...(prev[key] as string[]), val.trim()] }))
@@ -322,6 +334,7 @@ function ContactTab() {
       linkMode: methodLinkMode,
       manualLink: methodLinkMode === 'manual' ? methodManualLink.trim() || null : null,
       icon: methodIcon || null,
+      label: methodLabel.trim() || null,
     }
     setData(prev => ({
       ...prev,
@@ -331,6 +344,7 @@ function ContactTab() {
     setMethodManualLink('')
     setMethodLinkMode('auto')
     setMethodIcon(null)
+    setMethodLabel('')
     setShowMethodForm(false)
   }
 
@@ -346,10 +360,10 @@ function ContactTab() {
   return (
     <div className="space-y-6 max-w-2xl">
       {/* Managing (internal) emails */}
-      <div className="bg-white border rounded-xl p-6 space-y-4">
-        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+      <div className="bg-card border rounded-xl p-6 space-y-4">
+        <h2 className="font-semibold text-foreground flex items-center gap-2">
           <Mail className="h-4 w-4 text-primary" /> Managing Emails
-          <span className="text-xs text-neutral-400 font-normal ml-1">(receive form submissions)</span>
+          <span className="text-xs text-muted-foreground/70 font-normal ml-1">(receive form submissions)</span>
         </h2>
         <div className="flex gap-2">
           <Input
@@ -375,8 +389,8 @@ function ContactTab() {
       </div>
 
       {/* Public contact info */}
-      <div className="bg-white border rounded-xl p-6 space-y-5">
-        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+      <div className="bg-card border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-foreground flex items-center gap-2">
           <Phone className="h-4 w-4 text-primary" /> Public Contact Info
         </h2>
         {/* Phones */}
@@ -384,20 +398,28 @@ function ContactTab() {
           <Label>Phone Numbers</Label>
           <div className="flex gap-2">
             <Input
-              placeholder="+1 234 567 890"
-              value={newPhone}
-              onChange={e => setNewPhone(e.target.value)}
-              onKeyDown={e => e.key === 'Enter' && addToList('phones', newPhone, setNewPhone)}
+              placeholder="Phone number (+1 234 567 890)"
+              className="flex-1"
+              value={newPhone.number}
+              onChange={e => setNewPhone(p => ({ ...p, number: e.target.value }))}
+              onKeyDown={e => e.key === 'Enter' && addPhone()}
             />
-            <Button size="sm" onClick={() => addToList('phones', newPhone, setNewPhone)}>
+            <Input
+              placeholder="Owner name (optional)"
+              className="w-48"
+              value={newPhone.ownerName}
+              onChange={e => setNewPhone(p => ({ ...p, ownerName: e.target.value }))}
+              onKeyDown={e => e.key === 'Enter' && addPhone()}
+            />
+            <Button size="sm" onClick={addPhone}>
               <Plus className="h-4 w-4" />
             </Button>
           </div>
           <div className="flex flex-wrap gap-2">
             {data.phones.map((ph, i) => (
               <Badge key={i} variant="secondary" className="flex items-center gap-1 pr-1">
-                {ph}
-                <button onClick={() => removeFromList('phones', i)} className="ml-1 hover:text-red-500">
+                {ph.ownerName ? `${ph.ownerName}: ${ph.number}` : ph.number}
+                <button onClick={() => removePhone(i)} className="ml-1 hover:text-red-500">
                   <X className="h-3 w-3" />
                 </button>
               </Badge>
@@ -432,10 +454,10 @@ function ContactTab() {
       </div>
 
       {/* Contact Methods (Messaging platforms) */}
-      <div className="bg-white border rounded-xl p-6 space-y-5">
-        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+      <div className="bg-card border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-foreground flex items-center gap-2">
           <MessageCircle className="h-4 w-4 text-primary" /> Contact Methods (Messaging)
-          <span className="text-xs text-neutral-400 font-normal ml-1">WhatsApp, Telegram, Viber, Skype, etc.</span>
+          <span className="text-xs text-muted-foreground/70 font-normal ml-1">WhatsApp, Telegram, Viber, Skype, etc.</span>
         </h2>
 
         {/* Existing methods */}
@@ -445,23 +467,23 @@ function ContactTab() {
               const meta = CONTACT_METHOD_OPTIONS.find(o => o.value === m.type)
               const Icon = getContactMethodIcon(m.icon || m.type)
               return (
-                <div key={i} className="flex items-center gap-3 bg-neutral-50 rounded-lg px-4 py-3">
-                  <div className="w-9 h-9 rounded-full bg-white border flex items-center justify-center text-neutral-600 shrink-0">
+                <div key={i} className="flex items-center gap-3 bg-muted/50 rounded-lg px-4 py-3">
+                  <div className="w-9 h-9 rounded-full bg-card border flex items-center justify-center text-muted-foreground shrink-0">
                     <Icon className="w-4 h-4" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <Badge variant="secondary" className="text-xs capitalize">{meta?.label || m.type}</Badge>
+                      <Badge variant="secondary" className="text-xs capitalize">{m.label || meta?.label || m.type}</Badge>
                       {m.linkMode === 'auto' ? (
                         <Badge className="text-xs bg-blue-100 text-blue-700 border-blue-200">Auto-link</Badge>
                       ) : (
                         <Badge className="text-xs bg-amber-100 text-amber-700 border-amber-200">Manual link</Badge>
                       )}
                     </div>
-                    <p className="text-sm text-neutral-600 mt-1 truncate">
+                    <p className="text-sm text-muted-foreground mt-1 truncate">
                       {m.value}
                       {m.linkMode === 'manual' && m.manualLink && (
-                        <span className="text-neutral-400 ml-2">→ {m.manualLink}</span>
+                        <span className="text-muted-foreground/70 ml-2">→ {m.manualLink}</span>
                       )}
                     </p>
                   </div>
@@ -473,12 +495,12 @@ function ContactTab() {
             })}
           </div>
         ) : (
-          <p className="text-sm text-neutral-400 py-2">No messaging methods configured yet.</p>
+          <p className="text-sm text-muted-foreground/70 py-2">No messaging methods configured yet.</p>
         )}
 
         {/* Add method form */}
         {showMethodForm ? (
-          <div className="border rounded-lg p-4 space-y-4 bg-neutral-50">
+          <div className="border rounded-lg p-4 space-y-4 bg-muted/50">
             <div className="grid grid-cols-3 gap-4">
               <div className="space-y-1.5">
                 <Label>Icon</Label>
@@ -521,7 +543,17 @@ function ContactTab() {
                 value={methodValue}
                 onChange={e => setMethodValue(e.target.value)}
               />
-              <p className="text-xs text-neutral-400">{CONTACT_METHOD_HINTS[methodType]}</p>
+              <p className="text-xs text-muted-foreground/70">{CONTACT_METHOD_HINTS[methodType]}</p>
+            </div>
+            <div className="space-y-1.5">
+              <Label htmlFor="method-label">Custom Label (Optional)</Label>
+              <Input
+                id="method-label"
+                placeholder="e.g. WhatsApp - Sales"
+                value={methodLabel}
+                onChange={e => setMethodLabel(e.target.value)}
+              />
+              <p className="text-xs text-muted-foreground/70">Overrides the default platform name.</p>
             </div>
             {methodLinkMode === 'manual' && (
               <div className="space-y-1.5">
@@ -532,7 +564,7 @@ function ContactTab() {
                   value={methodManualLink}
                   onChange={e => setMethodManualLink(e.target.value)}
                 />
-                <p className="text-xs text-neutral-400">Enter the complete URL for this contact method.</p>
+                <p className="text-xs text-muted-foreground/70">Enter the complete URL for this contact method.</p>
               </div>
             )}
             <div className="flex gap-2">
@@ -552,8 +584,8 @@ function ContactTab() {
       </div>
 
       {/* Map & Business Hours */}
-      <div className="bg-white border rounded-xl p-6 space-y-5">
-        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+      <div className="bg-card border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-foreground flex items-center gap-2">
           <MapPin className="h-4 w-4 text-primary" /> Location & Hours
         </h2>
         <div className="space-y-1.5">
@@ -603,14 +635,14 @@ function ContactTab() {
       </div>
 
       {/* Auto-reply */}
-      <div className="bg-white border rounded-xl p-6 space-y-5">
-        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+      <div className="bg-card border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-foreground flex items-center gap-2">
           <Mail className="h-4 w-4 text-primary" /> Auto-Reply Email
         </h2>
         <div className="flex items-center justify-between">
           <Label htmlFor="form-enabled" className="cursor-pointer">
             <span className="font-medium">Contact Form Enabled</span>
-            <p className="text-xs text-neutral-400 mt-0.5">Allow visitors to submit the contact form</p>
+            <p className="text-xs text-muted-foreground/70 mt-0.5">Allow visitors to submit the contact form</p>
           </Label>
           <Switch
             id="form-enabled"
@@ -737,7 +769,7 @@ function PluginsTab() {
     <div className="space-y-5 max-w-3xl">
       <div className="flex items-center justify-between">
         <div>
-          <p className="text-sm text-neutral-500">Inject HTML/JavaScript code into specific page locations.</p>
+          <p className="text-sm text-muted-foreground">Inject HTML/JavaScript code into specific page locations.</p>
         </div>
         <Button onClick={openCreate}>
           <Plus className="h-4 w-4 mr-2" /> Add Plugin
@@ -752,8 +784,8 @@ function PluginsTab() {
 
       {/* Form */}
       {showForm && (
-        <div className="bg-white border rounded-xl p-5 space-y-4">
-          <h3 className="font-semibold text-neutral-800">{editingPlugin ? 'Edit Plugin' : 'New Plugin'}</h3>
+        <div className="bg-card border rounded-xl p-5 space-y-4">
+          <h3 className="font-semibold text-foreground">{editingPlugin ? 'Edit Plugin' : 'New Plugin'}</h3>
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-1.5">
               <Label htmlFor="plugin-name">Plugin Name *</Label>
@@ -796,14 +828,14 @@ function PluginsTab() {
 
       {/* Plugin list */}
       {plugins.length === 0 ? (
-        <div className="text-center py-16 text-neutral-400">
+        <div className="text-center py-16 text-muted-foreground/70">
           <Code className="h-12 w-12 mx-auto mb-4 opacity-30" />
           <p>No plugins yet. Add your first script embed.</p>
         </div>
       ) : (
         <div className="space-y-3">
           {plugins.map(p => (
-            <div key={p.id} className={`bg-white border rounded-xl p-4 flex items-start gap-4 ${!p.isActive ? 'opacity-60' : ''}`}>
+            <div key={p.id} className={`bg-card border rounded-xl p-4 flex items-start gap-4 ${!p.isActive ? 'opacity-60' : ''}`}>
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="font-medium text-neutral-900">{p.name}</span>
@@ -814,7 +846,7 @@ function PluginsTab() {
                     <Badge variant="secondary" className="text-xs">Inactive</Badge>
                   )}
                 </div>
-                <pre className="text-xs text-neutral-400 mt-2 truncate max-w-md font-mono">{p.code.slice(0, 80)}{p.code.length > 80 ? '…' : ''}</pre>
+                <pre className="text-xs text-muted-foreground/70 mt-2 truncate max-w-md font-mono">{p.code.slice(0, 80)}{p.code.length > 80 ? '…' : ''}</pre>
               </div>
               <div className="flex items-center gap-1 shrink-0">
                 <Button size="sm" variant="ghost" onClick={() => handleToggle(p)} title={p.isActive ? 'Deactivate' : 'Activate'}>
@@ -887,19 +919,19 @@ function FaqTab() {
   return (
     <div className="space-y-6 max-w-3xl">
       <div className="flex items-center justify-between">
-        <p className="text-sm text-neutral-500">Manage FAQ questions and answers shown on the /faq page.</p>
+        <p className="text-sm text-muted-foreground">Manage FAQ questions and answers shown on the /faq page.</p>
         <Button onClick={addFaq}><Plus className="h-4 w-4 mr-2" /> Add Question</Button>
       </div>
 
       {faqs.length === 0 ? (
-        <div className="text-center py-16 text-neutral-400 border rounded-xl">
+        <div className="text-center py-16 text-muted-foreground/70 border rounded-xl">
           <HelpCircle className="h-12 w-12 mx-auto mb-4 opacity-30" />
           <p>No FAQ items yet. Click &quot;Add Question&quot; to start.</p>
         </div>
       ) : (
         <div className="space-y-4">
           {faqs.map((faq, i) => (
-            <div key={i} className="bg-white border rounded-xl p-5 space-y-3">
+            <div key={i} className="bg-card border rounded-xl p-5 space-y-3">
               <div className="flex items-center justify-between">
                 <Badge variant="secondary">#{i + 1}</Badge>
                 <div className="flex gap-1">
@@ -977,11 +1009,11 @@ function GalleriesTab() {
 
   return (
     <div className="space-y-6 max-w-2xl">
-      <div className="bg-white border rounded-xl p-6 space-y-5">
-        <h2 className="font-semibold text-neutral-800 flex items-center gap-2">
+      <div className="bg-card border rounded-xl p-6 space-y-5">
+        <h2 className="font-semibold text-foreground flex items-center gap-2">
           <ImageIcon className="h-4 w-4 text-primary" /> Carousel Style
         </h2>
-        <p className="text-sm text-neutral-500">Choose how the galleries page displays photos and videos.</p>
+        <p className="text-sm text-muted-foreground">Choose how the galleries page displays photos and videos.</p>
 
         <div className="space-y-1.5">
           <Label htmlFor="carousel-style">Gallery Carousel Style</Label>
@@ -997,7 +1029,7 @@ function GalleriesTab() {
               ))}
             </SelectContent>
           </Select>
-          <p className="text-xs text-neutral-400 mt-2">
+          <p className="text-xs text-muted-foreground/70 mt-2">
             {CAROUSEL_STYLE_OPTIONS.find(o => o.value === carouselStyle)?.description}
           </p>
         </div>

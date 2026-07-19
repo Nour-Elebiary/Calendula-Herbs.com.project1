@@ -2,6 +2,8 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
+import { useLocale } from 'next-intl'
+import { isRtlLocale, type Locale } from '@/i18n/routing'
 import { Play, ChevronLeft, ChevronRight } from 'lucide-react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -21,6 +23,8 @@ export function Template3Carousel({ items, sectionLabel, sectionDescription }: P
   const containerRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const timelineRef = useRef<gsap.core.Timeline | null>(null)
+  const locale = useLocale()
+  const isRtl = isRtlLocale(locale as Locale)
 
   useEffect(() => {
     if (!trackRef.current || items.length === 0) return
@@ -37,13 +41,13 @@ export function Template3Carousel({ items, sectionLabel, sectionDescription }: P
 
     const tl = gsap.timeline({ repeat: -1, paused: false })
       .to(trackRef.current, {
-        x: -totalWidth,
+        x: isRtl ? totalWidth : -totalWidth,
         duration,
         ease: 'none',
       })
       .set(trackRef.current, { x: 0 })
       .to(trackRef.current, {
-        x: -totalWidth,
+        x: isRtl ? totalWidth : -totalWidth,
         duration,
         ease: 'none',
       })
@@ -121,12 +125,13 @@ export function Template3Carousel({ items, sectionLabel, sectionDescription }: P
       <div ref={containerRef} className="relative w-full group" style={{ height: '360px' }}>
         <div
           ref={trackRef}
+          dir={isRtl ? "rtl" : "ltr"}
           className="flex gap-5 absolute"
           style={{ willChange: 'transform' }}
         >
           {doubled.map((item, index) => {
-            const imgUrl = item.thumbnailUrl || item.url
             const isEmbed = item.type === 'UPLOADED_VIDEO' || item.type === 'YOUTUBE' || item.type === 'GOOGLE_DRIVE' || item.type === 'FACEBOOK'
+            const imgUrl = item.thumbnailUrl || item.url
             const realIndex = index % items.length
 
             return (

@@ -4,20 +4,33 @@ import { z } from 'zod'
 import slugify from 'slugify'
 import { requireAdmin, unauthorized } from '@/lib/admin-auth'
 
+const CutType = z.enum(['WHOLE', 'CRUSHED', 'POWDER', 'CUT_SIFTED', 'GRANULATED', 'LEAF', 'STEM', 'ROOT', 'TBC'])
+
+const translationSchema = z.object({
+  name: z.string().min(1),
+  scientificName: z.string().optional().nullable(),
+  commonName: z.string().optional().nullable(),
+  shortDescription: z.string().optional().nullable(),
+  description: z.string().optional().nullable(),
+})
+
 const patchSchema = z.object({
   name: z.string().min(1).optional(),
   scientificName: z.string().optional().nullable(),
+  commonName: z.string().optional().nullable(),
   slug: z.string().optional().nullable(),
   description: z.string().optional().nullable(),
   shortDescription: z.string().optional().nullable(),
   isOrganic: z.boolean().optional(),
   organicType: z.string().optional().nullable(),
   conventionalType: z.string().optional().nullable(),
+  availableCuts: z.array(CutType).optional(),
   minOrderKg: z.number().int().positive().optional(),
   isActive: z.boolean().optional(),
   isFeatured: z.boolean().optional(),
   categoryIds: z.array(z.string()).optional(),
   order: z.number().int().optional(),
+  translations: z.record(z.string(), translationSchema).optional(),
 })
 
 async function generateSlug(name: string, excludeId?: string) {
@@ -42,6 +55,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ id: 
         include: { mediaFile: { select: { id: true, url: true, thumbnailUrl: true, name: true, width: true, height: true } } },
         orderBy: [{ isPrimary: 'desc' }, { order: 'asc' }],
       },
+      translations: true,
     },
   })
   if (!product) return NextResponse.json({ error: 'Not found' }, { status: 404 })
@@ -86,6 +100,15 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
             create: categoryIds.map(cid => ({ categoryId: cid })),
           },
         } : {}),
+        ...(json.translations ? {
+          translations: {
+            upsert: Object.entries(json.translations as Record<string, { name: string; scientificName: string | null; shortDescription: string | null; description: string | null }>).map(([locale, tr]) => ({
+              where: { productId_locale: { productId: id, locale } },
+              create: { locale, ...tr },
+              update: { ...tr },
+            })),
+          },
+        } : {}),
       },
       include: {
         categories: { include: { category: true } },
@@ -93,6 +116,7 @@ export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id
           include: { mediaFile: { select: { id: true, url: true, thumbnailUrl: true, name: true } } },
           orderBy: [{ isPrimary: 'desc' }, { order: 'asc' }],
         },
+        translations: true,
       },
     })
     return NextResponse.json({ product })

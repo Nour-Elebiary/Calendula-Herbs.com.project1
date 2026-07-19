@@ -8,11 +8,18 @@ import { Template2PageAdapter } from '@/components/public/carousels/Template2Pag
 import { Template3Carousel } from '@/components/public/carousels/Template3Carousel'
 import { getCarouselStyle, type CarouselStyle } from '@/lib/settings'
 import { CarouselItem } from '@/components/public/carousels/types'
-import { GallerySection } from '@prisma/client'
+import { GallerySection, GalleryItem, MediaFile, Gallery } from '@prisma/client'
+import { getTranslations } from 'next-intl/server'
 
-export const metadata = {
-  title: 'Galleries | Calendula Herbs',
-  description: 'Explore our farms, processing facilities, and products through our media galleries.',
+type GalleryItemWithRelations = GalleryItem & { mediaFile: MediaFile | null; gallery: Gallery | null }
+type GroupedSection = { section: GallerySection; label: string; description: string; items: GalleryItemWithRelations[] }
+
+export async function generateMetadata() {
+  const t = await getTranslations('galleries')
+  return {
+    title: t('heroMetadataTitle'),
+    description: t('heroMetadataDesc'),
+  }
 }
 
 const SECTION_ORDER: GallerySection[] = [
@@ -24,39 +31,20 @@ const SECTION_ORDER: GallerySection[] = [
   'SHIPMENTS',
 ]
 
-const SECTION_META: Record<GallerySection, { label: string; description: string }> = {
-  EVENTS: {
-    label: 'Events',
-    description: 'Moments from our industry events, exhibitions, and gatherings.',
-  },
-  INTERVIEWS_TV: {
-    label: 'Interviews and TV Shows',
-    description: 'Media appearances, interviews, and television features.',
-  },
-  FACTORY: {
-    label: 'Factory Pics',
-    description: 'A look inside our state-of-the-art processing facilities.',
-  },
-  FARMS: {
-    label: 'Farms Pics',
-    description: 'Scenes from our partner farms and cultivation fields.',
-  },
-  SHIPMENTS: {
-    label: 'Shipments Pics',
-    description: 'Our products being prepared and shipped worldwide.',
-  },
-  VISITS: {
-    label: 'Visits',
-    description: 'Visits to our farms, facilities, and partners around the world.',
-  },
+function sectionMeta(t: (key: string) => string, section: GallerySection): { label: string; description: string } {
+  return {
+    label: t(`sections.${section}`),
+    description: t(`sections.${section}_desc`),
+  }
 }
 
-function mapItems(items: any[]): CarouselItem[] {
+function mapItems(items: GalleryItemWithRelations[]): CarouselItem[] {
   return items.map(item => ({
     id: item.id,
     type: item.type,
     url: item.mediaFile?.url,
     thumbnailUrl: item.thumbnailUrl
+      || item.mediaFile?.thumbnailUrl
       || (item.type === 'YOUTUBE' && item.externalId ? `https://img.youtube.com/vi/${item.externalId}/hqdefault.jpg` : undefined)
       || (item.type === 'GOOGLE_DRIVE' && item.externalId ? `https://drive.google.com/thumbnail?id=${item.externalId}&sz=w480` : undefined),
     title: item.title,
@@ -67,8 +55,9 @@ function mapItems(items: any[]): CarouselItem[] {
 }
 
 export default async function GalleriesPage() {
+  const t = await getTranslations('galleries')
   let carouselStyle: CarouselStyle = 'original'
-  let items: any[] = []
+  let items: GalleryItemWithRelations[] = []
   try {
     const [style, galleryItems] = await Promise.all([
       getCarouselStyle(),
@@ -91,14 +80,14 @@ export default async function GalleriesPage() {
   const grouped = SECTION_ORDER
     .map(section => ({
       section,
-      ...SECTION_META[section],
+      ...sectionMeta(t, section),
       items: items.filter(item => item.section === section),
     }))
     .filter(group => group.items.length > 0)
 
   const hasContent = grouped.length > 0
 
-  const renderCarousel = (group: { section: GallerySection; label: string; description: string; items: any[] }) => {
+  const renderCarousel = (group: GroupedSection) => {
     const carouselItems = mapItems(group.items)
     const props = {
       items: carouselItems,
@@ -125,12 +114,8 @@ export default async function GalleriesPage() {
           <div className="hero-page__bg hero-page__bg--galleries" />
           <div className="hero-page__content">
             <div className="hero-page__glass-card">
-              <h1 className="hero-page__title">
-                Media Galleries
-              </h1>
-              <p className="hero-page__desc">
-                A visual journey through our farms, state-of-the-art processing facilities, and premium products.
-              </p>
+              <h1 className="hero-page__title">{t('heroTitle')}</h1>
+              <p className="hero-page__desc">{t('heroDesc')}</p>
             </div>
           </div>
         </section>
@@ -139,10 +124,8 @@ export default async function GalleriesPage() {
           {!hasContent ? (
             <div className="card-glass py-24 text-center">
               <ImageIcon className="w-16 h-16 mx-auto mb-4" style={{ color: 'var(--color-text-tertiary)' }} />
-              <h3 className="font-display text-2xl font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>
-                No Galleries Available
-              </h3>
-              <p style={{ color: 'var(--color-text-secondary)' }}>Check back later for photos and videos.</p>
+              <h3 className="font-display text-2xl font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>{t('empty')}</h3>
+              <p style={{ color: 'var(--color-text-secondary)' }}>{t('emptyDesc')}</p>
             </div>
           ) : (
             carouselStyle === 'template2' ? (

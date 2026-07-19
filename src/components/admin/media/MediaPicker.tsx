@@ -99,7 +99,7 @@ export function MediaPicker({ open, onOpenChange, onSelect, filterType }: MediaP
                   onClick={() => handleSelect(item)}
                   className="group relative border rounded-md overflow-hidden cursor-pointer hover:border-primary transition-colors bg-neutral-50 aspect-square flex flex-col"
                 >
-                  <div className="flex-1 flex items-center justify-center relative bg-white">
+                  <div className="flex-1 flex items-center justify-center relative bg-card">
                     {item.type === 'IMAGE' ? (
                       <Image 
                         src={item.url} 
@@ -112,7 +112,7 @@ export function MediaPicker({ open, onOpenChange, onSelect, filterType }: MediaP
                       renderIcon(item.type)
                     )}
                   </div>
-                  <div className="p-2 text-xs truncate border-t bg-white">
+                  <div className="p-2 text-xs truncate border-t bg-card">
                     {item.name}
                   </div>
                   <div className="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity">

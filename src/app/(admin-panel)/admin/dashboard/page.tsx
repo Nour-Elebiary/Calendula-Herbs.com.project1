@@ -49,7 +49,7 @@ export default async function AdminDashboard() {
         <p className="text-[var(--color-text-tertiary)]">Here&apos;s what&apos;s happening with Calendula Herbs today.</p>
       </div>
 
-      <div className="bg-white border border-[var(--color-border-subtle)] rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+      <div className="bg-card border border-[var(--color-border-subtle)] rounded-xl p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div className="flex items-start sm:items-center gap-3">
           <div className="w-10 h-10 rounded-lg bg-[var(--color-calendula-500)]/15 flex items-center justify-center shrink-0">
             <ShieldCheck className="w-5 h-5 text-[var(--color-calendula-500)]" />
@@ -91,7 +91,7 @@ export default async function AdminDashboard() {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
-          <div className="bg-white border border-[var(--color-border-subtle)] rounded-xl p-5">
+          <div className="bg-card border border-[var(--color-border-subtle)] rounded-xl p-5">
             <h2 className="text-lg font-semibold text-[var(--color-text-primary)] mb-4">Recent Inquiries</h2>
             {totalInquiries > 0 ? (
               <div className="space-y-3">
@@ -140,7 +140,7 @@ export default async function AdminDashboard() {
           </div>
         </div>
         <div>
-          <div className="bg-white border border-[var(--color-border-subtle)] rounded-xl p-5 min-h-96">
+          <div className="bg-card border border-[var(--color-border-subtle)] rounded-xl p-5 min-h-96">
             <h2 className="text-lg font-semibold text-[var(--color-text-primary)] mb-4">Quick Actions</h2>
             <div className="space-y-4">
               {productCount === 0 && (
@@ -174,7 +174,7 @@ function StatCard({
   highlighted?: boolean
 }) {
   return (
-    <div className={`bg-white border border-[var(--color-border-subtle)] rounded-xl p-5 ${
+    <div className={`bg-card border border-[var(--color-border-subtle)] rounded-xl p-5 ${
       highlight || highlighted ? 'border-[var(--color-calendula-500)]/20 bg-[var(--color-calendula-500)]/[0.02]' : ''
     }`}>
       <div className="flex items-center justify-between mb-4">

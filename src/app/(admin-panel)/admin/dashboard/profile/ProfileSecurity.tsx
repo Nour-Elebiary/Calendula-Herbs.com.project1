@@ -104,7 +104,7 @@ export function ProfileSecurity({ initialRecoveryEmails }: Props) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {/* Security / Change Password */}
-      <div className="bg-white border border-[var(--color-border-subtle)] rounded-xl p-6 flex flex-col">
+      <div className="bg-card border border-[var(--color-border-subtle)] rounded-xl p-6 flex flex-col">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-10 rounded-full bg-[var(--color-green-500)]/15 flex items-center justify-center">
             <KeyRound className="w-5 h-5 text-[var(--color-green-600)]" />
@@ -208,7 +208,7 @@ export function ProfileSecurity({ initialRecoveryEmails }: Props) {
       </div>
 
       {/* Recovery Emails */}
-      <div className="bg-white border border-[var(--color-border-subtle)] rounded-xl p-6">
+      <div className="bg-card border border-[var(--color-border-subtle)] rounded-xl p-6">
         <div className="flex items-center gap-3 mb-6">
           <div className="w-10 h-10 rounded-full bg-[var(--color-green-500)]/15 flex items-center justify-center">
             <Mail className="w-5 h-5 text-[var(--color-green-600)]" />

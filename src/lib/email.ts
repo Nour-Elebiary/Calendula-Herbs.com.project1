@@ -1,17 +1,18 @@
 import { Resend } from 'resend'
 import type { SenderMeta } from '@/lib/sender-meta'
+import { getRequiredEnvVar, getOptionalEnvVar } from '@/lib/env'
 
 const COMPANY = 'Calendula Herbs'
 
 let _resend: Resend | null = null
 function getResend(): Resend {
-  if (!_resend) _resend = new Resend(process.env.RESEND_API_KEY)
+  if (!_resend) _resend = new Resend(getRequiredEnvVar('RESEND_API_KEY'))
   return _resend
 }
 
 let _from: string | null = null
 function getFromEmail(): string {
-  if (!_from) _from = process.env.RESEND_FROM_EMAIL || 'noreply@calendula-herbs.com'
+  if (!_from) _from = getOptionalEnvVar('RESEND_FROM_EMAIL', 'noreply@calendula-herbs.com')
   return _from
 }
 

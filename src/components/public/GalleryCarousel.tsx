@@ -2,6 +2,8 @@
 
 import React, { useState, useRef, useCallback, useEffect } from 'react'
 import Image from 'next/image'
+import { useTranslations, useLocale } from 'next-intl'
+import { isRtlLocale, type Locale } from '@/i18n/routing'
 import { ChevronLeft, ChevronRight, Play, X } from 'lucide-react'
 
 type CarouselItem = {
@@ -49,6 +51,9 @@ export function GalleryCarousel({
   sectionLabel: string
   sectionDescription: string
 }) {
+  const tg = useTranslations('galleries')
+  const locale = useLocale()
+  const isRtl = isRtlLocale(locale as Locale)
   const scrollRef = useRef<HTMLDivElement>(null)
   const [canScrollLeft, setCanScrollLeft] = useState(false)
   const [canScrollRight, setCanScrollRight] = useState(true)
@@ -97,11 +102,12 @@ export function GalleryCarousel({
   }, [lightboxIndex, items.length])
 
   const current = lightboxIndex !== null ? items[lightboxIndex] : null
-  const imgUrl = current?.url || current?.thumbnailUrl
   const isVideo = current?.type === 'UPLOADED_VIDEO'
   const isYouTube = current?.type === 'YOUTUBE'
   const isGoogleDrive = current?.type === 'GOOGLE_DRIVE'
   const isFacebook = current?.type === 'FACEBOOK'
+  const isVideoType = isVideo || isYouTube || isGoogleDrive || isFacebook
+  const imgUrl = current?.thumbnailUrl || current?.url
   const youtubeEmbedUrl = isYouTube ? getYouTubeEmbedUrl(current) : null
   const googleDriveEmbedUrl = isGoogleDrive ? getGoogleDriveEmbedUrl(current) : null
 
@@ -122,7 +128,7 @@ export function GalleryCarousel({
             onClick={() => scrollBy('left')}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-lg"
             style={{ background: 'var(--color-bg-card, rgba(255,255,255,0.95))' }}
-            aria-label="Scroll left"
+            aria-label={tg('scrollLeft')}
           >
             <ChevronLeft className="w-5 h-5" style={{ color: 'var(--color-text-primary)' }} />
           </button>
@@ -130,6 +136,7 @@ export function GalleryCarousel({
 
         <div
           ref={scrollRef}
+          dir={isRtl ? "rtl" : "ltr"}
           className="flex gap-5 overflow-x-auto scrollbar-hide pb-2"
           style={{
             scrollSnapType: 'x mandatory',
@@ -145,14 +152,14 @@ export function GalleryCarousel({
           aria-label={`${sectionLabel} gallery`}
         >
           {items.map((item, index) => {
-            const itemImgUrl = item.url || item.thumbnailUrl
             const itemIsEmbed = item.type === 'UPLOADED_VIDEO' || item.type === 'YOUTUBE' || item.type === 'GOOGLE_DRIVE' || item.type === 'FACEBOOK'
+            const itemImgUrl = item.thumbnailUrl || item.url
             return (
               <Card3DItem key={item.id} prefersReducedMotionRef={prefersReducedMotion}>
                 <button
                   onClick={() => setLightboxIndex(index)}
                   className="block w-full h-full text-left"
-                  aria-label={item.title || `Gallery item ${index + 1}`}
+                  aria-label={item.title || tg('galleryItemLabel', { index: index + 1 })}
                 >
                   <div className="relative w-[260px] sm:w-[300px] md:w-[340px] aspect-[4/3] rounded-xl overflow-hidden bg-[var(--color-bg-elevated)]">
                     {itemImgUrl ? (
@@ -215,7 +222,7 @@ export function GalleryCarousel({
             onClick={() => scrollBy('right')}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full flex items-center justify-center opacity-0 group-hover/carousel:opacity-100 transition-opacity shadow-lg"
             style={{ background: 'var(--color-bg-card, rgba(255,255,255,0.95))' }}
-            aria-label="Scroll right"
+            aria-label={tg('scrollRight')}
           >
             <ChevronRight className="w-5 h-5" style={{ color: 'var(--color-text-primary)' }} />
           </button>
@@ -232,7 +239,7 @@ export function GalleryCarousel({
             onClick={() => setLightboxIndex(null)}
             className="absolute top-4 right-4 z-10 p-2 transition-colors"
             style={{ color: 'rgba(250,250,246,0.7)' }}
-            aria-label="Close lightbox"
+            aria-label={tg('closeLightbox')}
           >
             <X className="w-8 h-8" />
           </button>
@@ -243,7 +250,7 @@ export function GalleryCarousel({
                 onClick={(e) => { e.stopPropagation(); setLightboxIndex(prev => prev !== null ? (prev - 1 + items.length) % items.length : 0) }}
                 className="absolute left-4 z-10 p-3 transition-colors"
                 style={{ color: 'rgba(250,250,246,0.7)' }}
-                aria-label="Previous image"
+                aria-label={tg('previousImage')}
               >
                 <ChevronLeft className="w-8 h-8" />
               </button>
@@ -251,7 +258,7 @@ export function GalleryCarousel({
                 onClick={(e) => { e.stopPropagation(); setLightboxIndex(prev => prev !== null ? (prev + 1) % items.length : 0) }}
                 className="absolute right-4 z-10 p-3 transition-colors"
                 style={{ color: 'rgba(250,250,246,0.7)' }}
-                aria-label="Next image"
+                aria-label={tg('nextImage')}
               >
                 <ChevronRight className="w-8 h-8" />
               </button>

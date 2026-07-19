@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { useCart } from './CartProvider'
 import { ShoppingCart, Package } from 'lucide-react'
 import { toast } from 'sonner'
@@ -22,6 +23,7 @@ type Props = {
 }
 
 export function ProductActions({ productId, productName, minOrderKg }: Props) {
+  const t = useTranslations('productActions')
   const { addItem } = useCart()
   const [quantity, setQuantity] = useState(minOrderKg)
   const [sampleOpen, setSampleOpen] = useState(false)
@@ -36,7 +38,7 @@ export function ProductActions({ productId, productName, minOrderKg }: Props) {
 
   const handleAddToCart = () => {
     addItem({ productId, productName, quantity, minOrderKg })
-    toast.success(`${productName} added to quote cart`)
+    toast.success(t('cartSuccess', { name: productName }))
   }
 
   const submitSample = async (e: React.FormEvent) => {
@@ -58,10 +60,10 @@ export function ProductActions({ productId, productName, minOrderKg }: Props) {
         })
       })
       if (res.ok) {
-        toast.success('Sample request submitted')
+        toast.success(t('sampleSuccess'))
         setSampleOpen(false)
       } else {
-        toast.error('Failed to submit request')
+        toast.error(t('submitError'))
       }
     } finally {
       setIsSubmitting(false)
@@ -72,7 +74,7 @@ export function ProductActions({ productId, productName, minOrderKg }: Props) {
     <>
       <div className="card-glass p-6 space-y-6">
         <div>
-          <Label className="text-[var(--color-text-tertiary)] mb-2 block">Bulk Inquiry Quantity (kg)</Label>
+          <Label className="text-[var(--color-text-tertiary)] mb-2 block">{t('bulkInquiryLabel')}</Label>
           <div className="flex items-center">
             <Input
               type="number"
@@ -83,18 +85,18 @@ export function ProductActions({ productId, productName, minOrderKg }: Props) {
               className="input text-lg h-12 w-32 rounded-r-none border-r-0 focus-visible:ring-0"
             />
             <div className="input h-12 px-4 flex items-center text-[var(--color-text-tertiary)] rounded-l-none border-l-0 w-auto shrink-0">
-              kg
+              {t('kgSuffix')}
             </div>
           </div>
-          <p className="text-xs text-[var(--color-text-tertiary)] mt-2">MOQ: {minOrderKg} kg</p>
+          <p className="text-xs text-[var(--color-text-tertiary)] mt-2">{t('moq', { weight: minOrderKg })}</p>
         </div>
 
         <div className="flex flex-col gap-3">
           <button onClick={handleAddToCart} className="btn btn-primary btn-lg w-full">
-            <ShoppingCart className="w-5 h-5 mr-2" /> Add to Quote Cart
+            <ShoppingCart className="w-5 h-5 mr-2" /> {t('addToCart')}
           </button>
           <button onClick={() => setSampleOpen(true)} className="btn btn-secondary btn-lg w-full">
-            <Package className="w-5 h-5 mr-2" /> Request a Sample
+            <Package className="w-5 h-5 mr-2" /> {t('requestSample')}
           </button>
         </div>
       </div>
@@ -102,38 +104,36 @@ export function ProductActions({ productId, productName, minOrderKg }: Props) {
       <Dialog open={sampleOpen} onOpenChange={setSampleOpen}>
         <DialogContent className="sm:max-w-[500px] card-glass">
           <DialogHeader>
-            <DialogTitle className="font-display text-[var(--color-text-primary)]">Request Sample: {productName}</DialogTitle>
-            <DialogDescription className="text-[var(--color-text-secondary)]">
-              We provide product samples for quality evaluation. Please note that shipping costs are typically covered by the buyer.
-            </DialogDescription>
+            <DialogTitle className="font-display text-[var(--color-text-primary)]">{t('dialogTitle', { name: productName })}</DialogTitle>
+            <DialogDescription className="text-[var(--color-text-secondary)]">{t('dialogDesc')}</DialogDescription>
           </DialogHeader>
           <form onSubmit={submitSample} className="space-y-4 mt-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-1.5">
-                <Label htmlFor="sample-name" className="text-[var(--color-text-tertiary)]">Contact Name *</Label>
+                <Label htmlFor="sample-name" className="text-[var(--color-text-tertiary)]">{t('contactName')}</Label>
                 <Input id="sample-name" required value={sName} onChange={e => setSName(e.target.value)} className="input" />
               </div>
               <div className="space-y-1.5">
-                <Label htmlFor="sample-email" className="text-[var(--color-text-tertiary)]">Email *</Label>
+                <Label htmlFor="sample-email" className="text-[var(--color-text-tertiary)]">{t('email')}</Label>
                 <Input id="sample-email" type="email" required value={sEmail} onChange={e => setSEmail(e.target.value)} className="input" />
               </div>
             </div>
             <div className="space-y-1.5">
-              <Label htmlFor="sample-company" className="text-[var(--color-text-tertiary)]">Company</Label>
+              <Label htmlFor="sample-company" className="text-[var(--color-text-tertiary)]">{t('company')}</Label>
               <Input id="sample-company" value={sCompany} onChange={e => setSCompany(e.target.value)} className="input" />
             </div>
             <div className="space-y-1.5">
-              <Label htmlFor="sample-address" className="text-[var(--color-text-tertiary)]">Shipping Address *</Label>
+              <Label htmlFor="sample-address" className="text-[var(--color-text-tertiary)]">{t('shippingAddress')}</Label>
               <Textarea id="sample-address" required value={sAddress} onChange={e => setSAddress(e.target.value)} rows={3} className="input resize-none" />
             </div>
             <div className="space-y-1.5">
-              <Label htmlFor="sample-notes" className="text-[var(--color-text-tertiary)]">Shipping Account (DHL/FedEx) or Notes</Label>
-              <Textarea id="sample-notes" value={sNotes} onChange={e => setSNotes(e.target.value)} placeholder="Provide your courier account number if you want to cover shipping..." rows={2} className="input resize-none" />
+              <Label htmlFor="sample-notes" className="text-[var(--color-text-tertiary)]">{t('shippingAccount')}</Label>
+              <Textarea id="sample-notes" value={sNotes} onChange={e => setSNotes(e.target.value)} placeholder={t('shippingPlaceholder')} rows={2} className="input resize-none" />
             </div>
             <div className="pt-4 flex justify-end gap-2">
-              <button type="button" onClick={() => setSampleOpen(false)} className="btn btn-secondary">Cancel</button>
+              <button type="button" onClick={() => setSampleOpen(false)} className="btn btn-secondary">{t('cancel')}</button>
               <button type="submit" disabled={isSubmitting} className="btn btn-primary disabled:opacity-50 disabled:pointer-events-none">
-                {isSubmitting ? 'Submitting...' : 'Request Sample'}
+                {isSubmitting ? t('submitting') : t('requestSampleButton')}
               </button>
             </div>
           </form>

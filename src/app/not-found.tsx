@@ -4,7 +4,7 @@ import { Leaf } from 'lucide-react'
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center px-6 max-w-md">
         <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-8">
           <Leaf className="w-10 h-10 text-primary" />

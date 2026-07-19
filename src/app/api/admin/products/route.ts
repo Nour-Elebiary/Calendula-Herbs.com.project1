@@ -5,20 +5,32 @@ import { z } from 'zod'
 import slugify from 'slugify'
 import { requireAdmin, unauthorized } from '@/lib/admin-auth'
 
+const CutType = z.enum(['WHOLE', 'CRUSHED', 'POWDER', 'CUT_SIFTED', 'GRANULATED', 'LEAF', 'STEM', 'ROOT', 'TBC'])
+
+const translationSchema = z.object({
+  name: z.string().min(1),
+  scientificName: z.string().optional().nullable(),
+  commonName: z.string().optional().nullable(),
+  shortDescription: z.string().optional().nullable(),
+  description: z.string().optional().nullable(),
+})
+
 const productSchema = z.object({
   name: z.string().min(1),
   scientificName: z.string().optional().nullable(),
+  commonName: z.string().optional().nullable(),
   slug: z.string().optional(), // auto-generated if absent
   description: z.string().optional().nullable(),
   shortDescription: z.string().optional().nullable(),
   isOrganic: z.boolean().default(false),
   organicType: z.string().optional().nullable(),
   conventionalType: z.string().optional().nullable(),
+  availableCuts: z.array(CutType).default([]),
   minOrderKg: z.number().int().positive().default(500),
   isActive: z.boolean().default(true),
   isFeatured: z.boolean().default(false),
   categoryIds: z.array(z.string()).default([]),
-  // Images handled separately via productImages
+  translations: z.record(z.string(), translationSchema).optional(),
 })
 
 // Derive isOrganic from organicType presence
@@ -95,8 +107,26 @@ export async function POST(req: NextRequest) {
         slug,
         order,
         categories: { create: categoryIds.map(cid => ({ categoryId: cid })) },
+        ...(json.translations ? {
+          translations: {
+            create: Object.entries(json.translations as Record<string, { name: string; scientificName: string | null; shortDescription: string | null; description: string | null }>).map(([locale, tr]) => ({
+              locale,
+              ...tr,
+            })),
+          },
+        } : {
+          translations: {
+            create: {
+              locale: 'en',
+              name: data.name,
+              scientificName: data.scientificName,
+              shortDescription: data.shortDescription,
+              description: data.description,
+            },
+          },
+        }),
       },
-      include: { categories: { include: { category: true } }, images: true },
+      include: { categories: { include: { category: true } }, images: true, translations: true },
     })
     return NextResponse.json({ product }, { status: 201 })
   } catch (err) {

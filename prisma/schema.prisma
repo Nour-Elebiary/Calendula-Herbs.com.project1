@@ -91,6 +91,7 @@ model MediaFile {
   teamMembers    TeamMember[]
   certFiles      Certificate[]  @relation("CertFile")
   certLogos      Certificate[]  @relation("CertLogo")
+  categoryImages Category[]     @relation("CategoryImage")
 }
 
 enum MediaType {
@@ -152,32 +153,76 @@ enum GalleryItemType {
 
 // ─── Products ────────────────────────────────────────────────────────────────
 
+enum CutType {
+  WHOLE
+  CRUSHED
+  POWDER
+  CUT_SIFTED
+  GRANULATED
+  LEAF
+  STEM
+  ROOT
+  TBC // To Be Confirmed — buyer specifies
+}
+
 model Category {
-  id       String            @id @default(cuid())
-  name     String
-  slug     String            @unique
-  order    Int               @default(0)
-  products ProductCategory[]
+  id          String                @id @default(cuid())
+  name        String
+  slug        String                @unique
+  description String?
+  imageId     String?
+  image       MediaFile?            @relation("CategoryImage", fields: [imageId], references: [id])
+  parentId    String?
+  parent      Category?             @relation("CategoryHierarchy", fields: [parentId], references: [id])
+  children    Category[]            @relation("CategoryHierarchy")
+  order       Int                   @default(0)
+  products    ProductCategory[]
+  translations CategoryTranslation[]
+}
+
+model CategoryTranslation {
+  categoryId String
+  locale     String
+  name       String
+  category   Category  @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([categoryId, locale])
 }
 
 model Product {
-  id               String            @id @default(cuid())
+  id               String                @id @default(cuid())
   name             String
   scientificName   String?
-  slug             String            @unique
-  description      String?           // HTML via rich editor
-  shortDescription String?           // Plain text for cards
-  isOrganic        Boolean           @default(false)
-  organicType      String?           // EU, NOP, COR, JAS, BIO_SUISSE, etc.
-  conventionalType String?           // NORMAL, EU_LIMITS
-  minOrderKg       Int               @default(500)
-  isActive         Boolean           @default(true)
-  isFeatured       Boolean           @default(false)
-  order            Int               @default(0)
-  createdAt        DateTime          @default(now())
-  updatedAt        DateTime          @updatedAt
+  commonName       String?
+  slug             String                @unique
+  description      String?               // HTML via rich editor
+  shortDescription String?               // Plain text for cards
+  isOrganic        Boolean               @default(false)
+  organicType      String?               // EU, NOP, COR, JAS, BIO_SUISSE, etc.
+  conventionalType String?               // NORMAL, EU_LIMITS
+  availableCuts    CutType[]
+  minOrderKg       Int                   @default(500)
+  isActive         Boolean               @default(true)
+  isFeatured       Boolean               @default(false)
+  order            Int                   @default(0)
+  createdAt        DateTime              @default(now())
+  updatedAt        DateTime              @updatedAt
   images           ProductImage[]
   categories       ProductCategory[]
+  translations     ProductTranslation[]
+}
+
+model ProductTranslation {
+  productId       String
+  locale          String
+  name            String
+  scientificName  String?
+  commonName      String?
+  description     String?
+  shortDescription String?
+  product         Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@id([productId, locale])
 }
 
 model ProductImage {
@@ -255,17 +300,30 @@ enum ContactType {
 // ─── Certificates ────────────────────────────────────────────────────────────
 
 model Certificate {
-  id          String     @id @default(cuid())
-  title       String
-  issuer      String?
-  fileId      String?
-  fileType    CertType
-  order       Int        @default(0)
-  isActive    Boolean    @default(true)
-  createdAt   DateTime   @default(now())
-  file        MediaFile? @relation("CertFile", fields: [fileId], references: [id])
-  logoFileId  String?
-  logo        MediaFile? @relation("CertLogo", fields: [logoFileId], references: [id])
+  id           String                    @id @default(cuid())
+  title        String
+  issuer       String?
+  description  String?
+  fileId       String?
+  fileType     CertType
+  order        Int                       @default(0)
+  isActive     Boolean                   @default(true)
+  createdAt    DateTime                  @default(now())
+  file         MediaFile?                @relation("CertFile", fields: [fileId], references: [id])
+  logoFileId   String?
+  logo         MediaFile?                @relation("CertLogo", fields: [logoFileId], references: [id])
+  translations CertificateTranslation[]
+}
+
+model CertificateTranslation {
+  certificateId String
+  locale        String
+  title         String?
+  issuer        String?
+  description   String?
+  certificate   Certificate @relation(fields: [certificateId], references: [id], onDelete: Cascade)
+
+  @@id([certificateId, locale])
 }
 
 enum CertType {
@@ -307,7 +365,7 @@ model ContactSetting {
   mapAddress       String?
   mapLat           Float?
   mapLng           Float?
-  phones           String[]
+  phones           Json      // [{ number: string, ownerName?: string }]
   publicEmails     String[]
   businessHours    String?  // JSON
   autoReplySubject  String?

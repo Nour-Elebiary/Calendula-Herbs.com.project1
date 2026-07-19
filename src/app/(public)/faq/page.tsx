@@ -1,69 +1,22 @@
 import React from 'react'
 import { db } from '@/lib/db'
 import { HelpCircle, ChevronDown } from 'lucide-react'
+import { getTranslations } from 'next-intl/server'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 const normalizedUrl = siteUrl.startsWith('http://') || siteUrl.startsWith('https://')
   ? siteUrl
   : `https://${siteUrl}`
 
-export const metadata = {
-  title: 'FAQ | Calendula Herbs',
-  description: 'B2B export FAQs — MOQ, free samples, certifications, shipping, and payment terms for bulk herb and spice buyers.',
+export async function generateMetadata() {
+  const t = await getTranslations('faq')
+  return {
+    title: t('heroMetadataTitle'),
+    description: t('heroMetadataDesc'),
+  }
 }
 
 type FaqItem = { question: string; answer: string }
-
-const DEFAULT_FAQS: FaqItem[] = [
-  {
-    question: 'What is your minimum order quantity (MOQ)?',
-    answer: 'Our standard MOQ is 500–1,000 kg per product depending on the item and season. We can accommodate smaller trial orders (50–100 kg) for first-time qualified buyers. Contact our sales team to discuss your specific volume needs.'
-  },
-  {
-    question: 'Do you offer free samples for quality evaluation?',
-    answer: 'Yes, we provide free samples of 50–200 g for qualified B2B buyers. The buyer covers shipping costs unless otherwise negotiated. Submit a sample request through our website, and our team will prepare material from current production batches.'
-  },
-  {
-    question: 'What sterilization options do you offer?',
-    answer: 'We offer several sterilization methods including steam sterilization (autoclave), ethylene oxide (EtO), and gamma irradiation depending on product specifications and destination country requirements. Our processing facilities follow GMP and HACCP guidelines. Please specify your sterilization requirements when requesting a quote.'
-  },
-  {
-    question: 'Can you provide pricing on your website?',
-    answer: 'Herb and spice prices fluctuate with crop yields, market conditions, and seasonality. We provide accurate, current pricing only after understanding your specific requirements — volume, quality grade, packaging, and destination. Contact us for a tailored quotation.'
-  },
-  {
-    question: 'What certifications do you hold?',
-    answer: 'We hold 11 major certifications including ISO 9001, ISO 22000, EU Organic, USDA NOP, HALAL, KOSHER, BRCGS, FDA Registration, SEDEX/Semeta, NFSA Whitelist, and AHK Council membership. Visit our Certificates page for full details. We can provide certificates upon request for your compliance review.'
-  },
-  {
-    question: 'What are your shipping terms and lead times?',
-    answer: 'We ship worldwide via air and sea freight. Common incoterms include FOB (Damietta or Alexandria ports), CIF, and EXW. Lead times are 7–14 days for stock items and 20–30 days for custom processing. We work with reliable freight forwarders and can assist with logistics arrangements.'
-  },
-  {
-    question: 'What payment terms do you accept?',
-    answer: 'Payment terms are discussed and agreed per order based on order value, destination, and buyer history. Typical arrangements include T/T (wire transfer) and L/C (letter of credit). Contact our sales team to discuss the best option for your order.'
-  },
-  {
-    question: 'Do you source exclusively from your own farms?',
-    answer: 'We own and operate our own farms in Ibshaway, Fayoum, Egypt — over 500 acres dedicated to organic calendula, chamomile, hibiscus, and other botanicals. We supplement with trusted partner farms under our direct agronomist supervision to ensure consistent quality, traceability, and year-round availability.'
-  },
-  {
-    question: 'How do you ensure product quality and consistency?',
-    answer: 'Quality is ensured at every stage: seed selection, cultivation, harvesting, processing, and packaging. We conduct in-house laboratory testing for purity, potency, microbiological contamination, and heavy metals. Our quality management system is ISO 9001 and ISO 22000 certified, following GMP and HACCP guidelines throughout.'
-  },
-  {
-    question: 'Can I visit your farm or processing facility?',
-    answer: 'Yes, we welcome visits from serious buyers and importers. Please contact us in advance to schedule a tour of our farms, processing facilities, and quality control labs in Fayoum, Egypt. We recommend allowing at least two weeks for visa and travel arrangements.'
-  },
-  {
-    question: 'How do I place a bulk order?',
-    answer: 'Browse our product catalog, submit an inquiry through our Request a Quote form, or contact our sales team directly. We will respond within 24 hours with product specifications, current pricing, and next steps including sample provision and contract terms.'
-  },
-  {
-    question: 'Do you offer private labelling or custom packaging?',
-    answer: 'Yes, we offer private labelling, custom packaging, and OEM services for B2B partners. Minimum quantities apply. Contact us with your specifications for a detailed proposal.'
-  },
-]
 
 function FaqAccordion({ items }: { items: FaqItem[] }) {
   return (
@@ -115,9 +68,12 @@ function FaqPageSchema({ items }: { items: FaqItem[] }) {
 }
 
 export default async function FaqPage() {
+  const t = await getTranslations('faq')
+  const tn = await getTranslations('nav')
   const setting = await db.siteSetting.findUnique({ where: { key: 'faqs' } })
 
-  let faqs: FaqItem[] = DEFAULT_FAQS
+  const defaultFaqs: FaqItem[] = t.raw('items') as FaqItem[]
+  let faqs: FaqItem[] = defaultFaqs
   if (setting?.value) {
     try {
       const parsed = JSON.parse(setting.value)
@@ -132,12 +88,8 @@ export default async function FaqPage() {
           <div className="hero-page__bg hero-page__bg--faq" />
           <div className="hero-page__content">
             <div className="hero-page__glass-card">
-              <h1 className="hero-page__title">
-                Frequently Asked Questions
-              </h1>
-              <p className="hero-page__desc">
-                Everything B2B buyers need to know about ordering from Calendula Herbs.
-              </p>
+              <h1 className="hero-page__title">{t('heroTitle')}</h1>
+              <p className="hero-page__desc">{t('heroDesc')}</p>
             </div>
           </div>
         </section>
@@ -151,8 +103,8 @@ export default async function FaqPage() {
               '@context': 'https://schema.org',
               '@type': 'BreadcrumbList',
               itemListElement: [
-                { '@type': 'ListItem', position: 1, name: 'Home', item: normalizedUrl },
-                { '@type': 'ListItem', position: 2, name: 'FAQ', item: `${normalizedUrl}/faq` },
+                { '@type': 'ListItem', position: 1, name: tn('home'), item: normalizedUrl },
+                { '@type': 'ListItem', position: 2, name: t('heroTitle'), item: `${normalizedUrl}/faq` },
               ],
             }),
           }}
@@ -162,9 +114,7 @@ export default async function FaqPage() {
           {faqs.length === 0 ? (
             <div className="card-glass py-24 text-center">
               <HelpCircle className="w-16 h-16 mx-auto mb-4" style={{ color: 'var(--color-text-tertiary)' }} />
-              <h3 className="font-display text-2xl font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>
-                No FAQs Available
-              </h3>
+              <h3 className="font-display text-2xl font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>{t('empty')}</h3>
             </div>
           ) : (
             <FaqAccordion items={faqs} />
@@ -174,15 +124,9 @@ export default async function FaqPage() {
             className="card-glass mt-16 p-8 md:p-10 text-center"
             style={{ borderColor: 'var(--color-border-accent)' }}
           >
-            <h2 className="font-display text-2xl font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>
-              Still have questions?
-            </h2>
-            <p className="mb-6" style={{ color: 'var(--color-text-secondary)' }}>
-              Our export team is ready to help with any additional inquiries.
-            </p>
-            <a href="/contact" className="btn btn-primary btn-lg">
-              Contact Us
-            </a>
+            <h2 className="font-display text-2xl font-medium mb-2" style={{ color: 'var(--color-text-primary)' }}>{t('stillQuestions')}</h2>
+            <p className="mb-6" style={{ color: 'var(--color-text-secondary)' }}>{t('teamReady')}</p>
+            <a href="/contact" className="btn btn-primary btn-lg">{t('contactButton')}</a>
           </div>
         </div>
       </div>

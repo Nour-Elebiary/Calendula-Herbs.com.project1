@@ -198,14 +198,14 @@ export default function ProductsPage() {
           <p className="text-sm mt-1">Try adjusting your filters or create a new product.</p>
         </div>
       ) : (
-        <div className="bg-white border rounded-xl overflow-hidden">
+        <div className="bg-card border rounded-xl overflow-hidden">
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b bg-neutral-50 text-neutral-500 text-xs uppercase tracking-wide">
                 <th className="text-left px-4 py-3 w-16">Image</th>
                 <th className="text-left px-4 py-3">Product</th>
                 <th className="text-left px-4 py-3 hidden lg:table-cell">Categories</th>
-                <th className="text-left px-4 py-3 hidden md:table-cell">Min Order</th>
+                <th className="text-left px-4 py-3 hidden md:table-cell">MOQ</th>
                 <th className="text-left px-4 py-3">Status</th>
                 <th className="text-right px-4 py-3">Actions</th>
               </tr>
@@ -262,7 +262,7 @@ export default function ProductsPage() {
                     </td>
                     {/* Min order */}
                     <td className="px-4 py-3 hidden md:table-cell text-neutral-600">
-                      {product.minOrderKg.toLocaleString()} kg
+                      (MOQ) {product.minOrderKg.toLocaleString()} kg
                     </td>
                     {/* Status */}
                     <td className="px-4 py-3">

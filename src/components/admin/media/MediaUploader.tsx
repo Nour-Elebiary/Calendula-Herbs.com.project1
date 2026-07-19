@@ -187,7 +187,7 @@ export function MediaUploader({ onUploadSuccess }: MediaUploaderProps) {
       {Object.entries(progress).length > 0 && (
         <div className="space-y-2">
           {Object.entries(progress).map(([name, pct]) => (
-            <div key={name} className="bg-white p-3 rounded-md border flex items-center gap-3">
+            <div key={name} className="bg-card p-3 rounded-md border flex items-center gap-3">
               <File className="h-5 w-5 text-neutral-400 flex-shrink-0" />
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between text-sm mb-1">

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { MapPin, Phone, Mail, Clock, Globe } from 'lucide-react'
+import { useTranslations, useLocale } from 'next-intl'
 import { cleanImageUrl } from '@/lib/image-url'
 import { generateContactLink, isClickableLink, CONTACT_METHOD_META, type ContactMethod } from '@/lib/contact-links'
 import { getContactMethodIcon } from '@/lib/icon-map'
@@ -12,10 +13,11 @@ type FooterProps = {
   settings: Record<string, string>
   contact: {
     mapAddress: string | null
-    phones: string[]
+    phones: { number: string; ownerName?: string }[]
     publicEmails: string[]
     businessHours: string | null
     contactMethods: ContactMethod[] | null
+    teamMembers?: any[]
   } | null
 }
 
@@ -26,6 +28,8 @@ type CertData = {
 }
 
 export function Footer({ settings, contact }: FooterProps) {
+  const t = useTranslations('footer')
+  const locale = useLocale()
   const [certs, setCerts] = useState<CertData[]>([])
   const currentYear = new Date().getFullYear()
   const siteName = settings.site_name || 'Calendula Herbs'
@@ -73,7 +77,7 @@ export function Footer({ settings, contact }: FooterProps) {
               </Link>
             </div>
             <p className="footer-tagline leading-relaxed">
-              {settings.site_tagline || 'Specialists in exporting premium Egyptian dried herbs, spices, herbal tea, and seeds.'}
+              {settings.site_tagline || t('brandDescription')}
             </p>
             <div className="flex items-center gap-3 mt-6">
               {socialLinks.map(({ key, icon: Icon, label }) =>
@@ -96,39 +100,77 @@ export function Footer({ settings, contact }: FooterProps) {
 
           {/* Quick Links */}
           <div>
-            <h4 className="footer-heading">Quick Links</h4>
+            <h4 className="footer-heading">{t('quickLinks')}</h4>
             <ul className="footer-links">
-              <li><Link href="/products" className="footer-link">Products Catalog</Link></li>
-              <li><Link href="/about" className="footer-link">About Our Company</Link></li>
-              <li><Link href="/galleries" className="footer-link">Farm & Processing</Link></li>
-              <li><Link href="/certificates" className="footer-link">Quality Certificates</Link></li>
-              <li><Link href="/contact" className="footer-link">Contact Us</Link></li>
-              <li><Link href="/privacy" className="footer-link">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="footer-link">Terms of Service</Link></li>
+              <li><Link href="/products" className="footer-link">{t('productsCatalog')}</Link></li>
+              <li><Link href="/about" className="footer-link">{t('aboutCompany')}</Link></li>
+              <li><Link href="/galleries" className="footer-link">{t('farmProcessing')}</Link></li>
+              <li><Link href="/certificates" className="footer-link">{t('qualityCertificates')}</Link></li>
+              <li><Link href="/contact" className="footer-link">{t('contactUs')}</Link></li>
+              <li><Link href="/privacy" className="footer-link">{t('privacyPolicy')}</Link></li>
+              <li><Link href="/terms" className="footer-link">{t('termsOfService')}</Link></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h4 className="footer-heading">Contact Us</h4>
+            <h4 className="footer-heading">{t('contactInfo')}</h4>
             {contact?.mapAddress && (
               <div className="flex items-start gap-3 mb-4">
                 <MapPin className="w-4 h-4 shrink-0 mt-1 text-[var(--color-calendula-500)]" />
                 <span className="text-sm leading-snug text-[var(--color-text-secondary)]">{contact.mapAddress}</span>
               </div>
             )}
+            {/* Team Members Direct Contacts */}
+            {(contact?.teamMembers || []).map((member) => {
+              const contacts = (member.contacts as any[]) || []
+              const phoneContacts = contacts.filter(c => ['WHATSAPP', 'PHONE', 'VIBER', 'SIGNAL'].includes(c.type?.toUpperCase()))
+              
+              if (phoneContacts.length === 0) return null
+              
+              return (
+                <div key={member.id} className="mb-4">
+                  <span className="text-[var(--color-text-primary)] font-medium mb-1.5 block text-sm">{member.name}</span>
+                  <div className="flex flex-col gap-1.5 ml-1">
+                    {phoneContacts.map((c, i) => {
+                      const Icon = getContactMethodIcon(c.icon || c.type)
+                      const displayValue = c.label || c.value
+                      const cleanPhone = c.value.replace(/[^\d+]/g, '')
+                      const isWhatsApp = c.type?.toUpperCase() === 'WHATSAPP'
+                      const href = isWhatsApp ? `https://wa.me/${cleanPhone.replace('+', '')}` : `tel:${cleanPhone}`
+                      
+                      return (
+                        <a key={i} href={href} target={isWhatsApp ? '_blank' : undefined} rel={isWhatsApp ? 'noopener noreferrer' : undefined} className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-primary-500)] transition-colors">
+                          <Icon className="w-3.5 h-3.5 shrink-0 text-[var(--color-calendula-500)]" />
+                          <span>{displayValue}</span>
+                        </a>
+                      )
+                    })}
+                  </div>
+                </div>
+              )
+            })}
+
+            {/* General Phones */}
             {contact?.phones && contact.phones.length > 0 && (
               <div className="flex items-start gap-3 mb-4">
                 <Phone className="w-4 h-4 shrink-0 mt-1 text-[var(--color-calendula-500)]" />
                 <div className="text-sm">
-                  {contact.phones.map((phone, i) => (
-                    <div key={i} className="mb-1 last:mb-0">
-                      <a href={`tel:${phone.replace(/[^\d+]/g, '')}`} className="footer-link">{phone}</a>
-                    </div>
-                  ))}
+                  {contact.phones.map((entry: any, i: number) => {
+                    const number = typeof entry === 'string' ? entry : entry.number
+                    const ownerName = typeof entry === 'string' ? undefined : entry.ownerName
+                    const normalized = number.replace(/[^\d+]/g, '')
+                    return (
+                      <div key={i} className="mb-1 last:mb-0">
+                        <a href={`tel:${normalized}`} className="footer-link">{ownerName ? `${ownerName}: ` : ''}{number}</a>
+                      </div>
+                    )
+                  })}
                 </div>
               </div>
             )}
+            
+            {/* General Emails */}
             {contact?.publicEmails && contact.publicEmails.length > 0 && (
               <div className="flex items-start gap-3 mb-4">
                 <Mail className="w-4 h-4 shrink-0 mt-1 text-[var(--color-calendula-500)]" />
@@ -168,7 +210,7 @@ export function Footer({ settings, contact }: FooterProps) {
 
           {/* Business Hours */}
           <div>
-            <h4 className="footer-heading">Business Hours</h4>
+            <h4 className="footer-heading">{t('businessHours')}</h4>
             {Object.keys(hours).length > 0 ? (
               <ul className="list-none p-0 m-0">
                 {Object.entries(hours).map(([days, time]) => (
@@ -181,7 +223,7 @@ export function Footer({ settings, contact }: FooterProps) {
             ) : (
               <div className="flex items-start gap-3">
                 <Clock className="w-4 h-4 shrink-0 mt-1 text-[var(--color-calendula-500)]" />
-                <span className="text-sm leading-snug text-[var(--color-text-secondary)]">Contact us anytime for inquiries.</span>
+                <span className="text-sm leading-snug text-[var(--color-text-secondary)]">{t('fallbackHours')}</span>
               </div>
             )}
           </div>
@@ -193,7 +235,7 @@ export function Footer({ settings, contact }: FooterProps) {
             className="border-t pt-8 mt-8"
             style={{ borderColor: 'var(--color-border-subtle)' }}
           >
-            <h4 className="footer-heading text-center mb-6">Our Certifications</h4>
+            <h4 className="footer-heading text-center mb-6">{t('ourCertifications')}</h4>
             <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
               {certs.map(cert => {
                 const rawLogoUrl = cert.logo?.thumbnailUrl || cert.logo?.url
@@ -216,6 +258,7 @@ export function Footer({ settings, contact }: FooterProps) {
                         src={logoUrl}
                         alt={`${cert.title} certificate logo`}
                         fill
+                        sizes="110px"
                         className="object-contain opacity-70 hover:opacity-100 transition-opacity"
                       />
                     )}
@@ -229,7 +272,7 @@ export function Footer({ settings, contact }: FooterProps) {
         {/* Bottom */}
         <div className="footer-bottom">
           <p className="footer-copyright text-xs sm:text-sm">
-            © {currentYear} Calendula Herbs For Import & Export. Ibshaway, Fayoum, Egypt.
+            {t('copyright', { year: currentYear })}
           </p>
         </div>
       </div>

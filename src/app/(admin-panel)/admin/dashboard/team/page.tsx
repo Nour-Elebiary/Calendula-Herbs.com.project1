@@ -173,7 +173,7 @@ function SortableMemberRow({ member, onEdit, onDelete }: { member: MemberRow, on
   }
 
   return (
-    <div ref={setNodeRef} style={style} className={`flex items-center gap-4 bg-white border rounded-xl p-3 ${isDragging ? 'shadow-lg border-green-300' : 'shadow-sm'}`}>
+    <div ref={setNodeRef} style={style} className={`flex items-center gap-4 bg-card border rounded-xl p-3 ${isDragging ? 'shadow-lg border-green-300' : 'shadow-sm'}`}>
       <div {...attributes} {...listeners} className="cursor-grab text-neutral-400 hover:text-neutral-600 p-1">
         <GripVertical className="w-5 h-5" />
       </div>

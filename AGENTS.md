@@ -24,8 +24,7 @@ Build order: `prisma generate` → `next build`.
 
 ## Auth & security
 - NextAuth v5 credentials, JWT strategy, 8h expiry. `AdminSession` table for per-session revocation.
-- Auth guard at `src/proxy.ts` (Next.js 16 proxy pattern, not `middleware.ts`). Matcher: `/admin/:path*`, `/api/admin/:path*`.
-  Checks `session?.user?.email` — empty = revoked JWT → 401 for API, redirect to login for pages.
+- Auth guard at `src/proxy.ts` (Next.js 16 proxy pattern, no `middleware.ts`). Broad matcher (all routes). Uses `getToken()` from `next-auth/jwt` (no `auth()` wrapper — prevents middleware conflicts). Checks `token?.email` — empty = 401 for API, redirect to login for pages.
 - Sign out in `AdminSidebar.tsx`: `signOut({ redirect: false })` + `window.location.href = '/admin/login'`.
 - Admin login: 5-attempt lockout (15 min) via `loginRateLimit`. IP/UA/geo captured on login.
 - Cloudinary signed uploads: `POST /api/admin/media/sign` generates server-side signature.
@@ -60,7 +59,8 @@ All 4 public forms (contact, sample, product-request, cart) follow identical arc
 4. **Sender metadata**: Each route calls `extractSenderMeta(req)` + `await enrichWithCountry(meta)` from `src/lib/sender-meta.ts` before sending notifications. Metadata (IP, country, User-Agent, referrer, language) is appended to the admin notification email — sender has no control over this, it's extracted server-side from HTTP headers.
 
 ## Architecture notes
-- `src/proxy.ts` is the auth guard — no `middleware.ts` file.
+- `src/proxy.ts` is the auth guard — no `middleware.ts` file. Uses `getToken()` from `next-auth/jwt`, not `auth()` wrapper.
+- i18n locale detection is handled server-side in `src/i18n/request.ts` (cookies + Accept-Language headers). No `createMiddleware` from next-intl — no URL rewriting, no middleware conflicts. `localePrefix: 'never'` means no locale in URLs.
 - Public layout `(public)/layout.tsx` is `force-dynamic` — all public pages are SSR, never static. Injects DB-hosted plugins (head, bodyEnd, footerFixed, chatWidget).
 - Admin layout wraps `<SessionProvider>` — admin pages have `next-auth/react` context.
 - Cart uses Zustand-like context via `CartProvider` at `src/components/public/CartProvider.tsx`.

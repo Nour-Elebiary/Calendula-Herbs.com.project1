@@ -90,7 +90,7 @@ function InquiryCard({ isRead, isExpanded, onToggle, header, children, onMarkRea
   onDelete: () => void
 }) {
   return (
-    <div className={`bg-white border rounded-xl overflow-hidden transition-all ${!isRead ? 'border-primary/30 shadow-sm' : ''}`}>
+    <div className={`bg-card border rounded-xl overflow-hidden transition-all ${!isRead ? 'border-primary/30 shadow-sm' : ''}`}>
       <div
         className="flex items-start gap-3 p-4 cursor-pointer hover:bg-neutral-50 transition-colors"
         onClick={onToggle}
@@ -203,7 +203,7 @@ function ContactTab() {
                 {item.phone && <div><span className="text-neutral-400">Phone:</span> {item.phone}</div>}
                 {item.country && <div><span className="text-neutral-400">Country:</span> {item.country}</div>}
               </div>
-              <div className="text-sm text-neutral-700 whitespace-pre-wrap bg-white border rounded-lg p-3 mt-2">
+              <div className="text-sm text-neutral-700 whitespace-pre-wrap bg-card border rounded-lg p-3 mt-2">
                 {item.message}
               </div>
               <div className="flex gap-2 mt-2">
@@ -317,7 +317,7 @@ function CartTab() {
                 }
               >
                 {/* Cart items list */}
-                <div className="bg-white border rounded-lg overflow-hidden mt-2">
+                <div className="bg-card border rounded-lg overflow-hidden mt-2">
                   <table className="w-full text-sm">
                     <thead className="bg-neutral-50 text-xs text-neutral-500 uppercase">
                       <tr>
@@ -340,7 +340,7 @@ function CartTab() {
                   {item.country && <div><span className="text-neutral-400">Country:</span> {item.country}</div>}
                 </div>
                 {item.notes && (
-                  <div className="text-sm text-neutral-700 bg-white border rounded-lg p-3 mt-1 whitespace-pre-wrap">{item.notes}</div>
+                  <div className="text-sm text-neutral-700 bg-card border rounded-lg p-3 mt-1 whitespace-pre-wrap">{item.notes}</div>
                 )}
                 <div className="flex gap-2 mt-2">
                   <a href={`mailto:${item.email}`} className="text-xs text-primary hover:underline flex items-center gap-1">
@@ -456,7 +456,7 @@ function SamplesTab() {
                 {item.address && <div className="col-span-2"><span className="text-neutral-400">Address:</span> {item.address}</div>}
               </div>
               {item.notes && (
-                <div className="text-sm text-neutral-700 bg-white border rounded-lg p-3 mt-2 whitespace-pre-wrap">{item.notes}</div>
+                <div className="text-sm text-neutral-700 bg-card border rounded-lg p-3 mt-2 whitespace-pre-wrap">{item.notes}</div>
               )}
               <div className="flex gap-2 mt-2">
                 <a href={`mailto:${item.email}`} className="text-xs text-primary hover:underline flex items-center gap-1">
@@ -574,7 +574,7 @@ function ProductRequestsTab() {
                 {item.country && <div><span className="text-neutral-400">Country:</span> {item.country}</div>}
               </div>
               {item.notes && (
-                <div className="text-sm text-neutral-700 bg-white border rounded-lg p-3 mt-2 whitespace-pre-wrap">{item.notes}</div>
+                <div className="text-sm text-neutral-700 bg-card border rounded-lg p-3 mt-2 whitespace-pre-wrap">{item.notes}</div>
               )}
               <div className="flex gap-2 mt-2">
                 <a href={`mailto:${item.email}`} className="text-xs text-primary hover:underline flex items-center gap-1">

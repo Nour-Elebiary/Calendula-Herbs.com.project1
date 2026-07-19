@@ -22,21 +22,25 @@ type CartContextType = {
 const CartContext = createContext<CartContextType | undefined>(undefined)
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        const stored = localStorage.getItem('calendula_cart')
-        if (stored) return JSON.parse(stored)
-      } catch { /* ignore parse errors */ }
-    }
-    return []
-  })
+  const [items, setItems] = useState<CartItem[]>([])
+  const [isMounted, setIsMounted] = useState(false)
   const [isCartOpen, setIsCartOpen] = useState(false)
+
+  // Load from local storage on mount
+  useEffect(() => {
+    setIsMounted(true)
+    try {
+      const stored = localStorage.getItem('calendula_cart')
+      if (stored) setItems(JSON.parse(stored))
+    } catch { /* ignore parse errors */ }
+  }, [])
 
   // Save to local storage on change
   useEffect(() => {
-    localStorage.setItem('calendula_cart', JSON.stringify(items))
-  }, [items])
+    if (isMounted) {
+      localStorage.setItem('calendula_cart', JSON.stringify(items))
+    }
+  }, [items, isMounted])
 
   const addItem = (item: CartItem) => {
     setItems(prev => {

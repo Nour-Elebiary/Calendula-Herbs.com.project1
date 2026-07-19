@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { generateSignature } from '@/lib/cloudinary'
 import { requireAdmin, unauthorized } from '@/lib/admin-auth'
+import { getRequiredEnvVar, getOptionalEnvVar } from '@/lib/env'
 
 export async function GET(req: NextRequest) {
   try { await requireAdmin() } catch { return unauthorized() }
@@ -14,8 +15,8 @@ export async function GET(req: NextRequest) {
       timestamp,
       signature,
       folder,
-      cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
-      apiKey: process.env.CLOUDINARY_API_KEY,
+      cloudName: getOptionalEnvVar('NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME', ''),
+      apiKey: getRequiredEnvVar('CLOUDINARY_API_KEY'),
     })
   } catch (error) {
     console.error('Signature error:', error)

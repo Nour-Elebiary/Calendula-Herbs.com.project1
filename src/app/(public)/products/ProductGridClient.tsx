@@ -4,7 +4,9 @@ import React, { useState, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import { Leaf, Package } from 'lucide-react'
+import { AnimatePresence } from 'framer-motion'
 import { ProductDetailModal } from '@/components/public/ProductDetailModal'
 import { Card3D } from '@/components/public/Card3D'
 
@@ -13,12 +15,16 @@ type ProductCard = {
   slug: string
   name: string
   scientificName: string | null
+  commonName: string | null
   shortDescription: string | null
+  description: string | null
   isOrganic: boolean
   organicType: string | null
   conventionalType: string | null
   minOrderKg: number
+  availableCuts: string[]
   mainImage: string | null
+  images: { id: string; url: string; thumbnailUrl: string | null }[]
   categories: { id: string; name: string; slug: string }[]
 }
 
@@ -29,6 +35,7 @@ type Props = {
 export function ProductGridClient({ products }: Props) {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const tp = useTranslations('products')
   const activeSlug = searchParams.get('product')
 
   const openProduct = useCallback((slug: string) => {
@@ -44,10 +51,12 @@ export function ProductGridClient({ products }: Props) {
     router.replace(qs ? `/products?${qs}` : '/products', { scroll: false })
   }, [router, searchParams])
 
+  const activeProduct = products.find(p => p.slug === activeSlug) || null
+
   return (
     <>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {products.map((product) => {
+        {products.map((product, index) => {
           return (
             <Card3D key={product.id}>
               <button
@@ -56,11 +65,13 @@ export function ProductGridClient({ products }: Props) {
               >
               <div className="card-product__stage">
                 {product.mainImage ? (
-                  <Image 
-                    src={product.mainImage} 
-                    alt={product.name} 
-                    fill 
-                    className="card-product__image" 
+                  <Image
+                    src={product.mainImage}
+                    alt={product.name}
+                    fill
+                    className="card-product__image"
+                    priority={index < 3}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                 ) : (
                   <div className="absolute inset-0 flex items-center justify-center text-[var(--color-text-tertiary)]">
@@ -87,18 +98,23 @@ export function ProductGridClient({ products }: Props) {
                   ))}
                 </div>
                 <h3 className="card-product__name group-hover:text-[var(--color-green-600)] transition-colors">
-                  {product.name}
+                  {product.commonName || product.name}
                 </h3>
                 {product.scientificName && (
                   <p className="card-product__cuts italic">{product.scientificName}</p>
                 )}
-                <p className="text-sm text-[var(--color-text-secondary)] line-clamp-2">
-                  {product.shortDescription || 'Contact us for bulk export quotes and full specifications.'}
+                {product.availableCuts && product.availableCuts.length > 0 && (
+                  <p className="card-product__cuts text-xs">
+                    {product.availableCuts.map(c => tp('cutForms.' + c) || c).join(', ')}
+                  </p>
+                )}
+                <p className="text-sm text-[var(--color-text-secondary)] line-clamp-3">
+                  {product.shortDescription || tp('noDescription')}
                 </p>
                 <div className="card-product__footer">
                   <span className="badge badge-amber text-[10px]">
                     <Package className="w-3 h-3" />
-                    MOQ: {product.minOrderKg.toLocaleString()} kg
+                    {tp('moq', { weight: product.minOrderKg.toLocaleString() })}
                   </span>
                 </div>
               </div>
@@ -107,8 +123,11 @@ export function ProductGridClient({ products }: Props) {
           )
         })}
       </div>
-
-      <ProductDetailModal slug={activeSlug} onClose={closeProduct} />
+      <AnimatePresence>
+        {activeProduct && (
+          <ProductDetailModal slug={activeProduct.slug} onClose={closeProduct} />
+        )}
+      </AnimatePresence>
     </>
   )
 }

@@ -7,9 +7,9 @@ import { tmpdir } from 'os'
 import { join } from 'path'
 
 cloudinary.config({
-  cloud_name: 'dcukpuftg',
-  api_key: '675339851565595',
-  api_secret: 'Kzf1z9YSx8davluDFJF_yI9LwZg',
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 })
 
 const prisma = new PrismaClient()
@@ -30,18 +30,18 @@ function download(url, dest) {
 }
 
 const CERTS = [
-  { title: 'ISO 22000:2018', issuer: 'Food Safety Management System', url: 'https://calendula-herbs.com/wp-content/uploads/2018/07/iso-certificate-3.jpg' },
-  { title: 'ISO 9001:2015', issuer: 'Quality Management System (TÜV)', url: 'https://calendula-herbs.com/wp-content/uploads/2021/01/calendulaiso9001-jan2021.jpeg' },
-  { title: 'HALAL Certificate', issuer: 'Halal Quality Control', url: 'https://calendula-herbs.com/wp-content/uploads/2021/08/halal.png' },
-  { title: 'EU Organic Certificate', issuer: 'Control Union Certifications', url: 'https://calendula-herbs.com/wp-content/uploads/2018/07/organic-certificate-1.jpg' },
-  { title: 'USDA NOP Organic', issuer: 'USDA National Organic Program', url: 'https://calendula-herbs.com/wp-content/uploads/2021/10/nopcertificate.png' },
-  { title: 'KOSHER Certificate', issuer: 'Kosher Certification', url: null },
-  { title: 'FDA Registration', issuer: 'U.S. Food & Drug Administration', url: 'https://calendula-herbs.com/wp-content/uploads/2020/08/CALENDULA-HERBS-FDA-Certificate-2020.jpg' },
-  { title: 'BRCGS Certificate', issuer: 'Brand Reputation Compliance Global Standards', url: null },
-  { title: 'KOSHER Certificate', issuer: 'Kosher Certification', url: null },
-  { title: 'SEDEX / SMETA', issuer: 'Supplier Ethical Data Exchange', url: null },
-  { title: 'NFSA Whitelist', issuer: 'National Food Safety Authority (Egypt)', url: null },
-  { title: 'AHK Membership', issuer: 'Arab-Hungarian Chamber of Commerce', url: null },
+  { title: 'ISO 22000:2018', issuer: 'Food Safety Management System', url: 'https://calendula-herbs.com/wp-content/uploads/2018/07/iso-certificate-3.jpg', description: 'Certifies our Food Safety Management System meets international standards for safe herb and spice processing.' },
+  { title: 'ISO 9001:2015', issuer: 'Quality Management System (TÜV)', url: 'https://calendula-herbs.com/wp-content/uploads/2021/01/calendulaiso9001-jan2021.jpeg', description: 'TÜV-certified Quality Management System ensuring consistent product quality and continuous improvement.' },
+  { title: 'HALAL Certificate', issuer: 'Halal Quality Control', url: 'https://calendula-herbs.com/wp-content/uploads/2021/08/halal.png', description: 'All products are Halal-certified, compliant with Islamic dietary laws from sourcing to processing.' },
+  { title: 'EU Organic Certificate', issuer: 'Control Union Certifications', url: 'https://calendula-herbs.com/wp-content/uploads/2018/07/organic-certificate-1.jpg', description: 'EU-certified organic production — our herbs and spices meet strict European organic farming standards.' },
+  { title: 'USDA NOP Organic', issuer: 'USDA National Organic Program', url: 'https://calendula-herbs.com/wp-content/uploads/2021/10/nopcertificate.png', description: 'USDA National Organic Program certification for export of organic products to the United States.' },
+  { title: 'KOSHER Certificate', issuer: 'Kosher Certification', url: null, description: 'Kosher-certified products meeting dietary requirements for Jewish markets worldwide.' },
+  { title: 'FDA Registration', issuer: 'U.S. Food & Drug Administration', url: 'https://calendula-herbs.com/wp-content/uploads/2020/08/CALENDULA-HERBS-FDA-Certificate-2020.jpg', description: 'Registered with the U.S. Food and Drug Administration for food facility export compliance.' },
+  { title: 'BRCGS Certificate', issuer: 'Brand Reputation Compliance Global Standards', url: null, description: 'BRCGS certification for food safety — a Global Food Safety Initiative (GFSI) benchmarked standard.' },
+  { title: 'KOSHER Certificate', issuer: 'Kosher Certification', url: null, description: 'Kosher-certified products meeting dietary requirements for Jewish markets worldwide.' },
+  { title: 'SEDEX / SMETA', issuer: 'Supplier Ethical Data Exchange', url: null, description: 'SMETA-audited — demonstrating ethical trade practices, labour standards, and environmental responsibility.' },
+  { title: 'NFSA Whitelist', issuer: 'National Food Safety Authority (Egypt)', url: null, description: 'Listed on the Egyptian National Food Safety Authority whitelist for food export compliance.' },
+  { title: 'AHK Membership', issuer: 'Arab-Hungarian Chamber of Commerce', url: null, description: 'Member of the Arab-Hungarian Chamber of Commerce, fostering bilateral trade relations.' },
 ]
 
 // Remove duplicates first
@@ -66,7 +66,7 @@ for (const cert of uniqueCerts) {
 
   if (!cert.url) {
     await prisma.certificate.create({
-      data: { title: cert.title, issuer: cert.issuer, fileType: 'IMAGE', order },
+      data: { title: cert.title, issuer: cert.issuer, description: cert.description, fileType: 'IMAGE', order },
     })
     console.log(`CREATED ${cert.title} (no image)`)
     order++
@@ -82,7 +82,7 @@ for (const cert of uniqueCerts) {
   } catch (e) {
     console.log(`  FAIL download — creating without image`)
     await prisma.certificate.create({
-      data: { title: cert.title, issuer: cert.issuer, fileType: 'IMAGE', order },
+      data: { title: cert.title, issuer: cert.issuer, description: cert.description, fileType: 'IMAGE', order },
     })
     order++; continue
   }
@@ -110,7 +110,7 @@ for (const cert of uniqueCerts) {
   })
 
   await prisma.certificate.create({
-    data: { title: cert.title, issuer: cert.issuer, fileId: media.id, fileType: 'IMAGE', order },
+    data: { title: cert.title, issuer: cert.issuer, description: cert.description, fileId: media.id, fileType: 'IMAGE', order },
   })
   console.log(`  CREATED ${cert.title} ✓`)
   order++

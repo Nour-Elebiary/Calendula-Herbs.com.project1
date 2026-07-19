@@ -3,9 +3,9 @@ import { createReadStream } from 'fs'
 import path from 'path'
 
 cloudinary.config({
-  cloud_name: 'dcukpuftg',
-  api_key: '675339851565595',
-  api_secret: 'Kzf1z9YSx8davluDFJF_yI9LwZg',
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 })
 
 const logoPath = path.resolve('..', "CUTTER PLOTTER 37 X20 (1).pdf (1) (1).png")

@@ -120,7 +120,7 @@ export default function EditTeamMemberPage({ params }: { params: Promise<{ id: s
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="md:col-span-2 space-y-6 bg-white p-6 rounded-xl border shadow-sm">
+        <div className="md:col-span-2 space-y-6 bg-card p-6 rounded-xl border shadow-sm">
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-2">
               <Label htmlFor="member-name">Name</Label>
@@ -162,7 +162,7 @@ export default function EditTeamMemberPage({ params }: { params: Promise<{ id: s
                     <div className="space-y-2 w-16 shrink-0">
                       <Label className="text-xs">Icon</Label>
                       <div className="flex flex-col items-center gap-1">
-                        <div className="w-9 h-9 rounded-full bg-white border flex items-center justify-center text-neutral-600">
+                        <div className="w-9 h-9 rounded-full bg-card border flex items-center justify-center text-neutral-600">
                           <Icon className="w-4 h-4" />
                         </div>
                         <IconPicker
@@ -201,7 +201,7 @@ export default function EditTeamMemberPage({ params }: { params: Promise<{ id: s
         </div>
 
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-xl border shadow-sm space-y-6">
+          <div className="bg-card p-6 rounded-xl border shadow-sm space-y-6">
             <h3 className="font-semibold border-b pb-2">Profile Photo</h3>
             <div className="aspect-square bg-neutral-100 rounded-lg border-2 border-dashed flex flex-col items-center justify-center overflow-hidden relative">
               {member.photo?.url ? (
@@ -225,7 +225,7 @@ export default function EditTeamMemberPage({ params }: { params: Promise<{ id: s
             )}
           </div>
 
-          <div className="bg-white p-6 rounded-xl border shadow-sm space-y-6">
+          <div className="bg-card p-6 rounded-xl border shadow-sm space-y-6">
             <h3 className="font-semibold border-b pb-2">Settings</h3>
             
             <div className="flex items-center justify-between">

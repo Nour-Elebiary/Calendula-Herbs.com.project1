@@ -31,7 +31,7 @@ function SortableCategory({
   const count = category._count?.products ?? 0
 
   return (
-    <div ref={setNodeRef} style={style} className="flex items-center gap-3 bg-white border rounded-lg p-3.5 hover:shadow-sm transition-shadow">
+    <div ref={setNodeRef} style={style} className="flex items-center gap-3 bg-card border rounded-lg p-3.5 hover:shadow-sm transition-shadow">
       <button {...attributes} {...listeners} className="cursor-grab text-neutral-300 hover:text-neutral-500">
         <GripVertical className="h-5 w-5" />
       </button>
@@ -164,7 +164,7 @@ export default function CategoriesPage() {
 
       {/* Create form */}
       {creating && (
-        <div className="bg-white border rounded-lg p-4 flex gap-2 items-center">
+        <div className="bg-card border rounded-lg p-4 flex gap-2 items-center">
           <Input
             autoFocus
             placeholder="Category name..."
@@ -199,7 +199,7 @@ export default function CategoriesPage() {
             <div className="space-y-2">
               {categories.map(cat => (
                 editingCat?.id === cat.id ? (
-                  <div key={cat.id} className="flex gap-2 bg-white border rounded-lg p-3.5 items-center">
+                  <div key={cat.id} className="flex gap-2 bg-card border rounded-lg p-3.5 items-center">
                     <Input
                       autoFocus
                       value={editName}

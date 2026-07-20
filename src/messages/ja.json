@@ -1,556 +1,556 @@
 {
-  "nav": {
-    "home": "ホーム",
-    "products": "製品",
-    "aboutUs": "当社について",
-    "galleries": "ギャラリー",
-    "certificates": "認証",
-    "contact": "お問い合わせ"
-  },
-  "header": {
-    "getQuote": "見積もりを依頼する",
-    "themeLight": "ライトモードに切り替え",
-    "themeDark": "ダークモードに切り替え",
-    "languageLabel": "言語を選択",
-    "cartAria": "ショッピングカート（{count}点）"
-  },
-  "home": {
-    "heroTitle": "自然に根ざした最高級オーガニックハーブ",
-    "heroCta": "コレクションを見る",
-    "heroSecondaryCta": "もっと詳しく知る",
-    "biofachBadge": "BIOFACH参加者",
-    "biofachTitle": "4年以上にわたりBIOFACHに出展",
-    "biofachDesc": "世界有機見本市でお会いしましょう。パートナーシップについて話し合い、製品をサンプリングし、品質を実際に体験してください。",
-    "biofachCta": "ご相談はこちら",
-    "biofachSecondaryCta": "認証を見る",
-    "ctaAltTitle": "プレミアムエジプトハーブの調達をご検討中ですか？",
-    "ctaAltDesc": "バルク見積もり、製品仕様、サンプルリクエストについては、弊社チームまでお問い合わせください。",
-    "ctaAltButton": "見積もりを依頼する",
-    "ctaAltSecondary": "製品を見る",
-    "heroEyebrow": "{year}年から続く高級輸出品質",
-    "heroDescription": "{year}年から続く、エジプトの農場から世界中の倉庫まで信頼できるエンドツーエンドのサプライチェーン — GAP/GHP認証、二重乾燥方法、高級オーガニックハーブ、スパイス、種子に対応したMOSH/MOAHフリー包装。",
-    "ourCollection": "コレクション",
-    "featuredProducts": "おすすめ製品",
-    "featuredDesc": "国際基準を満たすよう細心の注意を払って栽培・加工された、最も人気の高い植物製品をご覧ください。",
-    "howItWorks": "仕組み",
-    "processTitle": "お問い合わせから出荷まで",
-    "processSubtitle": "国際バイヤー向けに設計された効率的なプロセス。各段階を精密に管理します。",
-    "step1Title": "お問い合わせ",
-    "step1Desc": "製品要件と仕様をお送りください。24時間以内にチームが確認し、オーダーメイドの提案書を作成します。",
-    "step2Title": "サンプル",
-    "step2Desc": "品質評価用の代表サンプルを準備し発送します。製品がお客様の基準を満たしていることを確認します。",
-    "step3Title": "注文",
-    "step3Desc": "サンプル承認後、商談条件、生産スケジュール、品質仕様を確定します。",
-    "step4Title": "出荷",
-    "step4Desc": "ご注文は輸出基準に従って処理、包装され、完全な書類とリアルタイム追跡付きで出荷されます。",
-    "ourStory": "私たちの物語",
-    "cultivatingTitle": "卓越性を育む。",
-    "cultivatingSpan": "信頼をお届けする。",
-    "aboutPara1": "エジプトの肥沃なファイユーム地方に拠点を置くCalendula Herbsは、栽培から納品までの完全なサプライチェーンを管理し、GAP（適正農業規範）およびGHP（適正取扱規範）に基づく自社および契約農場を運営しています。",
-    "aboutPara2": "45年の農業経験、25年の製造実績、11年の国際輸出経験により、比類なき伝統をすべての出荷に活かしています。最新の加工施設では、世界的な食品規制に従って製品を洗浄、加工、ブレンドし、全段階で社内実験室によるテストを実施しています。",
-    "highlight1": "農場から出荷までの完全トレーサビリティ",
-    "highlight2": "GAPおよびGHP認定の農業慣行",
-    "highlight3": "製品品質を守るMOSH/MOAHフリー包装",
-    "highlight4": "二重乾燥オプション：天日乾燥および機械乾燥",
-    "learnMoreAboutUs": "当社の詳細を知る",
-    "stat1Value": "45",
-    "stat1Unit": "年",
-    "stat1Label": "農業",
-    "stat2Value": "25",
-    "stat2Unit": "年",
-    "stat2Label": "製造",
-    "stat3Value": "11",
-    "stat3Unit": "年",
-    "stat3Label": "輸出",
-    "stat4Value": "4+",
-    "stat4Unit": "回",
-    "stat4Label": "BIOFACH出展",
-    "certsTitle": "認証＆品質基準",
-    "certsSubtitle": "認証は、品質、安全性、持続可能性への揺るぎない取り組みを反映しています。",
-    "available": "提供可能: {cuts}",
-    "moq": "最小注文数量: {weight} kg",
-    "requestQuoteAria": "{name}の見積もりを依頼"
-  },
-  "products": {
-    "searchPlaceholder": "製品を検索...",
-    "noResults": "製品が見つかりません",
-    "heroTitle": "製品",
-    "heroDesc": "世界中の輸入業者やメーカー向けのプレミアムバルクハーブ、スパイス、種子。すべての製品は完全な認証付きで輸出可能です。",
-    "heroMetadataTitle": "製品 | Calendula Herbs Import & Export",
-    "heroMetadataDesc": "高級バルクハーブ、スパイス、種子のカタログをご覧ください。最小注文数量500kgから。輸入ニーズについては見積もりをリクエストしてください。",
-    "sidebarTitle": "カテゴリー",
-    "filterAllLabel": "すべての製品",
-    "noResultsDesc": "検索条件またはカテゴリフィルターを調整してください。",
-    "clearFilters": "フィルターをクリア",
-    "loading": "製品を読み込み中...",
-    "cantFindTitle": "お探しの製品が見つかりませんか？",
-    "cantFindDesc": "掲載以外にも幅広い製品を取り扱っています。ご必要なものをお知らせください。",
-    "requestProduct": "製品をリクエスト",
-    "noDescription": "バルク輸出見積もりと完全な仕様についてはお問い合わせください。",
-    "cutForms": {
-      "WHOLE": "ホール",
-      "CRUSHED": "クラッシュド",
-      "POWDER": "パウダー",
-      "CUT_SIFTED": "カット＆シフテッド",
-      "GRANULATED": "顆粒",
-      "LEAF": "リーフ",
-      "STEM": "ステム",
-      "ROOT": "ルート",
-      "TBC": "確認中"
-    },
-    "moq": "(MOQ) {weight} kg"
-  },
-  "productDetail": {
-    "home": "ホーム",
-    "products": "製品",
-    "productHighlights": "製品の特徴",
-    "highlightFreeSamples": "品質評価用の無料サンプルをご用意",
-    "highlightCustomCut": "ご希望に応じたカスタムカットおよびラベリング対応",
-    "highlightOrganicOptions": "EU有機/USDA有機認証オプション",
-    "cutForms": "カット形状",
-    "certifications": "認証",
-    "productInformation": "製品情報",
-    "minOrder": "最小注文: {weight} KG",
-    "cutFormEmpty": "カットオプションについてはお問い合わせください",
-    "certAvailable": "認証可能",
-    "close": "閉じる",
-    "productNotFound": "製品が見つかりません",
-    "failedToLoad": "製品の読み込みに失敗しました",
-    "closeAria": "閉じる",
-    "cutForm": {
-      "whole": "Whole",
-      "cutSifted": "Cut & Sifted",
-      "powder": "Powder",
-      "granulated": "Granulated",
-      "teaCut": "Tea Cut"
-    },
-    "cert": {
-      "haccp": "HACCP",
-      "eu_organic": "EU Organic",
-      "iso22000": "ISO 22000",
-      "gmp": "GMP",
-      "usda": "USDA Organic"
-    }
-  },
   "about": {
-    "teamTitle": "チーム紹介",
-    "heroTitle": "Calendula Herbsについて",
-    "heroDesc": "40年以上にわたり、純粋さを育み卓越性をお届けしています。世代を超えた農業の専門知識に根ざした、最高級のオーガニックハーブを世界に提供することに専念しています。",
-    "heroMetadataTitle": "当社について | Calendula Herbs Import & Export",
-    "heroMetadataDesc": "45年の農業、25年の製造、11年のエジプト産プレミアムオーガニックハーブ輸出の実績をご紹介します。",
-    "statUnit": "年",
-    "statFarming": "農業の伝統",
-    "statManufacturing": "製造",
-    "statExporting": "輸出の卓越性",
-    "heritageTitle": "伝統とミッション",
-    "heritagePara1": "地元の農家と世界市場をつなぐビジョンを持って設立されたCalendula Herbsは、オーガニック植物の主要輸出国へと成長しました。農場はエジプトで最も美しい農業地域に位置し、すべての作物が最適な条件で栽培されています。",
-    "heritagePara2": "持続可能な農業、倫理的な取引、妥協のない品質を信条としています。種子の選別から最終包装まで、厳格な品質管理プロセスにより、お客様が国際基準を超える製品を受け取ることを保証します。",
-    "journeyTitle": "私たちの歩み",
-    "journeySubtitle": "家族経営の農場から世界的輸出業者へ — 三代にわたる農業の卓越性。",
-    "timeline1Year": "1980",
-    "timeline1Title": "農業のルーツ",
-    "timeline1Desc": "エジプトの肥沃なファイユーム地方で薬用ハーブと芳香植物の栽培を始めました。",
-    "timeline2Year": "2000",
-    "timeline2Title": "製造",
-    "timeline2Desc": "ハーブの洗浄、切断、乾燥、包装を大規模に行う最新の加工施設に拡張しました。",
-    "timeline3Year": "2014",
-    "timeline3Title": "世界輸出",
-    "timeline3Desc": "完全なトレーサビリティでエジプトの植物を世界市場に届けるため、Calendula Herbs for Exportを設立しました。",
-    "teamSubtitle": "ビジョンを推進する献身的な専門家たちをご紹介します。",
     "boardTitle": "取締役会",
+    "ctaButton": "お問い合わせ",
+    "ctaDesc": "輸入業者、ディストリビューター、製造業者の皆様、当社のプレミアムハーブがどのように貴社のニーズにお応えできるか、ぜひご相談ください。",
+    "ctaTitle": "ビジネスパートナーをお探しですか？",
     "execTeamTitle": "経営陣",
-    "ctaTitle": "ぜひ一緒に働きませんか？",
-    "ctaDesc": "輸入業者、販売業者、メーカーを問わず、プレミアムハーブがお客様のニーズをどのように満たせるかについてお話しさせてください。",
-    "ctaButton": "お問い合わせ"
+    "heritagePara1": "地元の農家とグローバル市場をつなぐというビジョンのもと設立されたCalendula Herbsは、オーガニックボタニカルの主要な輸出企業へと成長いたしました。当社の農場はエジプトで最も豊かな農業地域に位置しており、すべての作物が最適な環境で栽培されています。",
+    "heritagePara2": "私たちは、持続可能な農業、倫理的な取引、そして妥協のない品質を信条としています。種子の選定から最終梱包に至るまで、厳格な品質管理プロセスにより、国際基準を超える製品をお客様にお届けすることをお約束いたします。",
+    "heritageTitle": "私たちの歩みと使命",
+    "heroDesc": "40年以上にわたり、純粋さを追求し、卓越した品質をお届けしてきました。私たちは、何世代にもわたる農業の専門知識を活かし、世界中に最高品質のオーガニックハーブを提供することに尽力しています。",
+    "heroMetadataDesc": "当社の歩みをご紹介します。エジプト産プレミアムオーガニックハーブの栽培45年、製造25年、輸出11年の実績を誇ります。",
+    "heroMetadataTitle": "会社概要 | Calendula Herbs For Import & Export",
+    "heroTitle": "Calendula Herbsについて",
+    "journeySubtitle": "家族経営の農場からグローバルな輸出企業へ — 3世代にわたり受け継がれる卓越した農業技術。",
+    "journeyTitle": "私たちの歩み",
+    "statExporting": "優れた輸出実績",
+    "statFarming": "農業の歴史",
+    "statManufacturing": "製造実績",
+    "statUnit": "年",
+    "teamSubtitle": "私たちのビジョンを推進する、情熱を持った専門家チームをご紹介します。",
+    "teamTitle": "リーダーシップとチーム",
+    "timeline1Desc": "エジプトの肥沃なファイユーム地方で、私たちの家族が薬用ハーブや芳香植物の栽培を開始しました。",
+    "timeline1Title": "農業のルーツ",
+    "timeline1Year": "1980",
+    "timeline2Desc": "ハーブの洗浄、カット、乾燥、梱包を大規模に行うための近代的な加工施設へと拡張しました。",
+    "timeline2Title": "製造の近代化",
+    "timeline2Year": "2000",
+    "timeline3Desc": "完全なトレーサビリティを備えたエジプト産ボタニカルを世界市場に届けるため、Calendula Herbsを設立しました。",
+    "timeline3Title": "グローバル輸出の開始",
+    "timeline3Year": "2014"
   },
-  "contact": {
-    "formTitle": "メッセージを送信",
-    "nameLabel": "お名前",
-    "namePlaceholder": "氏名を入力",
-    "emailLabel": "メールアドレス",
-    "emailPlaceholder": "メールアドレスを入力",
-    "phoneLabel": "電話番号",
-    "phonePlaceholder": "電話番号を入力",
-    "subjectLabel": "件名",
-    "subjectPlaceholder": "件名は何ですか？",
-    "messageLabel": "メッセージ",
-    "messagePlaceholder": "お問い合わせ内容の詳細をご記入ください...",
-    "sendButton": "送信",
-    "sendingButton": "送信中...",
-    "successMessage": "ありがとうございます。メッセージは正常に送信されました。折り返しご連絡いたします。",
-    "errorMessage": "エラーが発生しました。もう一度お試しいただくか、直接メールまたはお電話でお問い合わせください。",
-    "heroTitle": "お問い合わせ",
-    "heroDesc": "プレミアムエジプト産ハーブ、スパイス、植物製品のバルク輸出に関するお問い合わせをお送りください。輸出チームが内容を確認し、24時間以内にオーダーメイドの見積書を作成します。",
-    "heroMetadataTitle": "お問い合わせ | Calendula Herbs Import & Export",
-    "heroMetadataDesc": "バルク有機ハーブ輸出に関するお問い合わせはCalendula Herbsまで。見積もり、製品仕様、サンプルをリクエストできます。",
-    "formDesc": "必要な数量、仕様、仕向地をお知らせください。カスタム見積もりを作成します。",
-    "unavailableTitle": "お問い合わせフォームは現在利用できません",
-    "unavailableDesc": "以下の詳細からメールまたは電話で直接お問い合わせください。",
-    "directTitle": "直接のお問い合わせ",
-    "directDesc": "電話、メール、またはメッセージングアプリで輸出チームに直接ご連絡ください。営業時間内であれば、B2Bのお問い合わせに迅速に対応します。",
-    "locationTitle": "所在地",
-    "addressLabel": "本社 & 農場",
-    "hoursLabel": "営業時間",
-    "emailLabel2": "メール",
-    "phoneLabel2": "電話",
+  "cart": {
+    "browseProducts": "製品を見る",
+    "closeAria": "カートを閉じる",
+    "closeTitle": "カートを閉じる",
     "companyLabel": "会社名",
-    "companyPlaceholder": "ハーブズ合同会社",
+    "companyPlaceholder": "ハーブ株式会社",
     "countryLabel": "国",
-    "countryPlaceholder": "アメリカ合衆国",
-    "successTitle": "成功しました",
-    "errorUnexpected": "予期しないエラーが発生しました",
-    "validationRequired": "{field}は必須項目です",
-    "validationEmail": "有効なメールアドレスを入力してください",
-    "validationFix": "フォームのエラーを修正してください"
-  },
-  "footer": {
-    "brandDescription": "世界中から持続可能な方法で調達されたプレミアムオーガニックハーブ。1995年以降、ハーブ取引における信頼できるパートナーです。",
-    "quickLinks": "クイックリンク",
-    "contactInfo": "お問い合わせ先",
-    "businessHours": "営業時間",
-    "followUs": "フォローする",
-    "copyright": "© {year} Calendula Herbs. All rights reserved.",
-    "privacyPolicy": "プライバシーポリシー",
-    "termsOfService": "利用規約",
-    "productsCatalog": "製品カタログ",
-    "aboutCompany": "会社概要",
-    "farmProcessing": "農場と加工",
-    "qualityCertificates": "品質認証",
-    "contactUs": "お問い合わせ",
-    "fallbackHours": "お問い合わせは随時承っております。",
-    "ourCertifications": "認証一覧"
-  },
-  "faq": {
-    "heroTitle": "よくある質問",
-    "heroDesc": "Calendula Herbsからのご注文について、B2Bバイヤーが知っておくべき情報。",
-    "heroMetadataTitle": "よくある質問 | Calendula Herbs",
-    "heroMetadataDesc": "B2B輸出FAQ — 最小注文数量、無料サンプル、認証、配送、支払条件について。",
-    "empty": "FAQは現在ありません",
-    "stillQuestions": "まだ質問がありますか？",
-    "teamReady": "輸出チームが追加のお問い合わせに対応いたします。",
-    "contactButton": "お問い合わせ",
-    "items": [
-      {
-        "question": "最小注文数量（MOQ）はいくらですか？",
-        "answer": "標準的な最小注文数量は、製品と季節により1製品あたり500〜1,000kgです。初回の資格のあるバイヤー様には、少量の試験注文（50〜100kg）にも対応可能です。具体的な数量については営業チームまでお問い合わせください。"
-      },
-      {
-        "question": "品質評価用の無料サンプルを提供していますか？",
-        "answer": "はい、資格のあるB2Bバイヤー様には50〜200gの無料サンプルを提供しています。別途取り決めがない限り、送料はバイヤー様のご負担となります。ウェブサイトからサンプルリクエストをお送りください。現在の生産バッチからサンプルを準備します。"
-      },
-      {
-        "question": "どのような殺菌オプションを提供していますか？",
-        "answer": "蒸気殺菌（オートクレーブ）、エチレンオキシド（EtO）、ガンマ線照射など、製品仕様と仕向国の要件に応じて複数の殺菌方法を提供しています。加工施設はGMPおよびHACCPガイドラインに従っています。見積もりをリクエストする際に殺菌条件を指定してください。"
-      },
-      {
-        "question": "ウェブサイトで価格を確認できますか？",
-        "answer": "ハーブやスパイスの価格は、作物の収穫量、市場状況、季節性により変動します。数量、品質グレード、包装、仕向地など、お客様の具体的な条件を把握した上で、正確な最新価格を提供します。オーダーメイドの見積もりについてはお問い合わせください。"
-      },
-      {
-        "question": "どのような認証を取得していますか？",
-        "answer": "ISO 9001、ISO 22000、EUオーガニック、USDA NOP、HALAL、KOSHER、BRCGS、FDA登録、SEDEX/Semeta、NFSAホワイトリスト、AHK評議員会メンバーシップを含む11の主要認証を取得しています。詳細は認証ページをご覧ください。コンプライアンスレビュー用にご希望に応じて証明書を提供できます。"
-      },
-      {
-        "question": "配送条件とリードタイムは？",
-        "answer": "航空便および海上便で世界中に発送可能です。一般的なインコタームズはFOB（ダミエッタ港またはアレクサンドリア港）、CIF、EXWです。リードタイムは在庫品で7〜14日、カスタム加工で20〜30日です。信頼できる運送業者と提携しており、物流手配もサポートします。"
-      },
-      {
-        "question": "どのような支払条件に対応していますか？",
-        "answer": "支払条件は、注文金額、仕向地、バイヤーの取引履歴に基づき、注文ごとに協議の上決定します。一般的な取り決めはT/T（電信送金）およびL/C（信用状）です。営業チームまでお問い合わせください。"
-      },
-      {
-        "question": "製品はすべて自社農場から調達していますか？",
-        "answer": "エジプトのファイユーム、イブシャウェイに500エーカー以上の自社農場を所有・運営しており、有機カレンデュラ、カモミール、ハイビスカスなどを栽培しています。また、当社の農学者による直接監督下にある信頼できるパートナー農場からも補完的に調達し、一貫した品質、トレーサビリティ、年間を通じた供給を確保しています。"
-      },
-      {
-        "question": "製品の品質と一貫性をどのように保証していますか？",
-        "answer": "種子の選別、栽培、収穫、加工、包装の全段階で品質を保証しています。純度、効能、微生物汚染、重金属について社内ラボテストを実施しています。品質管理システムはISO 9001およびISO 22000認証を取得しており、GMPおよびHACCPガイドラインに従っています。"
-      },
-      {
-        "question": "農場や加工施設を見学できますか？",
-        "answer": "はい、真剣なバイヤーや輸入業者様の見学を歓迎します。事前にご連絡いただき、エジプト・ファイユームの農場、加工施設、品質管理ラボの見学をスケジュールしてください。ビザや渡航手配には少なくとも2週間の余裕を見ることをお勧めします。"
-      },
-      {
-        "question": "バルク注文はどのように行いますか？",
-        "answer": "製品カタログを閲覧し、「見積もりを依頼する」フォームからお問い合わせいただくか、営業チームに直接ご連絡ください。24時間以内に製品仕様、最新価格、サンプル提供や契約条件などの次のステップをご案内します。"
-      },
-      {
-        "question": "プライベートラベルやカスタム包装は可能ですか？",
-        "answer": "はい、B2Bパートナー様向けにプライベートラベル、カスタム包装、OEMサービスを提供しています。最小数量が適用されます。詳細な提案書をご希望の場合は、仕様を添えてお問い合わせください。"
-      }
-    ]
+    "countryPlaceholder": "日本",
+    "decreaseAria": "数量を減らす",
+    "emailLabel": "メールアドレス *",
+    "emailPlaceholder": "jane@example.com",
+    "emptyDesc": "カタログをご覧いただき、一括見積もりを希望する製品を追加してください。",
+    "emptyTitle": "見積もりカートは空です",
+    "errorGeneric": "予期しないエラーが発生しました",
+    "increaseAria": "数量を増やす",
+    "moq": "(MOQ) {weight} kg",
+    "nameLabel": "お名前 *",
+    "namePlaceholder": "山田 太郎",
+    "notesLabel": "追加の備考（任意）",
+    "notesPlaceholder": "仕向港、特別な要件、必要書類など...",
+    "phoneLabel": "電話番号",
+    "phonePlaceholder": "+81 90...",
+    "removeAria": "商品を削除",
+    "removeTitle": "カートから削除",
+    "step1Button": "詳細の入力に進む",
+    "step2Back": "戻る",
+    "submit": "送信する",
+    "submitting": "送信中...",
+    "success": "お問い合わせが正常に送信されました。間もなく担当者よりご連絡いたします。",
+    "title": "見積もり依頼"
   },
   "certificates": {
+    "certified": "認証取得済み",
+    "empty": "掲載されている認証はまだありません。",
+    "heroDesc": "私たちは、有機農業、加工、および輸出に関する最高水準の国際基準を遵守しています。",
+    "heroMetadataDesc": "当社のオーガニックおよび品質保証証明書（ISO、EU Organic、HALAL、KOSHER、USDA NOPなど）をご紹介します。",
+    "heroMetadataTitle": "認証・証明書 | Calendula Herbs",
     "heroTitle": "品質と認証",
-    "heroDesc": "有機農業、加工、輸出において最高の国際基準を遵守しています。",
-    "heroMetadataTitle": "認証 | Calendula Herbs",
-    "heroMetadataDesc": "有機および品質保証認証 — ISO、EUオーガニック、HALAL、KOSHER、USDA NOPなど。",
-    "empty": "現在認証は掲載されていません。",
-    "certified": "認証済み",
-    "viewPdf": "PDFを見る",
-    "viewFile": "ファイルを見る"
-  },
-  "galleries": {
-    "heroTitle": "メディアギャラリー",
-    "heroDesc": "農場、最先端の加工施設、プレミアム製品を巡るビジュアルな旅。",
-    "heroMetadataTitle": "ギャラリー | Calendula Herbs",
-    "heroMetadataDesc": "メディアギャラリーで農場、加工施設、製品をご覧ください。",
-    "empty": "ギャラリーは現在ありません",
-    "emptyDesc": "写真や動画は後日ご確認ください。",
-    "sections": {
-      "EVENTS": "イベント",
-      "EVENTS_desc": "業界イベント、展示会、交流会の様子。",
-      "INTERVIEWS_TV": "インタビュー・テレビ番組",
-      "INTERVIEWS_TV_desc": "メディア出演、インタビュー、テレビ特集。",
-      "FACTORY": "工場の写真",
-      "FACTORY_desc": "最先端の加工施設の内部をご紹介。",
-      "FARMS": "農場の写真",
-      "FARMS_desc": "提携農場と栽培畑の風景。",
-      "SHIPMENTS": "出荷の写真",
-      "SHIPMENTS_desc": "世界中に出荷される製品の準備風景。",
-      "VISITS": "訪問",
-      "VISITS_desc": "世界中の農場、施設、パートナーへの訪問。"
-    },
-    "scrollLeft": "左にスクロール",
-    "scrollRight": "右にスクロール",
-    "closeLightbox": "ライトボックスを閉じる",
-    "previousImage": "前の画像",
-    "nextImage": "次の画像",
-    "galleryItemLabel": "ギャラリー項目 {index}"
-  },
-  "privacy": {
-    "lastUpdated": "最終更新日: {date}",
-    "heroTitle": "プライバシーポリシー",
-    "heroDesc": "お客様の個人データの収集、利用、保護方法について。",
-    "heroMetadataTitle": "プライバシーポリシー",
-    "heroMetadataDesc": "Calendula Herbsのプライバシーポリシー — 個人データの収集、利用、保護方法について。",
-    "section1": {
-      "title": "1. はじめに",
-      "body": "<p>Calendula Herbs For Import & Export（当社）は、お客様のプライバシー保護に取り組んでいます。このポリシーは、お客様が当社のウェブサイトをご利用いただく際に、お客様の個人情報をどのように収集、利用、保護するかを説明するものです。</p>"
-    },
-    "section2": {
-      "title": "2. 収集する情報",
-      "body": "<p><strong>お客様が提供する情報：</strong> 氏名、メールアドレス、電話番号、会社名、国、およびお問い合わせフォーム、見積リクエスト、サンプルリクエストを通じて送信される詳細情報。</p><p><strong>自動的に収集される情報：</strong> IPアドレス、ブラウザの種類、デバイス情報、閲覧ページ、およびサイト滞在時間（Cookieおよび分析ツール経由）。</p>"
-    },
-    "section3": {
-      "title": "3. お客様の情報の利用方法",
-      "body": "<ul><li>お問い合わせへの回答と見積書の提供</li><li>製品およびサンプルリクエストの処理</li><li>ウェブサイトとお客様体験の改善</li><li>法的義務の遵守</li></ul>"
-    },
-    "section4": {
-      "title": "4. データ保護",
-      "body": "<p>当社は、暗号化、アクセス制御、安全なサーバーを含む適切なセキュリティ対策を実施し、お客様の個人データを不正アクセス、改ざん、または開示から保護します。</p>"
-    },
-    "section5": {
-      "title": "5. データの保存期間",
-      "body": "<p>当社は、お客様の個人データを本ポリシーに記載された目的のために必要な期間、または法律が要求する期間のみ保存します。お問い合わせおよび連絡内容は最大3年間保存されます。</p>"
-    },
-    "section6": {
-      "title": "6. お客様の権利",
-      "body": "<p>適用されるデータ保護法に基づき、お客様には以下の権利があります：</p><ul><li>個人データへのアクセス</li><li>不正確なデータの訂正請求</li><li>データの削除請求</li><li>データ処理に対する異議申し立て</li><li>データポータビリティの請求</li></ul><p>これらの権利を行使するには、<a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a>までご連絡ください。</p>"
-    },
-    "section7": {
-      "title": "7. 第三者サービス",
-      "body": "<p>当社は、お客様のデータを処理する可能性のある以下の第三者サービスを利用しています：</p><ul><li><strong>Cloudinary</strong> — 画像・メディアホスティング</li><li><strong>Resend</strong> — トランザクションメール配信</li><li><strong>Supabase</strong> — データベースホスティング</li><li><strong>Railway</strong> — ウェブサイトホスティング</li></ul>"
-    },
-    "section8": {
-      "title": "8. Cookie",
-      "body": "<p>当社のウェブサイトは、分析および機能向上のためにCookieを使用する場合があります。ブラウザの設定からCookieの設定を管理できます。</p>"
-    },
-    "section9": {
-      "title": "9. お問い合わせ",
-      "body": "<p>このプライバシーポリシーに関するご質問は、以下までご連絡ください：</p><p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />Email: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
-    }
-  },
-  "terms": {
-    "lastUpdated": "最終更新日: {date}",
-    "heroTitle": "利用規約",
-    "heroDesc": "ウェブサイトおよびサービスの利用に関する条件。",
-    "heroMetadataTitle": "利用規約",
-    "heroMetadataDesc": "Calendula Herbsの利用規約 — ウェブサイトおよびサービスの利用に関する条件。",
-    "section1": {
-      "title": "1. 利用規約の承諾",
-      "body": "<p>Calendula Herbsのウェブサイトにアクセスし利用することにより、お客様は本利用規約に拘束されることに同意したものとみなされます。同意されない場合は、本サイトをご利用にならないでください。</p>"
-    },
-    "section2": {
-      "title": "2. 製品とサービス",
-      "body": "<p>当ウェブサイトに掲載されているすべての製品は在庫状況に応じて提供されます。予告なく製品を変更または中止する権利を留保します。製品の説明、画像、仕様は情報提供を目的としており、色や外観が100%正確でない場合があります。</p>"
-    },
-    "section3": {
-      "title": "3. 注文と見積書",
-      "body": "<p>見積リクエストまたはお問い合わせの送信は、拘束力のある契約を構成するものではありません。見積書は現在の市場レートに基づいて提供され、見積書に記載された期間有効です。すべての注文は、当社の書面による確認および合意された条件に従うものとします。</p>"
-    },
-    "section4": {
-      "title": "4. 価格",
-      "body": "<p>表示されている価格はすべて参考価格であり、市場状況、収穫量、注文数量に応じて変更される場合があります。最終的な価格は正式な見積書にて提供されます。</p>"
-    },
-    "section5": {
-      "title": "5. 最小注文数量",
-      "body": "<p>最小注文数量（MOQ）は製品ごとに表示されています。これらは在庫状況や季節的要因により変動する場合があります。</p>"
-    },
-    "section6": {
-      "title": "6. 配送と納品",
-      "body": "<p>配送条件は注文ごとに交渉され、販売契約書に明記されます。当社は信頼できる物流パートナーと協力し、タイムリーな配送を確保します。Calendula Herbsは、税関、天候、またはその他の不可抗力による遅延について責任を負いません。</p>"
-    },
-    "section7": {
-      "title": "7. サンプル",
-      "body": "<p>サンプルリクエストは在庫状況に応じて対応します。特に取り決めがない限り、サンプル請求者が送料を負担します。サンプルは品質評価目的のみで提供されます。</p>"
-    },
-    "section8": {
-      "title": "8. 責任の制限",
-      "body": "<p>Calendula Herbsは、当ウェブサイトまたは製品の使用に起因する間接的、付随的、または結果的な損害について責任を負いません。当社の総責任額は、該当する特定の注文の価値を超えないものとします。</p>"
-    },
-    "section9": {
-      "title": "9. 知的財産",
-      "body": "<p>このウェブサイト上のすべてのコンテンツ — テキスト、画像、ロゴ、デザインを含む — はCalendula Herbs For Import & Exportの財産であり、適用される知的財産法により保護されています。</p>"
-    },
-    "section10": {
-      "title": "10. 準拠法",
-      "body": "<p>本規約はエジプト・アラブ共和国の法律に準拠します。紛争はエジプトのファイユーム県の裁判所で解決されるものとします。</p>"
-    },
-    "section11": {
-      "title": "11. お問い合わせ",
-      "body": "<p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />Email: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
-    }
+    "viewFile": "ファイルを表示",
+    "viewPdf": "PDFを表示"
   },
   "common": {
-    "readMore": "続きを読む",
-    "learnMore": "もっと詳しく",
+    "allRightsReserved": "All rights reserved.",
     "close": "閉じる",
-    "loading": "読み込み中...",
-    "error": "エラーが発生しました",
-    "search": "検索",
-    "subscribe": "購読",
-    "subscribePlaceholder": "メールアドレスを入力",
-    "allRightsReserved": "無断転載を禁じます。",
-    "pageNotFound": "ページが見つかりません",
-    "goHome": "ホームページに戻る",
-    "cookieConsent": "お客様の体験向上のためにCookieを使用しています。サイトを利用することで、Cookieポリシーに同意したものとみなされます。",
     "cookieAccept": "同意する",
-    "cookieDecline": "拒否",
-    "privacyPolicy": "プライバシーポリシー"
+    "cookieConsent": "当サイトは、分析および基本的な機能のためにクッキーを使用しています。",
+    "cookieDecline": "拒否する",
+    "error": "エラーが発生しました",
+    "goHome": "ホームページへ戻る",
+    "learnMore": "詳細を見る",
+    "loading": "読み込み中...",
+    "pageNotFound": "ページが見つかりません",
+    "privacyPolicy": "プライバシーポリシー",
+    "readMore": "続きを読む",
+    "search": "検索",
+    "subscribe": "購読する",
+    "subscribePlaceholder": "メールアドレスを入力"
   },
-  "languages": {
-    "en": "英語",
-    "ar": "アラビア語",
-    "es": "スペイン語",
-    "it": "イタリア語",
-    "ja": "日本語",
-    "ko": "韓国語",
-    "hi": "ヒンディー語",
-    "ru": "ロシア語",
-    "uk": "ウクライナ語",
-    "pt-BR": "ポルトガル語（ブラジル）",
-    "zh-CN": "中国語（簡体字）",
-    "fr": "フランス語",
-    "nl": "オランダ語",
-    "de": "ドイツ語",
-    "bg": "ブルガリア語",
-    "el": "ギリシャ語",
-    "tr": "トルコ語"
+  "contact": {
+    "addressLabel": "本社・農場",
+    "companyLabel": "会社名",
+    "companyPlaceholder": "ハーブ株式会社",
+    "countryLabel": "国",
+    "countryPlaceholder": "日本",
+    "directDesc": "お急ぎですか？以下のいずれかの方法で、当社の輸出チームに直接ご連絡いただけます。営業時間は土曜日から木曜日の午前9時〜午後5時（カイロ時間）です。",
+    "directTitle": "直接のお問い合わせ",
+    "emailLabel": "メールアドレス",
+    "emailLabel2": "メールアドレス",
+    "emailPlaceholder": "jane@example.com",
+    "errorMessage": "メッセージの送信に失敗しました。もう一度お試しいただくか、お電話またはメールで直接お問い合わせください。",
+    "errorUnexpected": "予期しないエラーが発生しました",
+    "formDesc": "以下のフォームにご記入ください。輸出チームが24営業時間以内にご返信いたします。",
+    "formTitle": "お問い合わせフォーム",
+    "heroDesc": "一括輸出に関するお問い合わせ、製品仕様、サンプル請求、またはエジプト産ハーブ＆スパイスに関するご質問など、お気軽にお問い合わせください。",
+    "heroMetadataDesc": "オーガニックハーブの一括輸出に関するお問い合わせは、Calendula Herbsまで。見積もり、製品仕様、サンプルのご請求を承ります。",
+    "heroMetadataTitle": "お問い合わせ | Calendula Herbs For Import & Export",
+    "heroTitle": "お問い合わせ",
+    "hoursLabel": "営業時間",
+    "locationTitle": "所在地",
+    "messageLabel": "メッセージ",
+    "messagePlaceholder": "ご要望（製品、数量、仕向地、必要な特定の基準や認証など）について詳しくお聞かせください。",
+    "nameLabel": "お名前",
+    "namePlaceholder": "山田 太郎",
+    "phoneLabel": "電話番号",
+    "phoneLabel2": "電話番号",
+    "phonePlaceholder": "+81 90...",
+    "sendButton": "問い合わせを送信する",
+    "sendingButton": "送信中...",
+    "subjectLabel": "件名",
+    "subjectPlaceholder": "一括購入についてのお問い合わせ",
+    "successMessage": "お問い合わせいただきありがとうございます。輸出チームが24営業時間以内にご返信いたします。",
+    "successTitle": "送信完了",
+    "unavailableDesc": "記載されている連絡先情報をご参照の上、メールまたはお電話にて直接お問い合わせください。",
+    "unavailableTitle": "現在、お問い合わせフォームはご利用いただけません",
+    "validationEmail": "有効なメールアドレスを入力してください",
+    "validationFix": "フォーム内のエラーを修正してください",
+    "validationRequired": "{field}は必須項目です"
   },
   "errors": {
     "validation": {
-      "required": "このフィールドは必須です",
       "email": "有効なメールアドレスを入力してください",
+      "maxLength": "{max}文字以内で入力してください",
+      "minLength": "{min}文字以上で入力してください",
       "phone": "有効な電話番号を入力してください",
-      "minLength": "最低{min}文字以上である必要があります",
-      "maxLength": "最大{max}文字以内である必要があります"
+      "required": "このフィールドは必須項目です"
     }
   },
-  "sample": {
-    "heroTitle": "サンプルをリクエスト",
-    "heroDesc": "品質を実際にご確認ください。有機製品の無料サンプルをリクエストできます。",
-    "heroMetadataTitle": "サンプルをリクエスト | Calendula Herbs",
-    "heroMetadataDesc": "品質評価用の有機ハーブ、スパイス、植物製品の無料サンプルをリクエストしてください。",
-    "howItWorks": "仕組み",
-    "step1Title": "製品を選択",
-    "step1Desc": "テストしたい製品をお選びください。",
-    "step2Title": "準備と発送",
-    "step2Desc": "現在のバッチからサンプル（50〜200g）を準備します。",
-    "step3Title": "品質評価",
-    "step3Desc": "お客様のラボで純度、効能、一貫性をテストしてください。",
-    "importantNotes": "重要な注意事項",
-    "note1": "サンプルは資格のあるバイヤー様に無料です。",
-    "note2": "場所や注文金額により送料がかかる場合があります。",
-    "note3": "サンプル数量は通常50g〜200gです。",
-    "note4": "サンプルの準備と発送には5〜10営業日のお時間をいただきます。",
-    "formTitle": "リクエストを送信",
-    "formDesc": "フォームにご記入ください。24時間以内にチームがご連絡します。",
-    "loading": "フォームを読み込み中..."
+  "faq": {
+    "contactButton": "お問い合わせ",
+    "empty": "よくある質問はありません",
+    "heroDesc": "Calendula Herbsへのご注文に関して、B2Bバイヤーの皆様が知っておくべきすべての情報をご紹介します。",
+    "heroMetadataDesc": "B2B輸出に関するよくある質問 — ハーブやスパイスの一括購入をご検討のバイヤー様向けに、最小注文数量（MOQ）、無料サンプル、認証、配送、支払い条件について解説します。",
+    "heroMetadataTitle": "FAQ | Calendula Herbs",
+    "heroTitle": "よくある質問",
+    "items": [
+      {
+        "answer": "標準的な最小注文数量（MOQ）は、品目や時期によって異なりますが、1製品あたり500〜1,000 kgです。初めてお取引をされる適格なバイヤー様向けに、少量のお試し注文（50〜100 kg）にも対応可能です。具体的なご希望数量については、営業チームまでご相談ください。",
+        "question": "最小注文数量（MOQ）はどのくらいですか？"
+      },
+      {
+        "answer": "はい、適格なB2Bバイヤー様向けに50〜200gの無料サンプルをご用意しております。別途合意がない限り、送料はバイヤー様のご負担となります。ウェブサイトからサンプル請求を送信していただければ、現在の生産バッチからサンプルを準備いたします。",
+        "question": "品質評価用の無料サンプルは提供していますか？"
+      },
+      {
+        "answer": "製品仕様や仕向国の規制要件に応じて、蒸気殺菌（オートクレーブ）、エチレンオキサイド（EtO）、ガンマ線照射など、複数の殺菌方法を提供しています。当社の加工施設はGMPおよびHACCPガイドラインに準拠しています。見積もりをご依頼の際に、ご希望の殺菌要件をご指定ください。",
+        "question": "どのような殺菌オプションを提供していますか？"
+      },
+      {
+        "answer": "ハーブやスパイスの価格は、収穫量、市場動向、季節性によって変動します。そのため、ご希望の数量、品質グレード、梱包方法、仕向地などの具体的な要件をお伺いした上で、正確な最新価格をご提示しております。個別のお見積もりについては、お気軽にお問い合わせください。",
+        "question": "ウェブサイトに価格を掲載することはできますか？"
+      },
+      {
+        "answer": "当社は、ISO 9001、ISO 22000、EU Organic、USDA NOP、HALAL、KOSHER、BRCGS、FDA登録、SEDEX/Smeta、NFSAホワイトリスト、AHK（在外ドイツ商工会議所）評議会メンバーシップを含む、11の主要な認証・資格を保有しています。詳細は「認証・証明書」ページをご覧ください。コンプライアンス審査のために必要な証明書は、ご要望に応じてご提供いたします。",
+        "question": "どのような認証を取得していますか？"
+      },
+      {
+        "answer": "航空便および船便にて世界中へ発送しております。一般的なインコタームズには、FOB（ダミエッタ港またはアレクサンドリア港）、CIF、EXWなどがあります。リードタイムは、在庫品の場合は7〜14日、カスタム加工が必要な場合は20〜30日です。信頼できるフォワーダーと提携しており、物流の手配もサポートいたします。",
+        "question": "配送条件とリードタイムはどのようになっていますか？"
+      },
+      {
+        "answer": "支払い条件は、注文金額、仕向地、お取引実績などに基づき、ご注文ごとに協議の上で決定されます。一般的な方法としては、T/T（電信送金）やL/C（信用状）などがあります。最適な方法については、営業チームまでご相談ください。",
+        "question": "どのような支払い条件に対応していますか？"
+      },
+      {
+        "answer": "当社は、エジプトのファイユーム県イブシャワイに500エーカー以上の自社農場を所有・運営しており、オーガニックのカレンデュラ、カモミール、ハイビスカスなどのボタニカルを専門に栽培しています。また、年間を通じて安定した品質、トレーサビリティ、供給量を確保するため、当社の農学者の直接指導のもと、信頼できる提携農場からの調達も行っています。",
+        "question": "自社農場からのみ調達しているのですか？"
+      },
+      {
+        "answer": "品質は、種子の選定、栽培、収穫、加工、梱包のすべての段階で確保されています。自社ラボにて、純度、有効成分、微生物汚染、重金属の検査を実施しています。当社の品質管理システムはISO 9001およびISO 22000の認証を取得しており、全工程においてGMPおよびHACCPガイドラインに準拠しています。",
+        "question": "製品の品質と一貫性はどのように確保していますか？"
+      },
+      {
+        "answer": "はい、購入をご検討中のバイヤー様や輸入業者様のご訪問を歓迎いたします。エジプトのファイユームにある農場、加工施設、品質管理ラボの見学をご希望の場合は、事前にご連絡の上、スケジュールをご調整ください。ビザや旅行の手配のため、少なくとも2週間前までにご連絡いただくことをお勧めします。",
+        "question": "農場や加工施設を見学することはできますか？"
+      },
+      {
+        "answer": "製品カタログをご覧いただき、「見積もり依頼」フォームからお問い合わせを送信いただくか、営業チームまで直接ご連絡ください。24時間以内に、製品仕様、最新価格、サンプル提供や契約条件を含む次のステップについてご案内いたします。",
+        "question": "一括注文はどのように行えばよいですか？"
+      },
+      {
+        "answer": "はい、B2Bパートナー様向けに、プライベートブランド（PB）ラベル、カスタムパッケージ、およびOEMサービスを提供しています。最小注文数量が適用されますので、仕様を添えてお問い合わせいただければ、詳細なご提案をさせていただきます。",
+        "question": "プライベートブランド（PB）やカスタムパッケージには対応していますか？"
+      }
+    ],
+    "stillQuestions": "ご不明な点はございますか？",
+    "teamReady": "当社の輸出チームが、追加のご質問にいつでもお答えいたします。"
   },
-  "productRequest": {
-    "heroTitle": "お探しの製品が見つかりませんか？",
-    "heroDesc": "サイトに掲載されているもの以外にも、幅広いハーブ、スパイス、種子、植物製品を取り扱っています。ご必要なものをお知らせください。",
-    "heroMetadataTitle": "製品リクエスト | Calendula Herbs",
-    "heroMetadataDesc": "お探しの製品が見つかりませんか？製品リクエストを送信してください。チームが調達します。",
-    "howItWorks": "仕組み",
-    "step1Title": "ご必要なものをお知らせください",
-    "step1Desc": "お探しの製品（名称、仕様、数量）をご記入ください。",
-    "step2Title": "調査と見積もり",
-    "step2Desc": "調査チームが世界中のサプライヤーを検索し、競争力のある見積もりを準備します。",
-    "step3Title": "納品",
-    "step3Desc": "ご確認後、物流を手配しお客様の仕向地までお届けします。",
-    "whatWeCanSource": "取扱可能製品",
-    "item1": "調理用・薬用ハーブ",
-    "item2": "スパイスと調味料",
-    "item3": "種子と植物",
-    "item4": "精油とエキス",
-    "item5": "カスタム仕様とグレード",
-    "item6": "有機・慣行農法オプション",
-    "formTitle": "リクエストを送信",
-    "formDesc": "フォームにご記入ください。24時間以内にチームがオーダーメイドの見積もりとともにご連絡します。",
-    "loading": "フォームを読み込み中..."
+  "footer": {
+    "aboutCompany": "会社概要",
+    "brandDescription": "エジプト産プレミアム乾燥ハーブ、スパイス、ハーブティー、種子の輸出専門企業です。",
+    "businessHours": "営業時間",
+    "contactInfo": "連絡先情報",
+    "contactUs": "お問い合わせ",
+    "copyright": "© {year} Calendula Herbs For Import & Export. Ibshaway, Fayoum, Egypt.",
+    "fallbackHours": "お問い合わせはいつでも受け付けております。",
+    "farmProcessing": "農場・加工施設",
+    "followUs": "公式SNS",
+    "ourCertifications": "取得認証",
+    "privacyPolicy": "プライバシーポリシー",
+    "productsCatalog": "製品カタログ",
+    "qualityCertificates": "品質証明書",
+    "quickLinks": "クイックリンク",
+    "termsOfService": "利用規約"
   },
-  "cart": {
-    "title": "見積もりリクエスト",
-    "closeAria": "カートを閉じる",
-    "closeTitle": "カートを閉じる",
-    "emptyTitle": "見積もりカートは空です",
-    "emptyDesc": "カタログを閲覧し、バルク見積もりをご希望の製品を追加してください。",
-    "browseProducts": "製品を見る",
-    "decreaseAria": "数量を減らす",
-    "increaseAria": "数量を増やす",
-    "removeAria": "アイテムを削除",
-    "removeTitle": "カートから削除",
-    "moq": "(MOQ) {weight} kg",
-    "step1Button": "詳細に進む",
-    "step2Back": "戻る",
-    "submit": "送信",
-    "submitting": "送信中...",
-    "success": "お問い合わせが正常に送信されました。折り返しご連絡いたします。",
-    "errorGeneric": "予期しないエラーが発生しました",
-    "nameLabel": "お名前 *",
-    "namePlaceholder": "山田 太郎",
-    "companyLabel": "会社名",
-    "companyPlaceholder": "ハーブズ合同会社",
-    "emailLabel": "メール *",
-    "emailPlaceholder": "taro@example.com",
-    "phoneLabel": "電話番号",
-    "phonePlaceholder": "+81 3...",
-    "countryLabel": "国",
-    "countryPlaceholder": "日本",
-    "notesLabel": "追加メモ（任意）",
-    "notesPlaceholder": "仕向港、特別条件、書類..."
+  "galleries": {
+    "closeLightbox": "ライトボックスを閉じる",
+    "empty": "ギャラリーはありません",
+    "emptyDesc": "写真や動画の追加までしばらくお待ちください。",
+    "galleryItemLabel": "ギャラリー項目 {index}",
+    "heroDesc": "当社の農場、最先端の加工施設、およびプレミアム製品をビジュアルでご紹介します。",
+    "heroMetadataDesc": "メディアギャラリーを通じて、当社の農場、加工施設、製品をご覧ください。",
+    "heroMetadataTitle": "ギャラリー | Calendula Herbs",
+    "heroTitle": "メディアギャラリー",
+    "nextImage": "次の画像",
+    "previousImage": "前の画像",
+    "scrollLeft": "左にスクロール",
+    "scrollRight": "右にスクロール",
+    "sections": {
+      "EVENTS": "イベント",
+      "EVENTS_desc": "業界イベント、展示会、集まりの様子をご紹介します。",
+      "FACTORY": "工場の様子",
+      "FACTORY_desc": "最先端の加工施設内部の様子をご覧いただけます。",
+      "FARMS": "農場の様子",
+      "FARMS_desc": "提携農場や栽培フィールドの風景です。",
+      "INTERVIEWS_TV": "インタビュー・テレビ出演",
+      "INTERVIEWS_TV_desc": "メディア出演、インタビュー、テレビ特集などの映像です。",
+      "SHIPMENTS": "出荷の様子",
+      "SHIPMENTS_desc": "世界中へ出荷される製品の準備と発送の様子です。",
+      "VISITS": "ご訪問",
+      "VISITS_desc": "世界各地の農場、施設、パートナー企業への訪問の様子です。"
+    }
+  },
+  "header": {
+    "cartAria": "ショッピングカート（商品数: {count}）",
+    "getQuote": "見積もりを依頼する",
+    "languageLabel": "言語を選択",
+    "themeDark": "ダークモードに切り替える",
+    "themeLight": "ライトモードに切り替える"
+  },
+  "home": {
+    "aboutPara1": "エジプトの肥沃なファイユーム地方に拠点を置くCalendula Herbsは、適正農業規範（GAP）および適正製造規範（GHP）に基づき、自社農場および契約農場を運営し、栽培から配送までのサプライチェーン全体を管理しています。",
+    "aboutPara2": "45年にわたる農業の専門知識、25年にわたる優れた製造実績、および11年にわたるグローバルな輸出経験を活かし、すべての出荷において比類のない品質をお届けします。近代化された加工施設では、世界の食品規制に従って製品の洗浄、加工、ブレンドを行っており、すべての段階で自社ラボによる検査を実施しています。",
+    "available": "対応可能な形状: {cuts}",
+    "biofachBadge": "BIOFACH出展企業",
+    "biofachCta": "面談を予約する",
+    "biofachDesc": "世界最大級 of オーガニック見本市で皆様をお待ちしております。パートナーシップのご相談、製品サンプルのご試食、当社の品質を直接お確かめいただくために、ぜひ当社チームとおつなぎください。",
+    "biofachSecondaryCta": "認証・証明書を見る",
+    "biofachTitle": "BIOFACHに4年以上連続で出展",
+    "certsSubtitle": "当社の取得認証は、品質、安全性、および持続可能性に対する揺るぎないコミットメントの証です。",
+    "certsTitle": "認証と品質基準",
+    "ctaAltButton": "見積もりを依頼する",
+    "ctaAltDesc": "一括見積もり、製品仕様、サンプルのご請求については、当社チームまでお気軽にお問い合わせください。",
+    "ctaAltSecondary": "製品一覧を見る",
+    "ctaAltTitle": "エジプト産プレミアムハーブの調達をご検討ですか？",
+    "cultivatingSpan": "信頼をお届けします。",
+    "cultivatingTitle": "卓越した品質を栽培し、",
+    "featuredDesc": "国際基準を満たすよう、細心の注意を払って栽培・加工された、最も人気の高いボタニカル製品をご紹介します。",
+    "featuredProducts": "注目の製品",
+    "heroCta": "見積もりを依頼する",
+    "heroDescription": "{year}年の創業以来、エジプトの農場から世界の倉庫まで、信頼性の高いエンドツーエンドのサプライチェーンを提供しています。GAP/GHP認証、2種類の乾燥方法、および製品の完全性を保つMOSH/MOAHフリーの梱包を採用した、プレミアムな有機ハーブ、スパイス、種子をお届けします。",
+    "heroEyebrow": "{year}年創業 プレミアム輸出品質",
+    "heroSecondaryCta": "製品を探す",
+    "heroTitle": "自然に根ざし、<br />丁寧にお届けします。",
+    "highlight1": "農場から出荷までのエンドツーエンドのトレーサビリティ",
+    "highlight2": "GAPおよびGHP認証を取得した農業実践",
+    "highlight3": "製品の安全性を守るMOSH/MOAHフリーの梱包",
+    "highlight4": "天日乾燥と機械乾燥の2つの乾燥オプション",
+    "howItWorks": "お取引の流れ",
+    "learnMoreAboutUs": "当社について詳しく知る",
+    "moq": "最小注文数量: {weight} kg",
+    "ourCollection": "製品コレクション",
+    "ourStory": "私たちのストーリー",
+    "processSubtitle": "海外バイヤーの皆様のために合理化されたプロセス。すべてのステップが正確かつ丁寧に行われます。",
+    "processTitle": "お問い合わせから出荷まで",
+    "requestQuoteAria": "{name}の見積もりを依頼する",
+    "stat1Label": "農業実績",
+    "stat1Unit": "年",
+    "stat1Value": "45",
+    "stat2Label": "製造実績",
+    "stat2Unit": "年",
+    "stat2Value": "25",
+    "stat3Label": "輸出実績",
+    "stat3Unit": "年",
+    "stat3Value": "11",
+    "stat4Label": "BIOFACH出展",
+    "stat4Unit": "回以上",
+    "stat4Value": "4+",
+    "step1Desc": "ご希望の製品要件や仕様をお送りください。当社のチームが内容を確認し、24時間以内に最適なご提案をいたします。",
+    "step1Title": "お問い合わせ",
+    "step2Desc": "品質評価のために代表的なサンプルを準備・発送し、製品がお客様の基準を満たしているかご確認いただきます。",
+    "step2Title": "サンプル確認",
+    "step3Desc": "サンプルが承認されましたら、取引条件、生産スケジュール、品質仕様を最終決定します。",
+    "step3Title": "ご注文",
+    "step4Desc": "ご注文製品は加工され、輸出基準に沿って梱包された後、必要な書類一式とリアルタイム追跡情報を添えて出荷されます。",
+    "step4Title": "出荷"
+  },
+  "languages": {
+    "ar": "العربية",
+    "bg": "Български",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "nl": "Nederlands",
+    "pt-BR": "Português (Brasil)",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "zh-CN": "简体中文"
+  },
+  "nav": {
+    "aboutUs": "会社概要",
+    "certificates": "認証・証明書",
+    "contact": "お問い合わせ",
+    "galleries": "ギャラリー",
+    "home": "ホーム",
+    "products": "製品一覧"
+  },
+  "privacy": {
+    "heroDesc": "個人情報の収集、利用、および保護の方法について説明します。",
+    "heroMetadataDesc": "Calendula Herbsのプライバシーポリシー — 個人情報の収集、利用、および保護の方法について。",
+    "heroMetadataTitle": "プライバシーポリシー",
+    "heroTitle": "プライバシーポリシー",
+    "lastUpdated": "最終更新日: {date}",
+    "section1": {
+      "body": "<p>Calendula Herbs For Import & Export（以下「当社」）は、お客様のプライバシー保護に努めています。本ポリシーは、お客様が当社のウェブサイトを訪問された際、または当社のサービスを利用された際に、当社が個人情報をどのように収集、利用、および保護するかについて説明するものです。</p>",
+      "title": "1. はじめに"
+    },
+    "section2": {
+      "body": "<p><strong>お客様からご提供いただく情報：</strong> お名前、メールアドレス、電話番号、会社名、国、およびお問い合わせフォーム、見積もり依頼、サンプル請求を通じて送信された詳細情報。</p><p><strong>自動的に収集される情報：</strong> IPアドレス、ブラウザの種類、デバイス情報、閲覧ページ、および当サイトの滞在時間（クッキーおよび分析ツール経由）。</p>",
+      "title": "2. 収集する情報"
+    },
+    "section3": {
+      "body": "<ul><li>お問い合わせへの回答および見積もりの提供のため</li><li>製品およびサンプルの請求を処理するため</li><li>ウェブサイトおよび顧客体験の向上のため</li><li>法的義務を遵守するため</li></ul>",
+      "title": "3. 情報の利用目的"
+    },
+    "section4": {
+      "body": "<p>当社は、不正アクセス、改ざん、または開示からお客様の個人データを保護するため、暗号化、アクセス制御、安全なサーバーなどの適切なセキュリティ対策を講じています。</p>",
+      "title": "4. データ保護"
+    },
+    "section5": {
+      "body": "<p>当社は、本ポリシーに記載された目的のために必要な期間、または法律で義務付けられている期間に限り、お客様の個人データを保持します。お問い合わせおよび送信された内容は、最大3年間保持されます。</p>",
+      "title": "5. データの保持期間"
+    },
+    "section6": {
+      "body": "<p>適用されるデータ保護法に基づき、お客様には以下の権利があります。</p><ul><li>個人データへのアクセス</li><li>不正確なデータの訂正請求</li><li>データの削除請求</li><li>データ処理に対する異議申し立て</li><li>データポータビリティの請求</li></ul><p>これらの権利を行使される場合は、<a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a> までご連絡ください。</p>",
+      "title": "6. お客様の権利"
+    },
+    "section7": {
+      "body": "<p>当社は、お客様のデータを処理する可能性のある以下の第三者サービスを利用しています。</p><ul><li><strong>Cloudinary</strong> — 画像およびメディアのホスティング</li><li><strong>Resend</strong> — トランザクションメールの配信</li><li><strong>Supabase</strong> — データベースのホスティング</li><li><strong>Railway</strong> — ウェブサイトのホスティング</li></ul>",
+      "title": "7. 第三者サービス"
+    },
+    "section8": {
+      "body": "<p>当サイトは、分析および機能向上のためにクッキーを使用する場合があります。クッキーの設定は、ブラウザの設定から管理できます。</p>",
+      "title": "8. クッキーについて"
+    },
+    "section9": {
+      "body": "<p>本プライバシーポリシーに関するご質問は、下記までお問い合わせください。</p><p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />メールアドレス: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>",
+      "title": "9. お問い合わせ先"
+    }
   },
   "productActions": {
-    "bulkInquiryLabel": "バルクお問い合わせ数量（kg）",
-    "kgSuffix": "kg",
-    "moq": "最小注文数量: {weight} kg",
     "addToCart": "見積もりカートに追加",
-    "requestSample": "サンプルをリクエスト",
-    "dialogTitle": "サンプルリクエスト: {name}",
-    "dialogDesc": "品質評価用の製品サンプルを提供しています。送料は通常バイヤー様のご負担となります。",
-    "contactName": "担当者名 *",
-    "email": "メール *",
-    "company": "会社名",
-    "shippingAddress": "配送先住所 *",
-    "shippingAccount": "配送アカウント（DHL/FedEx）または備考",
-    "shippingPlaceholder": "送料をご負担いただける場合、貴社のアカウント番号を入力...",
+    "bulkInquiryLabel": "一括問い合わせ数量 (kg)",
     "cancel": "キャンセル",
-    "requestSampleButton": "サンプルをリクエスト",
-    "submitting": "送信中...",
     "cartSuccess": "{name}を見積もりカートに追加しました",
-    "sampleSuccess": "サンプルリクエストを送信しました",
-    "submitError": "リクエストの送信に失敗しました"
+    "company": "会社名",
+    "contactName": "ご担当者名 *",
+    "dialogDesc": "品質評価用の製品サンプルをご用意しております。なお、送料は原則としてバイヤー様のご負担となりますのでご了承ください。",
+    "dialogTitle": "サンプル請求: {name}",
+    "email": "メールアドレス *",
+    "kgSuffix": "kg",
+    "moq": "MOQ: {weight} kg",
+    "requestSample": "サンプルを請求する",
+    "requestSampleButton": "サンプルを請求する",
+    "sampleSuccess": "サンプル請求が送信されました",
+    "shippingAccount": "配送アカウント（DHL/FedEx）または備考",
+    "shippingAddress": "配送先住所 *",
+    "shippingPlaceholder": "送料をご負担いただける場合は、クーリエのアカウント番号をご記入ください...",
+    "submitError": "リクエストの送信に失敗しました",
+    "submitting": "送信中..."
+  },
+  "productDetail": {
+    "cert": {
+      "eu_organic": "EU Organic",
+      "gmp": "GMP",
+      "haccp": "HACCP",
+      "iso22000": "ISO 22000",
+      "usda": "USDA Organic"
+    },
+    "certAvailable": "対応可能な認証",
+    "certifications": "認証",
+    "close": "閉じる",
+    "closeAria": "閉じる",
+    "cutForm": {
+      "cutSifted": "カット＆シフテッド（刻み）",
+      "granulated": "グラニュール（粗挽き）",
+      "powder": "パウダー（粉末）",
+      "teaCut": "ティーカット",
+      "whole": "ホール（原形）"
+    },
+    "cutFormEmpty": "カット形状についてはお問い合わせください",
+    "cutForms": "対応形状",
+    "failedToLoad": "製品の読み込みに失敗しました",
+    "highlightCustomCut": "ご要望に応じたカスタムカットおよびラベリングに対応可能",
+    "highlightFreeSamples": "品質評価用の無料サンプルをご用意",
+    "highlightOrganicOptions": "EU Organic / USDA Organic 認証オプションあり",
+    "home": "ホーム",
+    "minOrder": "最小注文数量: {weight} KG",
+    "productHighlights": "製品の特徴",
+    "productInformation": "製品情報",
+    "productNotFound": "製品が見つかりません",
+    "products": "製品一覧"
+  },
+  "productRequest": {
+    "formDesc": "フォームにご記入ください。当社のチームが24時間以内に個別のお見積もりをご案内いたします。",
+    "formTitle": "リクエストを送信する",
+    "heroDesc": "当サイトに掲載されている製品以外にも、幅広いハーブ、スパイス、種子、およびボタニカル製品を調達可能です。ご希望の製品をお知らせください。",
+    "heroMetadataDesc": "お探しの製品が見つかりませんか？製品リクエストを送信していただければ、当社のチームが調達いたします。",
+    "heroMetadataTitle": "製品リクエスト | Calendula Herbs",
+    "heroTitle": "お探しの製品が見つからない場合",
+    "howItWorks": "お取引の流れ",
+    "item1": "食用・薬用ハーブ",
+    "item2": "スパイス＆調味料",
+    "item3": "種子＆ボタニカル",
+    "item4": "エッセンシャルオイル＆エキス",
+    "item5": "カスタム仕様＆グレード",
+    "item6": "オーガニックおよび慣行栽培オプション",
+    "loading": "フォームを読み込み中...",
+    "step1Desc": "お探しの製品名、仕様、数量などをご記入ください。",
+    "step1Title": "ご要望をお知らせください",
+    "step2Desc": "当社の調達チームがグローバルなサプライヤーを探索し、競争力のある見積もりを作成します。",
+    "step2Title": "We Source & Quote",
+    "step3Desc": "内容の確認後、物流を手配し、ご指定の場所までお届けします。",
+    "step3Title": "お届け",
+    "whatWeCanSource": "調達可能な製品"
+  },
+  "products": {
+    "cantFindDesc": "ここに掲載されている製品以外にも、幅広い製品を調達可能です。ご要望をお聞かせいただければ、お探しいたします。",
+    "cantFindTitle": "お探しの製品が見つかりませんか？",
+    "clearFilters": "フィルターをクリア",
+    "cutForms": {
+      "CRUSHED": "クラッシュ（粗砕）",
+      "CUT_SIFTED": "カット＆シフテッド（刻み）",
+      "GRANULATED": "グラニュール（粗挽き）",
+      "LEAF": "リーフ（葉）",
+      "POWDER": "パウダー（粉末）",
+      "ROOT": "ルート（根）",
+      "STEM": "ステム（茎）",
+      "TBC": "要確認",
+      "WHOLE": "ホール（原形）"
+    },
+    "filterAllLabel": "すべての製品",
+    "heroDesc": "グローバルな輸入業者や製造業者向けのプレミアムバルクハーブ、スパイス、および種子。すべての製品が完全な認証付きで輸出可能です。",
+    "heroMetadataDesc": "輸出用プレミアムバルクハーブ、スパイス、および種子のカタログをご覧ください。最小注文数量は500kgから。輸入に関するお見積もりをご請求ください。",
+    "heroMetadataTitle": "製品一覧 | Calendula Herbs For Import & Export",
+    "heroTitle": "製品一覧",
+    "loading": "製品を読み込み中...",
+    "moq": "(MOQ) {weight} kg",
+    "noDescription": "一括輸出の見積もりおよび詳細な仕様については、お問い合わせください。",
+    "noResults": "製品が見つかりませんでした",
+    "noResultsDesc": "検索ワードやカテゴリーフィルターを変更してお試しください。",
+    "requestProduct": "製品をリクエストする",
+    "searchPlaceholder": "製品を検索...",
+    "sidebarTitle": "カテゴリー"
+  },
+  "sample": {
+    "formDesc": "フォームにご記入ください。当社のチームが24時間以内にご連絡いたします。",
+    "formTitle": "リクエストを送信する",
+    "heroDesc": "当社の品質を直接お確かめください。オーガニック製品の無料サンプルをご請求いただけます。",
+    "heroMetadataDesc": "品質評価のために、オーガニックハーブ、スパイス、およびボタニカル製品の無料サンプルをご請求ください。",
+    "heroMetadataTitle": "サンプル請求 | Calendula Herbs",
+    "heroTitle": "サンプル請求",
+    "howItWorks": "お取引の流れ",
+    "importantNotes": "重要事項",
+    "loading": "フォームを読み込み中...",
+    "note1": "適格なバイヤー様向けにサンプルは無料で提供されます。",
+    "note2": "配送地域や注文金額によっては、送料が発生する場合があります。",
+    "note3": "サンプルの数量は通常50gから200gです。",
+    "note4": "サンプルの準備と発送には5〜10営業日ほどかかります。",
+    "step1Desc": "テストを希望される製品を選択してください。",
+    "step1Title": "製品の選択",
+    "step2Desc": "当社のチームが、現在のバッチからサンプル（50〜200g）を準備します。",
+    "step2Title": "準備・発送",
+    "step3Desc": "貴社のラボにて、純度、有効性、および一貫性をテストしてください。",
+    "step3Title": "品質評価"
+  },
+  "terms": {
+    "heroDesc": "当社のウェブサイトおよびサービスの利用に適用される規約です。",
+    "heroMetadataDesc": "Calendula Herbsの利用規約 — 当社のウェブサイトおよびサービスの利用に適用される規約について。",
+    "heroMetadataTitle": "利用規約",
+    "heroTitle": "利用規約",
+    "lastUpdated": "最終更新日: {date}",
+    "section1": {
+      "body": "<p>Calendula Herbsのウェブサイトにアクセスし利用することにより、お客様は本利用規約に同意したものとみなされます。同意されない場合は、当サイトの利用をお控えください。</p>",
+      "title": "1. 規約への同意"
+    },
+    "section10": {
+      "body": "<p>本規約はエジプトアラブ共和国の法律に準拠します。いかなる紛争も、エジプトのファイユーム県の裁判所において解決されるものとします。</p>",
+      "title": "10. 準拠法"
+    },
+    "section11": {
+      "body": "<p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />メールアドレス: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>",
+      "title": "11. お問い合わせ先"
+    },
+    "section2": {
+      "body": "<p>当サイトに掲載されているすべての製品は、在庫状況によりご利用いただけない場合があります。当社は、事前の通知なしに製品を変更または中止する権利を留保します。製品の説明、画像、および仕様は情報提供のみを目的としており、色や外観が100%正確でない場合があります。</p>",
+      "title": "2. 製品およびサービス"
+    },
+    "section3": {
+      "body": "<p>見積もり依頼またはお問い合わせの送信は、拘束力のある契約を構成するものではありません。見積もりは現在の市場価格に基づいて提供され、見積書に記載された期間に限り有効です。すべての注文は、当社の書面による確認および合意された条件に従うものとします。</p>",
+      "title": "3. ご注文と見積もり"
+    },
+    "section4": {
+      "body": "<p>掲載されているすべての価格は目安であり、市場動向、収穫量、および注文数量に基づいて変更される場合があります。最終的な価格は、正式な見積書にて提示されます。</p>",
+      "title": "4. 価格について"
+    },
+    "section5": {
+      "body": "<p>最小注文数量（MOQ）は製品ごとに記載されています。これらは、製品の在庫状況や季節要因によって異なる場合があります。</p>",
+      "title": "5. 最小注文数量"
+    },
+    "section6": {
+      "body": "<p>配送条件は注文ごとに交渉され、売買契約書に明記されます。当社は、適時の配送を確保するために信頼できる物流パートナーと提携しています。Calendula Herbsは、税関、天候、またはその他の不可抗力イベントによって引き起こされた遅延について責任を負いません。</p>",
+      "title": "6. 配送および引き渡し"
+    },
+    "section7": {
+      "body": "<p>サンプル請求は在庫状況により対応できない場合があります。別途合意がない限り、原則として請求者が送料を負担するものとします。サンプルは品質評価目的のみに提供されます。</p>",
+      "title": "7. サンプル"
+    },
+    "section8": {
+      "body": "<p>Calendula Herbsは、当サイトまたは製品の使用から生じるいかなる間接的、偶発的、または結果的な損害に対しても責任を負いません。当社の総責任額は、該当する特定の注文の価値を超えないものとします。</p>",
+      "title": "8. 免責事項"
+    },
+    "section9": {
+      "body": "<p>テキスト、画像、ロゴ、およびデザインを含む当サイト上のすべてのコンテンツは、Calendula Herbs For Import & Exportの財産であり、適用される知的財産権法によって保護されています。</p>",
+      "title": "9. 知的財産権"
+    }
   }
 }

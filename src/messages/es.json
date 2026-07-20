@@ -1,556 +1,556 @@
 {
-  "nav": {
-    "home": "Inicio",
-    "products": "Productos",
-    "aboutUs": "Sobre Nosotros",
-    "galleries": "Galerías",
-    "certificates": "Certificados",
-    "contact": "Contacto"
-  },
-  "header": {
-    "getQuote": "Solicitar Presupuesto",
-    "themeLight": "Cambiar a modo claro",
-    "themeDark": "Cambiar a modo oscuro",
-    "languageLabel": "Seleccionar idioma",
-    "cartAria": "Carrito de compras con {count} artículos"
-  },
-  "home": {
-    "heroTitle": "Las Mejores Hierbas Orgánicas Naturales",
-    "heroCta": "Explorar Nuestra Colección",
-    "heroSecondaryCta": "Más Información",
-    "biofachBadge": "Participante de BIOFACH",
-    "biofachTitle": "Exhibiendo en BIOFACH por Más de 4 Años",
-    "biofachDesc": "Visítenos en la feria ecológica líder del mundo. Conozca a nuestro equipo para hablar sobre alianzas, probar nuestros productos y experimentar nuestra calidad de primera mano.",
-    "biofachCta": "Contáctenos para una Reunión",
-    "biofachSecondaryCta": "Ver Nuestros Certificados",
-    "ctaAltTitle": "¿Listo para Adquirir Hierbas Egipcias Premium?",
-    "ctaAltDesc": "Póngase en contacto con nuestro equipo para presupuestos al por mayor, especificaciones de productos y solicitudes de muestras.",
-    "ctaAltButton": "Solicitar Presupuesto",
-    "ctaAltSecondary": "Ver Productos",
-    "heroEyebrow": "Calidad Premium de Exportación Desde {year}",
-    "heroDescription": "Una cadena de suministro confiable de extremo a extremo, desde granjas egipcias hasta almacenes globales — certificada GAP/GHP, métodos de secado dual y empaque libre de MOSH/MOAH para hierbas orgánicas premium, especias y semillas desde {year}.",
-    "ourCollection": "Nuestra Colección",
-    "featuredProducts": "Productos Destacados",
-    "featuredDesc": "Descubra nuestros productos botánicos más solicitados, meticulosamente cultivados y procesados para cumplir con los estándares internacionales.",
-    "howItWorks": "Cómo Funciona",
-    "processTitle": "De la Consulta al Envío",
-    "processSubtitle": "Un proceso simplificado diseñado para compradores internacionales. Cada paso se gestiona con precisión y cuidado.",
-    "step1Title": "Consulta",
-    "step1Desc": "Envíe sus requisitos y especificaciones de producto. Nuestro equipo revisa y responde dentro de las 24 horas con una propuesta personalizada.",
-    "step2Title": "Muestra",
-    "step2Desc": "Preparamos y enviamos muestras representativas para su evaluación de calidad, asegurando que el producto cumpla con sus estándares exactos.",
-    "step3Title": "Pedido",
-    "step3Desc": "Una vez aprobadas las muestras, finalizamos las condiciones comerciales, el cronograma de producción y las especificaciones de calidad.",
-    "step4Title": "Envío",
-    "step4Desc": "Su pedido se procesa, se empaca según estándares de exportación y se envía con documentación completa y seguimiento en tiempo real.",
-    "ourStory": "Nuestra Historia",
-    "cultivatingTitle": "Cultivando la Excelencia.",
-    "cultivatingSpan": "Entregando Confianza.",
-    "aboutPara1": "Con sede en la fértil región de Fayoum en Egipto, Calendula Herbs gestiona toda la cadena de suministro desde el cultivo hasta la entrega — operando nuestras propias granjas y las contratadas bajo Buenas Prácticas Agrícolas (GAP) y Buenas Prácticas de Manejo (GHP).",
-    "aboutPara2": "Con 45 años de experiencia agrícola, 25 años de excelencia en fabricación y 11 años de experiencia en exportación global, aportamos un patrimonio incomparable a cada envío. Nuestras instalaciones de procesamiento reformadas limpian, procesan y mezclan productos según las regulaciones alimentarias globales, con pruebas de laboratorio internas en cada etapa.",
-    "highlight1": "Trazabilidad completa desde la granja hasta el envío",
-    "highlight2": "Prácticas agrícolas certificadas GAP y GHP",
-    "highlight3": "Empaque libre de MOSH/MOAH para la integridad del producto",
-    "highlight4": "Opciones de secado dual: secado al sol y a máquina",
-    "learnMoreAboutUs": "Conozca Más Sobre Nosotros",
-    "stat1Value": "45",
-    "stat1Unit": "Años",
-    "stat1Label": "Agricultura",
-    "stat2Value": "25",
-    "stat2Unit": "Años",
-    "stat2Label": "Fabricación",
-    "stat3Value": "11",
-    "stat3Unit": "Años",
-    "stat3Label": "Exportación",
-    "stat4Value": "4+",
-    "stat4Unit": "Veces",
-    "stat4Label": "En BIOFACH",
-    "certsTitle": "Certificaciones y Estándares de Calidad",
-    "certsSubtitle": "Nuestras certificaciones reflejan nuestro compromiso inquebrantable con la calidad, la seguridad y la sostenibilidad.",
-    "available": "Disponible: {cuts}",
-    "moq": "CMP: {weight} kg",
-    "requestQuoteAria": "Solicitar presupuesto para {name}"
-  },
-  "products": {
-    "searchPlaceholder": "Buscar productos...",
-    "noResults": "No se encontraron productos",
-    "heroTitle": "Nuestros Productos",
-    "heroDesc": "Hierbas, especias y semillas premium a granel para importadores y fabricantes globales. Todos los productos disponibles para exportación con certificación completa.",
-    "heroMetadataTitle": "Nuestros Productos | Calendula Herbs Para Importación y Exportación",
-    "heroMetadataDesc": "Explore nuestro catálogo de hierbas, especias y semillas premium a granel para exportación. Cantidades mínimas de pedido desde 500 KG. Solicite un presupuesto para sus necesidades de importación.",
-    "sidebarTitle": "Categorías",
-    "filterAllLabel": "Todos los Productos",
-    "noResultsDesc": "Intente ajustar su búsqueda o filtro de categoría.",
-    "clearFilters": "Limpiar Filtros",
-    "loading": "Cargando productos...",
-    "cantFindTitle": "¿No Encuentra Lo Que Busca?",
-    "cantFindDesc": "Ofrecemos una amplia gama de productos más allá de lo que se muestra aquí. Díganos lo que necesita y lo buscaremos por usted.",
-    "requestProduct": "Solicitar un Producto",
-    "noDescription": "Contáctenos para cotizaciones de exportación al por mayor y especificaciones completas.",
-    "cutForms": {
-      "WHOLE": "Entero",
-      "CRUSHED": "Triturado",
-      "POWDER": "Polvo",
-      "CUT_SIFTED": "Cortado y Tamizado",
-      "GRANULATED": "Granulado",
-      "LEAF": "Hoja",
-      "STEM": "Tallo",
-      "ROOT": "Raíz",
-      "TBC": "Por Confirmar"
-    },
-    "moq": "(MOQ) {weight} kg"
-  },
-  "productDetail": {
-    "home": "Inicio",
-    "products": "Productos",
-    "productHighlights": "Destacados del Producto",
-    "highlightFreeSamples": "Muestras gratuitas disponibles para evaluación de calidad",
-    "highlightCustomCut": "Corte y etiquetado personalizados disponibles bajo solicitud",
-    "highlightOrganicOptions": "Opciones certificadas UE Orgánico / USDA Orgánico",
-    "cutForms": "Formatos de Corte",
-    "certifications": "Certificaciones",
-    "productInformation": "Información del Producto",
-    "minOrder": "Pedido Mín.: {weight} KG",
-    "cutFormEmpty": "Contáctenos para opciones de corte",
-    "certAvailable": "Certificaciones disponibles",
-    "close": "Cerrar",
-    "productNotFound": "Producto no encontrado",
-    "failedToLoad": "Error al cargar el producto",
-    "closeAria": "Cerrar",
-    "cutForm": {
-      "whole": "Whole",
-      "cutSifted": "Cut & Sifted",
-      "powder": "Powder",
-      "granulated": "Granulated",
-      "teaCut": "Tea Cut"
-    },
-    "cert": {
-      "haccp": "HACCP",
-      "eu_organic": "EU Organic",
-      "iso22000": "ISO 22000",
-      "gmp": "GMP",
-      "usda": "USDA Organic"
-    }
-  },
   "about": {
-    "teamTitle": "Conoce a Nuestro Equipo",
-    "heroTitle": "Sobre Calendula Herbs",
-    "heroDesc": "Cultivando pureza y ofreciendo excelencia durante más de cuatro décadas. Estamos dedicados a proporcionar al mundo las mejores hierbas orgánicas, arraigados en generaciones de experiencia agrícola.",
-    "heroMetadataTitle": "Sobre Nosotros | Calendula Herbs Para Importación y Exportación",
-    "heroMetadataDesc": "Descubra nuestra herencia: 45 años de agricultura, 25 años de fabricación y 11 años exportando hierbas orgánicas premium desde Egipto.",
-    "statUnit": "Años",
-    "statFarming": "Herencia Agrícola",
-    "statManufacturing": "Fabricación",
-    "statExporting": "Excelencia en Exportación",
-    "heritageTitle": "Nuestra Herencia y Misión",
-    "heritagePara1": "Fundada con la visión de conectar a los agricultores locales con los mercados globales, Calendula Herbs se ha convertido en un exportador líder de productos botánicos orgánicos. Nuestras granjas están ubicadas en las regiones agrícolas más prístinas de Egipto, asegurando que cada cultivo se cultive en condiciones óptimas.",
-    "heritagePara2": "Creemos en la agricultura sostenible, el comercio ético y la calidad sin compromisos. Desde la selección de semillas hasta el empaque final, nuestros rigurosos procesos de control de calidad garantizan que nuestros clientes reciban productos que superan los estándares internacionales.",
-    "journeyTitle": "Nuestro Recorrido",
-    "journeySubtitle": "De la granja familiar al exportador global — tres generaciones de excelencia agrícola.",
-    "timeline1Year": "1980",
-    "timeline1Title": "Raíces Agrícolas",
-    "timeline1Desc": "Nuestra familia comenzó cultivando hierbas medicinales y plantas aromáticas en la fértil región de Fayoum en Egipto.",
-    "timeline2Year": "2000",
-    "timeline2Title": "Fabricación",
-    "timeline2Desc": "Expandimos nuestras instalaciones de procesamiento moderno para limpiar, cortar, secar y empacar hierbas a gran escala.",
-    "timeline3Year": "2014",
-    "timeline3Title": "Exportación Global",
-    "timeline3Desc": "Fundamos Calendula Herbs for Export para llevar los productos botánicos egipcios al mercado mundial con trazabilidad completa.",
-    "teamSubtitle": "Conozca a los profesionales dedicados que impulsan nuestra visión.",
-    "boardTitle": "Consejo Directivo",
+    "boardTitle": "Junta Directiva",
+    "ctaButton": "Contáctenos",
+    "ctaDesc": "Ya sea que usted sea importador, distribuidor o fabricante, nos encantaría conversar sobre cómo nuestras hierbas premium pueden satisfacer sus necesidades.",
+    "ctaTitle": "¿Está listo para trabajar con nosotros?",
     "execTeamTitle": "Equipo Ejecutivo",
-    "ctaTitle": "¿Listo para Trabajar Con Nosotros?",
-    "ctaDesc": "Ya sea que sea importador, distribuidor o fabricante, nos encantaría discutir cómo nuestras hierbas premium pueden satisfacer sus necesidades.",
-    "ctaButton": "Contáctenos"
+    "heritagePara1": "Fundada con la visión de conectar a los agricultores locales con los mercados globales, Calendula Herbs se ha convertido en un exportador líder de productos botánicos orgánicos. Nuestras granjas están ubicadas en las regiones agrícolas más prístinas de Egipto, lo que garantiza que cada cultivo se desarrolle en condiciones óptimas.",
+    "heritagePara2": "Creemos en la agricultura sostenible, el comercio ético y la calidad sin concesiones. Desde la selección de la semilla hasta el empaque final, nuestros rigurosos procesos de control de calidad garantizan que nuestros clientes reciban productos que superan los estándares internacionales.",
+    "heritageTitle": "Nuestro legado y misión",
+    "heroDesc": "Cultivando pureza y entregando excelencia durante más de cuatro décadas. Nos dedicamos a proveer al mundo las mejores hierbas orgánicas, respaldados por generaciones de experiencia agrícola.",
+    "heroMetadataDesc": "Descubra nuestra trayectoria: 45 años de cultivo, 25 años de manufactura y 11 años de exportación de hierbas orgánicas premium desde Egipto.",
+    "heroMetadataTitle": "Sobre nosotros | Calendula Herbs For Import & Export",
+    "heroTitle": "Sobre Calendula Herbs",
+    "journeySubtitle": "De granja familiar a exportador global: tres generaciones de excelencia agrícola.",
+    "journeyTitle": "Nuestra trayectoria",
+    "statExporting": "Excelencia en exportación",
+    "statFarming": "Legado agrícola",
+    "statManufacturing": "Manufactura",
+    "statUnit": "Años",
+    "teamSubtitle": "Conozca a los profesionales dedicados que impulsan nuestra visión.",
+    "teamTitle": "Liderazgo y equipo",
+    "timeline1Desc": "Nuestra familia comenzó a cultivar hierbas medicinales y plantas aromáticas en la fértil región de Fayum, en Egipto.",
+    "timeline1Title": "Raíces agrícolas",
+    "timeline1Year": "1980",
+    "timeline2Desc": "Nos expandimos hacia instalaciones de procesamiento modernas para la limpieza, corte, secado y empaque de hierbas a gran escala.",
+    "timeline2Title": "Manufactura",
+    "timeline2Year": "2000",
+    "timeline3Desc": "Fundamos Calendula Herbs para exportación con el fin de llevar los productos botánicos egipcios al mercado mundial con total trazabilidad.",
+    "timeline3Title": "Exportación global",
+    "timeline3Year": "2014"
   },
-  "contact": {
-    "formTitle": "Envíenos un Mensaje",
-    "nameLabel": "Su Nombre",
-    "namePlaceholder": "Ingrese su nombre completo",
-    "emailLabel": "Correo Electrónico",
-    "emailPlaceholder": "Ingrese su correo electrónico",
-    "phoneLabel": "Teléfono",
-    "phonePlaceholder": "Ingrese su número de teléfono",
-    "subjectLabel": "Asunto",
-    "subjectPlaceholder": "¿Sobre qué trata?",
-    "messageLabel": "Mensaje",
-    "messagePlaceholder": "Cuéntenos más sobre su consulta...",
-    "sendButton": "Enviar Mensaje",
-    "sendingButton": "Enviando...",
-    "successMessage": "¡Gracias! Su mensaje ha sido enviado con éxito. Le responderemos pronto.",
-    "errorMessage": "Algo salió mal. Por favor intente de nuevo o escríbanos directamente.",
-    "heroTitle": "Contáctenos",
-    "heroDesc": "Envíe una consulta al por mayor para nuestras hierbas, especias y productos botánicos egipcios premium. Nuestro equipo de exportación revisará sus requisitos y responderá con una cotización personalizada dentro de las 24 horas.",
-    "heroMetadataTitle": "Contáctenos | Calendula Herbs Para Importación y Exportación",
-    "heroMetadataDesc": "Póngase en contacto con Calendula Herbs para consultas de exportación de hierbas orgánicas a granel. Solicite un presupuesto, especificaciones de productos o muestras.",
-    "formDesc": "Cuéntenos sobre su volumen requerido, especificaciones y destino — nuestro equipo preparará una cotización personalizada para su revisión.",
-    "unavailableTitle": "El Formulario de Contacto No Está Disponible",
-    "unavailableDesc": "Comuníquese con nosotros directamente por correo electrónico o teléfono usando los detalles proporcionados.",
-    "directTitle": "Contacto Directo",
-    "directDesc": "Comuníquese con nuestro equipo de exportación directamente por teléfono, correo electrónico o aplicación de mensajería. Respondemos a todas las consultas B2B rápidamente durante el horario laboral.",
-    "locationTitle": "Nuestra Ubicación",
-    "addressLabel": "Oficina Central y Granja",
-    "hoursLabel": "Horario Laboral",
-    "emailLabel2": "Correo Electrónico",
-    "phoneLabel2": "Teléfono",
+  "cart": {
+    "browseProducts": "Explorar productos",
+    "closeAria": "Cerrar carrito",
+    "closeTitle": "Cerrar carrito",
     "companyLabel": "Empresa",
-    "companyPlaceholder": "Empresa S.L.",
+    "companyPlaceholder": "Hierbas S.A.",
     "countryLabel": "País",
     "countryPlaceholder": "Estados Unidos",
-    "successTitle": "¡Éxito!",
-    "errorUnexpected": "Ocurrió un error inesperado",
-    "validationRequired": "{field} es obligatorio",
-    "validationEmail": "Por favor ingrese un correo electrónico válido",
-    "validationFix": "Por favor corrija los errores en el formulario"
-  },
-  "footer": {
-    "brandDescription": "Hierbas orgánicas premium obtenidas de forma sostenible de todo el mundo. Su socio de confianza en el comercio de hierbas desde 1995.",
-    "quickLinks": "Enlaces Rápidos",
-    "contactInfo": "Información de Contacto",
-    "businessHours": "Horario Laboral",
-    "followUs": "Síganos",
-    "copyright": "© {year} Calendula Herbs. Todos los derechos reservados.",
-    "privacyPolicy": "Política de Privacidad",
-    "termsOfService": "Términos del Servicio",
-    "productsCatalog": "Catálogo de Productos",
-    "aboutCompany": "Sobre Nuestra Empresa",
-    "farmProcessing": "Granja y Procesamiento",
-    "qualityCertificates": "Certificados de Calidad",
-    "contactUs": "Contáctenos",
-    "fallbackHours": "Contáctenos en cualquier momento para consultas.",
-    "ourCertifications": "Nuestros Certificados"
-  },
-  "faq": {
-    "heroTitle": "Preguntas Frecuentes",
-    "heroDesc": "Todo lo que los compradores B2B necesitan saber sobre cómo hacer pedidos en Calendula Herbs.",
-    "heroMetadataTitle": "Preguntas Frecuentes | Calendula Herbs",
-    "heroMetadataDesc": "Preguntas frecuentes de exportación B2B — CMP, muestras gratuitas, certificaciones, envío y condiciones de pago para compradores de hierbas y especias a granel.",
-    "empty": "No Hay Preguntas Frecuentes Disponibles",
-    "stillQuestions": "¿Aún tiene preguntas?",
-    "teamReady": "Nuestro equipo de exportación está listo para ayudar con cualquier consulta adicional.",
-    "contactButton": "Contáctenos",
-    "items": [
-      {
-        "question": "¿Cuál es su cantidad mínima de pedido (CMP)?",
-        "answer": "Nuestra CMP estándar es de 500 a 1000 kg por producto, dependiendo del artículo y la temporada. Podemos aceptar pedidos de prueba más pequeños (50-100 kg) para compradores calificados por primera vez. Contacte a nuestro equipo de ventas para discutir sus necesidades de volumen específicas."
-      },
-      {
-        "question": "¿Ofrecen muestras gratuitas para evaluación de calidad?",
-        "answer": "Sí, proporcionamos muestras gratuitas de 50-200 g para compradores B2B calificados. El comprador cubre los costos de envío a menos que se acuerde lo contrario. Envíe una solicitud de muestra a través de nuestro sitio web, y nuestro equipo preparará material de lotes de producción actuales."
-      },
-      {
-        "question": "¿Qué opciones de esterilización ofrecen?",
-        "answer": "Ofrecemos varios métodos de esterilización que incluyen esterilización a vapor (autoclave), óxido de etileno (EtO) e irradiación gamma, dependiendo de las especificaciones del producto y los requisitos del país de destino. Nuestras instalaciones de procesamiento siguen las directrices GMP y HACCP. Por favor, especifique sus requisitos de esterilización al solicitar un presupuesto."
-      },
-      {
-        "question": "¿Pueden proporcionar precios en su sitio web?",
-        "answer": "Los precios de hierbas y especias fluctúan según los rendimientos de los cultivos, las condiciones del mercado y la estacionalidad. Proporcionamos precios precisos y actualizados solo después de conocer sus requisitos específicos — volumen, grado de calidad, empaque y destino. Contáctenos para una cotización personalizada."
-      },
-      {
-        "question": "¿Qué certificaciones poseen?",
-        "answer": "Poseemos 11 certificaciones principales que incluyen ISO 9001, ISO 22000, EU Orgánico, USDA NOP, HALAL, KOSHER, BRCGS, Registro FDA, SEDEX/Semeta, Lista Blanca NFSA y membresía del Consejo AHK. Visite nuestra página de Certificados para obtener más detalles. Podemos proporcionar certificados bajo solicitud para su revisión de cumplimiento."
-      },
-      {
-        "question": "¿Cuáles son sus términos de envío y plazos de entrega?",
-        "answer": "Enviamos a todo el mundo por vía aérea y marítima. Los incoterms comunes incluyen FOB (puertos de Damieta o Alejandría), CIF y EXW. Los plazos de entrega son de 7 a 14 días para artículos en stock y de 20 a 30 días para procesamiento personalizado. Trabajamos con transitarios confiables y podemos ayudar con los arreglos logísticos."
-      },
-      {
-        "question": "¿Qué términos de pago aceptan?",
-        "answer": "Las condiciones de pago se discuten y acuerdan por pedido según el valor del pedido, el destino y el historial del comprador. Los arreglos típicos incluyen T/T (transferencia bancaria) y L/C (carta de crédito). Contacte a nuestro equipo de ventas para discutir la mejor opción para su pedido."
-      },
-      {
-        "question": "¿Se abastecen exclusivamente de sus propias granjas?",
-        "answer": "Poseemos y operamos nuestras propias granjas en Ibshaway, Fayoum, Egipto — más de 500 acres dedicados a caléndula orgánica, manzanilla, hibisco y otros productos botánicos. Complementamos con granjas asociadas de confianza bajo la supervisión directa de nuestros agrónomos para garantizar calidad, trazabilidad y disponibilidad durante todo el año."
-      },
-      {
-        "question": "¿Cómo garantizan la calidad y consistencia del producto?",
-        "answer": "La calidad se garantiza en cada etapa: selección de semillas, cultivo, cosecha, procesamiento y empaque. Realizamos pruebas de laboratorio internas para pureza, potencia, contaminación microbiológica y metales pesados. Nuestro sistema de gestión de calidad está certificado ISO 9001 e ISO 22000, siguiendo las directrices GMP y HACCP en todo momento."
-      },
-      {
-        "question": "¿Puedo visitar su granja o instalación de procesamiento?",
-        "answer": "Sí, damos la bienvenida a visitas de compradores e importadores serios. Por favor, contáctenos con anticipación para programar un recorrido por nuestras granjas, instalaciones de procesamiento y laboratorios de control de calidad en Fayoum, Egipto. Recomendamos permitir al menos dos semanas para los arreglos de visa y viaje."
-      },
-      {
-        "question": "¿Cómo hago un pedido al por mayor?",
-        "answer": "Explore nuestro catálogo de productos, envíe una consulta a través de nuestro formulario de Solicitar Presupuesto, o contacte a nuestro equipo de ventas directamente. Responderemos dentro de las 24 horas con especificaciones del producto, precios actuales y los siguientes pasos, incluyendo el suministro de muestras y las condiciones del contrato."
-      },
-      {
-        "question": "¿Ofrecen etiquetado privado o empaque personalizado?",
-        "answer": "Sí, ofrecemos servicios de etiquetado privado, empaque personalizado y OEM para socios B2B. Se aplican cantidades mínimas. Contáctenos con sus especificaciones para una propuesta detallada."
-      }
-    ]
+    "decreaseAria": "Disminuir cantidad",
+    "emailLabel": "Correo electrónico *",
+    "emailPlaceholder": "correo@ejemplo.com",
+    "emptyDesc": "Explore nuestro catálogo y agregue los productos para los cuales desea una cotización al por mayor.",
+    "emptyTitle": "Su carrito de cotización está vacío",
+    "errorGeneric": "Ocurrió un error inesperado",
+    "increaseAria": "Aumentar cantidad",
+    "moq": "(MOQ) {weight} kg",
+    "nameLabel": "Nombre *",
+    "namePlaceholder": "Juan Pérez",
+    "notesLabel": "Notas adicionales (Opcional)",
+    "notesPlaceholder": "Puerto de destino, requisitos especiales, formularios...",
+    "phoneLabel": "Teléfono",
+    "phonePlaceholder": "+1 234...",
+    "removeAria": "Eliminar artículo",
+    "removeTitle": "Eliminar del carrito",
+    "step1Button": "Proceder a los detalles",
+    "step2Back": "Atrás",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "success": "¡Consulta enviada con éxito! Nos pondremos en contacto con usted pronto.",
+    "title": "Solicitud de cotización"
   },
   "certificates": {
-    "heroTitle": "Calidad y Certificaciones",
-    "heroDesc": "Cumplimos con los más altos estándares internacionales para agricultura orgánica, procesamiento y exportación.",
-    "heroMetadataTitle": "Certificados | Calendula Herbs",
-    "heroMetadataDesc": "Nuestros certificados de calidad y orgánicos — ISO, EU Orgánico, HALAL, KOSHER, USDA NOP y más.",
-    "empty": "Aún no hay certificaciones listadas.",
     "certified": "Certificado",
-    "viewPdf": "Ver PDF",
-    "viewFile": "Ver Archivo"
-  },
-  "galleries": {
-    "heroTitle": "Galerías de Medios",
-    "heroDesc": "Un viaje visual a través de nuestras granjas, instalaciones de procesamiento de última generación y productos premium.",
-    "heroMetadataTitle": "Galerías | Calendula Herbs",
-    "heroMetadataDesc": "Explore nuestras granjas, instalaciones de procesamiento y productos a través de nuestras galerías de medios.",
-    "empty": "No Hay Galerías Disponibles",
-    "emptyDesc": "Vuelva más tarde para ver fotos y videos.",
-    "sections": {
-      "EVENTS": "Eventos",
-      "EVENTS_desc": "Momentos de nuestros eventos, exposiciones y reuniones del sector.",
-      "INTERVIEWS_TV": "Entrevistas y Programas de TV",
-      "INTERVIEWS_TV_desc": "Apariciones en medios, entrevistas y reportajes televisivos.",
-      "FACTORY": "Fotos de la Fábrica",
-      "FACTORY_desc": "Un vistazo a nuestras instalaciones de procesamiento de última generación.",
-      "FARMS": "Fotos de las Granjas",
-      "FARMS_desc": "Escenas de nuestras granjas asociadas y campos de cultivo.",
-      "SHIPMENTS": "Fotos de Envíos",
-      "SHIPMENTS_desc": "Nuestros productos siendo preparados y enviados a todo el mundo.",
-      "VISITS": "Visitas",
-      "VISITS_desc": "Visitas a nuestras granjas, instalaciones y socios alrededor del mundo."
-    },
-    "scrollLeft": "Desplazar a la izquierda",
-    "scrollRight": "Desplazar a la derecha",
-    "closeLightbox": "Cerrar lightbox",
-    "previousImage": "Imagen anterior",
-    "nextImage": "Siguiente imagen",
-    "galleryItemLabel": "Elemento de galería {index}"
-  },
-  "privacy": {
-    "lastUpdated": "Última actualización: {date}",
-    "heroTitle": "Política de Privacidad",
-    "heroDesc": "Cómo recopilamos, usamos y protegemos sus datos personales.",
-    "heroMetadataTitle": "Política de Privacidad",
-    "heroMetadataDesc": "Política de privacidad de Calendula Herbs — cómo recopilamos, usamos y protegemos sus datos personales.",
-    "section1": {
-      "title": "1. Introducción",
-      "body": "<p>Calendula Herbs For Import & Export (nosotros, nuestro, nos) está comprometido con la protección de su privacidad. Esta política explica cómo recopilamos, usamos y protegemos su información personal cuando visita nuestro sitio web o utiliza nuestros servicios.</p>"
-    },
-    "section2": {
-      "title": "2. Información que Recopilamos",
-      "body": "<p><strong>Información que usted proporciona:</strong> Nombre, dirección de correo electrónico, número de teléfono, nombre de la empresa, país y cualquier detalle que envíe a través de nuestros formularios de contacto, solicitudes de cotización o solicitudes de muestras.</p><p><strong>Información recopilada automáticamente:</strong> Dirección IP, tipo de navegador, información del dispositivo, páginas visitadas y tiempo de permanencia en nuestro sitio (a través de cookies y análisis).</p>"
-    },
-    "section3": {
-      "title": "3. Cómo Usamos Su Información",
-      "body": "<ul><li>Para responder a sus consultas y proporcionar cotizaciones</li><li>Para procesar solicitudes de productos y muestras</li><li>Para mejorar nuestro sitio web y la experiencia del cliente</li><li>Para cumplir con obligaciones legales</li></ul>"
-    },
-    "section4": {
-      "title": "4. Protección de Datos",
-      "body": "<p>Implementamos medidas de seguridad adecuadas que incluyen encriptación, controles de acceso y servidores seguros para proteger sus datos personales contra el acceso no autorizado, la alteración o la divulgación.</p>"
-    },
-    "section5": {
-      "title": "5. Retención de Datos",
-      "body": "<p>Conservamos sus datos personales solo durante el tiempo necesario para los fines descritos en esta política o según lo exija la ley. Las consultas y los envíos de contacto se conservan por un máximo de 3 años.</p>"
-    },
-    "section6": {
-      "title": "6. Sus Derechos",
-      "body": "<p>Según las leyes de protección de datos aplicables, usted tiene derecho a:</p><ul><li>Acceder a sus datos personales</li><li>Solicitar la corrección de datos inexactos</li><li>Solicitar la eliminación de sus datos</li><li>Oponerse al procesamiento de sus datos</li><li>Solicitar la portabilidad de sus datos</li></ul><p>Para ejercer estos derechos, contáctenos en <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a>.</p>"
-    },
-    "section7": {
-      "title": "7. Servicios de Terceros",
-      "body": "<p>Utilizamos los siguientes servicios de terceros que pueden procesar sus datos:</p><ul><li><strong>Cloudinary</strong> — alojamiento de imágenes y medios</li><li><strong>Resend</strong> — envío de correos electrónicos transaccionales</li><li><strong>Supabase</strong> — alojamiento de base de datos</li><li><strong>Railway</strong> — alojamiento del sitio web</li></ul>"
-    },
-    "section8": {
-      "title": "8. Cookies",
-      "body": "<p>Nuestro sitio web puede utilizar cookies para análisis y funcionalidad. Puede controlar las preferencias de cookies a través de la configuración de su navegador.</p>"
-    },
-    "section9": {
-      "title": "9. Contacto",
-      "body": "<p>Si tiene preguntas sobre esta política de privacidad, contáctenos en:</p><p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />Email: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
-    }
-  },
-  "terms": {
-    "lastUpdated": "Última actualización: {date}",
-    "heroTitle": "Términos y Condiciones",
-    "heroDesc": "Regulan el uso de nuestro sitio web y servicios.",
-    "heroMetadataTitle": "Términos y Condiciones",
-    "heroMetadataDesc": "Términos y condiciones de Calendula Herbs — regulan el uso de nuestro sitio web y servicios.",
-    "section1": {
-      "title": "1. Aceptación de los Términos",
-      "body": "<p>Al acceder y utilizar el sitio web de Calendula Herbs, usted acepta estar sujeto a estos términos y condiciones. Si no está de acuerdo, no utilice nuestro sitio.</p>"
-    },
-    "section2": {
-      "title": "2. Productos y Servicios",
-      "body": "<p>Todos los productos listados en nuestro sitio web están sujetos a disponibilidad. Nos reservamos el derecho de modificar o descontinuar productos sin previo aviso. Las descripciones, imágenes y especificaciones de los productos se proporcionan con fines informativos y pueden no ser 100% precisas en color o apariencia.</p>"
-    },
-    "section3": {
-      "title": "3. Pedidos y Cotizaciones",
-      "body": "<p>El envío de una solicitud de cotización o consulta no constituye un contrato vinculante. Las cotizaciones se proporcionan según las tasas actuales del mercado y son válidas durante el período especificado en la cotización. Todos los pedidos están sujetos a nuestra confirmación por escrito y términos acordados.</p>"
-    },
-    "section4": {
-      "title": "4. Precios",
-      "body": "<p>Todos los precios listados son indicativos y están sujetos a cambios según las condiciones del mercado, los rendimientos de los cultivos y el volumen del pedido. El precio final se proporcionará en la cotización oficial.</p>"
-    },
-    "section5": {
-      "title": "5. Cantidades Mínimas de Pedido",
-      "body": "<p>Las cantidades mínimas de pedido (MOQ) se indican por producto. Estas pueden variar según la disponibilidad del producto y factores estacionales.</p>"
-    },
-    "section6": {
-      "title": "6. Envío y Entrega",
-      "body": "<p>Los términos de envío se negocian por pedido y se especificarán en el contrato de venta. Trabajamos con socios logísticos de confianza para garantizar una entrega oportuna. Calendula Herbs no se hace responsable por retrasos causados por aduanas, clima u otros eventos de fuerza mayor.</p>"
-    },
-    "section7": {
-      "title": "7. Muestras",
-      "body": "<p>Las solicitudes de muestras están sujetas a disponibilidad. El solicitante generalmente asume los costos de envío a menos que se acuerde lo contrario. Las muestras se proporcionan únicamente con fines de evaluación de calidad.</p>"
-    },
-    "section8": {
-      "title": "8. Limitación de Responsabilidad",
-      "body": "<p>Calendula Herbs no será responsable por daños indirectos, incidentales o consecuentes que surjan del uso de nuestro sitio web o productos. Nuestra responsabilidad total no excederá el valor del pedido específico en cuestión.</p>"
-    },
-    "section9": {
-      "title": "9. Propiedad Intelectual",
-      "body": "<p>Todo el contenido de este sitio web —incluyendo texto, imágenes, logotipos y diseños— es propiedad de Calendula Herbs For Import & Export y está protegido por las leyes de propiedad intelectual aplicables.</p>"
-    },
-    "section10": {
-      "title": "10. Legislación Aplicable",
-      "body": "<p>Estos términos se rigen por las leyes de la República Árabe de Egipto. Cualquier disputa se resolverá en los tribunales de la Gobernación de Fayoum, Egipto.</p>"
-    },
-    "section11": {
-      "title": "11. Contacto",
-      "body": "<p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum Governorate, Egypt<br />Email: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
-    }
+    "empty": "Aún no se han registrado certificaciones.",
+    "heroDesc": "Nos adherimos a los más altos estándares internacionales para la agricultura orgánica, el procesamiento y la exportación.",
+    "heroMetadataDesc": "Nuestros certificados orgánicos y de garantía de calidad: ISO, Orgánico UE, HALAL, KOSHER, USDA NOP y más.",
+    "heroMetadataTitle": "Certificados | Calendula Herbs",
+    "heroTitle": "Calidad y certificaciones",
+    "viewFile": "Ver archivo",
+    "viewPdf": "Ver PDF"
   },
   "common": {
-    "readMore": "Leer Más",
-    "learnMore": "Más Información",
+    "allRightsReserved": "Todos los derechos reservados.",
     "close": "Cerrar",
-    "loading": "Cargando...",
+    "cookieAccept": "Aceptar",
+    "cookieConsent": "Este sitio utiliza cookies para análisis y funcionalidad esencial.",
+    "cookieDecline": "Rechazar",
     "error": "Algo salió mal",
+    "goHome": "Ir al inicio",
+    "learnMore": "Más información",
+    "loading": "Cargando...",
+    "pageNotFound": "Página no encontrada",
+    "privacyPolicy": "Política de privacidad",
+    "readMore": "Leer más",
     "search": "Buscar",
     "subscribe": "Suscribirse",
-    "subscribePlaceholder": "Ingrese su correo electrónico",
-    "allRightsReserved": "Todos los derechos reservados.",
-    "pageNotFound": "Página No Encontrada",
-    "goHome": "Ir a la Página de Inicio",
-    "cookieConsent": "Usamos cookies para mejorar su experiencia. Al usar nuestro sitio, acepta nuestra política de cookies.",
-    "cookieAccept": "Aceptar",
-    "cookieDecline": "Rechazar",
-    "privacyPolicy": "Política de Privacidad"
+    "subscribePlaceholder": "Ingrese su correo electrónico"
   },
-  "languages": {
-    "en": "English",
-    "ar": "العربية",
-    "es": "Español",
-    "it": "Italiano",
-    "ja": "日本語",
-    "ko": "한국어",
-    "hi": "हिन्दी",
-    "ru": "Русский",
-    "uk": "Українська",
-    "pt-BR": "Português (Brasil)",
-    "zh-CN": "简体中文",
-    "fr": "Français",
-    "nl": "Nederlands",
-    "de": "Deutsch",
-    "bg": "Български",
-    "el": "Ελληνικά",
-    "tr": "Türkçe"
+  "contact": {
+    "addressLabel": "Sede central y granja",
+    "companyLabel": "Empresa",
+    "companyPlaceholder": "Hierbas S.A.",
+    "countryLabel": "País",
+    "countryPlaceholder": "Estados Unidos",
+    "directDesc": "¿Prefiere una respuesta más rápida? Comuníquese directamente con nuestro equipo de exportación a través de cualquiera de los canales a continuación; estamos disponibles de sábado a jueves, de 9:00 a. m. a 5:00 p. m. (hora de El Cairo).",
+    "directTitle": "Contacto directo",
+    "emailLabel": "Correo electrónico",
+    "emailLabel2": "Correo electrónico",
+    "emailPlaceholder": "correo@ejemplo.com",
+    "errorMessage": "No se pudo enviar el mensaje. Por favor, inténtelo de nuevo o contáctenos directamente por teléfono o correo electrónico.",
+    "errorUnexpected": "Ocurrió un error inesperado",
+    "formDesc": "Complete el siguiente formulario y nuestro equipo de exportación le responderá dentro de las próximas 24 horas hábiles.",
+    "formTitle": "Envíenos una consulta",
+    "heroDesc": "Contáctenos para consultas de exportación al por mayor, especificaciones de productos, solicitudes de muestras o cualquier pregunta sobre nuestras hierbas y especias egipcias.",
+    "heroMetadataDesc": "Póngase en contacto con Calendula Herbs para consultas de exportación de hierbas orgánicas al por mayor. Solicite una cotización, especificaciones de productos o muestras.",
+    "heroMetadataTitle": "Contáctenos | Calendula Herbs For Import & Export",
+    "heroTitle": "Contáctenos",
+    "hoursLabel": "Horario de atención",
+    "locationTitle": "Nuestra ubicación",
+    "messageLabel": "Mensaje",
+    "messagePlaceholder": "Cuéntenos sobre sus requisitos: producto, cantidad, destino y cualquier estándar o certificación específica que necesite.",
+    "nameLabel": "Nombre",
+    "namePlaceholder": "Juan Pérez",
+    "phoneLabel": "Teléfono",
+    "phoneLabel2": "Teléfono",
+    "phonePlaceholder": "+1 234...",
+    "sendButton": "Enviar consulta",
+    "sendingButton": "Enviando...",
+    "subjectLabel": "Asunto",
+    "subjectPlaceholder": "Consulta al por mayor",
+    "successMessage": "Gracias por comunicarse con nosotros. Nuestro equipo de exportación le responderá dentro de las próximas 24 horas hábiles.",
+    "successTitle": "¡Consulta enviada!",
+    "unavailableDesc": "Por favor, comuníquese con nosotros directamente por correo electrónico o teléfono utilizando los datos proporcionados.",
+    "unavailableTitle": "El formulario de contacto no está disponible en este momento",
+    "validationEmail": "Por favor, ingrese un correo electrónico válido",
+    "validationFix": "Por favor, corrija los errores en el formulario",
+    "validationRequired": "{field} es obligatorio"
   },
   "errors": {
     "validation": {
-      "required": "Este campo es obligatorio",
-      "email": "Por favor ingrese un correo electrónico válido",
-      "phone": "Por favor ingrese un número de teléfono válido",
+      "email": "Por favor, ingrese una dirección de correo electrónico válida",
+      "maxLength": "No debe superar los {max} caracteres",
       "minLength": "Debe tener al menos {min} caracteres",
-      "maxLength": "No debe exceder los {max} caracteres"
+      "phone": "Por favor, ingrese un número de teléfono válido",
+      "required": "Este campo es obligatorio"
     }
   },
-  "sample": {
-    "heroTitle": "Solicitar una Muestra",
-    "heroDesc": "Evalúe nuestra calidad de primera mano. Solicite muestras gratuitas de nuestros productos orgánicos.",
-    "heroMetadataTitle": "Solicitar una Muestra | Calendula Herbs",
-    "heroMetadataDesc": "Solicite muestras gratuitas de nuestras hierbas orgánicas, especias y productos botánicos para evaluación de calidad.",
-    "howItWorks": "Cómo Funciona",
-    "step1Title": "Seleccionar Productos",
-    "step1Desc": "Elija los productos que le interesa probar.",
-    "step2Title": "Preparamos y Enviamos",
-    "step2Desc": "Nuestro equipo prepara muestras (50-200 g) del lote actual.",
-    "step3Title": "Evaluar la Calidad",
-    "step3Desc": "Pruebe la pureza, potencia y consistencia en su laboratorio.",
-    "importantNotes": "Notas Importantes",
-    "note1": "Las muestras son gratuitas para compradores calificados.",
-    "note2": "Los costos de envío pueden aplicarse según la ubicación y el valor del pedido.",
-    "note3": "Las cantidades de muestra suelen oscilar entre 50 g y 200 g.",
-    "note4": "Permita de 5 a 10 días hábiles para la preparación y el envío de la muestra.",
-    "formTitle": "Enviar su Solicitud",
-    "formDesc": "Complete el formulario y nuestro equipo se comunicará dentro de las 24 horas.",
-    "loading": "Cargando formulario..."
+  "faq": {
+    "contactButton": "Contáctenos",
+    "empty": "No hay preguntas frecuentes disponibles",
+    "heroDesc": "Todo lo que los compradores B2B necesitan saber sobre cómo realizar pedidos a Calendula Herbs.",
+    "heroMetadataDesc": "Preguntas frecuentes sobre exportación B2B: MOQ, muestras gratuitas, certificaciones, envíos y condiciones de pago para compradores de hierbas y especias al por mayor.",
+    "heroMetadataTitle": "Preguntas frecuentes | Calendula Herbs",
+    "heroTitle": "Preguntas frecuentes",
+    "items": [
+      {
+        "answer": "Nuestro MOQ estándar es de 500 a 1,000 kg por producto, según el artículo y la temporada. Podemos aceptar pedidos de prueba más pequeños (50 a 100 kg) para compradores calificados por primera vez. Comuníquese con nuestro equipo de ventas para analizar sus necesidades específicas de volumen.",
+        "question": "¿Cuál es su cantidad mínima de pedido (MOQ)?"
+      },
+      {
+        "answer": "Sí, proporcionamos muestras gratuitas de 50 a 200 g para compradores B2B calificados. El comprador cubre los costos de envío, a menos que se acuerde lo contrario. Envíe una solicitud de muestra a través de nuestro sitio web y nuestro equipo preparará el material a partir de los lotes de producción actuales.",
+        "question": "¿Ofrecen muestras gratuitas para la evaluación de calidad?"
+      },
+      {
+        "answer": "Ofrecemos varios métodos de esterilización, incluyendo esterilización por vapor (autoclave), óxido de etileno (EtO) e irradiación gamma, según las especificaciones del producto y los requisitos del país de destino. Nuestras instalaciones de procesamiento siguen las pautas de GMP y HACCP. Por favor, especifique sus requisitos de esterilización al solicitar una cotización.",
+        "question": "¿Qué opciones de esterilización ofrecen?"
+      },
+      {
+        "answer": "Los precios de las hierbas y especias fluctúan según el rendimiento de los cultivos, las condiciones del mercado y la estacionalidad. Proporcionamos precios precisos y actualizados únicamente después de comprender sus requisitos específicos: volumen, grado de calidad, empaque y destino. Contáctenos para obtener una cotización personalizada.",
+        "question": "¿Pueden proporcionar precios en su sitio web?"
+      },
+      {
+        "answer": "Contamos con 11 certificaciones principales, que incluyen ISO 9001, ISO 22000, Orgánico UE, USDA NOP, HALAL, KOSHER, BRCGS, Registro FDA, SEDEX/Smeta, Lista Blanca de la NFSA y membresía del Consejo AHK. Visite nuestra página de Certificados para obtener todos los detalles. Podemos proporcionar los certificados a solicitud para su revisión de cumplimiento.",
+        "question": "¿Qué certificaciones poseen?"
+      },
+      {
+        "answer": "Realizamos envíos a todo el mundo mediante transporte aéreo y marítimo. Los incoterms habituales incluyen FOB (puertos de Damietta o Alejandría), CIF y EXW. Los plazos de entrega son de 7 a 14 días para artículos en stock y de 20 a 30 días para procesamiento personalizado. Trabajamos con agentes de carga confiables y podemos ayudar con las gestiones logísticas.",
+        "question": "¿Cuáles son sus condiciones de envío y plazos de entrega?"
+      },
+      {
+        "answer": "Las condiciones de pago se analizan y acuerdan por pedido según el valor de este, el destino y el historial del comprador. Los acuerdos típicos incluyen T/T (transferencia bancaria) y L/C (carta de crédito). Comuníquese con nuestro equipo de ventas para analizar la mejor opción para su pedido.",
+        "question": "¿Qué condiciones de pago aceptan?"
+      },
+      {
+        "answer": "Poseemos y operamos nuestras propias granjas en Ibshaway, Fayum, Egipto: más de 500 acres dedicados a la caléndula, manzanilla, hibisco y otros productos botánicos orgánicos. Complementamos nuestra producción con granjas asociadas de confianza bajo la supervisión directa de nuestros agrónomos para garantizar una calidad constante, trazabilidad y disponibilidad durante todo el año.",
+        "question": "¿Se abastecen exclusivamente de sus propias granjas?"
+      },
+      {
+        "answer": "La calidad está garantizada en cada etapa: selección de semillas, cultivo, cosecha, procesamiento y empaque. Realizamos pruebas de laboratorio internas para verificar la pureza, potencia, contaminación microbiológica y metales pesados. Nuestro sistema de gestión de calidad cuenta con las certificaciones ISO 9001 e ISO 22000, siguiendo las pautas de GMP y HACCP en todo momento.",
+        "question": "¿Cómo garantizan la calidad y consistencia del producto?"
+      },
+      {
+        "answer": "Sí, damos la bienvenida a las visitas de compradores e importadores serios. Por favor, contáctenos con anticipación para programar un recorrido por nuestras granjas, instalaciones de procesamiento y laboratorios de control de calidad en Fayum, Egipto. Recomendamos prever al menos dos semanas para los trámites de visa y viaje.",
+        "question": "¿Puedo visitar su granja o instalación de procesamiento?"
+      },
+      {
+        "answer": "Explore nuestro catálogo de productos, envíe una consulta a través de nuestro formulario de Solicitud de cotización o comuníquese directamente con nuestro equipo de ventas. Responderemos dentro de las 24 horas con las especificaciones del producto, los precios actuales y los siguientes pasos, incluyendo el suministro de muestras y las condiciones del contrato.",
+        "question": "¿Cómo realizo un pedido al por mayor?"
+      },
+      {
+        "answer": "Sí, ofrecemos marca privada, empaque personalizado y servicios OEM para socios B2B. Se aplican cantidades mínimas. Contáctenos con sus especificaciones para recibir una propuesta detallada.",
+        "question": "¿Ofrecen marca privada o empaque personalizado?"
+      }
+    ],
+    "stillQuestions": "¿Aún tiene preguntas?",
+    "teamReady": "Nuestro equipo de exportación está listo para ayudarle con cualquier consulta adicional."
+  },
+  "footer": {
+    "aboutCompany": "Sobre nuestra empresa",
+    "brandDescription": "Especialistas en la exportación de hierbas secas, especias, infusiones y semillas egipcias de calidad premium.",
+    "businessHours": "Horario de atención",
+    "contactInfo": "Contáctenos",
+    "contactUs": "Contáctenos",
+    "copyright": "© {year} Calendula Herbs For Import & Export. Ibshaway, Fayum, Egipto.",
+    "fallbackHours": "Contáctenos en cualquier momento para realizar consultas.",
+    "farmProcessing": "Granja y procesamiento",
+    "followUs": "Síganos",
+    "ourCertifications": "Nuestras certificaciones",
+    "privacyPolicy": "Política de privacidad",
+    "productsCatalog": "Catálogo de productos",
+    "qualityCertificates": "Certificados de calidad",
+    "quickLinks": "Enlaces rápidos",
+    "termsOfService": "Términos de servicio"
+  },
+  "galleries": {
+    "closeLightbox": "Cerrar caja de luz",
+    "empty": "No hay galerías disponibles",
+    "emptyDesc": "Vuelva más tarde para ver fotos y videos.",
+    "galleryItemLabel": "Elemento de galería {index}",
+    "heroDesc": "Un viaje visual a través de nuestras granjas, instalaciones de procesamiento de última generación y productos premium.",
+    "heroMetadataDesc": "Explore nuestras granjas, instalaciones de procesamiento y productos a través de nuestras galerías de medios.",
+    "heroMetadataTitle": "Galerías | Calendula Herbs",
+    "heroTitle": "Galerías de medios",
+    "nextImage": "Siguiente imagen",
+    "previousImage": "Imagen anterior",
+    "scrollLeft": "Desplazar a la izquierda",
+    "scrollRight": "Desplazar a la derecha",
+    "sections": {
+      "EVENTS": "Eventos",
+      "EVENTS_desc": "Momentos de nuestros eventos de la industria, exposiciones y reuniones.",
+      "FACTORY": "Fotos de la fábrica",
+      "FACTORY_desc": "Una mirada al interior de nuestras instalaciones de procesamiento de última generación.",
+      "FARMS": "Fotos de las granjas",
+      "FARMS_desc": "Escenas de nuestras granjas asociadas y campos de cultivo.",
+      "INTERVIEWS_TV": "Entrevistas y programas de televisión",
+      "INTERVIEWS_TV_desc": "Apariciones en medios, entrevistas y reportajes de televisión.",
+      "SHIPMENTS": "Fotos de envíos",
+      "SHIPMENTS_desc": "Nuestros productos siendo preparados y enviados a todo el mundo.",
+      "VISITS": "Visitas",
+      "VISITS_desc": "Visitas a nuestras granjas, instalaciones y socios en todo el mundo."
+    }
+  },
+  "header": {
+    "cartAria": "Carrito de compras con {count} artículos",
+    "getQuote": "Obtener cotización",
+    "languageLabel": "Seleccionar idioma",
+    "themeDark": "Cambiar a modo oscuro",
+    "themeLight": "Cambiar a modo claro"
+  },
+  "home": {
+    "aboutPara1": "Con sede en la fértil región de Fayum, en Egipto, Calendula Herbs gestiona toda la cadena de suministro, desde el cultivo hasta la entrega, operando granjas propias y contratadas bajo Buenas Prácticas Agrícolas (BPA/GAP) y Buenas Prácticas de Manipulación (BPM/GHP).",
+    "aboutPara2": "Con 45 años de experiencia agrícola, 25 años de excelencia en manufactura y 11 años de experiencia en exportación global, aportamos un legado incomparable a cada envío. Nuestras renovadas instalaciones de procesamiento limpian, procesan y mezclan los productos de acuerdo con las regulaciones alimentarias globales, con pruebas de laboratorio internas en cada etapa.",
+    "available": "Disponible: {cuts}",
+    "biofachBadge": "Participante de BIOFACH",
+    "biofachCta": "Contáctenos para agendar una reunión",
+    "biofachDesc": "Encuéntrenos en la feria de productos orgánicos líder en el mundo. Conéctese con nuestro equipo para analizar alianzas, probar nuestros productos y conocer nuestra calidad de primera mano.",
+    "biofachSecondaryCta": "Ver nuestros certificados",
+    "biofachTitle": "Exhibiendo en BIOFACH durante más de 4 años",
+    "certsSubtitle": "Nuestras certificaciones reflejan nuestro firme compromiso con la calidad, la seguridad y la sostenibilidad.",
+    "certsTitle": "Certificaciones y estándares de calidad",
+    "ctaAltButton": "Solicitar cotización",
+    "ctaAltDesc": "Póngase en contacto con nuestro equipo para obtener cotizaciones al por mayor, especificaciones de productos y solicitudes de muestras.",
+    "ctaAltSecondary": "Explorar productos",
+    "ctaAltTitle": "¿Está listo para abastecerse de hierbas egipcias premium?",
+    "cultivatingSpan": "Entregando confianza.",
+    "cultivatingTitle": "Cultivando excelencia.",
+    "featuredDesc": "Descubra nuestros productos botánicos más solicitados, meticulosamente cultivados y procesados para cumplir con los estándares internacionales.",
+    "featuredProducts": "Productos destacados",
+    "heroCta": "Solicitar cotización",
+    "heroDescription": "Una cadena de suministro confiable de extremo a extremo, desde las granjas egipcias hasta los almacenes globales: con certificación GAP/GHP, métodos de secado dual y empaques libres de MOSH/MOAH para hierbas, especias y semillas orgánicas premium desde {year}.",
+    "heroEyebrow": "Calidad de exportación premium desde {year}",
+    "heroSecondaryCta": "Explorar productos",
+    "heroTitle": "Arraigado en la naturaleza,<br />exportado con dedicación.",
+    "highlight1": "Trazabilidad de extremo a extremo desde la granja hasta el envío",
+    "highlight2": "Prácticas agrícolas certificadas por GAP y GHP",
+    "highlight3": "Empaque libre de MOSH/MOAH para la integridad del producto",
+    "highlight4": "Opciones de secado dual: secado al sol y mecánico",
+    "howItWorks": "Cómo funciona",
+    "learnMoreAboutUs": "Más información sobre nosotros",
+    "moq": "MOQ: {weight} kg",
+    "ourCollection": "Nuestra colección",
+    "ourStory": "Nuestra historia",
+    "processSubtitle": "Un proceso optimizado diseñado para compradores internacionales. Cada paso se gestiona con precisión y cuidado.",
+    "processTitle": "Desde la consulta hasta el envío",
+    "requestQuoteAria": "Solicitar cotización para {name}",
+    "stat1Label": "Agricultura",
+    "stat1Unit": "Años",
+    "stat1Value": "45",
+    "stat2Label": "Manufactura",
+    "stat2Unit": "Años",
+    "stat2Value": "25",
+    "stat3Label": "Exportación",
+    "stat3Unit": "Años",
+    "stat3Value": "11",
+    "stat4Label": "En BIOFACH",
+    "stat4Unit": "Veces",
+    "stat4Value": "4+",
+    "step1Desc": "Envíe los requisitos y especificaciones de su producto. Nuestro equipo los revisará y responderá dentro de las 24 horas con una propuesta personalizada.",
+    "step1Title": "Consulta",
+    "step2Desc": "Preparamos y enviamos muestras representativas para su evaluación de calidad, asegurando que el producto cumpla con sus estándares exactos.",
+    "step2Title": "Muestra",
+    "step3Desc": "Una vez aprobadas las muestras, finalizamos los términos comerciales, el cronograma de producción y las especificaciones de calidad.",
+    "step3Title": "Pedido",
+    "step4Desc": "Su pedido se procesa, se empaca según los estándares de exportación y se envía con la documentación completa y seguimiento en tiempo real.",
+    "step4Title": "Envío"
+  },
+  "languages": {
+    "ar": "العربية",
+    "bg": "Български",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "nl": "Nederlands",
+    "pt-BR": "Português (Brasil)",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "zh-CN": "简体中文"
+  },
+  "nav": {
+    "aboutUs": "Sobre nosotros",
+    "certificates": "Certificados",
+    "contact": "Contacto",
+    "galleries": "Galerías",
+    "home": "Inicio",
+    "products": "Productos"
+  },
+  "privacy": {
+    "heroDesc": "Cómo recopilamos, utilizamos y protegemos sus datos personales.",
+    "heroMetadataDesc": "Política de privacidad de Calendula Herbs: cómo recopilamos, utilizamos y protegemos sus datos personales.",
+    "heroMetadataTitle": "Política de privacidad",
+    "heroTitle": "Política de privacidad",
+    "lastUpdated": "Última actualización: {date}",
+    "section1": {
+      "body": "<p>Calendula Herbs For Import & Export (nosotros, nuestro) se compromete a proteger su privacidad. Esta política explica cómo recopilamos, utilizamos y protegemos su información personal cuando visita nuestro sitio web o utiliza nuestros servicios.</p>",
+      "title": "1. Introducción"
+    },
+    "section2": {
+      "body": "<p><strong>Información que usted proporciona:</strong> Nombre, dirección de correo electrónico, número de teléfono, nombre de la empresa, país y cualquier detalle que envíe a través de nuestros formularios de contacto, solicitudes de cotización o solicitudes de muestras.</p><p><strong>Información recopilada automáticamente:</strong> Dirección IP, tipo de navegador, información del dispositivo, páginas visitadas y tiempo de permanencia en nuestro sitio (a través de cookies y análisis).</p>",
+      "title": "2. Información que recopilamos"
+    },
+    "section3": {
+      "body": "<ul><li>Para responder a sus consultas y proporcionar cotizaciones</li><li>Para procesar solicitudes de productos y muestras</li><li>Para mejorar nuestro sitio web y la experiencia del cliente</li><li>Para cumplir con las obligaciones legales</li></ul>",
+      "title": "3. Cómo utilizamos su información"
+    },
+    "section4": {
+      "body": "<p>Implementamos medidas de seguridad adecuadas, que incluyen cifrado, controles de acceso y servidores seguros para proteger sus datos personales contra el acceso, alteración o divulgación no autorizados.</p>",
+      "title": "4. Protección de datos"
+    },
+    "section5": {
+      "body": "<p>Conservamos sus datos personales únicamente durante el tiempo necesario para los fines descritos en esta política o según lo exija la ley. Las consultas y los envíos de contacto se conservan por un período máximo de 3 años.</p>",
+      "title": "5. Retención de datos"
+    },
+    "section6": {
+      "body": "<p>Conforme a las leyes de protección de datos aplicables, usted tiene derecho a:</p><ul><li>Acceder a sus datos personales</li><li>Solicitar la corrección de datos inexactos</li><li>Solicitar la eliminación de sus datos</li><li>Oponerse al procesamiento de sus datos</li><li>Solicitar la portabilidad de los datos</li></ul><p>Para ejercer estos derechos, contáctenos en <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a>.</p>",
+      "title": "6. Sus derechos"
+    },
+    "section7": {
+      "body": "<p>Utilizamos los siguientes servicios de terceros que pueden procesar sus datos:</p><ul><li><strong>Cloudinary</strong>: alojamiento de imágenes y medios</li><li><strong>Resend</strong>: entrega de correos electrónicos transaccionales</li><li><strong>Supabase</strong>: alojamiento de bases de datos</li><li><strong>Railway</strong>: alojamiento de sitios web</li></ul>",
+      "title": "7. Servicios de terceros"
+    },
+    "section8": {
+      "body": "<p>Nuestro sitio web puede utilizar cookies para análisis y funcionalidad. Puede controlar las preferencias de cookies a través de la configuración de su navegador.</p>",
+      "title": "8. Cookies"
+    },
+    "section9": {
+      "body": "<p>Para preguntas sobre esta política de privacidad, contáctenos en:</p><p>Calendula Herbs For Import & Export<br />Ibshaway, Gobernación de Fayum, Egipto<br />Correo electrónico: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>",
+      "title": "9. Contacto"
+    }
+  },
+  "productActions": {
+    "addToCart": "Agregar al carrito de cotización",
+    "bulkInquiryLabel": "Cantidad de consulta al por mayor (kg)",
+    "cancel": "Cancelar",
+    "cartSuccess": "{name} agregado al carrito de cotización",
+    "company": "Empresa",
+    "contactName": "Nombre de contacto *",
+    "dialogDesc": "Proporcionamos muestras de productos para la evaluación de calidad. Tenga en cuenta que los costos de envío suelen correr por cuenta del comprador.",
+    "dialogTitle": "Solicitar muestra: {name}",
+    "email": "Correo electrónico *",
+    "kgSuffix": "kg",
+    "moq": "MOQ: {weight} kg",
+    "requestSample": "Solicitar una muestra",
+    "requestSampleButton": "Solicitar muestra",
+    "sampleSuccess": "Solicitud de muestra enviada",
+    "shippingAccount": "Cuenta de envío (DHL/FedEx) o notas",
+    "shippingAddress": "Dirección de envío *",
+    "shippingPlaceholder": "Proporcione su número de cuenta de mensajería si desea cubrir el envío...",
+    "submitError": "No se pudo enviar la solicitud",
+    "submitting": "Enviando..."
+  },
+  "productDetail": {
+    "cert": {
+      "eu_organic": "Orgánico UE",
+      "gmp": "GMP",
+      "haccp": "HACCP",
+      "iso22000": "ISO 22000",
+      "usda": "Orgánico USDA"
+    },
+    "certAvailable": "Certificaciones disponibles",
+    "certifications": "Certificaciones",
+    "close": "Cerrar",
+    "closeAria": "Cerrar",
+    "cutForm": {
+      "cutSifted": "Cortado y tamizado",
+      "granulated": "Granulado",
+      "powder": "Polvo",
+      "teaCut": "Corte para té (Tea Cut)",
+      "whole": "Entero"
+    },
+    "cutFormEmpty": "Contáctenos para opciones de corte",
+    "cutForms": "Formatos de corte",
+    "failedToLoad": "No se pudo cargar el producto",
+    "highlightCustomCut": "Corte y etiquetado personalizados disponibles a solicitud",
+    "highlightFreeSamples": "Muestras gratuitas disponibles para evaluación de calidad",
+    "highlightOrganicOptions": "Opciones certificadas como Orgánico UE / Orgánico USDA",
+    "home": "Inicio",
+    "minOrder": "Pedido mín.: {weight} KG",
+    "productHighlights": "Aspectos destacados del producto",
+    "productInformation": "Información del producto",
+    "productNotFound": "Producto no encontrado",
+    "products": "Productos"
   },
   "productRequest": {
-    "heroTitle": "¿No Encuentra un Producto?",
-    "heroDesc": "Ofrecemos una amplia gama de hierbas, especias, semillas y productos botánicos más allá de lo que se muestra en nuestro sitio. Díganos lo que necesita.",
-    "heroMetadataTitle": "Solicitar un Producto | Calendula Herbs",
-    "heroMetadataDesc": "¿No encuentra lo que busca? Envíe una solicitud de producto y nuestro equipo lo buscará para usted.",
-    "howItWorks": "Cómo Funciona",
-    "step1Title": "Díganos Lo Que Necesita",
-    "step1Desc": "Describa el producto que busca — nombre, especificaciones, cantidad.",
-    "step2Title": "Buscamos y Cotizamos",
-    "step2Desc": "Nuestro equipo de adquisiciones busca proveedores globales y prepara una cotización competitiva.",
-    "step3Title": "Entregamos",
-    "step3Desc": "Una vez confirmado, gestionamos la logística y entregamos en su destino.",
-    "whatWeCanSource": "Lo Que Podemos Proveer",
+    "formDesc": "Complete el formulario y nuestro equipo se comunicará con usted dentro de las próximas 24 horas con una cotización personalizada.",
+    "formTitle": "Envíe su solicitud",
+    "heroDesc": "Abastecemos una amplia gama de hierbas, especias, semillas y productos botánicos más allá de lo que figura en nuestro sitio. Cuéntenos qué necesita.",
+    "heroMetadataDesc": "¿No encuentra lo que busca? Envíe una solicitud de producto y nuestro equipo lo conseguirá para usted.",
+    "heroMetadataTitle": "Solicitar un producto | Calendula Herbs",
+    "heroTitle": "¿No encuentra un producto?",
+    "howItWorks": "Cómo funciona",
     "item1": "Hierbas culinarias y medicinales",
     "item2": "Especias y condimentos",
     "item3": "Semillas y productos botánicos",
     "item4": "Aceites esenciales y extractos",
     "item5": "Especificaciones y grados personalizados",
     "item6": "Opciones orgánicas y convencionales",
-    "formTitle": "Enviar su Solicitud",
-    "formDesc": "Complete el formulario y nuestro equipo se comunicará dentro de las 24 horas con una cotización personalizada.",
-    "loading": "Cargando formulario..."
+    "loading": "Cargando formulario...",
+    "step1Desc": "Describa el producto que busca: nombre, especificaciones, cantidad.",
+    "step1Title": "Cuéntenos qué necesita",
+    "step2Desc": "Nuestro equipo de adquisiciones busca proveedores globales y prepara una cotización competitiva.",
+    "step2Title": "Abastecemos y cotizamos",
+    "step3Desc": "Una vez confirmado, nos encargamos de la logística y realizamos la entrega en su destino.",
+    "step3Title": "Entregamos",
+    "whatWeCanSource": "Lo que podemos abastecer"
   },
-  "cart": {
-    "title": "Solicitud de Presupuesto",
-    "closeAria": "Cerrar carrito",
-    "closeTitle": "Cerrar carrito",
-    "emptyTitle": "Su carrito de cotización está vacío",
-    "emptyDesc": "Explore nuestro catálogo y agregue los productos para los que desea un presupuesto al por mayor.",
-    "browseProducts": "Explorar Productos",
-    "decreaseAria": "Disminuir cantidad",
-    "increaseAria": "Aumentar cantidad",
-    "removeAria": "Eliminar artículo",
-    "removeTitle": "Eliminar del carrito",
+  "products": {
+    "cantFindDesc": "Abastecemos una amplia gama de productos más allá de los que figuran aquí. Cuéntenos qué necesita y lo encontraremos para usted.",
+    "cantFindTitle": "¿No encuentra lo que está buscando?",
+    "clearFilters": "Limpiar filtros",
+    "cutForms": {
+      "CRUSHED": "Triturado",
+      "CUT_SIFTED": "Cortado y tamizado",
+      "GRANULATED": "Granulado",
+      "LEAF": "Hoja",
+      "POWDER": "Polvo",
+      "ROOT": "Raíz",
+      "STEM": "Tallo",
+      "TBC": "Por confirmar",
+      "WHOLE": "Entero"
+    },
+    "filterAllLabel": "Todos los productos",
+    "heroDesc": "Hierbas, especias y semillas premium a granel para importadores y fabricantes globales. Todos los productos están disponibles para exportación con certificación completa.",
+    "heroMetadataDesc": "Explore nuestro catálogo de hierbas, especias y semillas premium a granel para exportación. Cantidades mínimas de pedido desde 500 kg. Solicite una cotización para sus necesidades de importación.",
+    "heroMetadataTitle": "Nuestros productos | Calendula Herbs For Import & Export",
+    "heroTitle": "Nuestros productos",
+    "loading": "Cargando productos...",
     "moq": "(MOQ) {weight} kg",
-    "step1Button": "Proceder a Detalles",
-    "step2Back": "Atrás",
-    "submit": "Enviar",
-    "submitting": "Enviando...",
-    "success": "¡Consulta enviada con éxito! Nos pondremos en contacto pronto.",
-    "errorGeneric": "Ocurrió un error inesperado",
-    "nameLabel": "Nombre *",
-    "namePlaceholder": "María García",
-    "companyLabel": "Empresa",
-    "companyPlaceholder": "Empresa S.L.",
-    "emailLabel": "Correo Electrónico *",
-    "emailPlaceholder": "maria@ejemplo.com",
-    "phoneLabel": "Teléfono",
-    "phonePlaceholder": "+34 612...",
-    "countryLabel": "País",
-    "countryPlaceholder": "Estados Unidos",
-    "notesLabel": "Notas Adicionales (Opcional)",
-    "notesPlaceholder": "Puerto de destino, requisitos especiales, formularios..."
+    "noDescription": "Contáctenos para obtener cotizaciones de exportación al por mayor y especificaciones completas.",
+    "noResults": "No se encontraron productos",
+    "noResultsDesc": "Intente ajustar su búsqueda o el filtro de categorías.",
+    "requestProduct": "Solicitar un producto",
+    "searchPlaceholder": "Buscar productos...",
+    "sidebarTitle": "Categorías"
   },
-  "productActions": {
-    "bulkInquiryLabel": "Cantidad de Consulta al Por Mayor (kg)",
-    "kgSuffix": "kg",
-    "moq": "CMP: {weight} kg",
-    "addToCart": "Agregar al Carrito de Cotización",
-    "requestSample": "Solicitar una Muestra",
-    "dialogTitle": "Solicitar Muestra: {name}",
-    "dialogDesc": "Proporcionamos muestras de producto para evaluación de calidad. Tenga en cuenta que los costos de envío generalmente son cubiertos por el comprador.",
-    "contactName": "Nombre de Contacto *",
-    "email": "Correo Electrónico *",
-    "company": "Empresa",
-    "shippingAddress": "Dirección de Envío *",
-    "shippingAccount": "Cuenta de Envío (DHL/FedEx) o Notas",
-    "shippingPlaceholder": "Proporcione su número de cuenta de mensajería si desea cubrir el envío...",
-    "cancel": "Cancelar",
-    "requestSampleButton": "Solicitar Muestra",
-    "submitting": "Enviando...",
-    "cartSuccess": "{name} agregado al carrito de cotización",
-    "sampleSuccess": "Solicitud de muestra enviada",
-    "submitError": "Error al enviar la solicitud"
+  "sample": {
+    "formDesc": "Complete el formulario y nuestro equipo se comunicará con usted dentro de las próximas 24 horas.",
+    "formTitle": "Envíe su solicitud",
+    "heroDesc": "Evalúe nuestra calidad de primera mano. Solicite muestras gratuitas de nuestros productos orgánicos.",
+    "heroMetadataDesc": "Solicite muestras gratuitas de nuestras hierbas, especias y productos botánicos orgánicos para evaluación de calidad.",
+    "heroMetadataTitle": "Solicitar una muestra | Calendula Herbs",
+    "heroTitle": "Solicitar una muestra",
+    "howItWorks": "Cómo funciona",
+    "importantNotes": "Notas importantes",
+    "loading": "Cargando formulario...",
+    "note1": "Las muestras son gratuitas para compradores calificados.",
+    "note2": "Pueden aplicarse costos de envío según la ubicación y el valor del pedido.",
+    "note3": "Las cantidades de muestra suelen oscilar entre 50 g y 200 g.",
+    "note4": "Considere de 5 a 10 días hábiles para la preparación y el despacho de las muestras.",
+    "step1Desc": "Elija los productos que le interesa probar.",
+    "step1Title": "Seleccionar productos",
+    "step2Desc": "Nuestro equipo prepara muestras (50–200 g) del lote actual.",
+    "step2Title": "Preparamos y enviamos",
+    "step3Desc": "Pruebe la pureza, potencia y consistencia en su laboratorio.",
+    "step3Title": "Evaluar calidad"
+  },
+  "terms": {
+    "heroDesc": "Que rigen el uso de nuestro sitio web y servicios.",
+    "heroMetadataDesc": "Términos y condiciones de Calendula Herbs: rigen el uso de nuestro sitio web y servicios.",
+    "heroMetadataTitle": "Términos y condiciones",
+    "heroTitle": "Términos y condiciones",
+    "lastUpdated": "Última actualización: {date}",
+    "section1": {
+      "body": "<p>Al acceder y utilizar el sitio web de Calendula Herbs, usted acepta estar sujeto a estos términos y condiciones. Si no está de acuerdo, por favor no utilice nuestro sitio.</p>",
+      "title": "1. Aceptación de los términos"
+    },
+    "section10": {
+      "body": "<p>Estos términos se rigen por las leyes de la República Árabe de Egipto. Cualquier disputa se resolverá en los tribunales de la Gobernación de Fayum, Egipto.</p>",
+      "title": "10. Ley aplicable"
+    },
+    "section11": {
+      "body": "<p>Calendula Herbs For Import & Export<br />Ibshaway, Gobernación de Fayum, Egipto<br />Correo electrónico: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>",
+      "title": "11. Contacto"
+    },
+    "section2": {
+      "body": "<p>Todos los productos que figuran en nuestro sitio web están sujetos a disponibilidad. Nos reservamos el derecho de modificar o descontinuar productos sin previo aviso. Las descripciones, imágenes y especificaciones de los productos se proporcionan con fines informativos y pueden no ser 100% precisas en cuanto a color o apariencia.</p>",
+      "title": "2. Productos y servicios"
+    },
+    "section3": {
+      "body": "<p>El envío de una solicitud de cotización o consulta no constituye un contrato vinculante. Las cotizaciones se proporcionan en función de las tarifas actuales del mercado y son válidas por el período especificado en la cotización. Todos los pedidos están sujetos a nuestra confirmación por escrito y a los términos acordados.</p>",
+      "title": "3. Pedidos y cotizaciones"
+    },
+    "section4": {
+      "body": "<p>Todos los precios indicados son referenciales y están sujetos a cambios según las condiciones del mercado, el rendimiento de los cultivos y el volumen del pedido. El precio final se proporcionará en la cotización oficial.</p>",
+      "title": "4. Precios"
+    },
+    "section5": {
+      "body": "<p>Las cantidades mínimas de pedido (MOQ) se indican por producto. Estas pueden variar según la disponibilidad del producto y factores estacionales.</p>",
+      "title": "5. Cantidades mínimas de pedido"
+    },
+    "section6": {
+      "body": "<p>Las condiciones de envío se negocian por pedido y se especificarán en el contrato de compraventa. Trabajamos con socios logísticos de renombre para garantizar una entrega oportuna. Calendula Herbs no se hace responsable de los retrasos causados por aduanas, el clima u otros eventos de fuerza mayor.</p>",
+      "title": "6. Envío y entrega"
+    },
+    "section7": {
+      "body": "<p>Las solicitudes de muestras están sujetas a disponibilidad. El solicitante suele correr con los costos de envío, a menos que se acuerde lo contrario. Las muestras se proporcionan únicamente con fines de evaluación de calidad.</p>",
+      "title": "7. Muestras"
+    },
+    "section8": {
+      "body": "<p>Calendula Herbs no será responsable de ningún daño indirecto, incidental o consecuente que surja del uso de nuestro sitio web o productos. Nuestra responsabilidad total no excederá el valor del pedido específico en cuestión.</p>",
+      "title": "8. Limitación de responsabilidad"
+    },
+    "section9": {
+      "body": "<p>Todo el contenido de este sitio web, incluidos textos, imágenes, logotipos y diseños, es propiedad de Calendula Herbs For Import & Export y está protegido por las leyes de propiedad intelectual aplicables.</p>",
+      "title": "9. Propiedad intelectual"
+    }
   }
 }

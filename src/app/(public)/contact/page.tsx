@@ -127,7 +127,7 @@ export default async function ContactPage() {
                             const href = isWhatsApp ? `https://wa.me/${cleanPhone.replace('+', '')}` : `tel:${cleanPhone}`
                             
                             return (
-                              <a key={i} href={href} target={isWhatsApp ? '_blank' : undefined} rel={isWhatsApp ? 'noopener noreferrer' : undefined} className="channel-card__value flex items-center gap-2 hover:text-[var(--color-primary-500)] transition-colors">
+                              <a key={i} href={href} target={isWhatsApp ? '_blank' : undefined} rel={isWhatsApp ? 'noopener noreferrer' : undefined} className="channel-card__value flex items-center gap-2 hover:text-[var(--color-green-500)] transition-colors">
                                 <Icon className="w-4 h-4 text-[var(--color-text-tertiary)]" />
                                 {displayValue}
                               </a>

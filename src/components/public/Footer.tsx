@@ -140,7 +140,7 @@ export function Footer({ settings, contact }: FooterProps) {
                       const href = isWhatsApp ? `https://wa.me/${cleanPhone.replace('+', '')}` : `tel:${cleanPhone}`
                       
                       return (
-                        <a key={i} href={href} target={isWhatsApp ? '_blank' : undefined} rel={isWhatsApp ? 'noopener noreferrer' : undefined} className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-primary-500)] transition-colors">
+                        <a key={i} href={href} target={isWhatsApp ? '_blank' : undefined} rel={isWhatsApp ? 'noopener noreferrer' : undefined} className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-green-500)] transition-colors">
                           <Icon className="w-3.5 h-3.5 shrink-0 text-[var(--color-calendula-500)]" />
                           <span>{displayValue}</span>
                         </a>
@@ -184,23 +184,23 @@ export function Footer({ settings, contact }: FooterProps) {
               </div>
             )}
             {contactMethods.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-4">
+              <div className="flex flex-col gap-2 mb-4">
                 {contactMethods.map((method, i) => {
                   const meta = CONTACT_METHOD_META[method.type] || CONTACT_METHOD_META.other
                   const Icon = getContactMethodIcon(method.icon || method.type)
                   const link = generateContactLink(method)
                   const clickable = isClickableLink(method)
+                  const displayLabel = method.label || meta.label
                   return clickable ? (
                     <a
                       key={i}
                       href={link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-icon"
-                      title={meta.label}
-                      aria-label={meta.label}
+                      className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-green-500)] transition-colors"
                     >
-                      <Icon className="w-4 h-4" />
+                      <Icon className="w-3.5 h-3.5 shrink-0 text-[var(--color-calendula-500)]" />
+                      <span>{displayLabel}</span>
                     </a>
                   ) : null
                 })}

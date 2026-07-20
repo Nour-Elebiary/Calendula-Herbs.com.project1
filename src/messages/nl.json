@@ -1,556 +1,556 @@
 {
-  "nav": {
-    "home": "Home",
-    "products": "Producten",
-    "aboutUs": "Over ons",
-    "galleries": "Galerijen",
-    "certificates": "Certificaten",
-    "contact": "Contact"
-  },
-  "header": {
-    "getQuote": "Offerte Aanvragen",
-    "themeLight": "Schakel over naar lichte modus",
-    "themeDark": "Schakel over naar donkere modus",
-    "languageLabel": "Selecteer taal",
-    "cartAria": "Winkelwagen met {count} artikelen"
-  },
-  "home": {
-    "heroTitle": "De Fijnste Biologische Kruiden van de Natuur",
-    "heroCta": "Ontdek Onze Collectie",
-    "heroSecondaryCta": "Lees Meer",
-    "biofachBadge": "BIOFACH Deelnemer",
-    "biofachTitle": "Al Meer dan 4 Jaar op BIOFACH",
-    "biofachDesc": "Ontmoet ons op 's werelds toonaangevende biologische vakbeurs. Neem contact met ons team om partnerschappen te bespreken, onze producten te proeven en onze kwaliteit zelf te ervaren.",
-    "biofachCta": "Neem Contact Op voor een Afspraak",
-    "biofachSecondaryCta": "Bekijk Onze Certificaten",
-    "ctaAltTitle": "Klaar om Premium Egyptische Kruiden te Inkopen?",
-    "ctaAltDesc": "Neem contact op met ons team voor bulkoffertes, productspecificaties en monsteraanvragen.",
-    "ctaAltButton": "Offerte Aanvragen",
-    "ctaAltSecondary": "Blader door Producten",
-    "heroEyebrow": "Premium Exportkwaliteit sinds {year}",
-    "heroDescription": "Een betrouwbare end-to-end toeleveringsketen van Egyptische boerderijen naar wereldwijde magazijnen — GAP/GHP-gecertificeerd, dubbele droogmethoden en MOSH/MOAH-vrije verpakking voor premium biologische kruiden, specerijen en zaden sinds {year}.",
-    "ourCollection": "Onze Collectie",
-    "featuredProducts": "Aanbevolen Producten",
-    "featuredDesc": "Ontdek onze meest gewilde botanische producten, zorgvuldig geteeld en verwerkt volgens internationale normen.",
-    "howItWorks": "Hoe Het Werkt",
-    "processTitle": "Van Aanvraag tot Verzending",
-    "processSubtitle": "Een gestroomlijnd proces ontworpen voor internationale kopers. Elke stap wordt met precisie en zorg beheerd.",
-    "step1Title": "Aanvraag",
-    "step1Desc": "Dien uw productvereisten en specificaties in. Ons team beoordeelt en reageert binnen 24 uur met een op maat gemaakt voorstel.",
-    "step2Title": "Monster",
-    "step2Desc": "We bereiden en sturen representatieve monsters voor uw kwaliteitsbeoordeling, zodat het product aan uw exacte normen voldoet.",
-    "step3Title": "Bestelling",
-    "step3Desc": "Zodra monsters zijn goedgekeurd, finaliseren we de commerciële voorwaarden, het productieschema en de kwaliteitsspecificaties.",
-    "step4Title": "Verzending",
-    "step4Desc": "Uw bestelling wordt verwerkt, verpakt volgens exportnormen en verzonden met volledige documentatie en real-time tracking.",
-    "ourStory": "Ons Verhaal",
-    "cultivatingTitle": "Uitmuntendheid Cultiveren.",
-    "cultivatingSpan": "Vertrouwen Leveren.",
-    "aboutPara1": "Gevestigd in de vruchtbare Fayoum-regio van Egypte, beheert Calendula Herbs de volledige toeleveringsketen van teelt tot levering — met eigen en gecontracteerde boerderijen onder Good Agricultural Practices (GAP) en Good Handling Practices (GHP).",
-    "aboutPara2": "Met 45 jaar landbouwexpertise, 25 jaar productie-uitmuntendheid en 11 jaar wereldwijde exportervaring brengen we ongeëvenaarde kennis in elke zending. Onze moderne verwerkingsfaciliteiten reinigen, verwerken en mengen goederen volgens wereldwijde voedselregelgeving, met laboratoriumtests in eigen huis in elke fase.",
-    "highlight1": "End-to-end traceerbaarheid van boerderij tot zending",
-    "highlight2": "GAP & GHP gecertificeerde landbouwpraktijken",
-    "highlight3": "MOSH/MOAH-vrije verpakking voor productintegriteit",
-    "highlight4": "Dubbele droogopties: zon- en machinaal drogen",
-    "learnMoreAboutUs": "Meer Over Ons",
-    "stat1Value": "45",
-    "stat1Unit": "Jaar",
-    "stat1Label": "Landbouw",
-    "stat2Value": "25",
-    "stat2Unit": "Jaar",
-    "stat2Label": "Productie",
-    "stat3Value": "11",
-    "stat3Unit": "Jaar",
-    "stat3Label": "Export",
-    "stat4Value": "4+",
-    "stat4Unit": "Keer",
-    "stat4Label": "Op BIOFACH",
-    "certsTitle": "Certificeringen & Kwaliteitsnormen",
-    "certsSubtitle": "Onze certificeringen weerspiegelen onze niet-aflatende toewijding aan kwaliteit, veiligheid en duurzaamheid.",
-    "available": "Beschikbaar: {cuts}",
-    "moq": "MOQ: {weight} kg",
-    "requestQuoteAria": "Offerte aanvragen voor {name}"
-  },
-  "products": {
-    "searchPlaceholder": "Producten zoeken...",
-    "noResults": "Geen producten gevonden",
-    "heroTitle": "Onze Producten",
-    "heroDesc": "Premium bulk kruiden, specerijen en zaden voor wereldwijde importeurs en fabrikanten. Alle producten beschikbaar voor export met volledige certificering.",
-    "heroMetadataTitle": "Onze Producten | Calendula Herbs For Import & Export",
-    "heroMetadataDesc": "Bekijk ons assortiment premium bulk kruiden, specerijen en zaden voor export. Minimale bestelhoeveelheden vanaf 500 KG. Vraag een offerte aan voor uw importbehoeften.",
-    "sidebarTitle": "Categorieën",
-    "filterAllLabel": "Alle Producten",
-    "noResultsDesc": "Probeer uw zoekopdracht of categoriefilter aan te passen.",
-    "clearFilters": "Filters Wissen",
-    "loading": "Producten laden...",
-    "cantFindTitle": "Kunt U Niet Vinden Wat U Zoekt?",
-    "cantFindDesc": "Wij leveren een breed scala aan producten, meer dan hier vermeld staat. Vertel ons wat u nodig heeft en wij vinden het voor u.",
-    "requestProduct": "Product Aanvragen",
-    "noDescription": "Neem contact met ons op voor groothandelsexportoffertes en volledige specificaties.",
-    "cutForms": {
-      "WHOLE": "Geheel",
-      "CRUSHED": "Gebroken",
-      "POWDER": "Poeder",
-      "CUT_SIFTED": "Gesneden en Gezeefd",
-      "GRANULATED": "Gegranuleerd",
-      "LEAF": "Blad",
-      "STEM": "Stengel",
-      "ROOT": "Wortel",
-      "TBC": "Te Bevestigen"
-    },
-    "moq": "(MOQ) {weight} kg"
-  },
-  "productDetail": {
-    "home": "Home",
-    "products": "Producten",
-    "productHighlights": "Product Hoogtepunten",
-    "highlightFreeSamples": "Gratis monsters beschikbaar voor kwaliteitsbeoordeling",
-    "highlightCustomCut": "Custom cut & labeling op aanvraag beschikbaar",
-    "highlightOrganicOptions": "EU Organic / USDA Organic gecertificeerde opties",
-    "cutForms": "Snijvormen",
-    "certifications": "Certificeringen",
-    "productInformation": "Productinformatie",
-    "minOrder": "Min. Bestelling: {weight} KG",
-    "cutFormEmpty": "Neem contact op voor snijopties",
-    "certAvailable": "Certificeringen beschikbaar",
-    "close": "Sluiten",
-    "productNotFound": "Product niet gevonden",
-    "failedToLoad": "Product laden mislukt",
-    "closeAria": "Sluiten",
-    "cutForm": {
-      "whole": "Whole",
-      "cutSifted": "Cut & Sifted",
-      "powder": "Powder",
-      "granulated": "Granulated",
-      "teaCut": "Tea Cut"
-    },
-    "cert": {
-      "haccp": "HACCP",
-      "eu_organic": "EU Organic",
-      "iso22000": "ISO 22000",
-      "gmp": "GMP",
-      "usda": "USDA Organic"
-    }
-  },
   "about": {
-    "teamTitle": "Ontmoet Ons Team",
-    "heroTitle": "Over Calendula Herbs",
-    "heroDesc": "Al meer dan vier decennia cultiveren we zuiverheid en leveren we uitmuntendheid. Wij zijn toegewijd aan het leveren van de fijnste biologische kruiden aan de wereld, geworteld in generaties van landbouwexpertise.",
-    "heroMetadataTitle": "Over Ons | Calendula Herbs For Import & Export",
-    "heroMetadataDesc": "Ontdek onze geschiedenis: 45 jaar landbouw, 25 jaar productie en 11 jaar export van premium biologische kruiden uit Egypte.",
-    "statUnit": "Jaar",
-    "statFarming": "Landbouw Erfgoed",
-    "statManufacturing": "Productie",
-    "statExporting": "Export Uitmuntendheid",
-    "heritageTitle": "Ons Erfgoid & Missie",
-    "heritagePara1": "Opgericht met de visie om lokale boeren te verbinden met wereldwijde markten, is Calendula Herbs uitgegroeid tot een toonaangevende exporteur van biologische botanische producten. Onze boerderijen bevinden zich in de meest ongerepte landbouwregio's van Egypte, waardoor elk gewas onder optimale omstandigheden wordt geteeld.",
-    "heritagePara2": "Wij geloven in duurzame landbouw, ethische handel en onwrikbare kwaliteit. Van zaadselectie tot eindverpakking garanderen onze rigoureuze kwaliteitscontroleprocessen dat onze klanten producten ontvangen die de internationale normen overtreffen.",
-    "journeyTitle": "Onze Reis",
-    "journeySubtitle": "Van familieboerderij tot wereldwijde exporteur — drie generaties van landbouwuitmuntendheid.",
-    "timeline1Year": "1980",
-    "timeline1Title": "Landbouw Wortels",
-    "timeline1Desc": "Onze familie begon met het cultiveren van medicinale kruiden en aromatische planten in de vruchtbare Fayoum-regio van Egypte.",
-    "timeline2Year": "2000",
-    "timeline2Title": "Productie",
-    "timeline2Desc": "Uitgebreid naar moderne verwerkingsfaciliteiten voor het reinigen, snijden, drogen en verpakken van kruiden op grote schaal.",
-    "timeline3Year": "2014",
-    "timeline3Title": "Wereldwijde Export",
-    "timeline3Desc": "Calendula Herbs for Export opgericht om Egyptische botanische producten met volledige traceerbaarheid op de wereldmarkt te brengen.",
-    "teamSubtitle": "Ontmoet de toegewijde professionals die onze visie waarmaken.",
     "boardTitle": "Raad van Bestuur",
-    "execTeamTitle": "Directieteam",
+    "ctaButton": "Neem contact met ons op",
+    "ctaDesc": "Of u nu importeur, distributeur of fabrikant bent, wij bespreken graag hoe onze hoogwaardige kruiden aan uw behoeften kunnen voldoen.",
     "ctaTitle": "Klaar om met ons samen te werken?",
-    "ctaDesc": "Of u nu een importeur, distributeur of fabrikant bent, we bespreken graag hoe onze premium kruiden aan uw behoeften kunnen voldoen.",
-    "ctaButton": "Neem Contact Op"
+    "execTeamTitle": "Directie & Management",
+    "heritagePara1": "Opgericht met de visie om lokale boeren te verbinden met wereldwijde markten, is Calendula Herbs uitgegroeid tot een toonaangevende exporteur van biologische botanische producten. Onze boerderijen bevinden zich in de meest ongerepte landbouwregio's van Egypte, wat ervoor zorgt dat elk gewas onder optimale omstandigheden groeit.",
+    "heritagePara2": "Wij geloven in duurzame landbouw, ethische handel en compromisloze kwaliteit. Van de selectie van het zaad tot de uiteindelijke verpakking garanderen onze strenge kwaliteitscontroleprocessen dat onze klanten producten ontvangen die de internationale normen overtreffen.",
+    "heritageTitle": "Ons erfgoed & onze missie",
+    "heroDesc": "Al meer dan vier decennia telen wij puurheid en leveren wij uitmuntendheid. Wij zijn toegewijd om de wereld te voorzien van de beste biologische kruiden, geworteld in generaties van landbouwexpertise.",
+    "heroMetadataDesc": "Ontdek ons erfgoed: 45 jaar landbouw, 25 jaar verwerking en 11 jaar export van hoogwaardige biologische kruiden uit Egypte.",
+    "heroMetadataTitle": "Over ons | Calendula Herbs For Import & Export",
+    "heroTitle": "Over Calendula Herbs",
+    "journeySubtitle": "Van familieboerderij tot wereldwijde exporteur — drie generaties van uitmuntendheid in de landbouw.",
+    "journeyTitle": "Onze reis",
+    "statExporting": "Uitmuntendheid in export",
+    "statFarming": "Landbouwerfgoed",
+    "statManufacturing": "Verwerking & Productie",
+    "statUnit": "Jaar",
+    "teamSubtitle": "Maak kennis met de toegewijde professionals die onze visie vormgeven.",
+    "teamTitle": "Leiderschap & Team",
+    "timeline1Desc": "Onze familie begon met het telen van medicinale kruiden en aromatische planten in de vruchtbare regio Fayoum in Egypte.",
+    "timeline1Title": "Landbouwwortels",
+    "timeline1Year": "1980",
+    "timeline2Desc": "Uitgebreid met moderne verwerkingsfaciliteiten voor het op schaal reinigen, snijden, drogen en verpakken van kruiden.",
+    "timeline2Title": "Productie & Verwerking",
+    "timeline2Year": "2000",
+    "timeline3Desc": "Calendula Herbs opgericht voor export om Egyptische botanische producten met volledige traceerbaarheid naar de wereldmarkt te brengen.",
+    "timeline3Title": "Wereldwijde export",
+    "timeline3Year": "2014"
   },
-  "contact": {
-    "formTitle": "Stuur ons een Bericht",
-    "nameLabel": "Uw Naam",
-    "namePlaceholder": "Voer uw volledige naam in",
-    "emailLabel": "E-mailadres",
-    "emailPlaceholder": "Voer uw e-mailadres in",
-    "phoneLabel": "Telefoonnummer",
-    "phonePlaceholder": "Voer uw telefoonnummer in",
-    "subjectLabel": "Onderwerp",
-    "subjectPlaceholder": "Waar gaat dit over?",
-    "messageLabel": "Bericht",
-    "messagePlaceholder": "Vertel ons meer over uw aanvraag...",
-    "sendButton": "Bericht Verzenden",
-    "sendingButton": "Bezig met verzenden...",
-    "successMessage": "Dank u! Uw bericht is succesvol verzonden. We nemen spoedig contact met u op.",
-    "errorMessage": "Er is iets misgegaan. Probeer het opnieuw of e-mail ons rechtstreeks.",
-    "heroTitle": "Contact",
-    "heroDesc": "Dien een bulkaanvraag in voor onze premium Egyptische kruiden, specerijen en botanische producten. Ons exportteam beoordeelt uw wensen en reageert binnen 24 uur met een op maat gemaakte offerte.",
-    "heroMetadataTitle": "Contact | Calendula Herbs For Import & Export",
-    "heroMetadataDesc": "Neem contact op met Calendula Herbs voor bulk biologische kruiden exportaanvragen. Vraag een offerte, productspecificaties of monsters aan.",
-    "formDesc": "Vertel ons over uw gewenste volume, specificaties en bestemming — ons team stelt een offerte op maat voor u op.",
-    "unavailableTitle": "Contactformulier is Momentieel Niet Beschikbaar",
-    "unavailableDesc": "Neem rechtstreeks contact met ons op via e-mail of telefoon met behulp van de verstrekte gegevens.",
-    "directTitle": "Direct contact",
-    "directDesc": "Bereik ons exportteam rechtstreeks via telefoon, e-mail of berichtenapp. Wij reageren tijdens kantooruren snel op alle B2B-aanvragen.",
-    "locationTitle": "Onze Locatie",
-    "addressLabel": "Hoofdkantoor & Boerderij",
-    "hoursLabel": "Kantooruren",
-    "emailLabel2": "E-mail",
-    "phoneLabel2": "Telefoon",
+  "cart": {
+    "browseProducts": "Producten bekijken",
+    "closeAria": "Winkelwagen sluiten",
+    "closeTitle": "Winkelwagen sluiten",
     "companyLabel": "Bedrijf",
     "companyPlaceholder": "Kruiden BV",
     "countryLabel": "Land",
     "countryPlaceholder": "Nederland",
-    "successTitle": "Gelukt!",
-    "errorUnexpected": "Er is een onverwachte fout opgetreden",
-    "validationRequired": "{field} is verplicht",
-    "validationEmail": "Voer een geldig e-mailadres in",
-    "validationFix": "Corrigeer de fouten in het formulier"
-  },
-  "footer": {
-    "brandDescription": "Premium biologische kruiden duurzaam ingekocht van over de hele wereld. Uw vertrouwde partner in de kruidenhandel sinds 1995.",
-    "quickLinks": "Snelle Links",
-    "contactInfo": "Contactinformatie",
-    "businessHours": "Kantooruren",
-    "followUs": "Volg Ons",
-    "copyright": "© {year} Calendula Herbs. Alle rechten voorbehouden.",
-    "privacyPolicy": "Privacybeleid",
-    "termsOfService": "Algemene Voorwaarden",
-    "productsCatalog": "Productencatalogus",
-    "aboutCompany": "Over Ons Bedrijf",
-    "farmProcessing": "Boerderij & Verwerking",
-    "qualityCertificates": "Kwaliteitscertificaten",
-    "contactUs": "Neem Contact Op",
-    "fallbackHours": "Neem contact met ons op voor vragen.",
-    "ourCertifications": "Onze Certificeringen"
-  },
-  "faq": {
-    "heroTitle": "Veelgestelde Vragen",
-    "heroDesc": "Alles wat B2B-kopers moeten weten over bestellen bij Calendula Herbs.",
-    "heroMetadataTitle": "FAQ | Calendula Herbs For Import & Export",
-    "heroMetadataDesc": "B2B export FAQ — MOQ, gratis monsters, certificeringen, verzending en betalingsvoorwaarden voor bulk kruiden- en specerijenkopers.",
-    "empty": "Geen FAQ's Beschikbaar",
-    "stillQuestions": "Heeft u nog vragen?",
-    "teamReady": "Ons exportteam staat klaar om u te helpen met eventuele verdere vragen.",
-    "contactButton": "Neem Contact Op",
-    "items": [
-      {
-        "question": "Wat is uw minimale bestelhoeveelheid (MOQ)?",
-        "answer": "Onze standaard MOQ is 500–1.000 kg per product, afhankelijk van het artikel en het seizoen. Voor eerste kwalificerende kopers kunnen we kleinere proefbestellingen (50–100 kg) accommoderen. Neem contact op met ons verkoopteam om uw specifieke volumebehoeften te bespreken."
-      },
-      {
-        "question": "Biedt u gratis monsters aan voor kwaliteitsbeoordeling?",
-        "answer": "Ja, wij verstrekken gratis monsters van 50–200 g aan gekwalificeerde B2B-kopers. De koper betaalt de verzendkosten, tenzij anders overeengekomen. Dien een monsteraanvraag in via onze website en ons team bereidt materiaal voor uit de huidige productiebatches."
-      },
-      {
-        "question": "Welke sterilisatieopties biedt u aan?",
-        "answer": "Wij bieden verschillende sterilisatiemethoden aan, waaronder stoomsterilisatie (autoclaaf), ethyleenoxide (EtO) en gammabestraling, afhankelijk van de productspecificaties en de vereisten van het bestemmingsland. Onze verwerkingsfaciliteiten volgen GMP- en HACCP-richtlijnen. Geef uw sterilisatievereisten aan bij het aanvragen van een offerte."
-      },
-      {
-        "question": "Kunt u prijzen op uw website vermelden?",
-        "answer": "Kruiden- en specerijenprijzen fluctueren met oogstopbrengsten, marktomstandigheden en seizoensinvloeden. Wij verstrekken nauwkeurige, actuele prijzen pas nadat we uw specifieke vereisten hebben begrepen — volume, kwaliteitsklasse, verpakking en bestemming. Neem contact met ons op voor een offerte op maat."
-      },
-      {
-        "question": "Welke certificeringen bezit u?",
-        "answer": "Wij bezitten 11 belangrijke certificeringen, waaronder ISO 9001, ISO 22000, EU Organic, USDA NOP, HALAL, KOSHER, BRCGS, FDA-registratie, SEDEX/Semeta, NFSA Whitelist en AHK Council-lidmaatschap. Bezoek onze Certificatenpagina voor volledige details. We kunnen op verzoek certificaten verstrekken voor uw compliancebeoordeling."
-      },
-      {
-        "question": "Wat zijn uw verzendingsvoorwaarden en levertijden?",
-        "answer": "Wij verzenden wereldwijd via lucht- en zeevracht. Gangbare incoterms zijn FOB (havens van Damietta of Alexandrië), CIF en EXW. Levertijden zijn 7–14 dagen voor artikelen op voorraad en 20–30 dagen voor maatwerkverwerking. Wij werken met betrouwbare expediteurs en kunnen helpen bij logistieke regelingen."
-      },
-      {
-        "question": "Welke betalingsvoorwaarden accepteert u?",
-        "answer": "Betalingsvoorwaarden worden per bestelling besproken en overeengekomen op basis van orderwaarde, bestemming en klanthistorie. Typische regelingen omvatten T/T (overschrijving) en L/C (letter of credit). Neem contact op met ons verkoopteam om de beste optie voor uw bestelling te bespreken."
-      },
-      {
-        "question": "Betrekt u uitsluitend van uw eigen boerderijen?",
-        "answer": "Wij bezitten en beheren onze eigen boerderijen in Ibshaway, Fayoum, Egypte — meer dan 500 acres gewijd aan biologische calendula, kamille, hibiscus en andere botanische producten. We vullen aan met vertrouwde partnerboerderijen onder direct toezicht van onze eigen agronoom om consistente kwaliteit, traceerbaarheid en jaarrond beschikbaarheid te garanderen."
-      },
-      {
-        "question": "Hoe waarborgt u productkwaliteit en consistentie?",
-        "answer": "Kwaliteit wordt in elke fase gewaarborgd: zaadselectie, teelt, oogst, verwerking en verpakking. Wij voeren interne laboratoriumtests uit op zuiverheid, potentie, microbiologische besmetting en zware metalen. Ons kwaliteitsmanagementsysteem is ISO 9001 en ISO 22000 gecertificeerd en volgt GMP- en HACCP-richtlijnen."
-      },
-      {
-        "question": "Kan ik uw boerderij of verwerkingsfaciliteit bezoeken?",
-        "answer": "Ja, wij verwelkomen bezoeken van serieuze kopers en importeurs. Neem vooraf contact met ons op om een rondleiding door onze boerderijen, verwerkingsfaciliteiten en kwaliteitscontrolelaboratoria in Fayoum, Egypte te plannen. Wij adviseren om minimaal twee weken de tijd te nemen voor visa en reisregelingen."
-      },
-      {
-        "question": "Hoe plaats ik een bulkbestelling?",
-        "answer": "Blader door onze productcatalogus, dien een aanvraag in via ons Offertes Aanvragen-formulier of neem rechtstreeks contact op met ons verkoopteam. Wij reageren binnen 24 uur met productspecificaties, actuele prijzen en vervolgstappen inclusief monsterverstrekking en contractvoorwaarden."
-      },
-      {
-        "question": "Biedt u private labeling of maatwerkverpakking aan?",
-        "answer": "Ja, wij bieden private labeling, maatwerkverpakking en OEM-diensten voor B2B-partners. Minimale hoeveelheden zijn van toepassing. Neem contact met ons op met uw specificaties voor een gedetailleerd voorstel."
-      }
-    ]
+    "decreaseAria": "Aantal verlagen",
+    "emailLabel": "E-mailadres *",
+    "emailPlaceholder": "jane@voorbeeld.nl",
+    "emptyDesc": "Bekijk onze catalogus en voeg producten toe waarvoor u een offerte voor grote volumes wilt ontvangen.",
+    "emptyTitle": "Uw offerteaanvraag is leeg",
+    "errorGeneric": "Er is een onverwachte fout opgetreden",
+    "increaseAria": "Aantal verhogen",
+    "moq": "(MOQ) {weight} kg",
+    "nameLabel": "Naam *",
+    "namePlaceholder": "Jane Doe",
+    "notesLabel": "Aanvullende opmerkingen (optioneel)",
+    "notesPlaceholder": "Bestemmingshaven, speciale vereisten, formulieren...",
+    "phoneLabel": "Telefoonnummer",
+    "phonePlaceholder": "+31 6...",
+    "removeAria": "Item verwijderen",
+    "removeTitle": "Verwijderen uit winkelwagen",
+    "step1Button": "Doorgaan naar gegevens",
+    "step2Back": "Terug",
+    "submit": "Verzenden",
+    "submitting": "Verzenden...",
+    "success": "Aanvraag succesvol verzonden! We nemen snel contact met u op.",
+    "title": "Offerteaanvraag"
   },
   "certificates": {
-    "heroTitle": "Kwaliteit & Certificeringen",
-    "heroDesc": "Wij voldoen aan de hoogste internationale normen voor biologische landbouw, verwerking en export.",
-    "heroMetadataTitle": "Certificaten | Calendula Herbs",
-    "heroMetadataDesc": "Onze biologische en kwaliteitsborgingscertificaten — ISO, EU Organic, HALAL, KOSHER, USDA NOP en meer.",
-    "empty": "Nog geen certificeringen vermeld.",
     "certified": "Gecertificeerd",
-    "viewPdf": "Bekijk PDF",
-    "viewFile": "Bestand Bekijken"
-  },
-  "galleries": {
-    "heroTitle": "Mediagalerijen",
-    "heroDesc": "Een visuele reis door onze boerderijen, state-of-the-art verwerkingsfaciliteiten en premium producten.",
-    "heroMetadataTitle": "Galerijen | Calendula Herbs",
-    "heroMetadataDesc": "Ontdek onze boerderijen, verwerkingsfaciliteiten en producten via onze mediagalerijen.",
-    "empty": "Geen Galerijen Beschikbaar",
-    "emptyDesc": "Kom later terug voor foto's en video's.",
-    "sections": {
-      "EVENTS": "Evenementen",
-      "EVENTS_desc": "Momenten van onze branche-evenementen, beurzen en bijeenkomsten.",
-      "INTERVIEWS_TV": "Interviews en TV-programma's",
-      "INTERVIEWS_TV_desc": "Media-optredens, interviews en televisie reports.",
-      "FACTORY": "Fabrieksfoto's",
-      "FACTORY_desc": "Een kijkje in onze state-of-the-art verwerkingsfaciliteiten.",
-      "FARMS": "Boerderijfoto's",
-      "FARMS_desc": "Scènes van onze partnerboerderijen en teeltvelden.",
-      "SHIPMENTS": "Verzendingsfoto's",
-      "SHIPMENTS_desc": "Onze producten worden wereldwijd voorbereid en verzonden.",
-      "VISITS": "Bezoeken",
-      "VISITS_desc": "Bezoeken aan onze boerderijen, faciliteiten en partners over de hele wereld."
-    },
-    "scrollLeft": "Naar links scrollen",
-    "scrollRight": "Naar rechts scrollen",
-    "closeLightbox": "Lightbox sluiten",
-    "previousImage": "Vorige afbeelding",
-    "nextImage": "Volgende afbeelding",
-    "galleryItemLabel": "Galerij-item {index}"
-  },
-  "privacy": {
-    "lastUpdated": "Laatst bijgewerkt: {date}",
-    "heroTitle": "Privacybeleid",
-    "heroDesc": "Hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.",
-    "heroMetadataTitle": "Privacybeleid",
-    "heroMetadataDesc": "Calendula Herbs privacybeleid — hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.",
-    "section1": {
-      "title": "1. Inleiding",
-      "body": "<p>Calendula Herbs For Import & Export (wij, ons) zet zich in voor de bescherming van uw privacy. Dit beleid legt uit hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen wanneer u onze website bezoekt of onze diensten gebruikt.</p>"
-    },
-    "section2": {
-      "title": "2. Informatie Die Wij Verzamelen",
-      "body": "<p><strong>Informatie die u verstrekt:</strong> Naam, e-mailadres, telefoonnummer, bedrijfsnaam, land en alle details die u indient via onze contactformulieren, offerteaanvragen of monsteraanvragen.</p><p><strong>Automatisch verzamelde informatie:</strong> IP-adres, browsertype, apparaatinformatie, bezochte pagina's en tijd doorgebracht op onze site (via cookies en analyses).</p>"
-    },
-    "section3": {
-      "title": "3. Hoe Wij Uw Informatie Gebruiken",
-      "body": "<ul><li>Om uw vragen te beantwoorden en offertes te verstrekken</li><li>Om product- en monsteraanvragen te verwerken</li><li>Om onze website en klantervaring te verbeteren</li><li>Om te voldoen aan wettelijke verplichtingen</li></ul>"
-    },
-    "section4": {
-      "title": "4. Gegevensbescherming",
-      "body": "<p>Wij implementeren passende beveiligingsmaatregelen, waaronder encryptie, toegangscontroles en beveiligde servers om uw persoonlijke gegevens te beschermen tegen ongeautoriseerde toegang, wijziging of openbaarmaking.</p>"
-    },
-    "section5": {
-      "title": "5. Gegevensbewaring",
-      "body": "<p>Wij bewaren uw persoonlijke gegevens alleen zo lang als nodig is voor de doeleinden beschreven in dit beleid of zoals vereist door de wet. Aanvragen en contactinzendingen worden maximaal 3 jaar bewaard.</p>"
-    },
-    "section6": {
-      "title": "6. Uw Rechten",
-      "body": "<p>Op grond van de toepasselijke wetgeving inzake gegevensbescherming heeft u het recht op:</p><ul><li>Inzage in uw persoonlijke gegevens</li><li>Correctie van onjuiste gegevens</li><li>Verwijdering van uw gegevens</li><li>Bezwaar tegen verwerking van uw gegevens</li><li>Gegevensoverdraagbaarheid</li></ul><p>Om deze rechten uit te oefenen, kunt u contact met ons opnemen via <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a>.</p>"
-    },
-    "section7": {
-      "title": "7. Diensten van Derden",
-      "body": "<p>Wij maken gebruik van de volgende diensten van derden die uw gegevens kunnen verwerken:</p><ul><li><strong>Cloudinary</strong> — image- en mediahosting</li><li><strong>Resend</strong> — transactionele e-mailbezorging</li><li><strong>Supabase</strong> — databasehosting</li><li><strong>Railway</strong> — websitehosting</li></ul>"
-    },
-    "section8": {
-      "title": "8. Cookies",
-      "body": "<p>Onze website kan cookies gebruiken voor analyse en functionaliteit. U kunt cookievoorkeuren beheren via uw browserinstellingen.</p>"
-    },
-    "section9": {
-      "title": "9. Contact",
-      "body": "<p>Voor vragen over dit privacybeleid kunt u contact met ons opnemen op:</p><p>Calendula Herbs For Import & Export<br />Ibshaway, Gouvernement Fayoum, Egypte<br />E-mail: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
-    }
-  },
-  "terms": {
-    "lastUpdated": "Laatst bijgewerkt: {date}",
-    "heroTitle": "Algemene Voorwaarden",
-    "heroDesc": "Betreffende het gebruik van onze website en diensten.",
-    "heroMetadataTitle": "Algemene Voorwaarden",
-    "heroMetadataDesc": "Calendula Herbs algemene voorwaarden — betreffende het gebruik van onze website en diensten.",
-    "section1": {
-      "title": "1. Aanvaarding van de Voorwaarden",
-      "body": "<p>Door toegang te krijgen tot en gebruik te maken van de website van Calendula Herbs, gaat u akkoord met deze algemene voorwaarden. Als u niet akkoord gaat, gebruik onze site dan niet.</p>"
-    },
-    "section2": {
-      "title": "2. Producten en Diensten",
-      "body": "<p>Alle producten op onze website zijn onder voorbehoud van beschikbaarheid. Wij behouden ons het recht voor om producten zonder voorafgaande kennisgeving te wijzigen of te staken. Productbeschrijvingen, afbeeldingen en specificaties worden verstrekt voor informatieve doeleinden en kunnen mogelijk niet 100% nauwkeurig zijn wat betreft kleur of uiterlijk.</p>"
-    },
-    "section3": {
-      "title": "3. Bestellingen en Offertes",
-      "body": "<p>Het indienen van een offerteaanvraag of vraag vormt geen bindend contract. Offertes worden verstrekt op basis van actuele markttarieven en zijn geldig voor de in de offerte vermelde periode. Alle bestellingen zijn onderworpen aan onze schriftelijke bevestiging en overeengekomen voorwaarden.</p>"
-    },
-    "section4": {
-      "title": "4. Prijzen",
-      "body": "<p>Alle vermelde prijzen zijn indicatief en kunnen worden gewijzigd op basis van marktomstandigheden, oogstopbrengsten en ordervolume. De uiteindelijke prijs wordt vermeld in de officiële offerte.</p>"
-    },
-    "section5": {
-      "title": "5. Minimale Bestelhoeveelheden",
-      "body": "<p>Minimale bestelhoeveelheden (MOQ) worden per product vermeld. Deze kunnen variëren op basis van productbeschikbaarheid en seizoensfactoren.</p>"
-    },
-    "section6": {
-      "title": "6. Verzending en Levering",
-      "body": "<p>Verzendvoorwaarden worden per bestelling onderhandeld en worden gespecificeerd in het verkoopcontract. Wij werken samen met gerenommeerde logistieke partners om tijdige levering te garanderen. Calendula Herbs is niet aansprakelijk voor vertragingen veroorzaakt door douane, weersomstandigheden of andere overmachtssituaties.</p>"
-    },
-    "section7": {
-      "title": "7. Monsters",
-      "body": "<p>Monsteraanvragen zijn onder voorbehoud van beschikbaarheid. De aanvrager draagt doorgaans de verzendkosten, tenzij anders overeengekomen. Monsters worden uitsluitend verstrekt voor kwaliteitsbeoordeling.</p>"
-    },
-    "section8": {
-      "title": "8. Beperking van Aansprakelijkheid",
-      "body": "<p>Calendula Herbs is niet aansprakelijk voor enige indirecte, incidentele of gevolgschade voortvloeiend uit het gebruik van onze website of producten. Onze totale aansprakelijkheid zal niet hoger zijn dan de waarde van de specifieke betreffende bestelling.</p>"
-    },
-    "section9": {
-      "title": "9. Intellectueel Eigendom",
-      "body": "<p>Alle inhoud op deze website — inclusief tekst, afbeeldingen, logo's en ontwerpen — is eigendom van Calendula Herbs For Import & Export en wordt beschermd door toepasselijke wetgeving inzake intellectueel eigendom.</p>"
-    },
-    "section10": {
-      "title": "10. Toepasselijk Recht",
-      "body": "<p>Deze voorwaarden worden beheerst door de wetten van de Arabische Republiek Egypte. Eventuele geschillen worden beslecht door de rechtbanken van het Gouvernement Fayoum, Egypte.</p>"
-    },
-    "section11": {
-      "title": "11. Contact",
-      "body": "<p>Calendula Herbs For Import & Export<br />Ibshaway, Gouvernement Fayoum, Egypte<br />E-mail: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>"
-    }
+    "empty": "Nog geen certificeringen vermeld.",
+    "heroDesc": "Wij houden ons aan de hoogste internationale normen voor biologische landbouw, verwerking en export.",
+    "heroMetadataDesc": "Onze biologische en kwaliteitsborgingscertificaten — ISO, EU Organic, HALAL, KOSHER, USDA NOP en meer.",
+    "heroMetadataTitle": "Certificaten | Calendula Herbs",
+    "heroTitle": "Kwaliteit & Certificeringen",
+    "viewFile": "Bestand bekijken",
+    "viewPdf": "PDF bekijken"
   },
   "common": {
-    "readMore": "Lees Meer",
-    "learnMore": "Meer Informatie",
-    "close": "Sluiten",
-    "loading": "Laden...",
-    "error": "Er is iets misgegaan",
-    "search": "Zoeken",
-    "subscribe": "Abonneren",
-    "subscribePlaceholder": "Voer uw e-mail in",
     "allRightsReserved": "Alle rechten voorbehouden.",
-    "pageNotFound": "Pagina Niet Gevonden",
-    "goHome": "Ga naar Homepage",
-    "cookieConsent": "Wij gebruiken cookies om uw ervaring te verbeteren. Door onze site te gebruiken, accepteert u ons cookiebeleid.",
+    "close": "Sluiten",
     "cookieAccept": "Accepteren",
-    "cookieDecline": "Afwijzen",
-    "privacyPolicy": "Privacybeleid"
+    "cookieConsent": "Deze site maakt gebruik van cookies voor analyses en essentiële functionaliteit.",
+    "cookieDecline": "Weigeren",
+    "error": "Er is iets misgegaan",
+    "goHome": "Naar de homepage",
+    "learnMore": "Meer informatie",
+    "loading": "Laden...",
+    "pageNotFound": "Pagina niet gevonden",
+    "privacyPolicy": "Privacybeleid",
+    "readMore": "Lees meer",
+    "search": "Zoeken",
+    "subscribe": "Aanmelden",
+    "subscribePlaceholder": "Vul uw e-mailadres in"
   },
-  "languages": {
-    "en": "English",
-    "ar": "العربية",
-    "es": "Español",
-    "it": "Italiano",
-    "ja": "日本語",
-    "ko": "한국어",
-    "hi": "हिन्दी",
-    "ru": "Русский",
-    "uk": "Українська",
-    "pt-BR": "Português (Brasil)",
-    "zh-CN": "简体中文",
-    "fr": "Français",
-    "nl": "Nederlands",
-    "de": "Deutsch",
-    "bg": "Български",
-    "el": "Ελληνικά",
-    "tr": "Türkçe"
+  "contact": {
+    "addressLabel": "Hoofdkantoor & Boerderij",
+    "companyLabel": "Bedrijf",
+    "companyPlaceholder": "Kruiden BV",
+    "countryLabel": "Land",
+    "countryPlaceholder": "Nederland",
+    "directDesc": "Liever een snellere reactie? Neem rechtstreeks contact op met ons exportteam via een van de onderstaande kanalen — wij zijn bereikbaar van zaterdag tot donderdag, van 9:00 tot 17:00 uur (tijdzone Caïro).",
+    "directTitle": "Direct contact",
+    "emailLabel": "E-mailadres",
+    "emailLabel2": "E-mailadres",
+    "emailPlaceholder": "jane@voorbeeld.nl",
+    "errorMessage": "Bericht verzenden mislukt. Probeer het opnieuw of neem rechtstreeks telefonisch of per e-mail contact met ons op.",
+    "errorUnexpected": "Er is een onverwachte fout opgetreden",
+    "formDesc": "Vul het onderstaande formulier in en ons exportteam reageert binnen 24 kantooruren.",
+    "formTitle": "Stuur ons een aanvraag",
+    "heroDesc": "Neem contact met ons op voor bulkexportaanvragen, productspecificaties, monsterverzoeken of vragen over onze Egyptische kruiden en specerijen.",
+    "heroMetadataDesc": "Neem contact op met Calendula Herbs voor bulkexportaanvragen van biologische kruiden. Vraag een offerte, productspecificaties of monsters aan.",
+    "heroMetadataTitle": "Contact | Calendula Herbs For Import & Export",
+    "heroTitle": "Contact",
+    "hoursLabel": "Openingstijden",
+    "locationTitle": "Onze locatie",
+    "messageLabel": "Bericht",
+    "messagePlaceholder": "Vertel ons over uw wensen — product, hoeveelheid, bestemming en eventuele specifieke normen of certificeringen.",
+    "nameLabel": "Naam",
+    "namePlaceholder": "Jane Doe",
+    "phoneLabel": "Telefoonnummer",
+    "phoneLabel2": "Telefoonnummer",
+    "phonePlaceholder": "+31 6...",
+    "sendButton": "Aanvraag verzenden",
+    "sendingButton": "Verzenden...",
+    "subjectLabel": "Onderwerp",
+    "subjectPlaceholder": "Bulkaanvraag",
+    "successMessage": "Hartelijk dank voor uw bericht. Ons exportteam reageert binnen 24 kantooruren.",
+    "successTitle": "Aanvraag verzonden!",
+    "unavailableDesc": "Neem rechtstreeks contact met ons op via e-mail of telefoon met behulp van de verstrekte gegevens.",
+    "unavailableTitle": "Contactformulier is momenteel niet beschikbaar",
+    "validationEmail": "Vul een geldig e-mailadres in",
+    "validationFix": "Corrigeer de fouten in het formulier",
+    "validationRequired": "{field} is verplicht"
   },
   "errors": {
     "validation": {
-      "required": "Dit veld is verplicht",
-      "email": "Voer een geldig e-mailadres in",
-      "phone": "Voer een geldig telefoonnummer in",
-      "minLength": "Moet minimaal {min} tekens zijn",
-      "maxLength": "Mag maximaal {max} tekens zijn"
+      "email": "Vul een geldig e-mailadres in",
+      "maxLength": "Mag niet meer dan {max} tekens bevatten",
+      "minLength": "Moet ten minste {min} tekens bevatten",
+      "phone": "Vul een geldig telefoonnummer in",
+      "required": "Dit veld is verplicht"
     }
   },
-  "sample": {
-    "heroTitle": "Monster Aanvragen",
-    "heroDesc": "Beoordeel zelf onze kwaliteit. Vraag gratis monsters aan van onze biologische producten.",
-    "heroMetadataTitle": "Monster Aanvragen | Calendula Herbs",
-    "heroMetadataDesc": "Vraag gratis monsters aan van onze biologische kruiden, specerijen en botanische producten voor kwaliteitsbeoordeling.",
-    "howItWorks": "Hoe Het Werkt",
-    "step1Title": "Selecteer Producten",
-    "step1Desc": "Kies de producten die u wilt testen.",
-    "step2Title": "Wij Bereiden & Verzenden",
-    "step2Desc": "Ons team bereidt monsters (50–200 g) uit de huidige batch.",
-    "step3Title": "Beoordeel Kwaliteit",
-    "step3Desc": "Test op zuiverheid, potentie en consistentie in uw laboratorium.",
-    "importantNotes": "Belangrijke Opmerkingen",
-    "note1": "Monsters zijn gratis voor gekwalificeerde kopers.",
-    "note2": "Verzendkosten kunnen van toepassing zijn, afhankelijk van locatie en orderwaarde.",
-    "note3": "Monsterhoeveelheden variëren doorgaans van 50 g tot 200 g.",
-    "note4": "Houd rekening met 5–10 werkdagen voor monsterbereiding en verzending.",
-    "formTitle": "Dien Uw Aanvraag In",
-    "formDesc": "Vul het formulier in en ons team neemt binnen 24 uur contact met u op.",
-    "loading": "Formulier laden..."
+  "faq": {
+    "contactButton": "Neem contact met ons op",
+    "empty": "Geen veelgestelde vragen beschikbaar",
+    "heroDesc": "Alles wat B2B-kopers moeten weten over bestellen bij Calendula Herbs.",
+    "heroMetadataDesc": "Veelgestelde vragen over B2B-export — MOQ, gratis monsters, certificeringen, verzending en betalingsvoorwaarden voor kopers van bulk-kruiden en specerijen.",
+    "heroMetadataTitle": "Veelgestelde vragen | Calendula Herbs",
+    "heroTitle": "Veelgestelde vragen",
+    "items": [
+      {
+        "answer": "Onze standaard MOQ is 500-1.000 kg per product, afhankelijk van het artikel en het seizoen. Voor gekwalificeerde kopers die voor het eerst bestellen, kunnen we kleinere proefbestellingen (50-100 kg) faciliteren. Neem contact op met ons verkoopteam om uw specifieke volumebehoeften te bespreken.",
+        "question": "Wat is uw minimale bestelhoeveelheid (MOQ)?"
+      },
+      {
+        "answer": "Ja, wij leveren gratis monsters van 50-200 g voor gekwalificeerde B2B-kopers. De koper draagt de verzendkosten, tenzij anders overeengekomen. Dien een monsterverzoek in via onze website en ons team bereidt materiaal voor uit de huidige productiebases.",
+        "question": "Biedt u gratis monsters aan voor kwaliteitsbeoordeling?"
+      },
+      {
+        "answer": "Wij bieden verschillende sterilisatiemethoden aan, waaronder stoomsterilisatie (autoclaaf), ethyleenoxide (EtO) en gammabestraling, afhankelijk van de productspecificaties en de vereisten van het bestemmingsland. Onze verwerkingsfaciliteiten volgen de GMP- en HACCP-richtlijnen. Geef uw sterilisatie-eisen aan bij het aanvragen van een offerte.",
+        "question": "Welke sterilisatieopties biedt u aan?"
+      },
+      {
+        "answer": "De prijzen van kruiden en specerijen schommelen op basis van oogstopbrengsten, marktomstandigheden en seizoensinvloeden. Wij verstrekken pas nauwkeurige, actuele prijzen nadat we uw specifieke wensen begrijpen — volume, kwaliteitsklasse, verpakking en bestemming. Neem contact met ons op voor een offerte op maat.",
+        "question": "Kunt u prijzen vermelden op uw website?"
+      },
+      {
+        "answer": "Wij beschikken over 11 belangrijke certificeringen, waaronder ISO 9001, ISO 22000, EU Organic, USDA NOP, HALAL, KOSHER, BRCGS, FDA-registratie, SEDEX/Smeta, NFSA Whitelist en lidmaatschap van de AHK-raad. Bezoek onze certificatenpagina voor alle details. Op verzoek kunnen wij certificaten verstrekken voor uw nalevingscontrole.",
+        "question": "Welke certificeringen heeft u?"
+      },
+      {
+        "answer": "Wij verzenden wereldwijd via lucht- en zeevracht. Veelvoorkomende incoterms zijn FOB (havens van Damietta of Alexandrië), CIF en EXW. De levertijden bedragen 7-14 dagen voor voorraadartikelen en 20-30 dagen voor maatwerkverwerking. Wij werken samen met betrouwbare expediteurs en kunnen helpen bij het regelen van de logistiek.",
+        "question": "Wat zijn uw leveringsvoorwaarden en levertijden?"
+      },
+      {
+        "answer": "Betalingsvoorwaarden worden per bestelling besproken en overeengekomen op basis van de orderwaarde, bestemming en de geschiedenis van de koper. Typische regelingen zijn T/T (telegrafische overboeking) en L/C (letter of credit). Neem contact op met ons verkoopteam om de beste optie voor uw bestelling te bespreken.",
+        "question": "Welke betalingsvoorwaarden accepteert u?"
+      },
+      {
+        "answer": "Wij bezitten en exploiteren onze eigen boerderijen in Ibshaway, Fayoum, Egypte — meer dan 500 hectare gewijd aan biologische goudsbloem (calendula), kamille, hibiscus en andere botanische producten. We vullen dit aan met vertrouwde partnerboerderijen onder direct toezicht van onze eigen agronomen om een constante kwaliteit, traceerbaarheid en jaarronde beschikbaarheid te garanderen.",
+        "question": "Sourced u uitsluitend van uw eigen boerderijen?"
+      },
+      {
+        "answer": "Kwaliteit wordt in elke fase gewaarborgd: zaadselectie, teelt, oogst, verwerking en verpakking. We voeren in ons eigen laboratorium tests uit op zuiverheid, werkzaamheid, microbiologische besmetting en zware metalen. Ons kwaliteitsmanagementsysteem is ISO 9001 en ISO 22000 gecertificeerd, waarbij we overal de GMP- en HACCP-richtlijnen volgen.",
+        "question": "Hoe waarborgt u de productkwaliteit en -consistentie?"
+      },
+      {
+        "answer": "Ja, wij verwelkomen bezoeken van serieuze kopers en importeurs. Neem vooraf contact met ons op om een rondleiding te plannen langs onze boerderijen, verwerkingsfaciliteiten en kwaliteitscontrolelaboratoria in Fayoum, Egypte. We raden u aan om ten minste twee weken uit te trekken voor visum- en reisregelingen.",
+        "question": "Kan ik uw boerderij of verwerkingsfaciliteit bezoeken?"
+      },
+      {
+        "answer": "Bekijk onze productcatalogus, dien een aanvraag in via ons offerteformulier of neem rechtstreeks contact op met ons verkoopteam. Wij reageren binnen 24 uur met productspecificaties, actuele prijzen en de volgende stappen, waaronder monsterverstrekking en contractvoorwaarden.",
+        "question": "Hoe ik een bulkbestelling plaatsen?"
+      },
+      {
+        "answer": "Ja, wij bieden private labeling, aangepaste verpakkingen en OEM-diensten voor B2B-partners. Er gelden minimale afnames. Neem contact met ons op met uw specificaties voor een gedetailleerd voorstel.",
+        "question": "Biedt u private labeling of aangepaste verpakkingen aan?"
+      }
+    ],
+    "stillQuestions": "Heeft u nog vragen?",
+    "teamReady": "Ons exportteam staat klaar om u te helpen met eventuele aanvullende vragen."
+  },
+  "footer": {
+    "aboutCompany": "Over ons bedrijf",
+    "brandDescription": "Specialisten in de export van hoogwaardige Egyptische gedroogde kruiden, specerijen, kruidenthee en zaden.",
+    "businessHours": "Openingstijden",
+    "contactInfo": "Contactgegevens",
+    "contactUs": "Contact",
+    "copyright": "© {year} Calendula Herbs For Import & Export. Ibshaway, Fayoum, Egypte.",
+    "fallbackHours": "Neem op elk gewenst moment contact met ons op voor vragen.",
+    "farmProcessing": "Boerderij & Verwerking",
+    "followUs": "Volg ons",
+    "ourCertifications": "Onze certificeringen",
+    "privacyPolicy": "Privacybeleid",
+    "productsCatalog": "Productcatalogus",
+    "qualityCertificates": "Kwaliteitscertificaten",
+    "quickLinks": "Snelle links",
+    "termsOfService": "Algemene voorwaarden"
+  },
+  "galleries": {
+    "closeLightbox": "Lightbox sluiten",
+    "empty": "Geen galerijen beschikbaar",
+    "emptyDesc": "Kom later terug voor foto's en video's.",
+    "galleryItemLabel": "Galerij-item {index}",
+    "heroDesc": "Een visuele reis door onze boerderijen, ultramoderne verwerkingsfaciliteiten en hoogwaardige producten.",
+    "heroMetadataDesc": "Verken onze boerderijen, verwerkingsfaciliteiten en producten via onze mediagalerijen.",
+    "heroMetadataTitle": "Galerijen | Calendula Herbs",
+    "heroTitle": "Mediagalerijen",
+    "nextImage": "Volgende afbeelding",
+    "previousImage": "Vorige afbeelding",
+    "scrollLeft": "Naar links scrollen",
+    "scrollRight": "Naar rechts scrollen",
+    "sections": {
+      "EVENTS": "Evenementen",
+      "EVENTS_desc": "Momenten van onze branche-evenementen, beurzen en bijeenkomsten.",
+      "FACTORY": "Fabrieksfoto's",
+      "FACTORY_desc": "Een kijkje in onze ultramoderne verwerkingsfaciliteiten.",
+      "FARMS": "Boerderijfoto's",
+      "FARMS_desc": "Beelden van onze partnerboerderijen en teeltvelden.",
+      "INTERVIEWS_TV": "Interviews en tv-shows",
+      "INTERVIEWS_TV_desc": "Media-optredens, interviews en tv-rapportages.",
+      "SHIPMENTS": "Verzendingen",
+      "SHIPMENTS_desc": "Onze producten die worden klaargemaakt en wereldwijd verzonden.",
+      "VISITS": "Bezoeken",
+      "VISITS_desc": "Bezoeken aan onze boerderijen, faciliteiten en partners over de hele wereld."
+    }
+  },
+  "header": {
+    "cartAria": "Winkelwagen met {count} artikelen",
+    "getQuote": "Offerte aanvragen",
+    "languageLabel": "Taal selecteren",
+    "themeDark": "Omschakelen naar donkere modus",
+    "themeLight": "Omschakelen naar lichte modus"
+  },
+  "home": {
+    "aboutPara1": "Gevestigd in de vruchtbare regio Fayoum in Egypte, Calendula Herbs de volledige toeleveringsketen van teelt tot levering — waarbij we onze eigen boerderijen en contractboerderijen exploiteren onder Good Agricultural Practices (GAP) and Good Handling Practices (GHP).",
+    "aboutPara2": "Met 45 jaar landbouwexpertise, 25 jaar uitmuntendheid in productie en 11 jaar wereldwijde exportervaring brengen wij een ongeëvenaard erfgoed naar elke zending. Onze vernieuwde verwerkingsfaciliteiten reinigen, verwerken en mengen goederen volgens de wereldwijde voedselregelgeving, met laboratoriumtests in eigen beheer in elke fase.",
+    "available": "Beschikbaar: {cuts}",
+    "biofachBadge": "BIOFACH-deelnemer",
+    "biofachCta": "Neem contact op voor een afspraak",
+    "biofachDesc": "Ontmet ons op 's werelds toonaangevende vakbeurs voor biologische producten. Neem contact op met ons team om partnerschappen te bespreken, onze producten te proeven en onze kwaliteit persoonlijk te ervaren.",
+    "biofachSecondaryCta": "Bekijk onze certificaten",
+    "biofachTitle": "Al meer dan 4 jaar exposant op BIOFACH",
+    "certsSubtitle": "Onze certificeringen weerspiegelen onze onwrikbare toewijding aan kwaliteit, veiligheid en duurzaamheid.",
+    "certsTitle": "Certificeringen & Kwaliteitsnormen",
+    "ctaAltButton": "Offerte aanvragen",
+    "ctaAltDesc": "Neem contact op met ons team voor bulkoffertes, productspecificaties en monsterverzoeken.",
+    "ctaAltSecondary": "Producten bekijken",
+    "ctaAltTitle": "Klaar om hoogwaardige Egyptische kruiden in te kopen?",
+    "cultivatingSpan": "Leveren van vertrouwen.",
+    "cultivatingTitle": "Telen van uitmuntendheid.",
+    "featuredDesc": "Ontdek onze meest gewilde botanische producten, zorgvuldig geteeld en verwerkt om te voldoen aan internationale normen.",
+    "featuredProducts": "Uitgelichte producten",
+    "heroCta": "Offerte aanvragen",
+    "heroDescription": "Een betrouwbare end-to-end toeleveringsketen van Egyptische boerderijen naar wereldwijde magazijnen — GAP/GHP-gecertificeerd, dubbele droogmethoden en MOSH/MOAH-vrije verpakking voor hoogwaardige biologische kruiden, specerijen en zaden sinds {year}.",
+    "heroEyebrow": "Premium exportkwaliteit sinds {year}",
+    "heroSecondaryCta": "Producten ontdekken",
+    "heroTitle": "Geworteld in de natuur,<br />geëxporteerd met zorg.",
+    "highlight1": "End-to-end traceerbaarheid van boerderij tot verzending",
+    "highlight2": "GAP- & GHP-gecertificeerde landbouwmethoden",
+    "highlight3": "MOSH/MOAH-vrije verpakking voor productintegriteit",
+    "highlight4": "Dubbele droogopties: zon- & machinedrogen",
+    "howItWorks": "Hoe het werkt",
+    "learnMoreAboutUs": "Meer over ons",
+    "moq": "MOQ: {weight} kg",
+    "ourCollection": "Onze collectie",
+    "ourStory": "Ons verhaal",
+    "processSubtitle": "Een gestroomlijnd proces ontworpen voor internationale kopers. Elke stap wordt met precisie en zorg beheerd.",
+    "processTitle": "Van aanvraag tot verzending",
+    "requestQuoteAria": "Offerte aanvragen voor {name}",
+    "stat1Label": "Landbouw",
+    "stat1Unit": "Jaar",
+    "stat1Value": "45",
+    "stat2Label": "Productie",
+    "stat2Unit": "Jaar",
+    "stat2Value": "25",
+    "stat3Label": "Export",
+    "stat3Unit": "Jaar",
+    "stat3Value": "11",
+    "stat4Label": "Op BIOFACH",
+    "stat4Unit": "Keer",
+    "stat4Value": "4+",
+    "step1Desc": "Dien uw productvereisten en specificaties in. Ons team beoordeelt deze en reageert binnen 24 uur met een voorstel op maat.",
+    "step1Title": "Aanvraag",
+    "step2Desc": "We bereiden representatieve monsters voor en verzenden deze voor uw kwaliteitsbeoordeling, zodat het product aan uw exacte normen voldoet.",
+    "step2Title": "Monster",
+    "step3Desc": "Zodra de monsters zijn goedgekeurd, leggen we de commerciële voorwaarden, het productieplan en de kwaliteitsspecificaties vast.",
+    "step3Title": "Bestelling",
+    "step4Desc": "Uw bestelling wordt verwerkt, verpakt volgens de exportnormen en verzonden met volledige documentatie en realtime tracking.",
+    "step4Title": "Verzending"
+  },
+  "languages": {
+    "ar": "العربية",
+    "bg": "Български",
+    "de": "Deutsch",
+    "el": "Ελληνικά",
+    "en": "English",
+    "es": "Español",
+    "fr": "Français",
+    "hi": "हिन्दी",
+    "it": "Italiano",
+    "ja": "日本語",
+    "ko": "한국어",
+    "nl": "Nederlands",
+    "pt-BR": "Português (Brasil)",
+    "ru": "Русский",
+    "tr": "Türkçe",
+    "uk": "Українська",
+    "zh-CN": "简体中文"
+  },
+  "nav": {
+    "aboutUs": "Over ons",
+    "certificates": "Certificaten",
+    "contact": "Contact",
+    "galleries": "Galerijen",
+    "home": "Home",
+    "products": "Producten"
+  },
+  "privacy": {
+    "heroDesc": "Hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.",
+    "heroMetadataDesc": "Privacybeleid van Calendula Herbs — hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen.",
+    "heroMetadataTitle": "Privacybeleid",
+    "heroTitle": "Privacybeleid",
+    "lastUpdated": "Laatst bijgewerkt: {date}",
+    "section1": {
+      "body": "<p>Calendula Herbs For Import & Export (wij, we, ons, onze) is toegewijd aan het beschermen van uw privacy. Dit beleid legt uit hoe wij uw persoonlijke gegevens verzamelen, gebruiken en beschermen wanneer u onze website bezoekt of onze diensten gebruikt.</p>",
+      "title": "1. Inleiding"
+    },
+    "section2": {
+      "body": "<p><strong>Informatie die u verstrekt:</strong> Naam, e-mailadres, telefoonnummer, bedrijfsnaam, land en alle gegevens die u indient via onze contactformulieren, offerteaanvragen of monsterverzoeken.</p><p><strong>Automatisch verzamelde informatie:</strong> IP-adres, browsertype, apparaatgegevens, bezochte pagina's en tijd doorgebracht op onze site (via cookies en analyses).</p>",
+      "title": "2. Informatie die we verzamelen"
+    },
+    "section3": {
+      "body": "<ul><li>Om te reageren op uw vragen en offertes te verstrekken</li><li>Om product- en monsterverzoeken te verwerken</li><li>Om onze website en klantervaring te verbeteren</li><li>Om te voldoen aan wettelijke verplichtingen</li></ul>",
+      "title": "3. Hoe we uw informatie gebruiken"
+    },
+    "section4": {
+      "body": "<p>Wij implementeren passende beveiligingsmaatregelen, waaronder versleuteling, toegangscontroles en beveiligde servers, om uw persoonlijke gegevens te beschermen tegen ongeoorloofde toegang, wijziging of openbaarmaking.</p>",
+      "title": "4. Gegevensbeveiliging"
+    },
+    "section5": {
+      "body": "<p>Wij bewaren uw persoonlijke gegevens niet langer dan noodzakelijk is voor de doeleinden die in dit beleid worden beschreven of zoals wettelijk vereist. Aanvragen en contactinzendingen worden maximaal 3 jaar bewaard.</p>",
+      "title": "5. Gegevensbewaring"
+    },
+    "section6": {
+      "body": "<p>Onder de toepasselijke wetgeving inzake gegevensbescherming heeft u het recht om:</p><ul><li>Uw persoonlijke gegevens in te zien</li><li>Correctie van onjuiste gegevens aan te vragen</li><li>Verwijdering van uw gegevens aan te vragen</li><li>Bezwaar te maken tegen de verwerking van uw gegevens</li><li>Gegevensoverdraagbaarheid aan te vragen</li></ul><p>Om deze rechten uit te oefenen, kunt u contact met ons opnemen via <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a>.</p>",
+      "title": "6. Your Rights"
+    },
+    "section7": {
+      "body": "<p>Wij maken gebruik van de volgende diensten van derden die uw gegevens kunnen verwerken:</p><ul><li><strong>Cloudinary</strong> — hosting van afbeeldingen en media</li><li><strong>Resend</strong> — verzending van transactionele e-mails</li><li><strong>Supabase</strong> — databasehosting</li><li><strong>Railway</strong> — websitehosting</li></ul>",
+      "title": "7. Diensten van derden"
+    },
+    "section8": {
+      "body": "<p>Onze website kan cookies gebruiken voor analyses en functionaliteit. U kunt uw cookievoorkeuren beheren via uw browserinstellingen.</p>",
+      "title": "8. Cookies"
+    },
+    "section9": {
+      "body": "<p>Voor vragen over dit privacybeleid kunt u contact met ons opnemen via:</p><p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum, Egypte<br />E-mail: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>",
+      "title": "9. Contact"
+    }
+  },
+  "productActions": {
+    "addToCart": "Toevoegen aan offerteaanvraag",
+    "bulkInquiryLabel": "Aantal bulkaanvraag (kg)",
+    "cancel": "Annuleren",
+    "cartSuccess": "{name} toegevoegd aan offerteaanvraag",
+    "company": "Bedrijf",
+    "contactName": "Naam contactpersoon *",
+    "dialogDesc": "Wij verstrekken productmonsters voor kwaliteitsbeoordeling. Houd er rekening mee dat de verzendkosten doorgaans door de koper worden gedragen.",
+    "dialogTitle": "Monster aanvragen: {name}",
+    "email": "E-mailadres *",
+    "kgSuffix": "kg",
+    "moq": "MOQ: {weight} kg",
+    "requestSample": "Monster aanvragen",
+    "requestSampleButton": "Monster aanvragen",
+    "sampleSuccess": "Monsteraanvraag ingediend",
+    "shippingAccount": "Koeriersaccount (DHL/FedEx) of opmerkingen",
+    "shippingAddress": "Verzendadres *",
+    "shippingPlaceholder": "Vermeld uw koeriersaccountnummer als u de verzendkosten wilt dekken...",
+    "submitError": "Aanvraag indienen mislukt",
+    "submitting": "Verzenden..."
+  },
+  "productDetail": {
+    "cert": {
+      "eu_organic": "EU Organic",
+      "gmp": "GMP",
+      "haccp": "HACCP",
+      "iso22000": "ISO 22000",
+      "usda": "USDA Organic"
+    },
+    "certAvailable": "Beschikbare certificeringen",
+    "certifications": "Certificeringen",
+    "close": "Sluiten",
+    "closeAria": "Sluiten",
+    "cutForm": {
+      "cutSifted": "Gesneden & Gezeefd",
+      "granulated": "Gegranuleerd",
+      "powder": "Poeder",
+      "teaCut": "Theesnit",
+      "whole": "Heel"
+    },
+    "cutFormEmpty": "Neem contact met ons op voor snijopties",
+    "cutForms": "Snijvormen",
+    "failedToLoad": "Laden van product mislukt",
+    "highlightCustomCut": "Aangepaste snijvormen & etikettering beschikbaar op aanvraag",
+    "highlightFreeSamples": "Gratis monsters beschikbaar voor kwaliteitsbeoordeling",
+    "highlightOrganicOptions": "EU Organic / USDA Organic gecertificeerde opties",
+    "home": "Home",
+    "minOrder": "Min. bestelling: {weight} kg",
+    "productHighlights": "Producthoogtepunten",
+    "productInformation": "Productinformatie",
+    "productNotFound": "Product niet gevonden",
+    "products": "Producten"
   },
   "productRequest": {
-    "heroTitle": "Kunt U Een Product Niet Vinden?",
-    "heroDesc": "Wij leveren een breed scala aan kruiden, specerijen, zaden en botanische producten die verder gaan dan wat op onze site staat. Vertel ons wat u nodig heeft.",
-    "heroMetadataTitle": "Product Aanvragen | Calendula Herbs",
-    "heroMetadataDesc": "Kunt u niet vinden wat u zoekt? Dien een productaanvraag in en ons team zoekt het voor u.",
-    "howItWorks": "Hoe Het Werkt",
-    "step1Title": "Vertel Ons Wat U Nodig Heeft",
-    "step1Desc": "Beschrijf het product dat u zoekt — naam, specificaties, hoeveelheid.",
-    "step2Title": "Wij Zoeken & Offreren",
-    "step2Desc": "Ons inkoopteam doorzoekt wereldwijde leveranciers en stelt een concurrerende offerte op.",
-    "step3Title": "Wij Leveren",
-    "step3Desc": "Zodra bevestigd, regelen wij de logistiek en leveren op uw bestemming.",
-    "whatWeCanSource": "Wat Wij Kunnen Leveren",
+    "formDesc": "Vul het formulier in en ons team neemt binnen 24 uur contact met u op met een offerte op maat.",
+    "formTitle": "Dien uw aanvraag in",
+    "heroDesc": "Wij betrekken een breed scala aan kruiden, specerijen, zaden en botanische producten buiten wat op onze site vermeld staat. Vertel ons wat u nodig heeft.",
+    "heroMetadataDesc": "Kunt u niet vinden wat u zoekt? Dien een productaanvraag in en ons team zal het voor u inkopen.",
+    "heroMetadataTitle": "Product aanvragen | Calendula Herbs",
+    "heroTitle": "Kunt u een product niet vinden?",
+    "howItWorks": "Hoe het werkt",
     "item1": "Culinaire & medicinale kruiden",
     "item2": "Specerijen & kruidenmengsels",
     "item3": "Zaden & botanische producten",
     "item4": "Essentiële oliën & extracten",
-    "item5": "Maatwerk specificaties & kwaliteiten",
+    "item5": "Aangepaste specificaties & kwaliteitsklassen",
     "item6": "Biologische & conventionele opties",
-    "formTitle": "Dien Uw Aanvraag In",
-    "formDesc": "Vul het formulier in en ons team neemt binnen 24 uur contact met u op met een offerte op maat.",
-    "loading": "Formulier laden..."
+    "loading": "Formulier laden...",
+    "step1Desc": "Beschrijf het product dat u zoekt — naam, specificaties, hoeveelheid.",
+    "step1Title": "Vertel ons wat u nodig heeft",
+    "step2Desc": "Ons inkoopteam zoekt bij wereldwijde leveranciers en stelt een concurrerende offerte op.",
+    "step2Title": "Wij zoeken & offreren",
+    "step3Desc": "Na bevestiging regelen wij de logistiek en leveren we aan uw bestemming.",
+    "step3Title": "Wij leveren",
+    "whatWeCanSource": "Wat wij kunnen inkopen"
   },
-  "cart": {
-    "title": "Offerte Aanvraag",
-    "closeAria": "Winkelwagen sluiten",
-    "closeTitle": "Winkelwagen sluiten",
-    "emptyTitle": "Uw offertemand is leeg",
-    "emptyDesc": "Blader door onze catalogus en voeg producten toe waarvoor u een bulkofferte wilt.",
-    "browseProducts": "Blader door Producten",
-    "decreaseAria": "Hoeveelheid verlagen",
-    "increaseAria": "Hoeveelheid verhogen",
-    "removeAria": "Item verwijderen",
-    "removeTitle": "Verwijder uit winkelwagen",
+  "products": {
+    "cantFindDesc": "Wij betrekken een breed scala aan producten buiten wat hier vermeld staat. Vertel ons wat u nodig heeft en wij vinden het voor u.",
+    "cantFindTitle": "Kunt u niet vinden wat u zoekt?",
+    "clearFilters": "Filters wissen",
+    "cutForms": {
+      "CRUSHED": "Geplet",
+      "CUT_SIFTED": "Gesneden & Gezeefd",
+      "GRANULATED": "Gegranuleerd",
+      "LEAF": "Blad",
+      "POWDER": "Poeder",
+      "ROOT": "Wortel",
+      "STEM": "Stengel",
+      "TBC": "Nader te bepalen",
+      "WHOLE": "Heel"
+    },
+    "filterAllLabel": "Alle producten",
+    "heroDesc": "Hoogwaardige bulk-kruiden, specerijen en zaden voor wereldwijde importeurs en fabrikanten. Alle producten zijn beschikbaar voor export met volledige certificering.",
+    "heroMetadataDesc": "Bekijk onze catalogus van hoogwaardige bulk-kruiden, specerijen en zaden voor de export. Minimale bestelhoeveelheden vanaf 500 kg. Vraag een offerte aan voor uw importbehoeften.",
+    "heroMetadataTitle": "Onze producten | Calendula Herbs For Import & Export",
+    "heroTitle": "Onze producten",
+    "loading": "Producten laden...",
     "moq": "(MOQ) {weight} kg",
-    "step1Button": "Ga naar Gegevens",
-    "step2Back": "Terug",
-    "submit": "Verzenden",
-    "submitting": "Bezig met verzenden...",
-    "success": "Aanvraag succesvol ingediend! We nemen spoedig contact met u op.",
-    "errorGeneric": "Er is een onverwachte fout opgetreden",
-    "nameLabel": "Naam *",
-    "namePlaceholder": "Jan Jansen",
-    "companyLabel": "Bedrijf",
-    "companyPlaceholder": "Kruiden BV",
-    "emailLabel": "E-mail *",
-    "emailPlaceholder": "jan@voorbeeld.nl",
-    "phoneLabel": "Telefoon",
-    "phonePlaceholder": "+31 6...",
-    "countryLabel": "Land",
-    "countryPlaceholder": "Nederland",
-    "notesLabel": "Aanvullende Opmerkingen (Optioneel)",
-    "notesPlaceholder": "Bestemmingshaven, speciale vereisten, formulieren..."
+    "noDescription": "Neem contact met ons op voor bulkexportoffertes en volledige specificaties.",
+    "noResults": "Geen producten gevonden",
+    "noResultsDesc": "Probeer uw zoekopdracht of categoriefilter aan te passen.",
+    "requestProduct": "Product aanvragen",
+    "searchPlaceholder": "Producten zoeken...",
+    "sidebarTitle": "Categorieën"
   },
-  "productActions": {
-    "bulkInquiryLabel": "Bulkaanvraag Hoeveelheid (kg)",
-    "kgSuffix": "kg",
-    "moq": "MOQ: {weight} kg",
-    "addToCart": "Toevoegen aan Offertewagen",
-    "requestSample": "Monster Aanvragen",
-    "dialogTitle": "Monster Aanvragen: {name}",
-    "dialogDesc": "Wij verstrekken productmonsters voor kwaliteitsbeoordeling. Houd er rekening mee dat verzendkosten doorgaans door de koper worden gedragen.",
-    "contactName": "Contactpersoon *",
-    "email": "E-mail *",
-    "company": "Bedrijf",
-    "shippingAddress": "Verzendadres *",
-    "shippingAccount": "Verzendrekening (DHL/FedEx) of Opmerkingen",
-    "shippingPlaceholder": "Vermeld uw koeriersrekeningnummer als u de verzending wilt dekken...",
-    "cancel": "Annuleren",
-    "requestSampleButton": "Monster Aanvragen",
-    "submitting": "Bezig met verzenden...",
-    "cartSuccess": "{name} toegevoegd aan offertewagen",
-    "sampleSuccess": "Monsteraanvraag ingediend",
-    "submitError": "Aanvraag indienen mislukt"
+  "sample": {
+    "formDesc": "Vul het formulier in en ons team neemt binnen 24 uur contact met u op.",
+    "formTitle": "Dien uw aanvraag in",
+    "heroDesc": "Beoordeel onze kwaliteit zelf. Vraag gratis monsters aan van onze biologische producten.",
+    "heroMetadataDesc": "Vraag gratis monsters aan van onze biologische kruiden, specerijen en botanische producten voor kwaliteitsbeoordeling.",
+    "heroMetadataTitle": "Monster aanvragen | Calendula Herbs",
+    "heroTitle": "Monster aanvragen",
+    "howItWorks": "Hoe het werkt",
+    "importantNotes": "Belangrijke opmerkingen",
+    "loading": "Formulier laden...",
+    "note1": "Monsters zijn gratis voor gekwalificeerde kopers.",
+    "note2": "Verzendkosten kunnen van toepassing zijn, afhankelijk van de locatie en de orderwaarde.",
+    "note3": "Monsterhoeveelheden variëren doorgaans van 50g tot 200g.",
+    "note4": "Houd rekening met 5-10 werkdagen voor de voorbereiding en verzending van monsters.",
+    "step1Desc": "Kies de producten die u wilt testen.",
+    "step1Title": "Producten selecteren",
+    "step2Desc": "Ons team bereidt monsters (50-200g) voor uit de huidige partij.",
+    "step2Title": "Wij bereiden voor & verzenden",
+    "step3Desc": "Test op zuiverheid, werkzaamheid en consistentie in uw laboratorium.",
+    "step3Title": "Kwaliteit beoordelen"
+  },
+  "terms": {
+    "heroDesc": "Regels voor het gebruik van onze website en diensten.",
+    "heroMetadataDesc": "Algemene voorwaarden van Calendula Herbs — regels voor het gebruik van onze website en diensten.",
+    "heroMetadataTitle": "Algemene voorwaarden",
+    "heroTitle": "Algemene voorwaarden",
+    "lastUpdated": "Laatst bijgewerkt: {date}",
+    "section1": {
+      "body": "<p>Door de website van Calendula Herbs te bezoeken en te gebruiken, gaat u ermee akkoord gebonden te zijn aan deze algemene voorwaarden. Als u hier niet mee akkoord gaat, gebruik onze site dan niet.</p>",
+      "title": "1. Acceptatie van de voorwaarden"
+    },
+    "section10": {
+      "body": "<p>Deze voorwaarden worden beheerst door de wetten van de Arabische Republiek Egypte. Eventuele geschillen zullen worden voorgelegd aan de rechtbanken van het gouvernement Fayoum, Egypte.</p>",
+      "title": "10. Toepasselijk recht"
+    },
+    "section11": {
+      "body": "<p>Calendula Herbs For Import & Export<br />Ibshaway, Fayoum, Egypte<br />E-mail: <a href=\"mailto:info@calendulaherbs.com\">info@calendulaherbs.com</a></p>",
+      "title": "11. Contact"
+    },
+    "section2": {
+      "body": "<p>Alle op onze website vermelde producten zijn onder voorbehoud van beschikbaarheid. Wij behouden ons het recht voor om producten zonder voorafgaande kennisgeving te wijzigen of stop te zetten. Productbeschrijvingen, afbeeldingen en specificaties worden verstrekt voor informatieve doeleinden en zijn mogelijk niet 100% nauwkeurig in kleur of uiterlijk.</p>",
+      "title": "2. Producten en diensten"
+    },
+    "section3": {
+      "body": "<p>Het indienen van een offerteaanvraag of informatieverzoek vormt geen bindend contract. Offertes worden verstrekt op basis van de huidige markttarieven en zijn geldig voor de in de offerte vermelde periode. Alle bestellingen zijn onderworpen aan onze schriftelijke bevestiging en overeengekomen voorwaarden.</p>",
+      "title": "3. Bestellingen en offertes"
+    },
+    "section4": {
+      "body": "<p>Alle vermelde prijzen zijn indicatief en onderhevig aan wijzigingen op basis van marktomstandigheden, oogstopbrengsten en bestelvolume. De definitieve prijsstelling wordt vermeld in de officiële offerte.</p>",
+      "title": "4. Prijzen"
+    },
+    "section5": {
+      "body": "<p>Minimale bestelhoeveelheden (MOQ) worden per product vermeld. Deze kunnen variëren op basis van productbeschikbaarheid en seizoensfactoren.</p>",
+      "title": "5. Minimale bestelhoeveelheden"
+    },
+    "section6": {
+      "body": "<p>De leveringsvoorwaarden worden per bestelling onderhandeld en worden gespecificeerd in het verkoopcontract. Wij werken samen met gerenommeerde logistieke partners om een tijdige levering te garanderen. Calendula Herbs is niet aansprakelijk voor vertragingen veroorzaakt door de douane, het weer of andere gevallen van overmacht.</p>",
+      "title": "6. Verzending en levering"
+    },
+    "section7": {
+      "body": "<p>Monsterverzoeken zijn afhankelijk van beschikbaarheid. De aanvrager draagt doorgaans de verzendkosten, tenzij anders overeengekomen. Monsters worden uitsluitend verstrekt voor kwaliteitsbeoordelingsdoeleinden.</p>",
+      "title": "7. Monsters"
+    },
+    "section8": {
+      "body": "<p>Calendula Herbs is niet aansprakelijk voor enige indirecte, incidentele of gevolgschade die voortvloeit uit het gebruik van onze website of producten. Onze totale aansprakelijkheid zal de waarde van de specifieke bestelling in kwestie niet overschrijden.</p>",
+      "title": "8. Beperking van aansprakelijkheid"
+    },
+    "section9": {
+      "body": "<p>Alle inhoud op deze website — inclusief tekst, afbeeldingen, logo's en ontwerpen — is eigendom van Calendula Herbs For Import & Export en wordt beschermd door toepasselijke intellectuele eigendomswetten.</p>",
+      "title": "9. Intellectueel eigendom"
+    }
   }
 }

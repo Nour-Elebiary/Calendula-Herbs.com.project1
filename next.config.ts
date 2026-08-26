@@ -125,8 +125,10 @@ export default withSentryConfig(withBundleAnalyzer(withNextIntl(nextConfig)), {
   // Disable Sentry SDK tree-shaking telemetry
   telemetry: false,
 
-  // Auto-instrument Next.js routes and API handlers
-  autoInstrumentServerFunctions: true,
-  autoInstrumentMiddleware: true,
-  autoInstrumentAppDirectory: true,
+  // Webpack instrumentation options
+  webpack: {
+    autoInstrumentServerFunctions: true,
+    autoInstrumentMiddleware: true,
+    autoInstrumentAppDirectory: true,
+  },
 });

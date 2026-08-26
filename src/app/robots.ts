@@ -1,7 +1,11 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://calendula-herbs.com'
+  const rawUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '')
+  const baseUrl =
+    rawUrl && !rawUrl.includes('.railway.app') && !rawUrl.includes('localhost')
+      ? rawUrl
+      : 'https://www.calendula-herbs.com'
 
   return {
     rules: [

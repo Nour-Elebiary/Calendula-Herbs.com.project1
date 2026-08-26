@@ -7,10 +7,12 @@ const LOCALES = ['en', 'ar'] as const
 type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Canonical domain — always use the production domain in sitemap
+  // Canonical domain — sanitize so Railway internal domains never leak into sitemaps
+  const rawUrl = process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '')
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
-    'https://calendula-herbs.com'
+    rawUrl && !rawUrl.includes('.railway.app') && !rawUrl.includes('localhost')
+      ? rawUrl
+      : 'https://www.calendula-herbs.com'
 
   // Fetch dynamic content
   const [products, productImages, categories, galleries] = await Promise.all([

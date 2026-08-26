@@ -48,3 +48,16 @@ secrets.json
 E2E_TEST_REPORT.md
 implementation_plan*.md
 devserver.log
+
+# dev log / scratch artefacts
+dev-*.txt
+dev-*.log
+dev_server*.log
+*.log
+build_output.txt
+build.log
+scratch/
+
+# backup dirs
+messages-backup-*/
+src/messages-backup-*/

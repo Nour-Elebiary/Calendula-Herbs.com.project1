@@ -1,18 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import { z } from 'zod'
-import { requireAdmin, unauthorized } from '@/lib/admin-auth'
-
-export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  try { await requireAdmin() } catch { return unauthorized() }
-  const { id } = await params;
-  const gallery = await db.gallery.findUnique({
-    where: { id },
-    include: { items: { orderBy: { order: 'asc' }, include: { mediaFile: true } } },
-  })
-  if (!gallery) return NextResponse.json({ error: 'Not found' }, { status: 404 })
-  return NextResponse.json({ gallery })
-}
+import { withAdminAuth, withValidation, apiError } from '@/lib/route-helpers'
 
 const updateSchema = z.object({
   name: z.string().min(1).optional(),
@@ -20,28 +9,34 @@ const updateSchema = z.object({
   isActive: z.boolean().optional(),
 })
 
-export async function PATCH(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  try { await requireAdmin() } catch { return unauthorized() }
-  const { id } = await params;
-  try {
-    const json = await req.json()
-    const data = updateSchema.parse(json)
-    const gallery = await db.gallery.update({ where: { id }, data })
-    return NextResponse.json({ gallery })
-  } catch (err) {
-    if (err instanceof z.ZodError) return NextResponse.json({ error: err.issues }, { status: 400 })
-    return NextResponse.json({ error: 'Update failed' }, { status: 500 })
-  }
-}
+export const GET = withAdminAuth(async (_req, ctx) => {
+  const { id } = await ctx.params
+  const gallery = await db.gallery.findUnique({
+    where: { id },
+    include: { items: { orderBy: { order: 'asc' }, include: { mediaFile: true } } },
+  })
+  if (!gallery) return NextResponse.json({ error: 'Not found' }, { status: 404 })
+  return NextResponse.json({ gallery })
+})
 
-export async function DELETE(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const PATCH = withAdminAuth(
+  withValidation(updateSchema, async (_req, ctx, _adminId, data) => {
+    const { id } = await ctx.params
+    try {
+      const gallery = await db.gallery.update({ where: { id }, data })
+      return NextResponse.json({ gallery })
+    } catch (err) {
+      return apiError('Update failed', 500, err)
+    }
+  }),
+)
+
+export const DELETE = withAdminAuth(async (_req, ctx) => {
   try {
-    const { id } = await params;
+    const { id } = await ctx.params
     await db.gallery.delete({ where: { id } })
     return NextResponse.json({ success: true })
   } catch (err) {
-    if (err instanceof z.ZodError) return NextResponse.json({ error: err.issues }, { status: 400 })
-    return NextResponse.json({ error: 'Delete failed' }, { status: 500 })
+    return apiError('Delete failed', 500, err)
   }
-}
+})

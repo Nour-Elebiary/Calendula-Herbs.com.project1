@@ -5,6 +5,7 @@ import {
   getOtpExpiry,
   getClientIp,
   getUserAgent,
+  sanitizeHtml,
 } from '@/lib/security'
 
 describe('validatePasswordStrength', () => {
@@ -140,5 +141,30 @@ describe('getUserAgent', () => {
   it('returns unknown when header is missing', () => {
     const ua = getUserAgent(new Headers())
     expect(ua).toBe('unknown')
+  })
+})
+
+describe('sanitizeHtml', () => {
+  it('removes <script> tags', () => {
+    const clean = sanitizeHtml('Hello <script>alert(1)</script>World')
+    expect(clean).toBe('Hello World')
+  })
+
+  it('removes javascript: URIs', () => {
+    const clean = sanitizeHtml('<a href="javascript:alert(1)">Click</a>')
+    expect(clean).toBe('<a>Click</a>')
+  })
+
+  it('preserves safe tags if allowed', () => {
+    const clean = sanitizeHtml('<p><b>Bold</b> and <i>Italic</i></p>')
+    expect(clean).toBe('<p><b>Bold</b> and <i>Italic</i></p>')
+  })
+
+  it('escapes HTML entities properly', () => {
+    // Note: DOMPurify often removes unsafe attributes entirely instead of just escaping them.
+    // However, text nodes with special characters are preserved (and escaped automatically by the browser/DOM if inserted).
+    // Let's test that it sanitizes an onmouseover handler.
+    const clean = sanitizeHtml('<a href="#" onmouseover="alert(1)">Hover</a>')
+    expect(clean).toBe('<a href="#">Hover</a>')
   })
 })

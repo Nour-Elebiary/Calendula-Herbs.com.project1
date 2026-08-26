@@ -1,6 +1,47 @@
 import '@testing-library/jest-dom/vitest'
-import { vi } from 'vitest'
+import { vi, beforeAll, afterEach, afterAll } from 'vitest'
 import en from '@/messages/en.json'
+import { http, HttpResponse } from 'msw'
+import { setupServer } from 'msw/node'
+
+export const mswServer = setupServer(
+  http.get('http://ip-api.com/json/*', () => {
+    return HttpResponse.json({ country: 'Test Country' })
+  }),
+  http.get('https://ip-api.com/json/*', () => {
+    return HttpResponse.json({ country: 'Test Country' })
+  })
+)
+
+beforeAll(() => mswServer.listen({ onUnhandledRequest: 'warn' }))
+afterEach(() => mswServer.resetHandlers())
+afterAll(() => mswServer.close())
+
+// Radix UI testing polyfills
+class MockPointerEvent extends Event {
+  button: number;
+  ctrlKey: boolean;
+  pointerType: string;
+
+  constructor(type: string, props: PointerEventInit) {
+    super(type, props);
+    this.button = props.button || 0;
+    this.ctrlKey = props.ctrlKey || false;
+    this.pointerType = props.pointerType || 'mouse';
+  }
+}
+window.PointerEvent = MockPointerEvent as any;
+window.HTMLElement.prototype.scrollIntoView = vi.fn();
+window.Element.prototype.releasePointerCapture = vi.fn();
+window.Element.prototype.hasPointerCapture = vi.fn();
+window.Element.prototype.setPointerCapture = vi.fn();
+
+class MockResizeObserver {
+  observe = vi.fn();
+  unobserve = vi.fn();
+  disconnect = vi.fn();
+}
+window.ResizeObserver = MockResizeObserver;
 
 class MockIntersectionObserver {
   readonly root: Element | Document | null = null

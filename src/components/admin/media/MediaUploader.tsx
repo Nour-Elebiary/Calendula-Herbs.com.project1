@@ -177,6 +177,7 @@ export function MediaUploader({ onUploadSuccess }: MediaUploaderProps) {
         <input
           ref={fileInputRef}
           type="file"
+          data-testid="file-input"
           multiple
           className="hidden"
           onChange={handleFileSelect}

@@ -4,17 +4,18 @@ import { z } from 'zod'
 import { cartRateLimit } from '@/lib/rate-limit'
 import { sendCartConfirmation, sendCartNotification } from '@/lib/email'
 import { extractSenderMeta, enrichWithCountry } from '@/lib/sender-meta'
+import { sanitizeHtml } from '@/lib/security'
 
 const schema = z.object({
-  name: z.string().min(1, "Name is required").max(200, "Name too long"),
-  email: z.string().email("Invalid email").max(320, "Email too long"),
-  phone: z.string().max(50, "Phone too long").optional().nullable(),
-  company: z.string().max(200, "Company too long").optional().nullable(),
-  country: z.string().max(100, "Country too long").optional().nullable(),
-  notes: z.string().max(2000, "Notes too long").optional().nullable(),
+  name: z.string().min(1, "Name is required").max(200, "Name too long").transform(sanitizeHtml),
+  email: z.string().email("Invalid email").max(320, "Email too long").transform(sanitizeHtml),
+  phone: z.string().max(50, "Phone too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  company: z.string().max(200, "Company too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  country: z.string().max(100, "Country too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  notes: z.string().max(2000, "Notes too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
   items: z.array(z.object({
-    productId: z.string(),
-    productName: z.string(),
+    productId: z.string().transform(sanitizeHtml),
+    productName: z.string().transform(sanitizeHtml),
     quantity: z.number().min(1)
   })).min(1, "Cart is empty"),
 })

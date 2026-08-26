@@ -4,18 +4,19 @@ import { z } from 'zod'
 import { productRequestRateLimit } from '@/lib/rate-limit'
 import { sendProductRequestConfirmation, sendProductRequestNotification } from '@/lib/email'
 import { extractSenderMeta, enrichWithCountry } from '@/lib/sender-meta'
+import { sanitizeHtml } from '@/lib/security'
 
 const schema = z.object({
-  productName: z.string().min(1, 'Product name is required').max(500),
-  productDescription: z.string().max(2000).optional().nullable(),
-  quantity: z.string().max(100).optional().nullable(),
-  name: z.string().min(1, 'Name is required').max(200),
-  email: z.string().email('Invalid email').max(320),
-  phone: z.string().max(50).optional().nullable(),
-  company: z.string().max(200).optional().nullable(),
-  country: z.string().max(100).optional().nullable(),
-  usage: z.string().max(500).optional().nullable(),
-  notes: z.string().max(2000).optional().nullable(),
+  productName: z.string().min(1, 'Product name is required').max(500).transform(sanitizeHtml),
+  productDescription: z.string().max(2000).optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  quantity: z.string().max(100).optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  name: z.string().min(1, 'Name is required').max(200).transform(sanitizeHtml),
+  email: z.string().email('Invalid email').max(320).transform(sanitizeHtml),
+  phone: z.string().max(50).optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  company: z.string().max(200).optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  country: z.string().max(100).optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  usage: z.string().max(500).optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  notes: z.string().max(2000).optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
 })
 
 export async function POST(req: NextRequest) {

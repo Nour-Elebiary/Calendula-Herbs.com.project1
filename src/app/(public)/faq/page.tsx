@@ -2,6 +2,7 @@ import React from 'react'
 import { db } from '@/lib/db'
 import { HelpCircle, ChevronDown } from 'lucide-react'
 import { getTranslations } from 'next-intl/server'
+import { JsonLd } from '@/components/shared/JsonLd'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
 const normalizedUrl = siteUrl.startsWith('http://') || siteUrl.startsWith('https://')
@@ -59,12 +60,7 @@ function FaqPageSchema({ items }: { items: FaqItem[] }) {
       },
     })),
   }
-  return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  )
+  return <JsonLd data={schema} />
 }
 
 export default async function FaqPage() {
@@ -96,19 +92,14 @@ export default async function FaqPage() {
 
         <FaqPageSchema items={faqs} />
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: tn('home'), item: normalizedUrl },
-                { '@type': 'ListItem', position: 2, name: t('heroTitle'), item: `${normalizedUrl}/faq` },
-              ],
-            }),
-          }}
-        />
+        <JsonLd data={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: tn('home'), item: normalizedUrl },
+            { '@type': 'ListItem', position: 2, name: t('heroTitle'), item: `${normalizedUrl}/faq` },
+          ],
+        }} />
 
         <div className="section" style={{ maxWidth: 'var(--container-tight)', margin: '0 auto' }}>
           {faqs.length === 0 ? (

@@ -1,5 +1,6 @@
 import React from 'react'
 import { db } from '@/lib/db'
+import { COMPANY_FOUNDED_YEAR } from '@/lib/constants'
 import Link from 'next/link'
 import { getTranslations, getLocale } from 'next-intl/server'
 import { HeroSection } from '@/components/public/home/HeroSection'
@@ -12,9 +13,18 @@ import { ScrollReveal } from '@/components/public/shared/ScrollReveal'
 
 export async function generateMetadata() {
   const t = await getTranslations('home')
+  
+  let founded = COMPANY_FOUNDED_YEAR
+  try {
+    const setting = await db.siteSetting.findUnique({ where: { key: 'company_founded' } })
+    if (setting?.value) founded = setting.value
+  } catch (err) {
+    console.error('generateMetadata: DB fetch failed, using default founded year')
+  }
+
   return {
     title: 'Home | Calendula Herbs For Import & Export',
-    description: t('heroDescription', { year: '2005' }).replace(/<[^>]+>/g, ''),
+    description: t('heroDescription', { year: founded }).replace(/<[^>]+>/g, ''),
   }
 }
 
@@ -40,7 +50,7 @@ export default async function HomePage() {
     const [products, settingsRow] = await Promise.all([
       db.product.findMany({
         where: { isFeatured: true, isActive: true },
-        include: { 
+        include: {
           images: { orderBy: { order: 'asc' }, take: 1, include: { mediaFile: true } },
           translations: { where: { locale } }
         },
@@ -70,7 +80,7 @@ export default async function HomePage() {
       {/* 2. HERO */}
       <HeroSection
         tagline={settings.site_tagline || ''}
-        founded={settings.company_founded || '2005'}
+        founded={settings.company_founded || COMPANY_FOUNDED_YEAR}
       />
 
       {/* 3. CERT STRIP — trust signals above fold */}

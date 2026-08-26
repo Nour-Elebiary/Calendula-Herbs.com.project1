@@ -174,4 +174,24 @@ describe('POST /api/public/contact', () => {
 
     expect(res.status).toBe(500)
   })
+
+  it('sanitises XSS attempts in input fields', async () => {
+    const res = await POST(createRequest({
+      name: '<script>alert(1)</script>Jane',
+      email: 'jane@example.com',
+      message: 'Hello <img src=x onerror=alert(1)>',
+    }))
+
+    expect(res.status).toBe(200)
+    // In actual app, we expect the DOMPurify logic to have stripped it,
+    // but the actual DB record will be saved. We verify that the API
+    // does not block the request, but rather sanitises or accepts it securely.
+    expect(mockCreate).toHaveBeenCalledWith(
+      expect.objectContaining({
+        data: expect.objectContaining({
+          name: 'Jane', // DOMPurify stripped the script tags completely
+        }),
+      })
+    )
+  })
 })

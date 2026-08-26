@@ -74,7 +74,7 @@
   "products": {
     "heroTitle": "Our Products",
     "heroDesc": "Premium bulk herbs, spices, and seeds for global importers and manufacturers. All products available for export with full certification.",
-    "heroMetadataTitle": "Our Products | Calendula Herbs For Import & Export",
+    "heroMetadataTitle": "Our Products",
     "heroMetadataDesc": "Browse our catalog of premium bulk herbs, spices, and seeds for export. Minimum order quantities from 500 KG. Request a quote for your import needs.",
     "searchPlaceholder": "Search products...",
     "sidebarTitle": "Categories",
@@ -135,7 +135,7 @@
   "about": {
     "heroTitle": "About Calendula Herbs",
     "heroDesc": "Cultivating purity and delivering excellence for over four decades. We are dedicated to providing the world with the finest organic herbs, rooted in generations of agricultural expertise.",
-    "heroMetadataTitle": "About Us | Calendula Herbs For Import & Export",
+    "heroMetadataTitle": "About Us",
     "heroMetadataDesc": "Discover our heritage: 45 years of farming, 25 years of manufacturing, and 11 years of exporting premium organic herbs from Egypt.",
     "statUnit": "Years",
     "statFarming": "Farming Heritage",
@@ -166,7 +166,7 @@
   "contact": {
     "heroTitle": "Contact Us",
     "heroDesc": "Reach out for bulk export inquiries, product specifications, sample requests, or any questions about our Egyptian herbs and spices.",
-    "heroMetadataTitle": "Contact Us | Calendula Herbs For Import & Export",
+    "heroMetadataTitle": "Contact Us",
     "heroMetadataDesc": "Get in touch with Calendula Herbs for bulk organic herb export inquiries. Request a quote, product specifications, or samples.",
     "formTitle": "Send Us an Inquiry",
     "formDesc": "Fill out the form below and our export team will respond within 24 business hours.",
@@ -223,7 +223,7 @@
   "faq": {
     "heroTitle": "Frequently Asked Questions",
     "heroDesc": "Everything B2B buyers need to know about ordering from Calendula Herbs.",
-    "heroMetadataTitle": "FAQ | Calendula Herbs",
+    "heroMetadataTitle": "FAQ",
     "heroMetadataDesc": "B2B export FAQs — MOQ, free samples, certifications, shipping, and payment terms for bulk herb and spice buyers.",
     "empty": "No FAQs Available",
     "stillQuestions": "Still have questions?",
@@ -283,7 +283,7 @@
   "certificates": {
     "heroTitle": "Quality & Certifications",
     "heroDesc": "We adhere to the highest international standards for organic farming, processing, and export.",
-    "heroMetadataTitle": "Certificates | Calendula Herbs",
+    "heroMetadataTitle": "Certificates",
     "heroMetadataDesc": "Our organic and quality assurance certificates — ISO, EU Organic, HALAL, KOSHER, USDA NOP, and more.",
     "empty": "No certifications listed yet.",
     "certified": "Certified",
@@ -293,7 +293,7 @@
   "galleries": {
     "heroTitle": "Media Galleries",
     "heroDesc": "A visual journey through our farms, state-of-the-art processing facilities, and premium products.",
-    "heroMetadataTitle": "Galleries | Calendula Herbs",
+    "heroMetadataTitle": "Galleries",
     "heroMetadataDesc": "Explore our farms, processing facilities, and products through our media galleries.",
     "empty": "No Galleries Available",
     "emptyDesc": "Check back later for photos and videos.",
@@ -460,7 +460,7 @@
   "sample": {
     "heroTitle": "Request a Sample",
     "heroDesc": "Evaluate our quality firsthand. Request free samples of our organic products.",
-    "heroMetadataTitle": "Request a Sample | Calendula Herbs",
+    "heroMetadataTitle": "Request a Sample",
     "heroMetadataDesc": "Request free samples of our organic herbs, spices, and botanical products for quality evaluation.",
     "howItWorks": "How It Works",
     "step1Title": "Select Products",
@@ -481,7 +481,7 @@
   "productRequest": {
     "heroTitle": "Can’t Find a Product?",
     "heroDesc": "We source a wide range of herbs, spices, seeds, and botanical products beyond what is listed on our site. Tell us what you need.",
-    "heroMetadataTitle": "Request a Product | Calendula Herbs",
+    "heroMetadataTitle": "Request a Product",
     "heroMetadataDesc": "Can’t find what you’re looking for? Submit a product request and our team will source it for you.",
     "howItWorks": "How It Works",
     "step1Title": "Tell Us What You Need",

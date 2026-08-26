@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import { z } from 'zod'
 import { MediaType } from '@prisma/client'
-import { requireAdmin, unauthorized } from '@/lib/admin-auth'
+import { withAdminAuth, apiError } from '@/lib/route-helpers'
 
 const createMediaSchema = z.object({
   name: z.string(),
@@ -18,28 +18,19 @@ const createMediaSchema = z.object({
   duration: z.number().positive().optional().nullable(),
 })
 
-export async function POST(req: NextRequest) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const POST = withAdminAuth(async (req: NextRequest) => {
   try {
     const json = await req.json()
     const parsed = createMediaSchema.parse(json)
-
-    const media = await db.mediaFile.create({
-      data: parsed,
-    })
-
+    const media = await db.mediaFile.create({ data: parsed })
     return NextResponse.json({ media }, { status: 201 })
   } catch (error) {
-    if (error instanceof z.ZodError) {
-      return NextResponse.json({ error: error.issues }, { status: 400 })
-    }
-    console.error('Media save error:', error)
-    return NextResponse.json({ error: 'Failed to save media record' }, { status: 500 })
+    if (error instanceof z.ZodError) return NextResponse.json({ error: error.issues }, { status: 400 })
+    return apiError('Failed to save media record', 500, error)
   }
-}
+})
 
-export async function GET(req: NextRequest) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const GET = withAdminAuth(async (req: NextRequest) => {
   try {
     const searchParams = req.nextUrl.searchParams
     const type = searchParams.get('type') as MediaType | null
@@ -54,23 +45,12 @@ export async function GET(req: NextRequest) {
     }
 
     const [items, total] = await Promise.all([
-      db.mediaFile.findMany({
-        where,
-        orderBy: { createdAt: 'desc' },
-        skip,
-        take: limit,
-      }),
+      db.mediaFile.findMany({ where, orderBy: { createdAt: 'desc' }, skip, take: limit }),
       db.mediaFile.count({ where }),
     ])
 
-    return NextResponse.json({
-      items,
-      total,
-      page,
-      totalPages: Math.ceil(total / limit),
-    })
+    return NextResponse.json({ items, total, page, totalPages: Math.ceil(total / limit) })
   } catch (error) {
-    console.error('Media fetch error:', error)
-    return NextResponse.json({ error: 'Failed to fetch media' }, { status: 500 })
+    return apiError('Failed to fetch media', 500, error)
   }
-}
+})

@@ -4,16 +4,17 @@ import { z } from 'zod'
 import { sampleRateLimit } from '@/lib/rate-limit'
 import { sendSampleConfirmation, sendSampleNotification } from '@/lib/email'
 import { extractSenderMeta, enrichWithCountry } from '@/lib/sender-meta'
+import { sanitizeHtml } from '@/lib/security'
 
 const schema = z.object({
-  productName: z.string().min(1, "Product name is required").max(500, "Product name too long"),
-  quantity: z.string().max(100).optional().nullable(),
-  name: z.string().min(1, "Name is required").max(200, "Name too long"),
-  email: z.string().email("Invalid email").max(320, "Email too long"),
-  company: z.string().max(200, "Company too long").optional().nullable(),
-  address: z.string().max(1000, "Address too long").optional().nullable(),
+  productName: z.string().min(1, "Product name is required").max(500, "Product name too long").transform(sanitizeHtml),
+  quantity: z.string().max(100).optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  name: z.string().min(1, "Name is required").max(200, "Name too long").transform(sanitizeHtml),
+  email: z.string().email("Invalid email").max(320, "Email too long").transform(sanitizeHtml),
+  company: z.string().max(200, "Company too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  address: z.string().max(1000, "Address too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
   shippingBy: z.enum(["buyer", "calendula"]),
-  notes: z.string().max(2000, "Notes too long").optional().nullable(),
+  notes: z.string().max(2000, "Notes too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
 })
 
 export async function POST(req: NextRequest) {

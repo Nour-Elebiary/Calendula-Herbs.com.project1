@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import { z } from 'zod'
 import { CertType } from '@prisma/client'
-import { requireAdmin, unauthorized } from '@/lib/admin-auth'
+import { withAdminAuth, apiError } from '@/lib/route-helpers'
 
 const LOCALES = ['en', 'ar', 'es', 'it', 'ja', 'ko', 'hi', 'ru', 'uk', 'pt-BR', 'zh-CN', 'fr', 'nl', 'de', 'bg', 'el', 'tr']
 
@@ -15,8 +15,7 @@ const certSchema = z.object({
   fileType: z.nativeEnum(CertType),
 })
 
-export async function GET() {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const GET = withAdminAuth(async () => {
   const certs = await db.certificate.findMany({
     orderBy: { order: 'asc' },
     include: {
@@ -26,10 +25,9 @@ export async function GET() {
     },
   })
   return NextResponse.json({ certs })
-}
+})
 
-export async function POST(req: NextRequest) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const POST = withAdminAuth(async (req: NextRequest) => {
   try {
     const json = await req.json()
     const data = certSchema.parse(json)
@@ -37,22 +35,29 @@ export async function POST(req: NextRequest) {
     const order = (maxOrder._max.order ?? -1) + 1
     const cert = await db.certificate.create({
       data: {
-        ...data, order,
-        translations: { create: LOCALES.map(locale => ({ locale, title: data.title, issuer: data.issuer, description: data.description })) },
+        ...data,
+        order,
+        translations: {
+          create: LOCALES.map(locale => ({
+            locale,
+            title: data.title,
+            issuer: data.issuer,
+            description: data.description,
+          })),
+        },
       },
       include: { translations: true },
     })
     return NextResponse.json({ cert }, { status: 201 })
   } catch (err) {
     if (err instanceof z.ZodError) return NextResponse.json({ error: err.issues }, { status: 400 })
-    return NextResponse.json({ error: 'Failed to create certificate' }, { status: 500 })
+    return apiError('Failed to create certificate', 500, err)
   }
-}
+})
 
-export async function PATCH(req: NextRequest) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const PATCH = withAdminAuth(async (req: NextRequest) => {
   // Reorder
   const { ids } = await req.json()
   await Promise.all(ids.map((id: string, i: number) => db.certificate.update({ where: { id }, data: { order: i } })))
   return NextResponse.json({ success: true })
-}
+})

@@ -3,7 +3,7 @@ import { db } from '@/lib/db'
 import type { Prisma } from '@prisma/client'
 import { z } from 'zod'
 import slugify from 'slugify'
-import { requireAdmin, unauthorized } from '@/lib/admin-auth'
+import { withAdminAuth, apiError } from '@/lib/route-helpers'
 
 const CutType = z.enum(['WHOLE', 'CRUSHED', 'POWDER', 'CUT_SIFTED', 'GRANULATED', 'LEAF', 'STEM', 'ROOT', 'TBC'])
 
@@ -34,7 +34,7 @@ const productSchema = z.object({
 })
 
 // Derive isOrganic from organicType presence
-function deriveIsOrganic(data: { organicType?: string | null, isOrganic?: boolean }) {
+function deriveIsOrganic(data: { organicType?: string | null; isOrganic?: boolean }) {
   if (data.organicType?.trim()) return true
   return data.isOrganic ?? false
 }
@@ -50,8 +50,7 @@ async function generateSlug(name: string, excludeId?: string) {
   return slug
 }
 
-export async function GET(req: NextRequest) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const GET = withAdminAuth(async (req: NextRequest) => {
   const sp = req.nextUrl.searchParams
   const categoryId = sp.get('categoryId')
   const status = sp.get('status') // 'active' | 'inactive'
@@ -89,10 +88,9 @@ export async function GET(req: NextRequest) {
   ])
 
   return NextResponse.json({ products, total, page, totalPages: Math.ceil(total / limit) })
-}
+})
 
-export async function POST(req: NextRequest) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const POST = withAdminAuth(async (req: NextRequest) => {
   try {
     const json = await req.json()
     const { categoryIds, slug: rawSlug, ...data } = productSchema.parse(json)
@@ -131,7 +129,6 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ product }, { status: 201 })
   } catch (err) {
     if (err instanceof z.ZodError) return NextResponse.json({ error: err.issues }, { status: 400 })
-    console.error(err)
-    return NextResponse.json({ error: 'Failed to create product' }, { status: 500 })
+    return apiError('Failed to create product', 500, err)
   }
-}
+})

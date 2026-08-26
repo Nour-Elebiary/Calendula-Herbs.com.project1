@@ -2,24 +2,22 @@ import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/lib/db'
 import { z } from 'zod'
 import slugify from 'slugify'
-import { requireAdmin, unauthorized } from '@/lib/admin-auth'
+import { withAdminAuth, apiError } from '@/lib/route-helpers'
 
 const createGallerySchema = z.object({
   name: z.string().min(1),
   description: z.string().optional(),
 })
 
-export async function GET() {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const GET = withAdminAuth(async () => {
   const galleries = await db.gallery.findMany({
     orderBy: { order: 'asc' },
     include: { _count: { select: { items: true } } },
   })
   return NextResponse.json({ galleries })
-}
+})
 
-export async function POST(req: NextRequest) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const POST = withAdminAuth(async (req: NextRequest) => {
   try {
     const json = await req.json()
     const { name, description } = createGallerySchema.parse(json)
@@ -39,17 +37,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ gallery }, { status: 201 })
   } catch (err) {
     if (err instanceof z.ZodError) return NextResponse.json({ error: err.issues }, { status: 400 })
-    return NextResponse.json({ error: 'Failed to create gallery' }, { status: 500 })
+    return apiError('Failed to create gallery', 500, err)
   }
-}
+})
 
-export async function PATCH(req: NextRequest) {
-  try { await requireAdmin() } catch { return unauthorized() }
+export const PATCH = withAdminAuth(async (req: NextRequest) => {
   // Reorder: expects { ids: string[] } in display order
   try {
     const { ids } = await req.json()
     if (!Array.isArray(ids)) return NextResponse.json({ error: 'ids must be an array' }, { status: 400 })
-
     await Promise.all(
       ids.map((id: string, index: number) =>
         db.gallery.update({ where: { id }, data: { order: index } })
@@ -57,6 +53,6 @@ export async function PATCH(req: NextRequest) {
     )
     return NextResponse.json({ success: true })
   } catch {
-    return NextResponse.json({ error: 'Reorder failed' }, { status: 500 })
+    return apiError('Reorder failed', 500)
   }
-}
+})

@@ -1,0 +1,38 @@
+name: Post-Deploy Smoke Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment_url:
+        description: 'Live URL to smoke test'
+        required: true
+        default: 'https://calendula-herbscomproject1-production.up.railway.app'
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Homepage returns 200
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "${{ github.event.inputs.environment_url }}/")
+          [ "$STATUS" = "200" ] || (echo "Homepage returned $STATUS" && exit 1)
+
+      - name: Products API returns 200
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "${{ github.event.inputs.environment_url }}/api/public/products")
+          [ "$STATUS" = "200" ] || (echo "Products API returned $STATUS" && exit 1)
+
+      - name: sitemap.xml returns 200 and is valid XML
+        run: |
+          BODY=$(curl -s "${{ github.event.inputs.environment_url }}/sitemap.xml")
+          echo "$BODY" | grep -q '<urlset' || (echo "sitemap.xml missing <urlset" && exit 1)
+
+      - name: robots.txt returns 200
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "${{ github.event.inputs.environment_url }}/robots.txt")
+          [ "$STATUS" = "200" ] || (echo "robots.txt returned $STATUS" && exit 1)
+
+      - name: Admin login page returns 200 (not 500)
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "${{ github.event.inputs.environment_url }}/admin/login")
+          [ "$STATUS" = "200" ] || (echo "Admin login returned $STATUS" && exit 1)

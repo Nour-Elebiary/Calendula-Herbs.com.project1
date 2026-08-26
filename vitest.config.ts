@@ -12,6 +12,19 @@ export default defineConfig({
     coverage: {
       provider: 'v8',
       enabled: false,
+      include: ['src/**/*.{ts,tsx}'],
+      exclude: [
+        'src/**/*.test.{ts,tsx}',
+        'src/**/*.spec.{ts,tsx}',
+        'src/__tests__/**',
+        'src/app/**/layout.tsx',
+        'src/app/**/loading.tsx',
+        'src/app/**/not-found.tsx',
+        'src/app/**/error.tsx',
+        'node_modules/**',
+        'e2e/**',
+      ],
+      reporter: ['text', 'json', 'html', 'lcov'],
       thresholds: {
         statements: 50,
         branches: 40,

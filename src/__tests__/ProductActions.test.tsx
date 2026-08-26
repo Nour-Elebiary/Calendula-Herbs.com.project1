@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeAll, afterAll, afterEach } from 'vitest'
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { http, HttpResponse } from 'msw'
 import { setupServer } from 'msw/node'
@@ -63,7 +63,7 @@ describe('ProductActions', () => {
     await user.type(inputs[0], 'Jane')
     await user.type(inputs[1], 'jane@example.com')
     await user.type(inputs[3], '123 Main St')
-    await user.click(screen.getByRole('button', { name: /request sample/i }))
+    fireEvent.submit(screen.getByRole('button', { name: /request sample/i }).closest('form')!)
 
     await waitFor(() => {
       expect(screen.queryByText(/request sample: chamomile/i)).not.toBeInTheDocument()
@@ -84,7 +84,7 @@ describe('ProductActions', () => {
   it('disables submit button while sample request is in progress', async () => {
     server.use(
       http.post('*/api/public/sample', async () => {
-        await new Promise((r) => setTimeout(r, 100))
+        await new Promise((r) => setTimeout(r, 1000))
         return HttpResponse.json({ success: true })
       }),
     )
@@ -99,7 +99,7 @@ describe('ProductActions', () => {
     await user.type(inputs[0], 'Jane')
     await user.type(inputs[1], 'jane@example.com')
     await user.type(inputs[3], '123 Main St')
-    await user.click(screen.getByRole('button', { name: /request sample/i }))
+    fireEvent.submit(screen.getByRole('button', { name: /request sample/i }).closest('form')!)
 
     expect(await screen.findByRole('button', { name: /submitting/i })).toBeDisabled()
   })

@@ -1,63 +1,105 @@
 import { MetadataRoute } from 'next'
 import { db } from '@/lib/db'
 
+// Supported locales — mirrors src/i18n/routing.ts
+const LOCALES = ['en', 'ar'] as const
+
+type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://calendulaherbs.com'
+  // Canonical domain — always use the production domain in sitemap
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, '') ||
+    'https://calendula-herbs.com'
 
   // Fetch dynamic content
-  const [products, categories, galleries] = await Promise.all([
+  const [products, productImages, categories, galleries] = await Promise.all([
     db.product.findMany({
       where: { isActive: true },
-      select: { slug: true, updatedAt: true }
+      select: { id: true, slug: true, name: true, updatedAt: true },
     }),
-    db.category.findMany({
-      select: { slug: true }
+    // Separate image query to avoid Prisma select-depth TS issues
+    db.productImage.findMany({
+      where: { product: { isActive: true }, order: 0 },
+      select: {
+        productId: true,
+        mediaFile: { select: { url: true } },
+      },
     }),
+    db.category.findMany({ select: { slug: true } }),
     db.gallery.findMany({
       select: { slug: true, updatedAt: true },
-      where: { isActive: true }
+      where: { isActive: true },
     }),
   ])
 
-  // Static routes
-  const staticRoutes = [
-    '',
-    '/about',
-    '/contact',
-    '/products',
-    '/faq',
-    '/galleries',
-    '/certificates',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
+  // Build a quick lookup: productId → image URL
+  const imageMap = new Map<string, string>()
+  for (const pi of productImages) {
+    if (pi.mediaFile?.url) imageMap.set(pi.productId, pi.mediaFile.url)
+  }
+
+  // ── Helper: build hreflang alternates for a given path ──────────────────
+  function alternates(path: string) {
+    return {
+      languages: Object.fromEntries(
+        LOCALES.map((locale) => [locale, `${baseUrl}/${locale}${path}`])
+      ) as Record<string, string>,
+    }
+  }
+
+  // ── Helper: explicit changeFrequency cast ────────────────────────────────
+  function freq(f: ChangeFreq): ChangeFreq { return f }
+
+  // ── Static routes ────────────────────────────────────────────────────────
+  const staticRoutes: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/`,             priority: 1.0, changeFrequency: freq('weekly')  },
+    { url: `${baseUrl}/about`,        priority: 0.8, changeFrequency: freq('monthly') },
+    { url: `${baseUrl}/contact`,      priority: 0.8, changeFrequency: freq('monthly') },
+    { url: `${baseUrl}/products`,     priority: 0.9, changeFrequency: freq('weekly')  },
+    { url: `${baseUrl}/faq`,          priority: 0.7, changeFrequency: freq('monthly') },
+    { url: `${baseUrl}/galleries`,    priority: 0.7, changeFrequency: freq('monthly') },
+    { url: `${baseUrl}/certificates`, priority: 0.7, changeFrequency: freq('monthly') },
+  ].map((entry) => ({
+    ...entry,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: route === '' ? 1 : 0.8,
+    alternates: alternates(entry.url.replace(baseUrl, '')),
   }))
 
-  // Product routes
-  const productRoutes = products.map((product) => ({
-    url: `${baseUrl}/products/${product.slug}`,
-    lastModified: product.updatedAt,
-    changeFrequency: 'weekly' as const,
-    priority: 0.9,
-  }))
+  // ── Product routes (highest priority — these are the money pages) ────────
+  const productRoutes: MetadataRoute.Sitemap = products.map((product) => {
+    const imageUrl = imageMap.get(product.id)
 
-  // Category routes (no updatedAt on Category model — use current date)
-  const categoryRoutes = categories.map((category) => ({
+    return {
+      url: `${baseUrl}/products/${product.slug}`,
+      lastModified: product.updatedAt,
+      changeFrequency: freq('weekly'),
+      priority: 0.9,
+      alternates: alternates(`/products/${product.slug}`),
+      // images[] — supported by Next.js ≥ 14.2 for image sitemaps
+      // Helps Google Images, Yandex Images, and Baidu Images index product photos
+      ...(imageUrl && { images: [imageUrl] }),
+    }
+  })
+
+  // ── Category routes ──────────────────────────────────────────────────────
+  const categoryRoutes: MetadataRoute.Sitemap = categories.map((category) => ({
     url: `${baseUrl}/products?category=${category.slug}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
+    changeFrequency: freq('weekly'),
     priority: 0.7,
+    alternates: alternates(`/products?category=${category.slug}`),
   }))
 
-  // Gallery routes
-  const galleryRoutes = galleries.map((gallery) => ({
+  // ── Gallery routes ───────────────────────────────────────────────────────
+  const galleryRoutes: MetadataRoute.Sitemap = galleries.map((gallery) => ({
     url: `${baseUrl}/galleries/${gallery.slug}`,
     lastModified: gallery.updatedAt,
-    changeFrequency: 'monthly' as const,
+    changeFrequency: freq('monthly'),
     priority: 0.6,
+    alternates: alternates(`/galleries/${gallery.slug}`),
   }))
 
   return [...staticRoutes, ...productRoutes, ...categoryRoutes, ...galleryRoutes]
 }
+

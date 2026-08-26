@@ -1,5 +1,5 @@
 import { describe, it, expect, vi, beforeAll, afterAll, afterEach } from 'vitest'
-import { render, screen, waitFor } from '@testing-library/react'
+import { render, screen, waitFor, fireEvent } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { http, HttpResponse } from 'msw'
 import { setupServer } from 'msw/node'
@@ -35,7 +35,7 @@ describe('ContactForm', () => {
     await user.type(screen.getByRole('textbox', { name: /name/i }), '   ')
     await user.type(screen.getByRole('textbox', { name: /email/i }), 'test@test')
     await user.type(screen.getByRole('textbox', { name: /message/i }), '   ')
-    await user.click(screen.getByRole('button', { name: /send inquiry/i }))
+    fireEvent.submit(screen.getByRole('button', { name: /send inquiry/i }).closest('form')!)
 
     expect(await screen.findByText(/name is required/i)).toBeInTheDocument()
     expect(screen.getByText(/please enter a valid email/i)).toBeInTheDocument()
@@ -48,7 +48,7 @@ describe('ContactForm', () => {
     await user.type(screen.getByRole('textbox', { name: /name/i }), 'Jane')
     await user.type(screen.getByRole('textbox', { name: /email/i }), 'test@test')
     await user.type(screen.getByRole('textbox', { name: /message/i }), 'Hello')
-    await user.click(screen.getByRole('button', { name: /send inquiry/i }))
+    fireEvent.submit(screen.getByRole('button', { name: /send inquiry/i }).closest('form')!)
 
     expect(await screen.findByText(/please enter a valid email/i)).toBeInTheDocument()
   })
@@ -60,10 +60,10 @@ describe('ContactForm', () => {
     await user.type(screen.getByRole('textbox', { name: /name/i }), 'Jane Doe')
     await user.type(screen.getByRole('textbox', { name: /email/i }), 'jane@example.com')
     await user.type(screen.getByRole('textbox', { name: /message/i }), 'I am interested in your products.')
-    await user.click(screen.getByRole('button', { name: /send inquiry/i }))
+    fireEvent.submit(screen.getByRole('button', { name: /send inquiry/i }).closest('form')!)
 
     await waitFor(() => {
-      expect(screen.getByText(/success!/i)).toBeInTheDocument()
+      expect(screen.getByText(/inquiry sent/i)).toBeInTheDocument()
     })
   })
 

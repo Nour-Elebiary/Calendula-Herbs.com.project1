@@ -4,15 +4,16 @@ import { z } from 'zod'
 import { contactRateLimit } from '@/lib/rate-limit'
 import { sendContactConfirmation, sendContactNotification } from '@/lib/email'
 import { extractSenderMeta, enrichWithCountry } from '@/lib/sender-meta'
+import { sanitizeHtml } from '@/lib/security'
 
 const schema = z.object({
-  name: z.string().min(1, "Name is required").max(200, "Name too long"),
-  email: z.string().email("Invalid email").max(320, "Email too long"),
-  phone: z.string().max(50, "Phone too long").optional().nullable(),
-  company: z.string().max(200, "Company too long").optional().nullable(),
-  country: z.string().max(100, "Country too long").optional().nullable(),
-  subject: z.string().max(200, "Subject too long").optional().nullable(),
-  message: z.string().min(1, "Message is required").max(5000, "Message too long"),
+  name: z.string().min(1, "Name is required").max(200, "Name too long").transform(sanitizeHtml),
+  email: z.string().email("Invalid email").max(320, "Email too long").transform(sanitizeHtml),
+  phone: z.string().max(50, "Phone too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  company: z.string().max(200, "Company too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  country: z.string().max(100, "Country too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  subject: z.string().max(200, "Subject too long").optional().nullable().transform(v => v ? sanitizeHtml(v) : v),
+  message: z.string().min(1, "Message is required").max(5000, "Message too long").transform(sanitizeHtml),
 })
 
 export async function POST(req: NextRequest) {

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+  Bing Webmaster Tools — Site Ownership Verification File
+  =========================================================
+  HOW TO USE:
+  1. Go to: https://www.bing.com/webmasters/
+  2. Add site: https://calendula-herbs.com
+  3. Choose "XML file" verification method
+  4. Copy the <user> code Bing gives you
+  5. Replace REPLACE_WITH_BING_CODE below
+  6. Deploy your site — Bing will fetch this file to verify ownership
+  7. Click "Verify" in Bing Webmaster Tools
+
+  NOTE: After verification, submit your sitemap:
+  https://calendula-herbs.com/sitemap.xml
+-->
+<users>
+  <user>REPLACE_WITH_BING_VERIFICATION_CODE</user>
+</users>

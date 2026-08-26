@@ -80,7 +80,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         let country = 'Unknown'
         if (ip !== 'unknown' && ip !== '127.0.0.1' && ip !== '::1') {
           try {
-            const geoRes = await fetch(`http://ip-api.com/json/${ip}?fields=country`)
+            const geoRes = await fetch(`https://ip-api.com/json/${ip}?fields=country`)
             const geoData = await geoRes.json()
             if (geoData && geoData.country) {
               country = geoData.country

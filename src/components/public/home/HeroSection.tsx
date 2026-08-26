@@ -7,6 +7,7 @@ import { ChevronDown } from 'lucide-react'
 import DOMPurify from 'isomorphic-dompurify'
 import { useTranslations } from 'next-intl'
 import { heroStagger, heroChild } from '@/lib/animations'
+import { COMPANY_FOUNDED_YEAR } from '@/lib/constants'
 
 const VIDEO_URL = 'https://res.cloudinary.com/dcukpuftg/video/upload/v1782298734/calendula-herbs/videos/hero-about.mp4'
 
@@ -67,14 +68,14 @@ export function HeroSection({ tagline, founded }: { tagline: string; founded: st
       <motion.div className="hero-atmospheric__fade-bottom" style={{ opacity: prefersReducedMotion ? 1 : fadeOpacity }} />
 
       <motion.div
-        className="about-hero__content"
+        className="about-hero__content pb-40 md:pb-0"
         variants={heroStagger}
         initial="hidden"
         animate="visible"
       >
         <motion.div variants={heroChild} className="about-hero__glass-card">
           <motion.div variants={heroChild} className="hero-atmospheric__eyebrow" style={{ justifyContent: 'center' }}>
-            {t('heroEyebrow', { year: founded || '2005' })}
+            {t('heroEyebrow', { year: founded || COMPANY_FOUNDED_YEAR })}
           </motion.div>
 
           <motion.h1
@@ -89,7 +90,7 @@ export function HeroSection({ tagline, founded }: { tagline: string; founded: st
           )}
 
           <motion.p variants={heroChild} className="hero-atmospheric__body" style={{ maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto' }}>
-            {t('heroDescription', { year: founded || '2005' })}
+            {t('heroDescription', { year: founded || COMPANY_FOUNDED_YEAR })}
           </motion.p>
 
           <motion.div variants={heroChild} className="hero-atmospheric__actions" style={{ justifyContent: 'center' }}>

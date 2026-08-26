@@ -1,4 +1,5 @@
 import bcrypt from 'bcryptjs'
+import DOMPurify from 'isomorphic-dompurify'
 
 const BCRYPT_ROUNDS = 12
 
@@ -71,4 +72,15 @@ export function getClientIp(headers: Headers): string {
  */
 export function getUserAgent(headers: Headers): string {
   return headers.get('user-agent') || 'unknown'
+}
+
+/**
+ * Sanitises HTML input to prevent XSS.
+ * Removes <script> tags, inline event handlers, etc.
+ */
+export function sanitizeHtml(html: string): string {
+  return DOMPurify.sanitize(html, {
+    ALLOWED_TAGS: ['b', 'i', 'em', 'strong', 'a', 'p', 'br', 'ul', 'ol', 'li'],
+    ALLOWED_ATTR: ['href', 'target', 'rel'],
+  })
 }

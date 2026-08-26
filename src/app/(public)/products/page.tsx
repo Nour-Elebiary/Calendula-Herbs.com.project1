@@ -6,8 +6,9 @@ import { Leaf, Search, Package, FileSearch } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { ProductGridClient } from './ProductGridClient'
 import { getTranslations, getLocale } from 'next-intl/server'
+import { JsonLd } from '@/components/shared/JsonLd'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://calendula-herbs.com'
 const normalizedUrl = siteUrl.startsWith('http://') || siteUrl.startsWith('https://')
   ? siteUrl
   : `https://${siteUrl}`
@@ -104,24 +105,16 @@ export default async function ProductsPage({ searchParams }: { searchParams: Pro
   return (
     <div className="page-root">
       <div className="page-content">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-        />
+        <JsonLd data={productSchema} />
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'BreadcrumbList',
-              itemListElement: [
-                { '@type': 'ListItem', position: 1, name: tn('home'), item: normalizedUrl },
-                { '@type': 'ListItem', position: 2, name: t('heroTitle'), item: `${normalizedUrl}/products` },
-              ],
-            }),
-          }}
-        />
+        <JsonLd data={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: tn('home'), item: normalizedUrl },
+            { '@type': 'ListItem', position: 2, name: t('heroTitle'), item: `${normalizedUrl}/products` },
+          ],
+        }} />
 
         {/* Header */}
         <section className="hero-page">

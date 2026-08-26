@@ -6,6 +6,7 @@ import { MapEmbedWrapper } from '@/components/public/MapEmbedWrapper'
 import { getTranslations, getLocale } from 'next-intl/server'
 import { generateContactLink, getDisplayValue, isClickableLink, CONTACT_METHOD_META, type ContactMethod } from '@/lib/contact-links'
 import { getContactMethodIcon } from '@/lib/icon-map'
+import { JsonLd } from '@/components/shared/JsonLd'
 
 export async function generateMetadata() {
   const t = await getTranslations('contact')
@@ -39,8 +40,25 @@ export default async function ContactPage() {
 
   const contactMethods: ContactMethod[] = (contact?.contactMethods as ContactMethod[]) || []
 
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Calendula Herbs For Import & Export',
+    image: 'https://calendulaherbs.com/images/calendula-logo.png',
+    '@id': 'https://calendulaherbs.com',
+    url: 'https://calendulaherbs.com',
+    telephone: phones[0] ? (typeof phones[0] === 'string' ? phones[0] : phones[0].number) : '+201120238857',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: address,
+      addressLocality: 'Ibshaway, Fayoum',
+      addressCountry: 'EG'
+    }
+  }
+
   return (
     <div className="page-root">
+      <JsonLd data={localBusinessSchema} />
       <div className="page-content">
         {/* Header */}
         <section className="hero-page">
